@@ -182,6 +182,19 @@ exports.handler = async argv => {
             )
             const cucTo = path.join(CYPRESS_PLUGINS, 'index.js')
             copy(cucFrom, cucTo, force)
+
+            const cucConfFrom = path.join(
+                __dirname,
+                '..',
+                '..',
+                'templates',
+                'cucumber-config.js'
+            )
+            const cucConfTo = path.join(
+                CONSUMING_ROOT,
+                'cypress-cucumber-preprocessor.config.js'
+            )
+            copy(cucConfFrom, cucConfTo, force)
         }
 
         if (support) {
