@@ -5,7 +5,7 @@
     "bin": {
         "d2-utils-cypress": "./bin/d2-utils-cypress"
     },
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": "Viktor Varland <viktor@dhis2.org>",
     "license": "BSD-3-Clause",
     "private": false,

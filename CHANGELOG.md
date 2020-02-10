@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/dhis2/cli-utils-cypress/compare/v1.0.1...v1.0.2) (2020-02-10)
+
+
+### Bug Fixes
+
+* simplify plugins loading ([7fcf8d4](https://github.com/dhis2/cli-utils-cypress/commit/7fcf8d439cec4f928e3c81cbdbc709ffebafcd7a))
+
 ## [1.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v1.0.0...v1.0.1) (2020-02-10)
 
 
