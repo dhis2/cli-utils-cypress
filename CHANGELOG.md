@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v1.0.0...v1.0.1) (2020-02-10)
+
+
+### Bug Fixes
+
+* simplify template setup ([190e65f](https://github.com/dhis2/cli-utils-cypress/commit/190e65f4326b92957c7f7870d96083f4f19607f3))
+
 # 1.0.0 (2020-02-10)
 
 
