@@ -1,3 +1,3 @@
-const support = require('@dhis2/cli-utils-cypress/support')
+import '@dhis2/cli-utils-cypress/support'
 
-support()
+// Add additional support functions here
