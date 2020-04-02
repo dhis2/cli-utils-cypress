@@ -1,7 +1,10 @@
 {
     "name": "@dhis2/cli-utils-cypress",
     "description": "DHIS2 Cypress configuration and utilities",
-    "repository": "https://github.com/dhis2/cli-utils-cypress.git",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dhis2/cli-utils-cypress.git"
+    },
     "bin": {
         "d2-utils-cypress": "./bin/d2-utils-cypress"
     },
