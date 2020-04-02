@@ -15,8 +15,13 @@ on:
             - '[0-9]+.[0-9]+.x'
 
 env:
-    GIT_NAME: '@dhis2-bot'
-    GIT_EMAIL: 'apps@dhis2.org'
+    GIT_AUTHOR_NAME: '@dhis2-bot'
+    GIT_AUTHOR_EMAIL: 'apps@dhis2.org'
+    GIT_COMMITTER_NAME: '@dhis2-bot'
+    GIT_COMMITTER_EMAIL: 'apps@dhis2.org'
+    NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+    GH_TOKEN: ${{secrets.GH_TOKEN}}
+    CI: true
 
 jobs:
     publish:
@@ -36,12 +41,3 @@ jobs:
 
             - name: Publish to NPM
               run: npx @dhis2/cli-utils release --publish npm
-              env:
-                  GIT_AUTHOR_NAME: ${{env.GIT_NAME}}
-                  GIT_AUTHOR_EMAIL: ${{env.GIT_EMAIL}}
-                  GIT_COMMITTER_NAME: ${{env.GIT_NAME}}
-                  GIT_COMMITTER_EMAIL: ${{env.GIT_EMAIL}}
-                  NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-                  GH_TOKEN: ${{secrets.GH_TOKEN}}
-                  GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
-                  CI: true
