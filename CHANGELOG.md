@@ -1,3 +1,20 @@
+# [2.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v1.0.2...v2.0.0) (2020-04-02)
+
+
+### Bug Fixes
+
+* set correct entry-point ([901f682](https://github.com/dhis2/cli-utils-cypress/commit/901f6825ba68b22e88cdbc2623436205bca7ea0f))
+
+
+### chore
+
+* update node engine to >= 10 ([bb45181](https://github.com/dhis2/cli-utils-cypress/commit/bb45181559272628053b2a457fdacab2eb923733))
+
+
+### BREAKING CHANGES
+
+* Require Node version 10 or above.
+
 ## [1.0.2](https://github.com/dhis2/cli-utils-cypress/compare/v1.0.1...v1.0.2) (2020-02-10)
 
 
