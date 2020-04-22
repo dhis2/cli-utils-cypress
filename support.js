@@ -1,11 +1,42 @@
-const loginEndPoint = 'dhis-web-commons/security/login.action'
+const parseSelectorWithDataTest = require('./helper/parseSelectorWithDataTest')
+
+/**
+ * Transforms values in curly braces to a data-test selector
+ *
+ * @param {jQuery} subject
+ * @param {string} selectors
+ * @param {string} [prefix]
+ * @returns {Object}
+ */
+/* eslint-disable-next-line max-params */
+const find = (originalFn, subject, selectors, options = {}) => {
+    const { prefix, ...restOptions } = options
+    const selector = parseSelectorWithDataTest(selectors, prefix)
+    return originalFn(subject, selector, restOptions)
+}
+
+/**
+ * Transforms values in curly braces to a data-test selector
+ *
+ * @param {Function} originalFn
+ * @param {string} selectors
+ * @param {Object} [options]
+ * @param {string} [options.prefix]
+ * @returns {Object}
+ */
+const get = (originalFn, selectors, options = {}) => {
+    const { prefix, ...restOptions } = options
+    const selector = parseSelectorWithDataTest(selectors, prefix)
+    return originalFn(selector, restOptions)
+}
 
 /**
  * This is done through cy.request(...)
  * because Cypress doesn't allow multiple domains per test:
  * https://docs.cypress.io/guides/guides/web-security.html#One-Superdomain-per-Test
  */
-Cypress.Commands.add('login', () => {
+const loginEndPoint = 'dhis-web-commons/security/login.action'
+const login = () => {
     const username = Cypress.env('dhis2_username')
     const password = Cypress.env('dhis2_password')
     const loginUrl = Cypress.env('dhis2_base_url')
@@ -21,17 +52,22 @@ Cypress.Commands.add('login', () => {
         },
         headers: { Authorization: loginAuth },
     })
-})
+}
 
-Cypress.Commands.add('stubWithFixture', ({ method = 'GET', url, fixture }) => {
+const stubWithFixture = ({ method = 'GET', url, fixture }) => {
     return cy.route({
         method,
         url,
         response: `fixture:${fixture}`,
     })
-})
+}
 
-Cypress.Commands.add('visitWhenStubbed', (url, options = {}) => {
+/**
+ * @param {string} url
+ * @param {Object} options
+ * @returns {Cypress}
+ */
+const visitWhenStubbed = (url, options = {}) => {
     return cy.visit(url, {
         ...options,
         onBeforeLoad: win => {
@@ -39,4 +75,10 @@ Cypress.Commands.add('visitWhenStubbed', (url, options = {}) => {
             options.onBeforeLoad && options.onBeforeLoad(win)
         },
     })
-})
+}
+
+Cypress.Commands.overwrite('find', find)
+Cypress.Commands.overwrite('get', get)
+Cypress.Commands.add('login', login)
+Cypress.Commands.add('stubWithFixture', stubWithFixture)
+Cypress.Commands.add('visitWhenStubbed', visitWhenStubbed)
