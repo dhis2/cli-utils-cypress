@@ -1,3 +1,12 @@
+# [2.1.0](https://github.com/dhis2/cli-utils-cypress/compare/v2.0.0...v2.1.0) (2020-05-01)
+
+
+### Features
+
+* add data-test selector syntax & prompt user for data test prefix ([12761a1](https://github.com/dhis2/cli-utils-cypress/commit/12761a172033cfbd32a7255c3ee10b046045fa4e))
+* add datatest functionality to get/find commands ([9b3837b](https://github.com/dhis2/cli-utils-cypress/commit/9b3837bb5b44435c8b63cd9947a9370feab9261a))
+* prompt consumer for data test prefix ([7d7bacd](https://github.com/dhis2/cli-utils-cypress/commit/7d7bacdcaa18a77317976076ccce6206fef60e8e))
+
 # [2.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v1.0.2...v2.0.0) (2020-04-02)
 
 
