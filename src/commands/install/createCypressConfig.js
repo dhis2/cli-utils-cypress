@@ -1,6 +1,6 @@
 const inquirer = require('inquirer')
-
 const { write } = require('../../utils/fs.js')
+const { CYPRESS_CONFIG_PATH } = require('../../utils/paths.js')
 
 const createCypressConfig = async force => {
     const prompt = inquirer.createPromptModule()
@@ -11,12 +11,6 @@ const createCypressConfig = async force => {
             name: 'baseUrl',
             message: 'URL that Cypress should run tests against:',
             default: 'http://localhost:3000',
-        },
-        {
-            type: 'input',
-            name: 'testFiles',
-            message: 'Glob pattern for the test files to run:',
-            default: '**/*.feature',
         },
         {
             type: 'confirm',
@@ -32,10 +26,9 @@ const createCypressConfig = async force => {
     ])
 
     write(
-        'cypress.json',
+        CYPRESS_CONFIG_PATH,
         {
             baseUrl: cypressAnswers.baseUrl,
-            testFiles: cypressAnswers.testFiles,
             video: cypressAnswers.video,
             ...(cypressAnswers.projectId ? [cypressAnswers.projectId] : []),
         },

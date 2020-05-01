@@ -59,7 +59,7 @@ exports.handler = async argv => {
         }
 
         if (cucumber) {
-            createCucumberConfigs(force)
+            await createCucumberConfigs(force)
         }
 
         if (support) {

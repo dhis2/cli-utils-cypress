@@ -1,21 +1,39 @@
-const path = require('path')
-const { CONSUMING_ROOT, CYPRESS_PLUGINS } = require('../../utils/paths.js')
+const inquirer = require('inquirer')
+const { addToJson } = require('../../utils/fs.js')
 const { copy } = require('../../utils/fs.js')
+const {
+    CYPRESS_CONFIG_PATH,
+    CUCUMBER_PLUGIN_TEMPLATE_SOURCE,
+    CUCUMBER_PLUGIN_TEMPLATE_DESTINATION,
+    CUCUMBER_CONFIG_TEMPLATE_SOURCE,
+    CUCUMBER_CONFIG_TEMPLATE_DESTINATION,
+} = require('../../utils/paths.js')
 
-const TEMPLATE_PATH = path.join(__dirname, '../../../templates')
+const createCucumberConfigs = async force => {
+    const prompt = inquirer.createPromptModule()
 
-const PLUGIN_TEMPLATE_SOURCE = path.join(TEMPLATE_PATH, 'plugins.js')
-const PLUGIN_TEMPLATE_DESTINATION = path.join(CYPRESS_PLUGINS, 'index.js')
+    copy(
+        CUCUMBER_PLUGIN_TEMPLATE_SOURCE,
+        CUCUMBER_PLUGIN_TEMPLATE_DESTINATION,
+        force
+    )
 
-const CONFIG_TEMPLATE_SOURCE = path.join(TEMPLATE_PATH, 'plugins.js')
-const CONFIG_TEMPLATE_DESTINATION = path.join(
-    CONSUMING_ROOT,
-    'cypress-cucumber-preprocessor.config.js'
-)
+    copy(
+        CUCUMBER_CONFIG_TEMPLATE_SOURCE,
+        CUCUMBER_CONFIG_TEMPLATE_DESTINATION,
+        force
+    )
 
-const createCucumberConfigs = force => {
-    copy(PLUGIN_TEMPLATE_SOURCE, PLUGIN_TEMPLATE_DESTINATION, force)
-    copy(CONFIG_TEMPLATE_SOURCE, CONFIG_TEMPLATE_DESTINATION, force)
+    const { testFiles } = await prompt([
+        {
+            type: 'input',
+            name: 'testFiles',
+            message: 'Glob pattern for the test files to run:',
+            default: '**/*.feature',
+        },
+    ])
+
+    addToJson(CYPRESS_CONFIG_PATH, { testFiles })
 }
 
 module.exports = { createCucumberConfigs }

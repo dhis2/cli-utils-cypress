@@ -2,14 +2,11 @@ const fs = require('fs-extra')
 const path = require('path')
 const log = require('@dhis2/cli-helpers-engine').reporter
 
-const { CONSUMING_ROOT } = require('./paths.js')
-
-const readJson = filename => {
-    const filepath = path.join(CONSUMING_ROOT, filename)
+const readJson = filepath => {
     const exists = fs.existsSync(filepath)
 
     if (!exists) {
-        log.warn(`File: '${filename}' does not exist`)
+        log.warn(`File: '${filepath}' does not exist`)
         return
     }
 
@@ -17,37 +14,35 @@ const readJson = filename => {
     try {
         content = JSON.parse(fs.readFileSync(filepath))
     } catch (e) {
-        log.error(`Could not parse contents of file: '${filename}'`)
+        log.error(`Could not parse contents of file: '${filepath}'`)
         return
     }
 
     return content
 }
 
-const addToJson = (filename, data, overwrite = false) => {
-    const filepath = path.join(CONSUMING_ROOT, filename)
+const addToJson = (filepath, data, overwrite = false) => {
     const exists = fs.existsSync(filepath)
 
     if (!exists) {
-        log.warn(`File: '${filename}' does not exist`)
+        log.warn(`File: '${filepath}' does not exist`)
         return
     }
 
     if (overwrite) {
-        return write(filename, data, true)
+        return write(filepath, data, true)
     }
 
-    const existingData = readJson(filename)
-    return write(filename, { ...existingData, ...data }, true)
+    const existingData = readJson(filepath)
+    return write(filepath, { ...existingData, ...data }, true)
 }
 
-const write = (filename, data, overwrite) => {
-    const filepath = path.join(CONSUMING_ROOT, filename)
+const write = (filepath, data, overwrite) => {
     const exists = fs.existsSync(filepath)
     const content = JSON.stringify(data, null, 4)
 
     if (exists && !overwrite) {
-        log.warn(`Existing file: '${filename}', use --force to overwrite.`)
+        log.warn(`Existing file: '${filepath}', use --force to overwrite.`)
         return
     }
 

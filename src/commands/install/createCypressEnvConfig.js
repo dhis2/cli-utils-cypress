@@ -2,6 +2,7 @@ const log = require('@dhis2/cli-helpers-engine').reporter
 const inquirer = require('inquirer')
 
 const { write } = require('../../utils/fs.js')
+const { CYPRESS_CONFIG_ENV_PATH } = require('../../utils/paths.js')
 
 const createCypressEnvConfig = async force => {
     const prompt = inquirer.createPromptModule()
@@ -28,7 +29,7 @@ const createCypressEnvConfig = async force => {
     ])
 
     write(
-        'cypress.env.json',
+        CYPRESS_CONFIG_ENV_PATH,
         {
             dhis2_base_url: envAnswers.dhis2Url,
             dhis2_username: envAnswers.username,

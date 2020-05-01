@@ -1,12 +1,11 @@
-const path = require('path')
 const inquirer = require('inquirer')
-
-const { CYPRESS_SUPPORT } = require('../../utils/paths.js')
 const { addToJson, copy, readJson } = require('../../utils/fs.js')
-
-const TEMPLATE_PATH = path.join(__dirname, '../../../templates')
-const SUPPORT_FILE_SOURCE = path.join(TEMPLATE_PATH, 'support.js')
-const SUPPORT_FILE_DESTINATION = path.join(CYPRESS_SUPPORT, 'index.js')
+const {
+    PACKAGE_JSON,
+    CYPRESS_CONFIG_ENV_PATH,
+    CYPRESS_SUPPORT_FILE_SOURCE,
+    CYPRESS_SUPPORT_FILE_DESTINATION,
+} = require('../../utils/paths.js')
 
 const extractOrgName = moduleName => {
     const matches = moduleName.match(/^@[^/]+(?=\/)/)
@@ -30,9 +29,9 @@ const extractAppName = moduleName => {
 
 const createCypressSupportFile = async force => {
     const prompt = inquirer.createPromptModule()
-    copy(SUPPORT_FILE_SOURCE, SUPPORT_FILE_DESTINATION, force)
+    copy(CYPRESS_SUPPORT_FILE_SOURCE, CYPRESS_SUPPORT_FILE_DESTINATION, force)
 
-    const packageJson = readJson('package.json')
+    const packageJson = readJson(PACKAGE_JSON)
     const moduleName = packageJson ? packageJson.name : ''
     const orgName = extractOrgName(moduleName)
     const appName = extractAppName(moduleName)
@@ -51,7 +50,7 @@ const createCypressSupportFile = async force => {
         },
     ])
 
-    addToJson('cypress.env.json', {
+    addToJson(CYPRESS_CONFIG_ENV_PATH, {
         dhis2_datatest_prefix: envAnswers.dhis2DatatestPrefix,
     })
 }
