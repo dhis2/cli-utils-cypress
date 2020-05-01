@@ -14,6 +14,63 @@ const {
     CYPRESS_SUPPORT,
 } = require('../utils/paths.js')
 
+const extractOrgName = moduleName => {
+    const matches = moduleName.match(/^@[^/]+(?=\/)/)
+
+    if (!matches || !matches.length) {
+        return 'dhis2'
+    }
+
+    const [orgNameWithAtSymbol] = matches
+    return orgNameWithAtSymbol.replace('@', '')
+}
+
+const extractAppName = moduleName => {
+    const matches = moduleName.match(/^@[^/]+\/(.+)$/)
+    const appName = matches && matches.length > 1 ? matches[1] : moduleName
+
+    return appName
+        .replace(/-app$/, '') // dhis2 apps' names end with "app"
+        .replace(/\W/g, '')
+}
+
+const readJson = filename => {
+    const filepath = path.join(CONSUMING_ROOT, filename)
+    const exists = fs.existsSync(filepath)
+
+    if (!exists) {
+        log.warn(`File: '${filename}' does not exist`)
+        return
+    }
+
+    let content
+    try {
+        content = JSON.parse(fs.readFileSync(filepath))
+    } catch (e) {
+        log.error(`Could not parse contents of file: '${filename}'`)
+        return
+    }
+
+    return content
+}
+
+const addToJson = (filename, data, overwrite = false) => {
+    const filepath = path.join(CONSUMING_ROOT, filename)
+    const exists = fs.existsSync(filepath)
+
+    if (!exists) {
+        log.warn(`File: '${filename}' does not exist`)
+        return
+    }
+
+    if (overwrite) {
+        return write(filename, data, true)
+    }
+
+    const existingData = readJson(filename)
+    return write(filename, { ...existingData, ...data }, true)
+}
+
 const write = (filename, data, overwrite) => {
     const filepath = path.join(CONSUMING_ROOT, filename)
     const exists = fs.existsSync(filepath)
@@ -207,6 +264,29 @@ exports.handler = async argv => {
             )
             const supTo = path.join(CYPRESS_SUPPORT, 'index.js')
             copy(supFrom, supTo, force)
+
+            const packageJson = readJson('package.json')
+            const moduleName = packageJson ? packageJson.name : ''
+            const orgName = extractOrgName(moduleName)
+            const appName = extractAppName(moduleName)
+            const prefixDefault = [
+                ...(orgName ? [orgName] : []),
+                ...(appName ? [appName] : []),
+            ].join('-')
+
+            const envAnswers = await prompt([
+                {
+                    type: 'input',
+                    name: 'dhis2DatatestPrefix',
+                    message:
+                        'The prefix for the cy.get data-test attributes of the app (e. g. "dhis2-appname-"):',
+                    ...(prefixDefault ? { default: prefixDefault } : {}),
+                },
+            ])
+
+            addToJson('cypress.env.json', {
+                dhis2_datatest_prefix: envAnswers.dhis2DatatestPrefix,
+            })
         }
     } catch (e) {
         log.error(e)
