@@ -1,6 +1,6 @@
 const { run } = require('../utils/run.js')
 
-exports.cypress = ({ mode, headless, port, browser, config }) => {
+exports.cypress = ({ mode, headless, port, browser, config, exec = true }) => {
     const cmd = 'npx'
 
     const modeArgs = mode === 'run' ? [...(headless ? [] : ['--headed'])] : []
@@ -15,6 +15,10 @@ exports.cypress = ({ mode, headless, port, browser, config }) => {
         ...modeArgs,
     ]
 
-    console.log(process.cwd())
-    run(cmd, { args })
+    if (exec) {
+        console.log(process.cwd())
+        return run(cmd, { args })
+    }
+
+    return [cmd, ...args].join(' ')
 }
