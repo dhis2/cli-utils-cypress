@@ -30,7 +30,9 @@ const createCypressConfig = async force => {
         {
             baseUrl: cypressAnswers.baseUrl,
             video: cypressAnswers.video,
-            ...(cypressAnswers.projectId ? [cypressAnswers.projectId] : []),
+            ...(cypressAnswers.projectId
+                ? { projectId: cypressAnswers.projectId }
+                : {}),
         },
         force
     )
