@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/dhis2/cli-utils-cypress/compare/v2.1.0...v2.2.0) (2020-05-07)
+
+
+### Features
+
+* add concurrently & wait-on command ([#34](https://github.com/dhis2/cli-utils-cypress/issues/34)) ([b1d067b](https://github.com/dhis2/cli-utils-cypress/commit/b1d067ba5f085aff4040852a6a10f2cddab958d1))
+
 # [2.1.0](https://github.com/dhis2/cli-utils-cypress/compare/v2.0.0...v2.1.0) (2020-05-01)
 
 
