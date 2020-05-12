@@ -1,4 +1,7 @@
+const exec = require('@dhis2/cli-helpers-engine').exec
+const log = require('@dhis2/cli-helpers-engine').reporter
 const inquirer = require('inquirer')
+
 const { addToJson, copy, readJson } = require('../../utils/fs.js')
 const {
     PACKAGE_JSON,
@@ -6,6 +9,8 @@ const {
     CYPRESS_SUPPORT_FILE_SOURCE,
     CYPRESS_SUPPORT_FILE_DESTINATION,
 } = require('../../utils/paths.js')
+
+const CYPRESS_COMMANDS_PACKAGE_NAME = '@dhis2/cypress-commands'
 
 const extractOrgName = moduleName => {
     const matches = moduleName.match(/^@[^/]+(?=\/)/)
@@ -27,8 +32,52 @@ const extractAppName = moduleName => {
         .replace(/\W/g, '')
 }
 
-const createCypressSupportFile = async force => {
+const promptForPackageManager = async prompt => {
+    let packageManager = ''
+
+    const userInput = await prompt([
+        {
+            type: 'list',
+            name: 'packageManager',
+            message:
+                'This step will install the @dhis2/cypress-commands package. Choose your package manager',
+            choices: ['yarn', 'npm', 'skip'],
+            default: 0,
+        },
+    ])
+
+    packageManager = userInput.packageManager
+
+    return packageManager
+}
+
+const installSupportPackage = packageManager => {
+    const packageManagerArgs =
+        packageManager === 'yarn' ? ['add', '--dev'] : ['install', '-D']
+    const args = [...packageManagerArgs, CYPRESS_COMMANDS_PACKAGE_NAME]
+
+    return exec({ cmd: packageManager, args })
+}
+
+const createCypressSupportFile = async (force, verbose) => {
+    let packageManager
     const prompt = inquirer.createPromptModule()
+
+    try {
+        packageManager = await promptForPackageManager(prompt)
+    } catch (e) {
+        log.error(e.message)
+        return
+    }
+
+    if (packageManager !== 'skip') {
+        try {
+            await installSupportPackage(packageManager, verbose)
+        } catch (e) {
+            return
+        }
+    }
+
     copy(CYPRESS_SUPPORT_FILE_SOURCE, CYPRESS_SUPPORT_FILE_DESTINATION, force)
 
     const packageJson = readJson(PACKAGE_JSON)

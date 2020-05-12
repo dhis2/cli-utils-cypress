@@ -41,12 +41,24 @@ exports.builder = yargs =>
             type: 'boolean',
             default: false,
         })
+        .option('verbose', {
+            describe: 'Detailed output',
+            type: 'boolean',
+            default: false,
+        })
 
 exports.handler = async argv => {
     log.info('d2-utils-cypress > install')
 
     try {
-        const { force, cypressConfig, cypressEnv, cucumber, support } = argv
+        const {
+            force,
+            cypressConfig,
+            cypressEnv,
+            cucumber,
+            support,
+            verbose,
+        } = argv
 
         ensureDirectories()
 
@@ -63,7 +75,7 @@ exports.handler = async argv => {
         }
 
         if (support) {
-            await createCypressSupportFile(force)
+            await createCypressSupportFile(force, verbose)
         }
     } catch (e) {
         log.error(e)
