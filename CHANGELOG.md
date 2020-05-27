@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/dhis2/cli-utils-cypress/compare/v2.2.0...v2.2.1) (2020-05-27)
+
+
+### Bug Fixes
+
+* remove require statements that causes support index file to throw an err ([#40](https://github.com/dhis2/cli-utils-cypress/issues/40)) ([e3dfe1d](https://github.com/dhis2/cli-utils-cypress/commit/e3dfe1d527f0fcc36ec447a1a8709f8691629343))
+
 # [2.2.0](https://github.com/dhis2/cli-utils-cypress/compare/v2.1.0...v2.2.0) (2020-05-07)
 
 
