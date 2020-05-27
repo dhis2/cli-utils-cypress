@@ -19,7 +19,10 @@ const CUCUMBER_PLUGIN_TEMPLATE_DESTINATION = path.join(
     CYPRESS_PLUGINS,
     'index.js'
 )
-const CUCUMBER_CONFIG_TEMPLATE_SOURCE = path.join(TEMPLATES, 'plugins.js')
+const CUCUMBER_CONFIG_TEMPLATE_SOURCE = path.join(
+    TEMPLATES,
+    'cucumber-config.js'
+)
 const CUCUMBER_CONFIG_TEMPLATE_DESTINATION = path.join(
     CONSUMING_ROOT,
     'cypress-cucumber-preprocessor.config.js'
