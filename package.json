@@ -43,6 +43,6 @@
     },
     "devDependencies": {
         "@dhis2/cli-style": "^6.0.0",
-        "@dhis2/cli-utils-docsite": "^1.3.0"
+        "@dhis2/cli-utils-docsite": "^2.0.0"
     }
 }
