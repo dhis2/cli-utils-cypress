@@ -55,7 +55,7 @@ const get = (originalFn, selectors, options = {}) => {
  * because Cypress doesn't allow multiple domains per test:
  * https://docs.cypress.io/guides/guides/web-security.html#One-Superdomain-per-Test
  */
-const loginEndPoint = 'dhis-web-commons/security/login.action'
+const loginEndPoint = 'dhis-web-commons-security/login.action'
 const login = () => {
     const username = Cypress.env('dhis2_username')
     const password = Cypress.env('dhis2_password')
