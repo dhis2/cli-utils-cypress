@@ -60,17 +60,17 @@ const login = () => {
     const username = Cypress.env('dhis2_username')
     const password = Cypress.env('dhis2_password')
     const loginUrl = Cypress.env('dhis2_base_url')
-    const loginAuth = `Basic ${btoa(`${username}:${password}`)}`
 
     return cy.request({
         url: `${loginUrl}/${loginEndPoint}`,
         method: 'POST',
+        form: true,
+        followRedirect: true,
         body: {
             j_username: username,
             j_password: password,
             '2fa_code': '',
         },
-        headers: { Authorization: loginAuth },
     })
 }
 
