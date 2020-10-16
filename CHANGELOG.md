@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/dhis2/cli-utils-cypress/compare/v2.2.1...v2.2.2) (2020-10-16)
+
+
+### Bug Fixes
+
+* correct url and needed props for login command ([#78](https://github.com/dhis2/cli-utils-cypress/issues/78)) ([d0d1bcf](https://github.com/dhis2/cli-utils-cypress/commit/d0d1bcf9c1e3621e9dd2549224ab27fb26765871))
+
 ## [2.2.1](https://github.com/dhis2/cli-utils-cypress/compare/v2.2.0...v2.2.1) (2020-05-27)
 
 
