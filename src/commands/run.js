@@ -17,7 +17,13 @@ exports.builder = yargs =>
 
 exports.handler = argv => {
     const { appStart, headed, port, browser, waitOn, spec } = argv
-    const cypressOptions = { mode: 'run', headless: !headed, browser, port, spec }
+    const cypressOptions = {
+        mode: 'run',
+        headless: !headed,
+        browser,
+        port,
+        spec,
+    }
 
     log.info('d2-utils-cypress > run')
     execCypress({ appStart, waitOn, cypressOptions })

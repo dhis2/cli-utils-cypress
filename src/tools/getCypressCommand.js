@@ -1,4 +1,11 @@
-exports.getCypressCommand = ({ mode, headless, port, browser, config, spec }) => {
+exports.getCypressCommand = ({
+    mode,
+    headless,
+    port,
+    browser,
+    config,
+    spec,
+}) => {
     const cmd = 'npx'
 
     const modeArgs = mode === 'run' ? [...(headless ? [] : ['--headed'])] : []
@@ -10,7 +17,7 @@ exports.getCypressCommand = ({ mode, headless, port, browser, config, spec }) =>
         ...(port ? ['--port', port] : []),
         ...(browser ? ['--browser', browser] : []),
         ...(config ? ['--config', config] : []),
-        ...(spec ? ['--spec', spec]: []),
+        ...(spec ? ['--spec', spec] : []),
         ...modeArgs,
     ]
 
