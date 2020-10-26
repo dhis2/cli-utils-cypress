@@ -9,8 +9,8 @@ exports.builder = yargs =>
     yargs.option('appStart', appStart).option('waitOn', waitOn)
 
 exports.handler = argv => {
-    const { appStart, port, browser, waitOn } = argv
-    const cypressOptions = { mode: 'open', browser, port }
+    const { appStart, port, browser, waitOn, spec } = argv
+    const cypressOptions = { mode: 'open', browser, port, spec }
 
     log.info('d2-utils-cypress > open')
     execCypress({ appStart, waitOn, cypressOptions })
