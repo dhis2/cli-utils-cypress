@@ -1,3 +1,16 @@
+# [3.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v2.2.2...v3.0.0) (2020-10-29)
+
+
+### Code Refactoring
+
+* turn repository a monorepo ([#37](https://github.com/dhis2/cli-utils-cypress/issues/37)) ([66f2d3e](https://github.com/dhis2/cli-utils-cypress/commit/66f2d3eb681694e041eecc38d9c77f7353bca138))
+
+
+### BREAKING CHANGES
+
+* Adopting to this change requires manual installation of
+the @dhis2/cypress-commands package
+
 ## [2.2.2](https://github.com/dhis2/cli-utils-cypress/compare/v2.2.1...v2.2.2) (2020-10-16)
 
 

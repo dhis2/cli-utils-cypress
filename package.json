@@ -23,5 +23,6 @@
         "format:staged": "yarn format:js --staged && yarn format:text --staged",
         "docs:build": "d2-utils-docsite build ./docs -o ./dist --jsdoc src/ --jsdocOutputFile api.md",
         "docs:start": "d2-utils-docsite serve ./docs -o ./dist --jsdoc src/ --jsdocOutputFile api.md"
-    }
+    },
+    "version": "3.0.0"
 }
