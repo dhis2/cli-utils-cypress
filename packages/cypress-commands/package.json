@@ -16,6 +16,9 @@
         "@dhis2/cli-style": "^7.0.0",
         "@dhis2/cli-app-scripts": "^4.0.4"
     },
+    "publishConfig": {
+        "access": "public"
+    },
     "scripts": {
         "build": "d2-app-scripts build"
     }
