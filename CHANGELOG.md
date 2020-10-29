@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v3.0.0...v3.0.1) (2020-10-29)
+
+
+### Bug Fixes
+
+* **cypress commands release:** add publish config to package.json ([#85](https://github.com/dhis2/cli-utils-cypress/issues/85)) ([056f0a8](https://github.com/dhis2/cli-utils-cypress/commit/056f0a81c580dfde05183439a34fc789aec46c09))
+
 # [3.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v2.2.2...v3.0.0) (2020-10-29)
 
 
