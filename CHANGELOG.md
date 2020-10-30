@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/dhis2/cli-utils-cypress/compare/v3.0.1...v3.0.2) (2020-10-30)
+
+
+### Bug Fixes
+
+* **cypress commands release:** run build script before deploying ([#86](https://github.com/dhis2/cli-utils-cypress/issues/86)) ([c717d1f](https://github.com/dhis2/cli-utils-cypress/commit/c717d1f64fb91dbd5c53d3e91ec286428e1d5995))
+
 ## [3.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v3.0.0...v3.0.1) (2020-10-29)
 
 
