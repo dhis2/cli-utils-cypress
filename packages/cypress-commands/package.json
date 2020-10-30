@@ -14,7 +14,7 @@
     "private": false,
     "devDependencies": {
         "@dhis2/cli-style": "^7.0.0",
-        "@dhis2/cli-app-scripts": "^4.0.4"
+        "@dhis2/cli-app-scripts": "^5.4.0"
     },
     "publishConfig": {
         "access": "public"
