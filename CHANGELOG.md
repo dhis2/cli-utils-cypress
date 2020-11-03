@@ -1,3 +1,10 @@
+## [3.0.3](https://github.com/dhis2/cli-utils-cypress/compare/v3.0.2...v3.0.3) (2020-11-02)
+
+
+### Bug Fixes
+
+* check for element existence using length as 'find' always returns an object ([#88](https://github.com/dhis2/cli-utils-cypress/issues/88)) ([1848f2e](https://github.com/dhis2/cli-utils-cypress/commit/1848f2e8b35f96756fc2e6f3efd9df97eab3c05a))
+
 ## [3.0.2](https://github.com/dhis2/cli-utils-cypress/compare/v3.0.1...v3.0.2) (2020-10-30)
 
 

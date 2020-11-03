@@ -22,7 +22,7 @@ const loginDev = () => {
     cy.visit('/')
     cy.get('body')
         .then($body => {
-            if (!$body.find('input#server')) return cy.wrap(false)
+            if (!$body.find('input#server').length) return cy.wrap(false)
 
             const loginUrl = Cypress.env('dhis2_base_url')
             const username = Cypress.env('dhis2_username')
