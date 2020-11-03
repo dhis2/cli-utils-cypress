@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/dhis2/cli-utils-cypress/compare/v3.0.3...v3.1.0) (2020-11-03)
+
+
+### Features
+
+* enable cucumber tags for cli run command ([#90](https://github.com/dhis2/cli-utils-cypress/issues/90)) ([9132626](https://github.com/dhis2/cli-utils-cypress/commit/9132626a2959a7dfd6815b7ab1b4ac5bd0d18b0f))
+
 ## [3.0.3](https://github.com/dhis2/cli-utils-cypress/compare/v3.0.2...v3.0.3) (2020-11-02)
 
 
