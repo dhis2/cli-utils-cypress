@@ -12,12 +12,23 @@ exports.builder = yargs =>
             type: 'boolean',
             default: false,
         })
+        .option('tags', {
+            describe: 'Use cucumber tags',
+            type: 'string',
+            default: '',
+        })
         .option('appStart', appStart)
         .option('waitOn', waitOn)
 
 exports.handler = argv => {
-    const { appStart, headed, port, browser, waitOn } = argv
-    const cypressOptions = { mode: 'run', headless: !headed, browser, port }
+    const { appStart, headed, port, tags, browser, waitOn } = argv
+    const cypressOptions = {
+        mode: 'run',
+        headless: !headed,
+        browser,
+        port,
+        tags,
+    }
 
     log.info('d2-utils-cypress > run')
     execCypress({ appStart, waitOn, cypressOptions })
