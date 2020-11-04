@@ -1,0 +1,7 @@
+li.item {
+    background-color: var(--colors-grey200);
+}
+
+li.item:hover {
+    background-color: var(--colors-grey300);
+}

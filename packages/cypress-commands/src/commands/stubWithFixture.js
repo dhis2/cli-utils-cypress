@@ -1,8 +1,8 @@
 /**
  * @param {Object} args
- * @param {string} args.methog
  * @param {string} args.url
  * @param {string} args.fixture
+ * @param {string} [args.methog] - Defaults to 'GET'
  * @returns {Cypress}
  */
 export const stubWithFixture = ({ method = 'GET', url, fixture }) => {

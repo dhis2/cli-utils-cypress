@@ -20,6 +20,7 @@
         "access": "public"
     },
     "scripts": {
-        "build": "d2-app-scripts build"
+        "build": "d2-app-scripts build",
+        "test": "d2-app-scripts test"
     }
 }

@@ -2,7 +2,8 @@
     "private": true,
     "workspaces": [
         "./packages/cli",
-        "./packages/cypress-commands"
+        "./packages/cypress-commands",
+        "./packages/testing-app"
     ],
     "author": "Viktor Varland <viktor@dhis2.org>",
     "contributors": [
@@ -23,7 +24,9 @@
         "format:staged": "yarn format:js --staged && yarn format:text --staged",
         "docs:build": "d2-utils-docsite build ./docs -o ./dist --jsdoc src/ --jsdocOutputFile api.md",
         "docs:start": "d2-utils-docsite serve ./docs -o ./dist --jsdoc src/ --jsdocOutputFile api.md",
-        "build": "yarn workspace @dhis2/cypress-commands build"
+        "build": "yarn workspace @dhis2/cypress-commands build",
+        "cy:test:functionality": "cd ./testing-app && yarn cy:run",
+        "test": "cy:test:functionality"
     },
     "version": "3.1.2"
 }
