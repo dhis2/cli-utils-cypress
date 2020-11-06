@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/dhis2/cli-utils-cypress/compare/v3.1.0...v3.1.1) (2020-11-06)
+
+
+### Bug Fixes
+
+* cut release to complete migration to jira ([e6bda2b](https://github.com/dhis2/cli-utils-cypress/commit/e6bda2bf3f9e4629e249dc2819e8e902837f8fed))
+
 # [3.1.0](https://github.com/dhis2/cli-utils-cypress/compare/v3.0.3...v3.1.0) (2020-11-03)
 
 
