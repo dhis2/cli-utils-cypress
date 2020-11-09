@@ -13,7 +13,7 @@
     "license": "BSD-3-Clause",
     "private": false,
     "devDependencies": {
-        "@dhis2/cli-style": "^7.2.1",
+        "@dhis2/cli-style": "^7.2.2",
         "@dhis2/cli-app-scripts": "^4.0.4"
     },
     "publishConfig": {

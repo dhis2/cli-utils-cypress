@@ -1636,18 +1636,18 @@
     handlebars "^4.5.3"
     isbinaryfile "^4.0.2"
 
-"@dhis2/cli-style@^7.2.1":
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/@dhis2/cli-style/-/cli-style-7.2.1.tgz#bbc2d8f8b7145ec2f7755256ec57ae52b46305e5"
-  integrity sha512-h7X6LGnUtR5GD8Dg8rRHtzdSgzKTZj2vFguDcF4qNQheE5v4mksyaZHTcc7CKTkp7kENK3ifMNTajG2fhkEFKQ==
+"@dhis2/cli-style@^7.2.2":
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/@dhis2/cli-style/-/cli-style-7.2.2.tgz#b163107d5ce2e5b826154ae5e01da5cda1acfd26"
+  integrity sha512-6NSJqk+Q5gS+SoX+468lS3wUfeoZ/cDs8Mf7GvvgjGeQiCBxZbFVHgdKlNmYoNtf9iQhicHPvyHYkWed1E2EJg==
   dependencies:
     "@commitlint/cli" "^11.0.0"
     "@commitlint/config-conventional" "^11.0.0"
     "@dhis2/cli-helpers-engine" "2.0.1"
     babel-eslint "^10.1.0"
     cross-spawn "^7.0.3"
-    eslint "^7.12.0"
-    eslint-config-prettier "^6.14.0"
+    eslint "^7.12.1"
+    eslint-config-prettier "^6.15.0"
     eslint-plugin-import "^2.22.1"
     eslint-plugin-prettier "^3.1.4"
     eslint-plugin-react "^7.21.5"
@@ -5910,7 +5910,7 @@ escodegen@^1.11.0, escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@^6.14.0:
+eslint-config-prettier@^6.15.0:
   version "6.15.0"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.15.0.tgz#7f93f6cb7d45a92f1537a70ecc06366e1ac6fed9"
   integrity sha512-a1+kOYLR8wMGustcgAjdydMsQ2A/2ipRPwRKUmfYaSxc9ZPcrku080Ctl6zrZzZNs/U82MjSv+qKREkoq3bJaw==
@@ -6140,10 +6140,10 @@ eslint@^6.6.0:
     text-table "^0.2.0"
     v8-compile-cache "^2.0.3"
 
-eslint@^7.12.0:
-  version "7.12.1"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.12.1.tgz#bd9a81fa67a6cfd51656cdb88812ce49ccec5801"
-  integrity sha512-HlMTEdr/LicJfN08LB3nM1rRYliDXOmfoO4vj39xN6BLpFzF00hbwBoqHk8UcJ2M/3nlARZWy/mslvGEuZFvsg==
+eslint@^7.12.1:
+  version "7.13.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.13.0.tgz#7f180126c0dcdef327bfb54b211d7802decc08da"
+  integrity sha512-uCORMuOO8tUzJmsdRtrvcGq5qposf7Rw0LwkTJkoDbOycVQtQjmnhZSuLQnozLE4TmAzlMVV45eCHmQ1OpDKUQ==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@eslint/eslintrc" "^0.2.1"
