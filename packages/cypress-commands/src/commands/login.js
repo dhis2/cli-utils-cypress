@@ -31,7 +31,7 @@ const loginDev = () => {
             cy.get('#server').type(loginUrl)
             cy.get('#j_username').type(username)
             cy.get('#j_password').type(password)
-            cy.get('{button}', { prefix: 'dhis2-uicore' }).click()
+            cy.get('{loginsubmit}', { prefix: 'dhis2-adapter' }).click()
 
             return cy.wrap(true)
         })
