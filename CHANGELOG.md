@@ -1,3 +1,10 @@
+## [3.1.2](https://github.com/dhis2/cli-utils-cypress/compare/v3.1.1...v3.1.2) (2020-11-17)
+
+
+### Bug Fixes
+
+* update the login button target ([154c1a4](https://github.com/dhis2/cli-utils-cypress/commit/154c1a4394fa07ea844fa3115b92bb60ec5eba35))
+
 ## [3.1.1](https://github.com/dhis2/cli-utils-cypress/compare/v3.1.0...v3.1.1) (2020-11-06)
 
 
