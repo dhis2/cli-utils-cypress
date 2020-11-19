@@ -14,3 +14,5 @@ export const find = (originalFn, subject, selectors, options = {}) => {
     const selector = parseSelectorWithDataTest(selectors, prefix)
     return originalFn(subject, selector, restOptions)
 }
+
+Cypress.Commands.overwrite('find', find)

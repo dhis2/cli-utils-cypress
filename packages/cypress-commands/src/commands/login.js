@@ -1,4 +1,4 @@
-const LOGIN_END_POINT = 'dhis-web-commons-security/login.action'
+import { LOGIN_ENDPOINT } from '../constants'
 
 const loginBasicAuth = () => {
     const username = Cypress.env('dhis2_username')
@@ -6,7 +6,7 @@ const loginBasicAuth = () => {
     const loginUrl = Cypress.env('dhis2_base_url')
 
     return cy.request({
-        url: `${loginUrl}/${LOGIN_END_POINT}`,
+        url: `${loginUrl}/${LOGIN_ENDPOINT}`,
         method: 'POST',
         form: true,
         followRedirect: true,
@@ -53,5 +53,14 @@ const loginDev = () => {
  * https://docs.cypress.io/guides/guides/web-security.html#One-Superdomain-per-Test
  */
 export const login = () => {
+    ;[
+        'DEPRICATION WARNING:',
+        'The `login` function will is an older version.',
+        'It is left in place to prevent breakage.',
+        'Please use either the `loginThroughForm` command or `autoLogin` setup.',
+    ].forEach(message => cy.log(message))
+
     return loginDev()
 }
+
+Cypress.Commands.add('login', login)
