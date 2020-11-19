@@ -12,3 +12,5 @@ export const visitWhenStubbed = (url, options = {}) => {
         },
     })
 }
+
+Cypress.Commands.add('visitWhenStubbed', visitWhenStubbed)

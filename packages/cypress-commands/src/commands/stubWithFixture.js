@@ -12,3 +12,5 @@ export const stubWithFixture = ({ method = 'GET', url, fixture }) => {
         response: `fixture:${fixture}`,
     })
 }
+
+Cypress.Commands.add('stubWithFixture', stubWithFixture)

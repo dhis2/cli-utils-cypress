@@ -14,3 +14,5 @@ export const get = (originalFn, selectors, options = {}) => {
     const selector = parseSelectorWithDataTest(selectors, prefix)
     return originalFn(selector, restOptions)
 }
+
+Cypress.Commands.overwrite('get', get)
