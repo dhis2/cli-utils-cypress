@@ -1,3 +1,10 @@
+## [3.1.3](https://github.com/dhis2/cli-utils-cypress/compare/v3.1.2...v3.1.3) (2020-11-19)
+
+
+### Bug Fixes
+
+* **run command:** make command exit correctly ([249c587](https://github.com/dhis2/cli-utils-cypress/commit/249c5876f85e10e9b09d46aa497f07f700a761c4))
+
 ## [3.1.2](https://github.com/dhis2/cli-utils-cypress/compare/v3.1.1...v3.1.2) (2020-11-17)
 
 
