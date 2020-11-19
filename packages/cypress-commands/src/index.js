@@ -9,6 +9,8 @@ import './commands/visitWhenStubbed'
 export { dataTestNameToSelector } from './helper/dataTestNameToSelector'
 export { parseSelectorWithDataTest } from './helper/parseSelectorWithDataTest'
 
+// setup helpers
+export { enableAutoLogin } from './setups/enableAutoLogin'
 
 // backward compatibility
 export const registerCommands = () => {
