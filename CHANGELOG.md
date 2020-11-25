@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/dhis2/cli-utils-cypress/compare/v3.1.3...v3.2.0) (2020-11-25)
+
+
+### Features
+
+* **auto login:** add setup function for enabling autologin ([cf4cd78](https://github.com/dhis2/cli-utils-cypress/commit/cf4cd7850f2511aa7cf0fd71e0b16704c7d8574c))
+
 ## [3.1.3](https://github.com/dhis2/cli-utils-cypress/compare/v3.1.2...v3.1.3) (2020-11-19)
 
 
