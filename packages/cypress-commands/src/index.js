@@ -2,8 +2,6 @@
 import './commands/find'
 import './commands/get'
 import './commands/login'
-import './commands/stubWithFixture'
-import './commands/visitWhenStubbed'
 
 // helpers
 export { dataTestNameToSelector } from './helper/dataTestNameToSelector'
