@@ -1,3 +1,21 @@
+# [4.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v3.2.0...v4.0.0) (2020-11-26)
+
+
+### Bug Fixes
+
+* **enable auto login:** preserve JSESSIONID cookie correctly after api update ([402d597](https://github.com/dhis2/cli-utils-cypress/commit/402d5971b6b53b5e4871f8744b82a982524f2ee6))
+
+
+### Code Refactoring
+
+* **commands:** remove superfluous commands ([ab58063](https://github.com/dhis2/cli-utils-cypress/commit/ab580636e7bb4fe28efa12bf8554d8608da92105))
+
+
+### BREAKING CHANGES
+
+* **commands:** Removes "stubWithFixture" and "visitWhenStubbed"
+commands. Usage of native cypress functions is preferred
+
 # [3.2.0](https://github.com/dhis2/cli-utils-cypress/compare/v3.1.3...v3.2.0) (2020-11-25)
 
 

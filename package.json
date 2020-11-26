@@ -25,5 +25,5 @@
         "docs:start": "d2-utils-docsite serve ./docs -o ./dist --jsdoc src/ --jsdocOutputFile api.md",
         "build": "yarn workspace @dhis2/cypress-commands build"
     },
-    "version": "3.2.0"
+    "version": "4.0.0"
 }
