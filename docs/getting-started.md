@@ -1,6 +1,13 @@
-# Install the tool
+# Introduction
 
-First up, add the tool as a development dependency in your project.
+The cypress utilities is a collection of npm modules that help with running
+cypress, cucumber/gherkin feature files and provide some commands for a more
+convenient test development process.
+
+## Install the cli tool
+
+First up, add the tool as a development dependency in your project. It is
+required to execute the tests.
 
 ```
 yarn add --dev @dhis2/cli-utils-cypress
@@ -14,33 +21,26 @@ yarn d2-utils-cypress
 npx --no-install d2-utils-cypress
 ```
 
-We are going to use `d2-utils-cypress` in this document, so prefix the
-commands with your preference.
+## Install the cypress commands
 
-# Setup Cypress for your project
-
-The CLI module provides an `install` command, that will set up some
-prerequisites for Cypress, and guide you through generating a
-configuration and a local environment configuration file.
+When using the cli tool's `install` command, this will be handled for you.
+Please refer to the [**Setup Cypress for your
+project**](guides/setting-up-cli-tool) guide for more detailed information. If
+you need to install the commands manually, then you can do so by running:
 
 ```
-d2-utils-cypress install
+yarn add --dev @dhis2/cypress-commands
+# or
+npm install -D @dhis2/cypress-commands
 ```
 
-There are additional options to do more specific configuration as well,
-check out all the options with the `--help` command.
+If you're just interested in the commands, you just need to import the file in
+your support file
 
-E.g. to set up Cypress without the support scripts:
+```js
+// support files, defaults to cypress/support/index.js
+import '@dhis2/cypress-commands'
+```
 
-```
-d2-utils-cypress install --no-support
-```
-
-And to install without the Cypress configuration, for example on a
-developer machine:
-
-```
-d2-utils-cypress install \
-    --no-cypress-config \
-    --no-support
-```
+For setup helpers, please have a look at the documentation for the available
+setup functionality.
