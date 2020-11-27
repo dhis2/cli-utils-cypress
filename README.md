@@ -3,6 +3,10 @@
 > This package is part of the [@dhis2/cli](https://github.com/dhis2/cli)
 > commandline interface.
 
+## Docs
+
+You can find the docs [here](https://cli-utils-cypress.dhis2.nu/#/)
+
 ## Report an issue
 
 The issue tracker can be found in [DHIS2 JIRA](https://jira.dhis2.org)

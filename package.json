@@ -21,8 +21,8 @@
         "format:js": "d2-style js apply",
         "format:text": "d2-style text apply",
         "format:staged": "yarn format:js --staged && yarn format:text --staged",
-        "docs:build": "d2-utils-docsite build ./docs -o ./dist --jsdoc src/ --jsdocOutputFile api.md",
-        "docs:start": "d2-utils-docsite serve ./docs -o ./dist --jsdoc src/ --jsdocOutputFile api.md",
+        "docs:build": "d2-utils-docsite build ./docs -o ./dist",
+        "docs:start": "d2-utils-docsite serve ./docs -o ./dist",
         "build": "yarn workspace @dhis2/cypress-commands build"
     },
     "version": "4.0.0"
