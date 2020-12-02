@@ -11,6 +11,10 @@
             "name": "Jan-Gerke Salomon",
             "email": "jgs.salomon@gmail.com",
             "url": "https://functionalprogramming.ninja"
+        },
+        {
+            "name": "Hendrik de Graaf",
+            "email": "hendrik@dhis2.org"
         }
     ],
     "scripts": {
