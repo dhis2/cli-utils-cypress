@@ -9,6 +9,7 @@ export { parseSelectorWithDataTest } from './helper/parseSelectorWithDataTest'
 
 // setup helpers
 export { enableAutoLogin } from './setups/enableAutoLogin'
+export { enableNetworkShim } from './setups/enableNetworkShim'
 
 // backward compatibility
 export const registerCommands = () => {
