@@ -1,4 +1,3 @@
-/* globals before */
 export const enableAutoLogin = () => {
     before(() => {
         cy.login()
