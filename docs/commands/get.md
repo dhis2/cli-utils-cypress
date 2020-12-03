@@ -5,7 +5,7 @@ functionality is preserved. Additionally you can use the custom data-test
 attribute syntax.
 
 For a detailed explanation how to use the custom syntax, please refer to the
-[Custom data test syntax](guides/custom_data_test_syntax) guide.
+[Custom data test syntax](guides/custom-data-test-syntax) guide.
 
 ## Arguments
 

@@ -30,37 +30,43 @@ const addToJson = (filepath, data, overwrite = false) => {
     }
 
     if (overwrite) {
-        return write(filepath, data, true)
+        return write(filepath, JSON.stringify(data, null, 4), true)
     }
 
     const existingData = readJson(filepath)
-    return write(filepath, { ...existingData, ...data }, true)
+    const newData = JSON.stringify({ ...existingData, ...data }, null, 4)
+    return write(filepath, newData, true)
+}
+
+const read = filePath => {
+    const exists = fs.existsSync(filePath)
+
+    if (!exists) {
+        log.warn(`Trying to read '${filePath}', it does not exist`)
+        return
+    }
+
+    const contents = fs.readFileSync(filePath, { encoding: 'utf8' })
+    return contents
 }
 
 const write = (filepath, data, overwrite) => {
     const exists = fs.existsSync(filepath)
-    const content = JSON.stringify(data, null, 4)
 
     if (exists && !overwrite) {
         log.warn(`Existing file: '${filepath}', use --force to overwrite.`)
         return
     }
 
-    fs.writeFileSync(filepath, content, { encoding: 'utf8' })
+    fs.writeFileSync(filepath, data, { encoding: 'utf8' })
 }
 
 function copy(from, to, overwrite = true) {
     try {
         const exists = fs.existsSync(to)
         const empty = exists ? fs.statSync(to).size === 0 : false
-
         const replace = empty ? true : overwrite
 
-        if (exists && !replace) {
-            log.print(`Skip existing: ${path.relative(process.cwd(), to)}`)
-        } else {
-            log.print(`Installing: ${path.relative(process.cwd(), to)}`)
-        }
         fs.ensureDirSync(path.dirname(to))
         fs.copySync(from, to, { overwrite: replace })
     } catch (err) {
@@ -73,4 +79,5 @@ module.exports = {
     addToJson,
     write,
     copy,
+    read,
 }
