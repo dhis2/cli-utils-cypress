@@ -4,6 +4,37 @@ const appStart = {
     default: 'yarn start',
 }
 
+const config = {
+    describe: 'Cypress config flags',
+    type: 'string',
+    default: '',
+}
+
+// TODO: Consider removal since this overlaps/clashes with 'config'
+const port = {
+    describe: 'Cypress port',
+    type: 'number',
+}
+
+const serverMinorVersion = {
+    describe: 'Enable netowrk shim stub mode',
+    type: 'number',
+    conflicts: ['--no-capture', '--no-stub'],
+}
+
+const stub = {
+    describe: 'Enable netowrk shim stub mode',
+    type: 'boolean',
+    default: false,
+    implies: 'serverMinorVersion',
+}
+
+const tags = {
+    describe: 'Use cucumber tags',
+    type: 'string',
+    default: '',
+}
+
 const waitOn = {
     describe: 'Url to wait for before running cypress',
     type: 'string',
@@ -12,5 +43,10 @@ const waitOn = {
 
 module.exports = {
     appStart,
+    config,
+    port,
+    serverMinorVersion,
+    stub,
+    tags,
     waitOn,
 }
