@@ -1,0 +1,4 @@
+{
+    "/api/system/info": "/systemInfo",
+    "/api/36/*": "/$1"
+}
