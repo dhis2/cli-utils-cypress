@@ -21,6 +21,7 @@ export const getApiBaseUrl = () => {
 export const getDefaultHosts = () => [getApiBaseUrl()]
 
 export const isDisabledMode = () =>
+    !Cypress.env('dhis2_api_stub_mode') ||
     Cypress.env('dhis2_api_stub_mode') === API_STUB_MODES.DISABLED
 
 export const isCaptureMode = () =>
