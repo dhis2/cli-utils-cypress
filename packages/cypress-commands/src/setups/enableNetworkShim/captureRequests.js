@@ -45,7 +45,12 @@ async function captureRequest(state, request, response) {
 
     if (requestStub) {
         // Repeated request
-        processDuplicatedRequestStub(state, requestStub, text)
+        processDuplicatedRequestStub({
+            state,
+            requestStub,
+            newResponseBody: text,
+            responseStatus: response.statusCode,
+        })
     } else {
         // New request
         state.requests.push({
@@ -67,15 +72,22 @@ async function captureRequest(state, request, response) {
     return response
 }
 
-function processDuplicatedRequestStub(state, requestStub, newResponseBody) {
+function processDuplicatedRequestStub({
+    state,
+    requestStub,
+    newResponseBody,
+    responseStatus,
+}) {
     requestStub.count += 1
     state.duplicates += 1
+    const isNotModified = responseStatus === 304
 
     if (!requestStub.nonDeterministic) {
         // if requestStub.responseBody equals newResponseBody this is a simple
-        // duplicated requestStub and we don't take any action
+        // duplicated request and we don't take any action
+        // And we deal with 304s the same way
 
-        if (requestStub.responseBody !== newResponseBody) {
+        if (requestStub.responseBody !== newResponseBody && !isNotModified) {
             // Switch to nonDeterministic requestStub mode with responseBody array
             state.nonDeterministicResponses += 1
             requestStub.nonDeterministic = true
@@ -87,9 +99,13 @@ function processDuplicatedRequestStub(state, requestStub, newResponseBody) {
         }
     } else {
         // RequestStub was already nonDeterministic, responseBody is already an array
-        const matchingResponseBodyIndex = requestStub.responseBody.findIndex(
-            responseBody => responseBody === newResponseBody
-        )
+        const matchingResponseBodyIndex = isNotModified
+            ? // When isNotModified the response body is empty and the browser is expected
+              // to return the last known response, so we do the same.
+              requestStub.responseBody.lenght - 1
+            : requestStub.responseBody.findIndex(
+                  responseBody => responseBody === newResponseBody
+              )
 
         if (matchingResponseBodyIndex >= 0) {
             // No need to store the responseBody, we already have it
