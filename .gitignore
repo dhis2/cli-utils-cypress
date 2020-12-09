@@ -31,3 +31,6 @@ bundle.stats.json
 
 # d2
 .d2/
+
+# eslint cache
+examples/testing-network-shim-app/.eslintcache
