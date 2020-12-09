@@ -7,21 +7,23 @@
         "@testing-library/react": "^11.1.0",
         "@testing-library/user-event": "^12.1.10",
         "axios": "^0.21.0",
+        "json-server": "^0.16.3",
+        "json-server-reset": "^1.3.0",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "react-scripts": "4.0.1",
-        "web-vitals": "^0.2.4",
-        "json-server": "^0.16.3",
-        "json-server-reset": "^1.3.0"
+        "web-vitals": "^0.2.4"
     },
     "devDependencies": {
-        "@dhis2/cypress-commands": "^4.0.0",
-        "@dhis2/cli-utils-cypress": "^4.0.0"
+        "@dhis2/cli-utils-cypress": "^4.0.0",
+        "@dhis2/cypress-commands": "^4.0.0"
     },
     "scripts": {
         "serve": "json-server src/json-server/db.js --routes ./src/json-server/routes.json --middlewares ./node_modules/json-server-reset --watch -p 1337",
-        "cy:open": "cypress open",
-        "cy:run": "cypress run",
+        "cypress:open": "d2-utils-cypress open --appStart 'yarn start'",
+        "cypress:run": "d2-utils-cypress run --appStart 'yarn start'",
+        "cypress:capture": "d2-utils-cypress run --capture --appStart 'yarn start' --serverMinorVersion 36",
+        "cypress:stub": "d2-utils-cypress run --stub --appStart 'yarn start' --serverMinorVersion 36",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
