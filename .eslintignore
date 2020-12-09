@@ -1,0 +1,14 @@
+# Editor settings
+/.vscode
+
+# dependencies
+node_modules/
+
+# production
+build/
+dist/
+
+# d2
+.d2/
+
+examples/testing-network-shim-app
