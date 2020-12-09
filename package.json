@@ -1,11 +1,9 @@
 {
     "private": true,
-    "workspaces": {
-        "packages": [
-            "./packages/cli",
-            "./packages/cypress-commands"
-        ]
-    },
+    "workspaces": [
+        "./packages/cli",
+        "./packages/cypress-commands"
+    ],
     "author": "Viktor Varland <viktor@dhis2.org>",
     "contributors": [
         {
