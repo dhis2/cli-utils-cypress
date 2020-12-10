@@ -39,7 +39,6 @@
       "content-type": "application/json; charset=utf-8",
       "content-length": "128",
       "etag": "W/\"80-7amB96uJ+4oWmNgr+D5YpTptWdI\"",
-      "date": "Thu, 10 Dec 2020 14:56:56 GMT",
       "connection": "keep-alive"
     },
     "responseLookup": [
@@ -84,7 +83,6 @@
       "access-control-allow-methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
       "access-control-allow-headers": "content-type",
       "content-length": "0",
-      "date": "Thu, 10 Dec 2020 14:56:56 GMT",
       "connection": "keep-alive"
     }
   },
@@ -130,7 +128,6 @@
       "content-type": "application/json; charset=utf-8",
       "content-length": "32",
       "etag": "W/\"20-QExGUU6otpykzJZTdalyVSclFQQ\"",
-      "date": "Thu, 10 Dec 2020 14:56:56 GMT",
       "connection": "keep-alive"
     }
   },
@@ -176,7 +173,6 @@
       "content-type": "application/json; charset=utf-8",
       "content-length": "32",
       "etag": "W/\"20-gZdtianfpW3eUnposZyQoF24weE\"",
-      "date": "Thu, 10 Dec 2020 14:56:56 GMT",
       "connection": "keep-alive"
     }
   },
@@ -212,7 +208,6 @@
       "access-control-allow-credentials": "true",
       "access-control-allow-methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
       "content-length": "0",
-      "date": "Thu, 10 Dec 2020 14:56:57 GMT",
       "connection": "keep-alive"
     }
   },
@@ -252,7 +247,6 @@
       "content-type": "application/json; charset=utf-8",
       "content-length": "2",
       "etag": "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\"",
-      "date": "Thu, 10 Dec 2020 14:56:57 GMT",
       "connection": "keep-alive"
     }
   },
@@ -288,7 +282,6 @@
       "access-control-allow-credentials": "true",
       "access-control-allow-methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
       "content-length": "0",
-      "date": "Thu, 10 Dec 2020 14:56:57 GMT",
       "connection": "keep-alive"
     }
   },
@@ -328,7 +321,6 @@
       "content-type": "application/json; charset=utf-8",
       "content-length": "2",
       "etag": "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\"",
-      "date": "Thu, 10 Dec 2020 14:56:57 GMT",
       "connection": "keep-alive"
     }
   }

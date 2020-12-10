@@ -35,7 +35,6 @@
       "content-type": "application/json; charset=utf-8",
       "content-length": "128",
       "etag": "W/\"80-7amB96uJ+4oWmNgr+D5YpTptWdI\"",
-      "date": "Thu, 10 Dec 2020 14:56:53 GMT",
       "connection": "keep-alive"
     }
   },
@@ -75,7 +74,6 @@
       "content-type": "application/json; charset=utf-8",
       "content-length": "86",
       "etag": "W/\"56-xQIJmK5HFoagWlaw949SaSlIw9U\"",
-      "date": "Thu, 10 Dec 2020 14:56:53 GMT",
       "connection": "keep-alive"
     }
   }

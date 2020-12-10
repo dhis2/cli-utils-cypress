@@ -1,4 +1,5 @@
 import {
+    getApiBaseUrl,
     getFullTestName,
     splitHostAndPath,
     toJsonBlob,
@@ -42,13 +43,14 @@ async function captureRequest(state, request, response) {
         state.requests
     )
     const { size, text } = await toJsonBlob(response.body)
+    const scrubbedText = removeApiEndpointFromResponseBodyBlob(text)
 
     if (requestStub) {
         // Repeated request
         processDuplicatedRequestStub({
             state,
             requestStub,
-            newResponseBody: text,
+            newResponseBody: scrubbedText,
             responseStatus: response.statusCode,
         })
     } else {
@@ -63,9 +65,9 @@ async function captureRequest(state, request, response) {
             requestBody: request.body,
             requestHeaders: request.headers,
             statusCode: response.statusCode,
-            responseBody: text,
+            responseBody: scrubbedText,
             responseSize: size,
-            responseHeaders: response.headers,
+            responseHeaders: clearDateFromResponseHeaders(response.headers),
         })
         state.totalResponseSize += size
     }
@@ -117,4 +119,17 @@ function processDuplicatedRequestStub({
             requestStub.responseLookup.push(requestStub.responseBody.length - 1)
         }
     }
+}
+
+function clearDateFromResponseHeaders(headers) {
+    const headersClone = { ...headers }
+    delete headersClone.date
+
+    return headersClone
+}
+
+function removeApiEndpointFromResponseBodyBlob(text) {
+    const apiEndpointUrl = new RegExp(`${getApiBaseUrl()}/api`, 'gi')
+
+    return text.replace(apiEndpointUrl, '')
 }
