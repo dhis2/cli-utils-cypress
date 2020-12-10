@@ -9,6 +9,7 @@ import createStateFromFixtures from './createStateFromFixtures.js'
 import captureRequests from './captureRequests.js'
 import stubRequests from './stubRequests.js'
 import createFixturesFromState from './createFixturesFromState.js'
+import validateVersionMinor from './validateVersionMinor.js'
 
 export function enableNetworkShim({
     hosts = getDefaultHosts(),
@@ -20,6 +21,9 @@ export function enableNetworkShim({
     }
 
     before(() => {
+        if (isCaptureMode()) {
+            validateVersionMinor()
+        }
         createStateFromFixtures({
             hosts,
             fixtureMode,

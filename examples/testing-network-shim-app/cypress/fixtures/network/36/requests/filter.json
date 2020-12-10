@@ -11,7 +11,7 @@
       "host": "localhost:1337",
       "proxy-connection": "keep-alive",
       "accept": "application/json, text/plain, */*",
-      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/87.0.4280.88 Safari/537.36",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/87.0.4280.88 Safari/537.36",
       "origin": "http://localhost:3000",
       "sec-fetch-site": "same-site",
       "sec-fetch-mode": "cors",
@@ -35,7 +35,7 @@
       "content-type": "application/json; charset=utf-8",
       "content-length": "128",
       "etag": "W/\"80-7amB96uJ+4oWmNgr+D5YpTptWdI\"",
-      "date": "Wed, 09 Dec 2020 15:08:43 GMT",
+      "date": "Thu, 10 Dec 2020 14:56:53 GMT",
       "connection": "keep-alive"
     }
   },
@@ -51,7 +51,7 @@
       "host": "localhost:1337",
       "proxy-connection": "keep-alive",
       "accept": "application/json, text/plain, */*",
-      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/87.0.4280.88 Safari/537.36",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/87.0.4280.88 Safari/537.36",
       "origin": "http://localhost:3000",
       "sec-fetch-site": "same-site",
       "sec-fetch-mode": "cors",
@@ -75,7 +75,7 @@
       "content-type": "application/json; charset=utf-8",
       "content-length": "86",
       "etag": "W/\"56-xQIJmK5HFoagWlaw949SaSlIw9U\"",
-      "date": "Wed, 09 Dec 2020 15:08:44 GMT",
+      "date": "Thu, 10 Dec 2020 14:56:53 GMT",
       "connection": "keep-alive"
     }
   }
