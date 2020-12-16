@@ -2,7 +2,6 @@ import {
     isDisabledMode,
     isCaptureMode,
     getDefaultHosts,
-    getDefaultFixtureMode,
     getDefaultStaticResources,
 } from './utils.js'
 import createStateFromFixtures from './createStateFromFixtures.js'
@@ -13,7 +12,6 @@ import validateVersionMinor from './validateVersionMinor.js'
 
 export function enableNetworkShim({
     hosts = getDefaultHosts(),
-    fixtureMode = getDefaultFixtureMode(),
     staticResources = getDefaultStaticResources(),
 } = {}) {
     if (isDisabledMode()) {
@@ -26,7 +24,6 @@ export function enableNetworkShim({
         }
         createStateFromFixtures({
             hosts,
-            fixtureMode,
             staticResources,
         }).then(state => {
             cy.wrap(state).as('networkShimState')

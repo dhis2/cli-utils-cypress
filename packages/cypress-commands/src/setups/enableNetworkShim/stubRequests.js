@@ -2,7 +2,7 @@ import {
     splitHostAndPath,
     getFullTestName,
     findMatchingRequestStub,
-    isPathStaticResource,
+    isStaticResource,
 } from './utils'
 
 export default function stubRequests(state) {
@@ -31,7 +31,7 @@ function stubRequest(state, request) {
         method: request.method,
         testName: getFullTestName(),
         requestBody: request.body,
-        isStaticResource: isPathStaticResource(path, state.config),
+        isStatic: isStaticResource(path, state.config),
     }
     const requestStub = findMatchingRequestStub(stubProps, state.requests)
     const responseBody = getRequesStubResponseBody(requestStub)

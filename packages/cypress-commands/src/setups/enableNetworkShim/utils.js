@@ -1,7 +1,5 @@
 import {
     API_STUB_MODES,
-    FIXTURE_MODES,
-    DEFAULT_FIXTURE_MODE,
     DEFAULT_STATIC_RESOURCES,
     NETWORK_FIXTURES_DIR,
 } from './constants.js'
@@ -30,11 +28,9 @@ export const isCaptureMode = () =>
 export const isStubMode = () =>
     Cypress.env('dhis2_api_stub_mode') === API_STUB_MODES.STUB
 
-export const getDefaultFixtureMode = () => DEFAULT_FIXTURE_MODE
-
 export const getDefaultStaticResources = () => DEFAULT_STATIC_RESOURCES
 
-export const isStaticResource = (path, staticResources) => {
+export const isStaticResource = (path, { staticResources }) => {
     const cleanedPath = path.split('?')[0]
     return staticResources.some(resourcePath =>
         cleanedPath.endsWith(resourcePath)
@@ -72,12 +68,8 @@ export const toJsonBlob = async input => {
     return { size, text }
 }
 
-export const isPathStaticResource = (path, config) =>
-    config.fixtureMode === FIXTURE_MODES.STATIC ||
-    isStaticResource(path, config.staticResources)
-
 export const findMatchingRequestStub = (
-    { path, method, testName, requestBody, isStaticResource },
+    { path, method, testName, requestBody, isStatic },
     requests
 ) =>
     requests.find(r => {
@@ -87,7 +79,7 @@ export const findMatchingRequestStub = (
             (requestBody === r.requestBody ||
                 JSON.stringify(requestBody) === JSON.stringify(r.requestBody))
 
-        return isStaticResource
+        return isStatic
             ? isMatchingRequest
             : isMatchingRequest && testName === r.testName
     })

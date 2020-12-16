@@ -3,7 +3,7 @@ import {
     getFullTestName,
     splitHostAndPath,
     toJsonBlob,
-    isPathStaticResource,
+    isStaticResource,
     findMatchingRequestStub,
 } from './utils.js'
 
@@ -31,14 +31,14 @@ async function captureRequest(state, request, response) {
     state.count++
 
     const testName = getFullTestName()
-    const isStaticResource = isPathStaticResource(path, state.config)
+    const isStatic = isStaticResource(path, state.config)
     const requestStub = findMatchingRequestStub(
         {
             path,
             method: request.method,
             testName,
             requestBody: request.body,
-            isStaticResource,
+            isStatic,
         },
         state.requests
     )
@@ -57,8 +57,8 @@ async function captureRequest(state, request, response) {
         // New request
         state.requests.push({
             path,
-            testName: isStaticResource ? null : testName,
-            static: isStaticResource,
+            testName: isStatic ? null : testName,
+            static: isStatic,
             count: 1,
             nonDeterministic: false,
             method: request.method,

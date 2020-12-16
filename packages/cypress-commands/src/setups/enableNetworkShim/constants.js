@@ -4,13 +4,6 @@ export const API_STUB_MODES = {
     CAPTURE: 'CAPTURE',
 }
 
-export const FIXTURE_MODES = {
-    STATIC: 'STATIC',
-    DYNAMIC: 'DYNAMIC',
-}
-
-export const DEFAULT_FIXTURE_MODE = FIXTURE_MODES.DYNAMIC
-
 export const DEFAULT_STATIC_RESOURCES = [
     'systemSettings/applicationTitle',
     'me',
