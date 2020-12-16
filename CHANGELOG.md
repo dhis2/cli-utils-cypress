@@ -1,3 +1,11 @@
+# [4.1.0](https://github.com/dhis2/cli-utils-cypress/compare/v4.0.0...v4.1.0) (2020-12-16)
+
+
+### Features
+
+* **codemods:** add codemod for transforming get/find ([daca680](https://github.com/dhis2/cli-utils-cypress/commit/daca680b4960933ee0d854453bdf00c618286955))
+* **codemods:** add codemod for transforming get/find ([#102](https://github.com/dhis2/cli-utils-cypress/issues/102)) ([046c50d](https://github.com/dhis2/cli-utils-cypress/commit/046c50d3f8cc89316ddf006087aeabbe540eb53f))
+
 # [4.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v3.2.0...v4.0.0) (2020-11-26)
 
 
