@@ -8,7 +8,6 @@ const INITIAL_SUMMARY = {
     totalResponseSize: 0,
     duplicates: 0,
     nonDeterministicResponses: 0,
-    serverMinorVersion: 0,
     fixtureFiles: [],
 }
 
