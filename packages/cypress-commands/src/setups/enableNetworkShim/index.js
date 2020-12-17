@@ -25,9 +25,7 @@ export function enableNetworkShim({
         createStateFromFixtures({
             hosts,
             staticResources,
-        }).then(state => {
-            cy.wrap(state).as('networkShimState')
-        })
+        }).as('networkShimState')
     })
 
     beforeEach(() => {
