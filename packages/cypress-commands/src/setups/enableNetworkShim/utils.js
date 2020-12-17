@@ -72,14 +72,15 @@ export const findMatchingRequestStub = (
     { path, method, testName, requestBody, isStatic },
     requestStubs
 ) =>
-    requestStubs.find(r => {
+    requestStubs.find(requestStub => {
         const isMatchingRequest =
-            path === r.path &&
-            method === r.method &&
-            (requestBody === r.requestBody ||
-                JSON.stringify(requestBody) === JSON.stringify(r.requestBody))
+            path === requestStub.path &&
+            method === requestStub.method &&
+            (requestBody === requestStub.requestBody ||
+                JSON.stringify(requestBody) ===
+                    JSON.stringify(requestStub.requestBody))
 
         return isStatic
             ? isMatchingRequest
-            : isMatchingRequest && testName === r.testName
+            : isMatchingRequest && testName === requestStub.testName
     })
