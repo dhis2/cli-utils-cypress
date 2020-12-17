@@ -1,8 +1,4 @@
-import {
-    API_STUB_MODES,
-    DEFAULT_STATIC_RESOURCES,
-    NETWORK_FIXTURES_DIR,
-} from './constants.js'
+import { API_STUB_MODES, DEFAULT_STATIC_RESOURCES } from './constants.js'
 
 export const getApiBaseUrl = () => {
     const baseUrl = Cypress.env('dhis2_base_url')
