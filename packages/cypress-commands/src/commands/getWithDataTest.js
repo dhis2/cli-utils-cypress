@@ -9,10 +9,10 @@ import { parseSelectorWithDataTest } from '../helper/parseSelectorWithDataTest'
  * @param {string} [options.prefix]
  * @returns {Object}
  */
-export const get = (originalFn, selectors, options = {}) => {
+export const getWithDataTest = (selectors, options = {}) => {
     const { prefix, ...restOptions } = options
     const selector = parseSelectorWithDataTest(selectors, prefix)
-    return originalFn(selector, restOptions)
+    return cy.get(selector, restOptions)
 }
 
-Cypress.Commands.overwrite('get', get)
+Cypress.Commands.add('getWithDataTest', getWithDataTest)
