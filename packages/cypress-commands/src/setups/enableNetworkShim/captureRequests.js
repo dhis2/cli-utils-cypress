@@ -11,11 +11,7 @@ export default function captureRequests(state) {
     state.config.hosts.forEach(host => {
         cy.intercept(host, request => {
             request.reply(response => {
-                try {
-                    captureRequest(state, request, response)
-                } catch (error) {
-                    console.error('NetworkShim capture error', error)
-                }
+                captureRequest(state, request, response)
             })
         })
     })

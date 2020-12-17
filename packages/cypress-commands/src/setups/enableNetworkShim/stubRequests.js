@@ -8,11 +8,7 @@ import {
 export default function stubRequests(state) {
     state.config.hosts.forEach(host => {
         cy.intercept(host, request => {
-            try {
-                stubRequest(state, request)
-            } catch (error) {
-                console.error('NetworkShim stub error', error)
-            }
+            stubRequest(state, request)
         })
     })
 }
