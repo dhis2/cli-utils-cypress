@@ -32,7 +32,7 @@ async function captureRequest(state, request, response) {
 
     const testName = getFullTestName()
     const isStatic = isStaticResource(path, state.config)
-    const requestStub = findMatchingRequestStub(
+    const existingRequestStub = findMatchingRequestStub(
         {
             path,
             method: request.method,
@@ -45,10 +45,10 @@ async function captureRequest(state, request, response) {
     const { size, text } = await toJsonBlob(response.body)
     const scrubbedText = removeApiEndpointFromResponseBodyBlob(text)
 
-    if (requestStub) {
+    if (existingRequestStub) {
         processDuplicatedRequest({
             state,
-            requestStub,
+            requestStub: existingRequestStub,
             newResponseBody: scrubbedText,
             responseStatus: response.statusCode,
         })
