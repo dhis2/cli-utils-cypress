@@ -1,5 +1,3 @@
-import { getNetworkFixturesDir } from './utils'
-
 export default function createFixturesFromState(state) {
     const dir = getNetworkFixturesDir()
     const summary = {
@@ -37,4 +35,12 @@ export default function createFixturesFromState(state) {
     cy.log(
         `Networkshim successfully captured ${state.requestStubs.length} requests`
     )
+}
+
+function getNetworkFixturesDir() {
+    return [
+        Cypress.config('fixturesFolder'),
+        'network',
+        Cypress.env('dhis2_server_minor_version'),
+    ].join('/')
 }

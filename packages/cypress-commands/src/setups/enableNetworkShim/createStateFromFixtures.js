@@ -1,4 +1,4 @@
-import { isStubMode, getNetworkFixturesDir } from './utils'
+import { isStubMode } from './utils'
 
 export default function createStateFromFixtures({ hosts, staticResources }) {
     try {
@@ -11,7 +11,7 @@ export default function createStateFromFixtures({ hosts, staticResources }) {
         }
 
         return cy
-            .readFile(`${getNetworkFixturesDir()}/summary.json`)
+            .fixture(`${getNetworkFixturesDir()}/summary.json`)
             .then(({ fixtureFiles, ...summary }) =>
                 parseFixtureFiles(fixtureFiles).then(requestStubs => ({
                     ...summary,
@@ -33,8 +33,12 @@ function parseFixtureFiles(fileNames) {
     return cy
         .all(
             ...fileNames.map(fileName => () =>
-                cy.readFile(`${getNetworkFixturesDir()}/${fileName}`)
+                cy.fixture(`${getNetworkFixturesDir()}/${fileName}`)
             )
         )
         .then(requestStubs => requestStubs.flat())
+}
+
+function getNetworkFixturesDir() {
+    return `network/${Cypress.env('dhis2_server_minor_version')}`
 }

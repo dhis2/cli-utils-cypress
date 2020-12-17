@@ -16,6 +16,14 @@ exports.clearNetworkFixtures = serverMinorVersion => {
     try {
         const versionMinorDir = path.join(
             process.cwd(),
+            /* 
+            TODO: this assumes the fixture dir is always the same.
+            Ideally the fixture folder should be read from the 
+            cypress config. However this code is completely 
+            independant and does not have access to this config.
+            We should refactor this part of the code to be in 
+            a cypress plugin so it could access cypress config.
+             */
             '/cypress/fixtures/network',
             serverMinorVersion.toString()
         )

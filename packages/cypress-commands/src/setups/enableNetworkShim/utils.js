@@ -83,6 +83,3 @@ export const findMatchingRequestStub = (
             ? isMatchingRequest
             : isMatchingRequest && testName === r.testName
     })
-
-export const getNetworkFixturesDir = () =>
-    `${NETWORK_FIXTURES_DIR}/${Cypress.env('dhis2_server_minor_version')}`
