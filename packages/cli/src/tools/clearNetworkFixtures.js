@@ -23,6 +23,7 @@ exports.clearNetworkFixtures = serverMinorVersion => {
             independant and does not have access to this config.
             We should refactor this part of the code to be in 
             a cypress plugin so it could access cypress config.
+            Related: https://github.com/cypress-io/cypress/issues/2840
              */
             '/cypress/fixtures/network',
             serverMinorVersion.toString()
