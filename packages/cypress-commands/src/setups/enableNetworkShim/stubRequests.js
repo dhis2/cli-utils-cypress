@@ -22,14 +22,21 @@ function stubRequest(state, request) {
         return request
     }
 
+    const testName = getFullTestName()
     const stubProps = {
         path,
         method: request.method,
-        testName: getFullTestName(),
+        testName,
         requestBody: request.body,
         isStatic: isStaticResource(path, state.config),
     }
     const requestStub = findMatchingRequestStub(stubProps, state.requestStubs)
+
+    if (!requestStub) {
+        const message = `No request stub found for a ${request.method} to "${path}" in test "${testName}". Perhaps you should try a capture run first?`
+        throw new Error(message)
+    }
+
     const responseBody = getRequesStubResponseBody(requestStub)
 
     requestStub.responseCount++
