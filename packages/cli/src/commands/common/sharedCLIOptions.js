@@ -29,12 +29,6 @@ const stub = {
     implies: 'serverMinorVersion',
 }
 
-const tags = {
-    describe: 'Use cucumber tags',
-    type: 'string',
-    default: '',
-}
-
 const waitOn = {
     describe: 'Url to wait for before running cypress',
     type: 'string',
@@ -47,6 +41,5 @@ module.exports = {
     port,
     serverMinorVersion,
     stub,
-    tags,
     waitOn,
 }

@@ -6,7 +6,6 @@ const {
     port,
     serverMinorVersion,
     stub,
-    tags,
     waitOn,
 } = require('./common/sharedCLIOptions.js')
 
@@ -49,7 +48,11 @@ exports.builder = yargs =>
         .option('port', port)
         .option('serverMinorVersion', serverMinorVersion)
         .option('stub', stub)
-        .option('tags', tags)
+        .option('tags', {
+            describe: 'Use cucumber tags',
+            type: 'string',
+            default: '',
+        })
         .option('waitOn', waitOn)
 
 exports.handler = argv => {

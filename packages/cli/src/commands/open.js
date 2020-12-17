@@ -27,7 +27,6 @@ exports.builder = yargs =>
          */
         // .option('serverMinorVersion', serverMinorVersion)
         // .option('stub', stub)
-        .option('tags', tags)
         .option('waitOn', waitOn)
 
 exports.handler = argv => {
