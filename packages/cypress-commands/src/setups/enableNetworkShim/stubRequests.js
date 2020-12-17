@@ -33,10 +33,10 @@ function stubRequest(state, request) {
         requestBody: request.body,
         isStatic: isStaticResource(path, state.config),
     }
-    const requestStub = findMatchingRequestStub(stubProps, state.requests)
+    const requestStub = findMatchingRequestStub(stubProps, state.requestStubs)
     const responseBody = getRequesStubResponseBody(requestStub)
 
-    requestStub.stubResponseCount++
+    requestStub.responseCount++
 
     request.reply({
         body: responseBody,
@@ -49,10 +49,10 @@ function getRequesStubResponseBody({
     nonDeterministic,
     responseBody,
     responseLookup,
-    stubResponseCount,
+    responseCount,
 }) {
     if (nonDeterministic) {
-        const responseBodyIndex = responseLookup[stubResponseCount]
+        const responseBodyIndex = responseLookup[responseCount]
         return JSON.parse(responseBody[responseBodyIndex])
     }
 

@@ -70,9 +70,9 @@ export const toJsonBlob = async input => {
 
 export const findMatchingRequestStub = (
     { path, method, testName, requestBody, isStatic },
-    requests
+    requestStubs
 ) =>
-    requests.find(r => {
+    requestStubs.find(r => {
         const isMatchingRequest =
             path === r.path &&
             method === r.method &&

@@ -1,26 +1,11 @@
 import { isStubMode, getNetworkFixturesDir } from './utils'
 
-function parseFixtureFiles(fileNames) {
-    return cy
-        .all(
-            ...fileNames.map(fileName => () =>
-                cy.readFile(`${getNetworkFixturesDir()}/requests/${fileName}`)
-            )
-        )
-        .then(results => results.flat())
-}
-
-export default function createStateFromFixtures({
-    hosts,
-    fixtureMode,
-    staticResources,
-}) {
+export default function createStateFromFixtures({ hosts, staticResources }) {
     try {
         const serverMinorVersion = Cypress.env('dhis2_server_minor_version')
         const config = {
             serverMinorVersion,
             hosts,
-            fixtureMode,
             staticResources,
             mode: Cypress.env('dhis2_api_stub_mode'),
         }
@@ -28,18 +13,28 @@ export default function createStateFromFixtures({
         return cy
             .readFile(`${getNetworkFixturesDir()}/summary.json`)
             .then(({ fixtureFiles, ...summary }) =>
-                parseFixtureFiles(fixtureFiles).then(requests => ({
+                parseFixtureFiles(fixtureFiles).then(requestStubs => ({
                     ...summary,
-                    requests: isStubMode()
-                        ? requests.map(request => ({
-                              ...request,
-                              stubResponseCount: 0,
+                    requestStubs: isStubMode()
+                        ? requestStubs.map(requestStub => ({
+                              ...requestStub,
+                              responseCount: 0,
                           }))
-                        : requests,
+                        : requestStubs,
                     config,
                 }))
             )
     } catch (error) {
         console.error('NetworkShim capture mode initialzation error', error)
     }
+}
+
+function parseFixtureFiles(fileNames) {
+    return cy
+        .all(
+            ...fileNames.map(fileName => () =>
+                cy.readFile(`${getNetworkFixturesDir()}/${fileName}`)
+            )
+        )
+        .then(requestStubs => requestStubs.flat())
 }

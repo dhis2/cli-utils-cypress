@@ -40,22 +40,20 @@ async function captureRequest(state, request, response) {
             requestBody: request.body,
             isStatic,
         },
-        state.requests
+        state.requestStubs
     )
     const { size, text } = await toJsonBlob(response.body)
     const scrubbedText = removeApiEndpointFromResponseBodyBlob(text)
 
     if (requestStub) {
-        // Repeated request
-        processDuplicatedRequestStub({
+        processDuplicatedRequest({
             state,
             requestStub,
             newResponseBody: scrubbedText,
             responseStatus: response.statusCode,
         })
     } else {
-        // New request
-        state.requests.push({
+        state.requestStubs.push({
             path,
             testName: isStatic ? null : testName,
             static: isStatic,
@@ -74,7 +72,7 @@ async function captureRequest(state, request, response) {
     return response
 }
 
-function processDuplicatedRequestStub({
+function processDuplicatedRequest({
     state,
     requestStub,
     newResponseBody,

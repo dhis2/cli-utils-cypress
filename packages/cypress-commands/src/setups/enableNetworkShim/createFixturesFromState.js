@@ -10,7 +10,7 @@ export default function createFixturesFromState(state) {
         serverMinorVersion: state.config.serverMinorVersion,
         fixtureFiles: [],
     }
-    const files = state.requests.reduce(
+    const files = state.requestStubs.reduce(
         (acc, request) => {
             const fileName = request.static
                 ? 'static_resources'
@@ -30,14 +30,11 @@ export default function createFixturesFromState(state) {
         { summary }
     )
 
-    for (const [name, requests] of Object.entries(files)) {
-        const filePath =
-            name === 'summary' ? `${dir}/${name}` : `${dir}/requests/${name}`
-
-        cy.writeFile(`${filePath}.json`, requests)
+    for (const [name, requestStubs] of Object.entries(files)) {
+        cy.writeFile(`${dir}/${name}.json`, requestStubs)
     }
 
     cy.log(
-        `Networkshim successfully captured ${state.requests.length} requests`
+        `Networkshim successfully captured ${state.requestStubs.length} requests`
     )
 }
