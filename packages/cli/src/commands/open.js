@@ -6,7 +6,6 @@ const {
     port,
     // serverMinorVersion,
     // stub,
-    tags,
     waitOn,
 } = require('./common/sharedCLIOptions.js')
 
