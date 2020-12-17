@@ -1,5 +1,5 @@
 const path = require('path')
-const fs = require('fs')
+const fs = require('fs-extra')
 const rimraf = require('rimraf')
 const log = require('@dhis2/cli-helpers-engine').reporter
 
@@ -14,17 +14,9 @@ const INITIAL_SUMMARY = {
 
 exports.clearNetworkFixtures = serverMinorVersion => {
     try {
-        const networkFixtureDir = path.join(
-            process.cwd(),
-            '/cypress/fixtures/network'
-        )
-
-        if (!fs.existsSync(networkFixtureDir)) {
-            fs.mkdirSync(networkFixtureDir)
-        }
-
         const versionMinorDir = path.join(
-            networkFixtureDir,
+            process.cwd(),
+            '/cypress/fixtures/network',
             serverMinorVersion.toString()
         )
 
@@ -32,7 +24,7 @@ exports.clearNetworkFixtures = serverMinorVersion => {
             rimraf.sync(versionMinorDir)
         }
 
-        fs.mkdirSync(versionMinorDir)
+        fs.ensureDirSync(versionMinorDir)
         fs.writeFileSync(
             path.join(versionMinorDir, 'summary.json'),
             JSON.stringify(INITIAL_SUMMARY, null, 4)
