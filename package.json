@@ -26,7 +26,7 @@
         "docs:start": "d2-utils-docsite serve ./docs -o ./dist",
         "build": "yarn workspace @dhis2/cypress-commands build"
     },
-    "version": "4.1.0",
+    "version": "5.0.0",
     "devDependencies": {
         "@dhis2/cli-style": "^7.2.1",
         "@dhis2/cli-utils-docsite": "^1.3.0",

@@ -1,3 +1,21 @@
+# [5.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v4.1.0...v5.0.0) (2020-12-18)
+
+
+### Code Refactoring
+
+* **install cmd:** restructure options & improve code maintainability ([6b83b9a](https://github.com/dhis2/cli-utils-cypress/commit/6b83b9a8d6aa82294b260311cb5105d1ba20fd44))
+
+
+### Features
+
+* **plugins:** create own package ([19c0bf8](https://github.com/dhis2/cli-utils-cypress/commit/19c0bf8d503e31ab1bc6cebff00e6011a52fe652))
+
+
+### BREAKING CHANGES
+
+* **install cmd:** This commit changes the way this package has to be
+used as the options have changed completely
+
 # [4.1.0](https://github.com/dhis2/cli-utils-cypress/compare/v4.0.0...v4.1.0) (2020-12-16)
 
 
