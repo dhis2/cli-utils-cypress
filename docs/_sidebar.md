@@ -12,4 +12,6 @@
     -   [**parseSelectorWithDataTest**](helpers/parseSelectorWithDataTest)
 -   [**API: Setup**](guides)
     -   [**enableAutoLogin**](setups/enable-auto-login)
+-   [**Developer docs**](developer)
+    -   [**Install command**](developer/install)
 -   [**Changelog**](CHANGELOG)

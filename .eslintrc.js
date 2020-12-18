@@ -6,4 +6,5 @@ module.exports = {
         Cypress: 'readonly',
         cy: 'readonly',
     },
+    ignorePatterns: ['**/templates/*.js'],
 }
