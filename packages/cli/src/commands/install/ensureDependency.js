@@ -3,12 +3,18 @@ const exec = require('@dhis2/cli-helpers-engine').exec
 const log = require('@dhis2/cli-helpers-engine').reporter
 
 const isYarnWorkspacesRoot = () => {
-    const rootDir = process.cwd()
-    const packageJson = fs.readFileSync(`${rootDir}/package.json`, {
-        encoding: 'utf8',
-    })
+    try {
+        const rootDir = process.cwd()
+        const packageJson = fs.readFileSync(`${rootDir}/package.json`, {
+            encoding: 'utf8',
+        })
 
-    return 'workspaces' in JSON.parse(packageJson)
+        return 'workspaces' in JSON.parse(packageJson)
+    } catch (_error) {
+        throw new Error(
+            `'cli-utils-cypress install' must be ran from the root of an npm package, but no valid 'package.json' was found in '${process.cwd()}'`
+        )
+    }
 }
 
 const installSupportPackage = (packageName, packageManager, cwd) => {
