@@ -7,6 +7,12 @@ import {
     findMatchingRequestStub,
 } from './utils.js'
 
+/**
+ * @description
+ * Intercepts requests on all hosts and captures them
+ * @param {NetworkShimState} state
+ * @returns {undefined}
+ */
 export default function captureRequests(state) {
     state.config.hosts.forEach(host => {
         cy.intercept(host, request => {
@@ -16,7 +22,14 @@ export default function captureRequests(state) {
         })
     })
 }
-
+/**
+ * @description
+ * Captures intercepted request
+ * @param {NetworkShimState} state
+ * @param {Object} A Fetch.Request instance
+ * @param {Object} reponse Fetch.Response instance
+ * @returns {Object} A Fetch.Response instance
+ */
 async function captureRequest(state, request, response) {
     const { host, path } = splitHostAndPath(request.url, state.config.hosts)
     if (!host) {
@@ -68,6 +81,15 @@ async function captureRequest(state, request, response) {
     return response
 }
 
+/**
+ * @description
+ * Processes a duplicated request to deal with non-deterministic responses, 304s or true duplicates
+ * @param {NetworkShimState} state
+ * @param {RequestStub} requestStub
+ * @param {Object} newResponseBody The body of a Fetch.Response instance
+ * @param {number} responseStatus The response status code
+ * @returns {void}
+ */
 function processDuplicatedRequest({
     state,
     requestStub,
