@@ -17,6 +17,7 @@ const { mergeCypressJsonContents } = require('./mergeCypressJsonContents.js')
 const { mergePluginFileImports } = require('./mergePluginFileImports.js')
 const { mergePluginSetupCalls } = require('./mergePluginSetupCalls.js')
 const { mergeSupportSetupCalls } = require('./mergeSupportSetupCalls.js')
+const { purgePluginLegacyCode } = require('./purgePluginLegacyCode.js')
 
 module.exports.applyState = async ({ state, packageManager, paths }) => {
     ensureDirectories(paths)
@@ -26,6 +27,7 @@ module.exports.applyState = async ({ state, packageManager, paths }) => {
 
     if (state.plugins.length) {
         await ensureDependency('@dhis2/cypress-plugins', packageManager, paths)
+        await purgePluginLegacyCode(paths)
         await mergePluginFileImports(state.plugins, paths)
         await mergePluginSetupCalls(state.plugins, paths)
     }
