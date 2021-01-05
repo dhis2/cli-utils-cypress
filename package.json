@@ -24,7 +24,9 @@
         "format:staged": "yarn format:js --staged && yarn format:text --staged",
         "docs:build": "d2-utils-docsite build ./docs -o ./dist",
         "docs:start": "d2-utils-docsite serve ./docs -o ./dist",
-        "build": "yarn workspace @dhis2/cypress-commands build",
+        "build:commands": "yarn workspace @dhis2/cypress-commands build",
+        "build:plugins": "yarn workspace @dhis2/cypress-plugins build",
+        "build": "concurrently -n w: \"yarn:build:*\"",
         "test": "jest"
     },
     "version": "5.0.0",
