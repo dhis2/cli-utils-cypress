@@ -12,7 +12,7 @@ const isYarnWorkspacesRoot = () => {
         return 'workspaces' in JSON.parse(packageJson)
     } catch (_error) {
         throw new Error(
-            `'cli-utils-cypress install' must be ran from the root of an npm package, but no valid 'package.json' was found in '${process.cwd()}'`
+            `'d2-utils-cypress install' must be run from the root of an npm package, but no valid 'package.json' was found in '${process.cwd()}'`
         )
     }
 }
