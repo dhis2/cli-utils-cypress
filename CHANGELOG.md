@@ -1,3 +1,10 @@
+## [5.0.2](https://github.com/dhis2/cli-utils-cypress/compare/v5.0.1...v5.0.2) (2021-01-06)
+
+
+### Bug Fixes
+
+* build both commands and plugins when running yarn build ([#125](https://github.com/dhis2/cli-utils-cypress/issues/125)) ([1153358](https://github.com/dhis2/cli-utils-cypress/commit/11533580417b4930104b6cf086ef5a3845efa73f))
+
 ## [5.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v5.0.0...v5.0.1) (2021-01-06)
 
 
