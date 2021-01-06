@@ -1,3 +1,10 @@
+## [5.0.3](https://github.com/dhis2/cli-utils-cypress/compare/v5.0.2...v5.0.3) (2021-01-06)
+
+
+### Bug Fixes
+
+* **commands:** move jscodeshift to regular dependencies ([#122](https://github.com/dhis2/cli-utils-cypress/issues/122)) ([05d9909](https://github.com/dhis2/cli-utils-cypress/commit/05d9909565dfe22529eec4650e2e3fd93e3de420))
+
 ## [5.0.2](https://github.com/dhis2/cli-utils-cypress/compare/v5.0.1...v5.0.2) (2021-01-06)
 
 
