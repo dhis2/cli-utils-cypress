@@ -23,31 +23,31 @@ defineInlineTest(
     transformOptions,
     // input
     `
-const {
-    chromeAllowXSiteCookies,
-    cucumberPreprocessor
-} = require('@dhis2/cypress-plugins');
+    const {
+        chromeAllowXSiteCookies,
+        cucumberPreprocessor
+    } = require('@dhis2/cypress-plugins');
 
-const plugins = require('@dhis2/cli-utils-cypress/plugins')
+    const plugins = require('@dhis2/cli-utils-cypress/plugins')
 
-module.exports = (on, config) => {
-    chromeAllowXSiteCookies(on, config);
-    cucumberPreprocessor(on, config);
+    module.exports = (on, config) => {
+        chromeAllowXSiteCookies(on, config);
+        cucumberPreprocessor(on, config);
 
-    plugins(on, config)
-}
-`,
+        plugins(on, config)
+    }
+    `,
     // output
     `
-const {
-    chromeAllowXSiteCookies,
-    cucumberPreprocessor
-} = require('@dhis2/cypress-plugins');
+    const {
+        chromeAllowXSiteCookies,
+        cucumberPreprocessor
+    } = require('@dhis2/cypress-plugins');
 
-module.exports = (on, config) => {
-    chromeAllowXSiteCookies(on, config);
-    cucumberPreprocessor(on, config);
-}
-`,
+    module.exports = (on, config) => {
+        chromeAllowXSiteCookies(on, config);
+        cucumberPreprocessor(on, config);
+    }
+    `,
     'Correctly transforms a typical file'
 )
