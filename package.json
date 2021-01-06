@@ -25,9 +25,7 @@
         "docs:build": "d2-utils-docsite build ./docs -o ./dist",
         "docs:start": "d2-utils-docsite serve ./docs -o ./dist",
         "build": "yarn workspace @dhis2/cypress-commands build",
-        "test:commands": "yarn workspace @dhis2/cypress-commands test",
-        "test:cli": "yarn workspace @dhis2/cli-utils-cypress test",
-        "test": "concurrently -n w: \"yarn:test:*\""
+        "test": "jest"
     },
     "version": "5.0.0",
     "devDependencies": {

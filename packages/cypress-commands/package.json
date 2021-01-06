@@ -27,7 +27,6 @@
         "access": "public"
     },
     "scripts": {
-        "test": "jest",
         "build": "d2-app-scripts build"
     }
 }

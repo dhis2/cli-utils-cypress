@@ -27,9 +27,6 @@
         "inquirer": "^7.0.4",
         "wait-on": "^4.0.2"
     },
-    "scripts": {
-        "test": "jest"
-    },
     "publishConfig": {
         "access": "public"
     },
