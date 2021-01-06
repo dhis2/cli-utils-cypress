@@ -1,3 +1,11 @@
+## [5.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v5.0.0...v5.0.1) (2021-01-06)
+
+
+### Bug Fixes
+
+* **commands:** add `-W` to `yarn add` when in yarn workspaces root ([#121](https://github.com/dhis2/cli-utils-cypress/issues/121)) ([6c5a369](https://github.com/dhis2/cli-utils-cypress/commit/6c5a36978c04da1dddd0f424294691a1df46a663))
+* **commands:** adjust generated code changes ([#124](https://github.com/dhis2/cli-utils-cypress/issues/124)) ([2c6de92](https://github.com/dhis2/cli-utils-cypress/commit/2c6de929e15a425de5bcf63e92c24e0115af0a7e))
+
 # [5.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v4.1.0...v5.0.0) (2020-12-18)
 
 

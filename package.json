@@ -27,7 +27,7 @@
         "build": "yarn workspace @dhis2/cypress-commands build",
         "test": "jest"
     },
-    "version": "5.0.0",
+    "version": "5.0.1",
     "devDependencies": {
         "@dhis2/cli-style": "^7.2.1",
         "@dhis2/cli-utils-docsite": "^1.3.0",
