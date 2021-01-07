@@ -55,43 +55,6 @@
     "static": false,
     "count": 1,
     "nonDeterministic": false,
-    "method": "OPTIONS",
-    "requestBody": "",
-    "requestHeaders": {
-      "host": "localhost:1337",
-      "proxy-connection": "keep-alive",
-      "accept": "*/*",
-      "access-control-request-method": "POST",
-      "access-control-request-headers": "content-type",
-      "origin": "http://localhost:3000",
-      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/87.0.4280.88 Safari/537.36",
-      "sec-fetch-mode": "cors",
-      "sec-fetch-site": "same-site",
-      "sec-fetch-dest": "empty",
-      "referer": "http://localhost:3000/",
-      "accept-encoding": "gzip, deflate, br",
-      "accept-language": "en-US"
-    },
-    "statusCode": 204,
-    "responseBody": "\"\"",
-    "responseSize": 2,
-    "responseHeaders": {
-      "x-powered-by": "Express",
-      "access-control-allow-origin": "http://localhost:3000",
-      "vary": "Origin, Access-Control-Request-Headers",
-      "access-control-allow-credentials": "true",
-      "access-control-allow-methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-      "access-control-allow-headers": "content-type",
-      "content-length": "0",
-      "connection": "keep-alive"
-    }
-  },
-  {
-    "path": "/api/36/names",
-    "testName": "List -- is possible to add and remove from the list",
-    "static": false,
-    "count": 1,
-    "nonDeterministic": false,
     "method": "POST",
     "requestBody": {
       "name": "Harry"
@@ -182,41 +145,6 @@
     "static": false,
     "count": 1,
     "nonDeterministic": false,
-    "method": "OPTIONS",
-    "requestBody": "",
-    "requestHeaders": {
-      "host": "localhost:1337",
-      "proxy-connection": "keep-alive",
-      "accept": "*/*",
-      "access-control-request-method": "DELETE",
-      "origin": "http://localhost:3000",
-      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/87.0.4280.88 Safari/537.36",
-      "sec-fetch-mode": "cors",
-      "sec-fetch-site": "same-site",
-      "sec-fetch-dest": "empty",
-      "referer": "http://localhost:3000/",
-      "accept-encoding": "gzip, deflate, br",
-      "accept-language": "en-US"
-    },
-    "statusCode": 204,
-    "responseBody": "\"\"",
-    "responseSize": 2,
-    "responseHeaders": {
-      "x-powered-by": "Express",
-      "access-control-allow-origin": "http://localhost:3000",
-      "vary": "Origin, Access-Control-Request-Headers",
-      "access-control-allow-credentials": "true",
-      "access-control-allow-methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-      "content-length": "0",
-      "connection": "keep-alive"
-    }
-  },
-  {
-    "path": "/api/36/names/5",
-    "testName": "List -- is possible to add and remove from the list",
-    "static": false,
-    "count": 1,
-    "nonDeterministic": false,
     "method": "DELETE",
     "requestBody": "",
     "requestHeaders": {
@@ -247,41 +175,6 @@
       "content-type": "application/json; charset=utf-8",
       "content-length": "2",
       "etag": "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\"",
-      "connection": "keep-alive"
-    }
-  },
-  {
-    "path": "/api/36/names/4",
-    "testName": "List -- is possible to add and remove from the list",
-    "static": false,
-    "count": 1,
-    "nonDeterministic": false,
-    "method": "OPTIONS",
-    "requestBody": "",
-    "requestHeaders": {
-      "host": "localhost:1337",
-      "proxy-connection": "keep-alive",
-      "accept": "*/*",
-      "access-control-request-method": "DELETE",
-      "origin": "http://localhost:3000",
-      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/87.0.4280.88 Safari/537.36",
-      "sec-fetch-mode": "cors",
-      "sec-fetch-site": "same-site",
-      "sec-fetch-dest": "empty",
-      "referer": "http://localhost:3000/",
-      "accept-encoding": "gzip, deflate, br",
-      "accept-language": "en-US"
-    },
-    "statusCode": 204,
-    "responseBody": "\"\"",
-    "responseSize": 2,
-    "responseHeaders": {
-      "x-powered-by": "Express",
-      "access-control-allow-origin": "http://localhost:3000",
-      "vary": "Origin, Access-Control-Request-Headers",
-      "access-control-allow-credentials": "true",
-      "access-control-allow-methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-      "content-length": "0",
       "connection": "keep-alive"
     }
   },
