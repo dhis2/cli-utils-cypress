@@ -1,3 +1,10 @@
+# [5.1.0](https://github.com/dhis2/cli-utils-cypress/compare/v5.0.3...v5.1.0) (2021-01-07)
+
+
+### Features
+
+* introduce network shim ([#106](https://github.com/dhis2/cli-utils-cypress/issues/106)) ([2755e89](https://github.com/dhis2/cli-utils-cypress/commit/2755e89432fe57dd2000724c9abee9297b953341))
+
 ## [5.0.3](https://github.com/dhis2/cli-utils-cypress/compare/v5.0.2...v5.0.3) (2021-01-06)
 
 
