@@ -1,4 +1,5 @@
 // will automatically create the commands
+import './commands/all'
 import './commands/find'
 import './commands/get'
 import './commands/login'
@@ -9,6 +10,7 @@ export { parseSelectorWithDataTest } from './helper/parseSelectorWithDataTest'
 
 // setup helpers
 export { enableAutoLogin } from './setups/enableAutoLogin'
+export { enableNetworkShim } from './setups/enableNetworkShim'
 
 // backward compatibility
 export const registerCommands = () => {

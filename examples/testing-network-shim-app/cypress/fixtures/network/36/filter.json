@@ -1,0 +1,80 @@
+[
+  {
+    "path": "/api/36/names",
+    "testName": "Filter -- is possible to filter the list",
+    "static": false,
+    "count": 2,
+    "nonDeterministic": false,
+    "method": "GET",
+    "requestBody": "",
+    "requestHeaders": {
+      "host": "localhost:1337",
+      "proxy-connection": "keep-alive",
+      "accept": "application/json, text/plain, */*",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/87.0.4280.88 Safari/537.36",
+      "origin": "http://localhost:3000",
+      "sec-fetch-site": "same-site",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-dest": "empty",
+      "referer": "http://localhost:3000/",
+      "accept-encoding": "gzip, deflate, br",
+      "accept-language": "en-US"
+    },
+    "statusCode": 200,
+    "responseBody": "[{\"name\":\"Goofy\",\"id\":1},{\"name\":\"Donald\",\"id\":2},{\"name\":\"Duck\",\"id\":3}]",
+    "responseSize": 73,
+    "responseHeaders": {
+      "x-powered-by": "Express",
+      "access-control-allow-origin": "http://localhost:3000",
+      "vary": "Origin, Accept-Encoding",
+      "access-control-allow-credentials": "true",
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "expires": "-1",
+      "x-content-type-options": "nosniff",
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "128",
+      "etag": "W/\"80-7amB96uJ+4oWmNgr+D5YpTptWdI\"",
+      "connection": "keep-alive"
+    }
+  },
+  {
+    "path": "/api/36/names?q=D",
+    "testName": "Filter -- is possible to filter the list",
+    "static": false,
+    "count": 1,
+    "nonDeterministic": false,
+    "method": "GET",
+    "requestBody": "",
+    "requestHeaders": {
+      "host": "localhost:1337",
+      "proxy-connection": "keep-alive",
+      "accept": "application/json, text/plain, */*",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/87.0.4280.88 Safari/537.36",
+      "origin": "http://localhost:3000",
+      "sec-fetch-site": "same-site",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-dest": "empty",
+      "referer": "http://localhost:3000/",
+      "accept-encoding": "gzip, deflate, br",
+      "accept-language": "en-US"
+    },
+    "statusCode": 200,
+    "responseBody": "[{\"name\":\"Donald\",\"id\":2},{\"name\":\"Duck\",\"id\":3}]",
+    "responseSize": 49,
+    "responseHeaders": {
+      "x-powered-by": "Express",
+      "access-control-allow-origin": "http://localhost:3000",
+      "vary": "Origin, Accept-Encoding",
+      "access-control-allow-credentials": "true",
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "expires": "-1",
+      "x-content-type-options": "nosniff",
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "86",
+      "etag": "W/\"56-xQIJmK5HFoagWlaw949SaSlIw9U\"",
+      "connection": "keep-alive"
+    }
+  }
+]
