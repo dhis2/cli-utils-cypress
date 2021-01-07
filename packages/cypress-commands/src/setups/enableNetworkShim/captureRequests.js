@@ -22,6 +22,7 @@ export default function captureRequests(state) {
         })
     })
 }
+
 /**
  * @description
  * Captures intercepted request
@@ -137,6 +138,14 @@ function processDuplicatedRequest({
     }
 }
 
+/**
+ * @description
+ * Removes date fields to avoid network fixtures from changing all the time
+ * @param {NetworkShimState} state
+ * @param {RequestStub} requestStub
+ * @param {Object} Headers A response Headers instance
+ * @returns {Object} plain object without date field
+ */
 function clearDateFromResponseHeaders(headers) {
     const headersClone = { ...headers }
     delete headersClone.date
@@ -144,6 +153,14 @@ function clearDateFromResponseHeaders(headers) {
     return headersClone
 }
 
+/**
+ * @description
+ * Removes endpoint URLs from fixtures to avoid mismatches
+ * @param {string} text Response body text blob
+ * @param {RequestStub} requestStub
+ * @param {Object} Headers A response Headers instance
+ * @returns {string} Response body text blob without references to api endpoint
+ */
 function removeApiEndpointFromResponseBodyBlob(text) {
     const apiEndpointUrl = new RegExp(`${getApiBaseUrl()}/api`, 'gi')
 

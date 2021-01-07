@@ -1,3 +1,8 @@
+/**
+ * @description
+ * Ensure the provided server minor version matches the actual server minor version
+ * @returns {void}
+ */
 export default function validateVersionMinor() {
     const baseUrl = Cypress.env('dhis2_base_url')
 

@@ -1,3 +1,9 @@
+/**
+ * @description
+ * Creates JSON files from state object
+ * @param {NetworkShimState} state
+ * @returns {void}
+ */
 export default function createFixturesFromState(state) {
     const dir = getNetworkFixturesDir()
     const summary = {

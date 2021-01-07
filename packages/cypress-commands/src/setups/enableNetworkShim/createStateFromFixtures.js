@@ -42,8 +42,12 @@ import { isStubMode } from './utils'
  * @property {NetworkShimConfig} config
  */
 
-// TODO: Use these typedefs to annotate individual functions with jsDocs
-
+/**
+ * @description
+ * Reads JSON network fixtures files and returns state
+ * @param {NetworkShimConfig}
+ * @returns {NetworkShimState}
+ */
 export default function createStateFromFixtures({ hosts, staticResources }) {
     try {
         const serverMinorVersion = Cypress.env('dhis2_server_minor_version')

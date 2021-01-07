@@ -5,6 +5,12 @@ import {
     isStaticResource,
 } from './utils'
 
+/**
+ * @description
+ * Intercepts requests to all the configured hosts
+ * @param {NetworkShimState} state
+ * @returns {void}
+ */
 export default function stubRequests(state) {
     state.config.hosts.forEach(host => {
         cy.intercept(host, request => {
@@ -13,6 +19,12 @@ export default function stubRequests(state) {
     })
 }
 
+/**
+ * @description
+ * Returns the correct stubbed response for the intercepted request
+ * @param {NetworkShimState} state
+ * @returns {void}
+ */
 function stubRequest(state, request) {
     const { host, path } = splitHostAndPath(request.url, state.config.hosts)
 
