@@ -1,3 +1,25 @@
+## [5.0.3](https://github.com/dhis2/cli-utils-cypress/compare/v5.0.2...v5.0.3) (2021-01-06)
+
+
+### Bug Fixes
+
+* **commands:** move jscodeshift to regular dependencies ([#122](https://github.com/dhis2/cli-utils-cypress/issues/122)) ([05d9909](https://github.com/dhis2/cli-utils-cypress/commit/05d9909565dfe22529eec4650e2e3fd93e3de420))
+
+## [5.0.2](https://github.com/dhis2/cli-utils-cypress/compare/v5.0.1...v5.0.2) (2021-01-06)
+
+
+### Bug Fixes
+
+* build both commands and plugins when running yarn build ([#125](https://github.com/dhis2/cli-utils-cypress/issues/125)) ([1153358](https://github.com/dhis2/cli-utils-cypress/commit/11533580417b4930104b6cf086ef5a3845efa73f))
+
+## [5.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v5.0.0...v5.0.1) (2021-01-06)
+
+
+### Bug Fixes
+
+* **commands:** add `-W` to `yarn add` when in yarn workspaces root ([#121](https://github.com/dhis2/cli-utils-cypress/issues/121)) ([6c5a369](https://github.com/dhis2/cli-utils-cypress/commit/6c5a36978c04da1dddd0f424294691a1df46a663))
+* **commands:** adjust generated code changes ([#124](https://github.com/dhis2/cli-utils-cypress/issues/124)) ([2c6de92](https://github.com/dhis2/cli-utils-cypress/commit/2c6de929e15a425de5bcf63e92c24e0115af0a7e))
+
 # [5.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v4.1.0...v5.0.0) (2020-12-18)
 
 
