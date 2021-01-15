@@ -1477,7 +1477,7 @@
     yargs "^13.1.0"
 
 "@dhis2/cli-utils-cypress@file:../../packages/cli":
-  version "5.0.3"
+  version "5.1.0"
   dependencies:
     "@dhis2/cli-helpers-engine" "^1.5.0"
     concurrently "^5.2.0"
@@ -1490,9 +1490,12 @@
     wait-on "^4.0.2"
 
 "@dhis2/cypress-commands@file:../../packages/cypress-commands":
-  version "5.0.3"
+  version "5.1.0"
   dependencies:
     jscodeshift "^0.11.0"
+
+"@dhis2/cypress-plugins@file:../../packages/cypress-plugins":
+  version "5.1.0"
 
 "@eslint/eslintrc@^0.2.2":
   version "0.2.2"

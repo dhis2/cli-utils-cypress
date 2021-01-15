@@ -1,5 +1,5 @@
-import cucumber from 'cypress-cucumber-preprocessor'
+const cucumber = require('cypress-cucumber-preprocessor').default
 
-export const cucumberPreprocessor = on => {
+module.exports = function cucumberPreprocessor(on) {
     on('file:preprocessor', cucumber())
 }

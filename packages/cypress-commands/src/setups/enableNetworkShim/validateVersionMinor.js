@@ -11,9 +11,7 @@ export default function validateVersionMinor() {
             throw new Error('Could not request system minor version')
         }
 
-        const providedVersionMinor = parseInt(
-            Cypress.env('dhis2_server_minor_version')
-        )
+        const providedVersionMinor = Cypress.env('dhis2_server_minor_version')
         const versionStr = response.body.version
         const foundVersionMinor = parseInt(versionStr.split(/\.|-/)[1])
 
