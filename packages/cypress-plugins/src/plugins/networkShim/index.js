@@ -16,8 +16,10 @@ module.exports = function networkShim(
         config = details.config
         env = config.env
 
-        if (!hosts) {
-            hosts = [env.dhis2_base_url]
+        if (isCaptureMode(env) && details.parallel) {
+            throw new Error(
+                'Parallel capture run detected, this is not supported'
+            )
         }
 
         if (!isDisabledMode(env)) {
