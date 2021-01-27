@@ -9,23 +9,19 @@ export function enableNetworkShim() {
     }
 
     before(() => {
-        cy.task('getNetworkShimState').as('networkShimState')
         if (isCaptureMode()) {
             validateVersionMinor()
         }
     })
-<<<<<<< HEAD
 
     beforeEach(() => {
-        createStateFromFixtures({
-            hosts,
-            staticResources,
-        }).then(networkShimState => {
+        // Get network state from plugin and make available as an alias
+        // which can be accessed again in the afterEach lifecycle hook
+        cy.task('getNetworkShimState').then(networkShimState => {
             cy.wrap(networkShimState).as('networkShimState')
-=======
->>>>>>> 5ce7597... refactor: make the network shim cypress-plugin based
 
             if (isCaptureMode()) {
+                // This will mutate the state
                 captureRequests(networkShimState)
             } else {
                 stubRequests(networkShimState)
@@ -33,20 +29,13 @@ export function enableNetworkShim() {
         })
     })
 
-<<<<<<< HEAD
     afterEach(() => {
-        cy.get('@networkShimState').then(networkShimState => {
-            if (isCaptureMode()) {
-                createFixturesFromState(networkShimState)
-            }
-        })
-=======
-    after(() => {
         if (isCaptureMode()) {
+            // First get the updated local state from the alias
             cy.get('@networkShimState').then(networkShimState => {
+                // Then update the plugin state
                 cy.task('setNetworkShimState', networkShimState)
             })
         }
->>>>>>> 5ce7597... refactor: make the network shim cypress-plugin based
     })
 }
