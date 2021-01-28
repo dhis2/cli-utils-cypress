@@ -22,14 +22,15 @@ export function enableNetworkShim({
         if (isCaptureMode()) {
             validateVersionMinor()
         }
-        createStateFromFixtures({
-            hosts,
-            staticResources,
-        }).as('networkShimState')
     })
 
     beforeEach(() => {
-        cy.get('@networkShimState').then(networkShimState => {
+        createStateFromFixtures({
+            hosts,
+            staticResources,
+        }).then(networkShimState => {
+            cy.wrap(networkShimState).as('networkShimState')
+
             if (isCaptureMode()) {
                 captureRequests(networkShimState)
             } else {
@@ -38,7 +39,7 @@ export function enableNetworkShim({
         })
     })
 
-    after(() => {
+    afterEach(() => {
         cy.get('@networkShimState').then(networkShimState => {
             if (isCaptureMode()) {
                 createFixturesFromState(networkShimState)

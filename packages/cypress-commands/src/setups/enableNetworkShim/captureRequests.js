@@ -38,6 +38,13 @@ async function captureRequest(state, request, response) {
         return response
     }
 
+    if (
+        typeof response.body !== 'string' &&
+        typeof response.body !== 'object'
+    ) {
+        response.body = String(response.body)
+    }
+
     state.count++
 
     const testName = getFullTestName()
