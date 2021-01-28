@@ -1,3 +1,10 @@
+## [5.1.1](https://github.com/dhis2/cli-utils-cypress/compare/v5.1.0...v5.1.1) (2021-01-28)
+
+
+### Bug Fixes
+
+* address lifecycle and response type bugs (CLI-25) ([#131](https://github.com/dhis2/cli-utils-cypress/issues/131)) ([7a849d2](https://github.com/dhis2/cli-utils-cypress/commit/7a849d21df91332e4caf53903b6a640f59d7f62e))
+
 # [5.1.0](https://github.com/dhis2/cli-utils-cypress/compare/v5.0.3...v5.1.0) (2021-01-07)
 
 
