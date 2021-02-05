@@ -1,3 +1,17 @@
+# [6.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v5.1.1...v6.0.0) (2021-02-05)
+
+
+### Code Refactoring
+
+* **get find commands:** rename to get-/findWithDataTest [BREAKING CHANGE] ([3b63762](https://github.com/dhis2/cli-utils-cypress/commit/3b63762f2d3f8faa1c514d9a1395fad270b7b37b))
+
+
+### BREAKING CHANGES
+
+* **get find commands:** This removes overwriting the existing get and find
+commands. Instead new commands will be provided: `getWIthDataTest` and
+`findWIthDataTest
+
 ## [5.1.1](https://github.com/dhis2/cli-utils-cypress/compare/v5.1.0...v5.1.1) (2021-01-28)
 
 
