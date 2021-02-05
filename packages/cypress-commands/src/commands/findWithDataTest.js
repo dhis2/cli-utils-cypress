@@ -1,4 +1,3 @@
-/* eslint-disable max-params */
 import { parseSelectorWithDataTest } from '../helper/parseSelectorWithDataTest'
 
 /**
@@ -9,10 +8,14 @@ import { parseSelectorWithDataTest } from '../helper/parseSelectorWithDataTest'
  * @param {string} [prefix]
  * @returns {Object}
  */
-export const find = (originalFn, subject, selectors, options = {}) => {
+export const findWithDataTest = (subject, selectors, options = {}) => {
     const { prefix, ...restOptions } = options
     const selector = parseSelectorWithDataTest(selectors, prefix)
-    return originalFn(subject, selector, restOptions)
+    return cy.wrap(subject).find(selector, restOptions)
 }
 
-Cypress.Commands.overwrite('find', find)
+Cypress.Commands.add(
+    'findWithDataTest',
+    { prevSubject: true },
+    findWithDataTest
+)

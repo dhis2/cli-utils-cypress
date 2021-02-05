@@ -1,7 +1,7 @@
 // will automatically create the commands
 import './commands/all'
-import './commands/find'
-import './commands/get'
+import './commands/findWithDataTest'
+import './commands/getWithDataTest'
 import './commands/login'
 
 // helpers
