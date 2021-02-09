@@ -13,17 +13,22 @@ const {
     setTestFilesToFeatureFiles,
 } = require('./setTestFilesToFeatureFiles.js')
 const {
+    useCommandsSetupEnableNetworkShim,
+} = require('./useCommandsSetupEnableNetworkShim.js')
+const {
     usePluginChromeAllowXSiteCookies,
 } = require('./usePluginChromeAllowXSiteCookies.js')
 const {
     usePluginCucumberPreprocessor,
 } = require('./usePluginCucumberPreprocessor.js')
+const { usePluginNetworkShim } = require('./usePluginNetworkShim.js')
 
 const groups = {
     CYPRESS_CONFIG: 'cypress-config',
     LOGIN: 'login',
     CUCUMBER: 'cucumber',
     SUPPORT: 'support',
+    NETWORK_SHIM: 'network-shim',
 }
 
 const options = [
@@ -66,6 +71,16 @@ const options = [
         name: 'setDataTestPrefix',
         group: groups.SUPPORT,
         handler: setDataTestPrefix,
+    },
+    {
+        name: 'useCommandsSetupEnableNetworkShim',
+        group: groups.NETWORK_SHIM,
+        handler: useCommandsSetupEnableNetworkShim,
+    },
+    {
+        name: 'usePluginNetworkShim',
+        group: groups.NETWORK_SHIM,
+        handler: usePluginNetworkShim,
     },
     {
         name: 'usePluginChromeAllowXSiteCookies',
