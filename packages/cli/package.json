@@ -10,7 +10,7 @@
         "d2-utils-cypress": "./bin/d2-utils-cypress"
     },
     "main": "src/index.js",
-    "version": "6.0.0",
+    "version": "6.0.1",
     "author": "Viktor Varland <viktor@dhis2.org>",
     "license": "BSD-3-Clause",
     "private": false,

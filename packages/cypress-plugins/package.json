@@ -1,6 +1,6 @@
 {
     "name": "@dhis2/cypress-plugins",
-    "version": "6.0.0",
+    "version": "6.0.1",
     "description": "Cypress plugins for dhis2 related apps",
     "main": "build/cjs/lib.js",
     "module": "build/es/lib.js",

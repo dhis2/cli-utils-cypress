@@ -1,3 +1,10 @@
+## [6.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v6.0.0...v6.0.1) (2021-02-10)
+
+
+### Bug Fixes
+
+* **replace getfind mod:** add checks to prevent crashes ([#135](https://github.com/dhis2/cli-utils-cypress/issues/135)) ([07175fe](https://github.com/dhis2/cli-utils-cypress/commit/07175fe39859738693682e30fe61c3dc66101b82))
+
 # [6.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v5.1.1...v6.0.0) (2021-02-05)
 
 
