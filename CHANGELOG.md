@@ -1,3 +1,15 @@
+# [7.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v6.0.1...v7.0.0) (2021-02-10)
+
+
+### Code Refactoring
+
+* make the network shim cypress-plugin based ([#128](https://github.com/dhis2/cli-utils-cypress/issues/128)) ([3701dec](https://github.com/dhis2/cli-utils-cypress/commit/3701dec4c4b427e015074c328ec24c7a77b97992))
+
+
+### BREAKING CHANGES
+
+* To use the network-shim's functionality the project will need to use the new network shim plugin on top of the existing enableNetworkShim setup. Also, the network shim options (an object with hosts and staticResources) need to be passed to the networkShim plugin, the enableNetworkShim setup doesn't accept any arguments anymore.
+
 ## [6.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v6.0.0...v6.0.1) (2021-02-10)
 
 
