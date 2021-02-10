@@ -1,19 +1,9 @@
-import {
-    isDisabledMode,
-    isCaptureMode,
-    getDefaultHosts,
-    getDefaultStaticResources,
-} from './utils.js'
-import createStateFromFixtures from './createStateFromFixtures.js'
+import { isDisabledMode, isCaptureMode } from './utils.js'
 import captureRequests from './captureRequests.js'
 import stubRequests from './stubRequests.js'
-import createFixturesFromState from './createFixturesFromState.js'
 import validateVersionMinor from './validateVersionMinor.js'
 
-export function enableNetworkShim({
-    hosts = getDefaultHosts(),
-    staticResources = getDefaultStaticResources(),
-} = {}) {
+export function enableNetworkShim() {
     if (isDisabledMode()) {
         return
     }
@@ -25,13 +15,13 @@ export function enableNetworkShim({
     })
 
     beforeEach(() => {
-        createStateFromFixtures({
-            hosts,
-            staticResources,
-        }).then(networkShimState => {
+        // Get network state from plugin and make available as an alias
+        // which can be accessed again in the afterEach lifecycle hook
+        cy.task('getNetworkShimState').then(networkShimState => {
             cy.wrap(networkShimState).as('networkShimState')
 
             if (isCaptureMode()) {
+                // This will mutate the state
                 captureRequests(networkShimState)
             } else {
                 stubRequests(networkShimState)
@@ -40,10 +30,12 @@ export function enableNetworkShim({
     })
 
     afterEach(() => {
-        cy.get('@networkShimState').then(networkShimState => {
-            if (isCaptureMode()) {
-                createFixturesFromState(networkShimState)
-            }
-        })
+        if (isCaptureMode()) {
+            // First get the updated local state from the alias
+            cy.get('@networkShimState').then(networkShimState => {
+                // Then update the plugin state
+                cy.task('setNetworkShimState', networkShimState)
+            })
+        }
     })
 }

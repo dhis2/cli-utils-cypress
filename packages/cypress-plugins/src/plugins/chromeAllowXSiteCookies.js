@@ -4,7 +4,7 @@ const chromeAllowXSiteCookiesLaunchOptions = [
     'SameSiteDefaultChecksMethodRigorously',
 ].join(',')
 
-export const chromeAllowXSiteCookies = on => {
+module.exports = function chromeAllowXSiteCookies(on) {
     on('before:browser:launch', (browser, launchOptions) => {
         if (browser.family === 'chromium' && browser.name !== 'electron') {
             const disabledFeaturesArgIndex = launchOptions.args.findIndex(arg =>

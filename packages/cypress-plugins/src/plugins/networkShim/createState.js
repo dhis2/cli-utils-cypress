@@ -1,4 +1,8 @@
-import { isStubMode } from './utils'
+const fs = require('fs-extra')
+const path = require('path')
+const rimraf = require('rimraf')
+const log = require('@dhis2/cli-helpers-engine').reporter
+const { isCaptureMode, isStubMode, getFixturesDir } = require('./utils.js')
 
 /**
  * Configuration section of the network shim state
@@ -24,7 +28,8 @@ import { isStubMode } from './utils'
  * @property {String} requestBody HTTP request body
  * @property {Object} requestHeaders HTTP request headers
  * @property {number} statusCode HTTP response status code
- * @property {String|String[]} responseBody A JSON blob or, when dealing with nonDeterministic response, an array of JSON blobs
+ * @property {String|String[]} responseBody A JSON blob or, when dealing with nonDeterministic response,
+ *      an array of JSON blobs
  * @property {number} responseSize Size of response body in kb
  * @property {Object} responseHeaders HTTP response headers
  * @property {Number[]} [responseLookup] Only needed for nonDeterministic requestStub, used to return the correct response body
@@ -45,48 +50,84 @@ import { isStubMode } from './utils'
 /**
  * @description
  * Reads JSON network fixtures files and returns state
- * @param {NetworkShimConfig}
+ * @param {Object} cypressConfig Cypress configuration
+ * @param {String[]} hosts Hosts to capture and stub for
+ * @param {String[]} staticResources Resource to treat as static (always returning the same response)
  * @returns {NetworkShimState}
  */
-export default function createStateFromFixtures({ hosts, staticResources }) {
+module.exports = function createState(cypressConfig, hosts, staticResources) {
     try {
-        const serverMinorVersion = Cypress.env('dhis2_server_minor_version')
+        const env = cypressConfig.env
+        const serverMinorVersion = env.dhis2_server_minor_version
+        const fixturesDir = getFixturesDir(cypressConfig)
         const config = {
             serverMinorVersion,
-            hosts,
+            mode: env.dhis2_api_stub_mode,
+            hosts: hosts || [env.dhis2_base_url],
             staticResources,
-            mode: Cypress.env('dhis2_api_stub_mode'),
         }
 
-        return cy
-            .fixture(`${getNetworkFixturesDir()}/summary.json`)
-            .then(({ fixtureFiles, ...summary }) =>
-                parseFixtureFiles(fixtureFiles).then(requestStubs => ({
-                    ...summary,
-                    requestStubs: isStubMode()
-                        ? requestStubs.map(requestStub => ({
-                              ...requestStub,
-                              responseCount: 0,
-                          }))
-                        : requestStubs,
-                    config,
-                }))
-            )
+        if (isCaptureMode(env)) {
+            clearFixturesDir(fixturesDir, serverMinorVersion)
+            return createInitialState(config)
+        } else if (isStubMode(env)) {
+            return createStateFromFixtures(config, fixturesDir)
+        }
     } catch (error) {
-        console.error('NetworkShim capture mode initialzation error', error)
+        throw new Error(
+            `Encountered an error creating the NetworkShim state: ${error.message}`
+        )
     }
 }
 
-function parseFixtureFiles(fileNames) {
-    return cy
-        .all(
-            ...fileNames.map(fileName => () =>
-                cy.fixture(`${getNetworkFixturesDir()}/${fileName}`)
-            )
+function clearFixturesDir(fixtureDir, serverMinorVersion) {
+    try {
+        if (fs.existsSync(fixtureDir)) {
+            rimraf.sync(fixtureDir)
+        }
+        fs.ensureDirSync(fixtureDir)
+
+        log.info(
+            `Cleared network fixture directory for version: ${serverMinorVersion}`
         )
-        .then(requestStubs => requestStubs.flat())
+    } catch (error) {
+        throw new Error(
+            `Encountered an error clearing the network fixtures directory: ${error.message}`
+        )
+    }
 }
 
-function getNetworkFixturesDir() {
-    return `network/${Cypress.env('dhis2_server_minor_version')}`
+function createInitialState(config) {
+    return {
+        count: 0,
+        totalResponseSize: 0,
+        duplicates: 0,
+        nonDeterministicResponses: 0,
+        fixtureFiles: [],
+        requestStubs: [],
+        config,
+    }
+}
+
+function createStateFromFixtures(config, fixturesDir) {
+    const { fixtureFiles, ...summary } = readJsonFileSync(
+        path.join(fixturesDir, 'summary.json')
+    )
+    const requestStubs = fixtureFiles
+        .map(fileName => readJsonFileSync(path.join(fixturesDir, fileName)))
+        .flat()
+        .map(requestStub => ({
+            ...requestStub,
+            responseCount: 0,
+        }))
+
+    return {
+        ...summary,
+        requestStubs,
+        config,
+    }
+}
+
+function readJsonFileSync(path) {
+    return JSON.parse(fs.readFileSync(path, { encoding: 'utf-8' }))
 }

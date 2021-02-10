@@ -1,11 +1,17 @@
+const fs = require('fs')
+const path = require('path')
+const log = require('@dhis2/cli-helpers-engine').reporter
+const { getFixturesDir } = require('./utils.js')
+
 /**
  * @description
  * Creates JSON files from state object
  * @param {NetworkShimState} state
+ * @param {Object} Cypress config
  * @returns {void}
  */
-export default function createFixturesFromState(state) {
-    const dir = getNetworkFixturesDir()
+module.exports = function createFixturesFromState(state, cypressConfig) {
+    const fixturesDir = getFixturesDir(cypressConfig)
     const summary = {
         count: state.count,
         totalResponseSize: state.totalResponseSize,
@@ -35,18 +41,13 @@ export default function createFixturesFromState(state) {
     )
 
     for (const [name, requestStubs] of Object.entries(files)) {
-        cy.writeFile(`${dir}/${name}.json`, requestStubs)
+        fs.writeFileSync(
+            path.join(fixturesDir, `${name}.json`),
+            JSON.stringify(requestStubs, null, 4)
+        )
     }
 
-    cy.log(
+    log.info(
         `Networkshim successfully captured ${state.requestStubs.length} requests`
     )
-}
-
-function getNetworkFixturesDir() {
-    return [
-        Cypress.config('fixturesFolder'),
-        'network',
-        Cypress.env('dhis2_server_minor_version'),
-    ].join('/')
 }

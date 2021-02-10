@@ -6,4 +6,4 @@ afterEach(() => {
         resetDb()
     }
 })
-enableNetworkShim({ staticResources: ['animals'] })
+enableNetworkShim()

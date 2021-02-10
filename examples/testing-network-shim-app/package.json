@@ -16,11 +16,13 @@
     },
     "devDependencies": {
         "@dhis2/cli-utils-cypress": "file:../../packages/cli",
-        "@dhis2/cypress-commands": "file:../../packages/cypress-commands"
+        "@dhis2/cypress-commands": "file:../../packages/cypress-commands",
+        "@dhis2/cypress-plugins": "file:../../packages/cypress-plugins"
     },
     "resolutions": {
         "@dhis2/cli-utils-cypress": "file:../../packages/cli",
-        "@dhis2/cypress-commands": "file:../../packages/cypress-commands"
+        "@dhis2/cypress-commands": "file:../../packages/cypress-commands",
+        "@dhis2/cypress-plugins": "file:../../packages/cypress-plugins"
     },
     "scripts": {
         "serve": "json-server src/json-server/db.js --routes ./src/json-server/routes.json --middlewares ./node_modules/json-server-reset --watch -p 1337",

@@ -1,4 +1,11 @@
-import { API_STUB_MODES, DEFAULT_STATIC_RESOURCES } from './constants.js'
+export const isDisabledMode = () =>
+    !Cypress.env('dhis2_api_stub_mode') ||
+    Cypress.env('dhis2_api_stub_mode') === 'DISABLED'
+
+export const isCaptureMode = () =>
+    Cypress.env('dhis2_api_stub_mode') === 'CAPTURE'
+
+export const isStubMode = () => Cypress.env('dhis2_api_stub_mode') === 'STUB'
 
 export const getApiBaseUrl = () => {
     const baseUrl = Cypress.env('dhis2_base_url')
@@ -11,20 +18,6 @@ export const getApiBaseUrl = () => {
 
     return baseUrl
 }
-
-export const getDefaultHosts = () => [getApiBaseUrl()]
-
-export const isDisabledMode = () =>
-    !Cypress.env('dhis2_api_stub_mode') ||
-    Cypress.env('dhis2_api_stub_mode') === API_STUB_MODES.DISABLED
-
-export const isCaptureMode = () =>
-    Cypress.env('dhis2_api_stub_mode') === API_STUB_MODES.CAPTURE
-
-export const isStubMode = () =>
-    Cypress.env('dhis2_api_stub_mode') === API_STUB_MODES.STUB
-
-export const getDefaultStaticResources = () => DEFAULT_STATIC_RESOURCES
 
 export const isStaticResource = (path, { staticResources }) => {
     const cleanedPath = path.split('?')[0]
