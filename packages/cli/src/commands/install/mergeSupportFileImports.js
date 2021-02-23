@@ -6,16 +6,16 @@ const { runCodemod } = require('../../utils/runCodemod.js')
  */
 const onlyUnique = (value, index, self) => self.indexOf(value) === index
 
-module.exports.mergePluginFileImports = (plugins, paths) => {
-    const importNames = plugins.filter(onlyUnique)
+module.exports.mergeSupportFileImports = (support, paths) => {
+    const importNames = support.filter(onlyUnique)
 
     const codemod = path.join(
         paths.CLI_TOOL_ROOT,
         'codemods',
-        'add-require-statement.js'
+        'add-import-statement.js'
     )
-    const files = [paths.CYPRESS_PLUGIN_TEMPLATE_DESTINATION]
-    const options = { importNames, packageName: '@dhis2/cypress-plugins' }
+    const files = [paths.CYPRESS_SUPPORT_FILE_DESTINATION]
+    const options = { importNames, packageName: '@dhis2/cypress-commands' }
 
     return runCodemod(codemod, files, options)
 }

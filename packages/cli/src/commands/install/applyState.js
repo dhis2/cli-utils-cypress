@@ -16,6 +16,7 @@ const {
 const { mergeCypressJsonContents } = require('./mergeCypressJsonContents.js')
 const { mergePluginFileImports } = require('./mergePluginFileImports.js')
 const { mergePluginSetupCalls } = require('./mergePluginSetupCalls.js')
+const { mergeSupportFileImports } = require('./mergeSupportFileImports.js')
 const { mergeSupportSetupCalls } = require('./mergeSupportSetupCalls.js')
 const { purgePluginLegacyCode } = require('./purgePluginLegacyCode.js')
 
@@ -34,6 +35,7 @@ module.exports.applyState = async ({ state, packageManager, paths }) => {
 
     if (state.support.length) {
         await ensureDependency('@dhis2/cypress-commands', packageManager, paths)
+        await mergeSupportFileImports(state.support, paths)
         await mergeSupportSetupCalls(state.support, paths)
     }
 
