@@ -1,3 +1,10 @@
+## [7.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v7.0.0...v7.0.1) (2021-03-10)
+
+
+### Bug Fixes
+
+* **install:** add imports to support file ([#146](https://github.com/dhis2/cli-utils-cypress/issues/146)) ([410a33e](https://github.com/dhis2/cli-utils-cypress/commit/410a33e95f47736dea274f688a9a3532eb820ea8))
+
 # [7.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v6.0.1...v7.0.0) (2021-02-10)
 
 
