@@ -1,9 +1,9 @@
 [
     {
-        "path": "/api/36/animals",
-        "testName": null,
-        "static": true,
-        "count": 3,
+        "path": "/api/36/names",
+        "testName": "Intercept behaviour -- it will return a fixture from the network shim if no intercept is declared in the test",
+        "static": false,
+        "count": 1,
         "nonDeterministic": false,
         "method": "GET",
         "requestBody": "",
@@ -21,7 +21,7 @@
             "accept-language": "en-US"
         },
         "statusCode": 200,
-        "responseBody": "[{\"name\":\"chicken\",\"id\":1},{\"name\":\"cow\",\"id\":2},{\"name\":\"t-rex\",\"id\":3}]",
+        "responseBody": "[{\"name\":\"Goofy\",\"id\":1},{\"name\":\"Donald\",\"id\":2},{\"name\":\"Duck\",\"id\":3}]",
         "responseSize": 73,
         "responseHeaders": {
             "x-powered-by": "Express",
@@ -34,7 +34,7 @@
             "x-content-type-options": "nosniff",
             "content-type": "application/json; charset=utf-8",
             "content-length": "128",
-            "etag": "W/\"80-UqLasOvEQ8IpNbsEWu7mtJ0a7iA\"",
+            "etag": "W/\"80-7amB96uJ+4oWmNgr+D5YpTptWdI\"",
             "connection": "keep-alive",
             "keep-alive": "timeout=5"
         }

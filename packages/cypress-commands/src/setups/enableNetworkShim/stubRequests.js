@@ -13,7 +13,9 @@ import {
  */
 export default function stubRequests(state) {
     state.config.hosts.forEach(host => {
-        cy.intercept(host, request => {
+        const hostRegex = new RegExp(`^${host}`)
+
+        cy.intercept(hostRegex, request => {
             stubRequest(state, request)
         })
     })
@@ -53,6 +55,12 @@ function stubRequest(state, request) {
 
     requestStub.responseCount++
 
+    // TODO: remove this log, just for debugging
+    console.log(`Going to call request.reply for ${path} with `, {
+        body: responseBody,
+        headers: requestStub.responseHeaders,
+        statusCode: requestStub.statusCode,
+    })
     request.reply({
         body: responseBody,
         headers: requestStub.responseHeaders,
