@@ -1,12 +1,13 @@
 {
-    "count": 14,
-    "totalResponseSize": 318,
-    "duplicates": 6,
+    "count": 16,
+    "totalResponseSize": 391,
+    "duplicates": 7,
     "nonDeterministicResponses": 2,
     "serverMinorVersion": 36,
     "fixtureFiles": [
         "filter.json",
         "static_resources.json",
+        "intercept_behaviour.json",
         "list.json"
     ]
 }

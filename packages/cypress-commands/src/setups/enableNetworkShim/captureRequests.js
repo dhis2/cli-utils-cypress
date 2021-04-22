@@ -15,7 +15,9 @@ import {
  */
 export default function captureRequests(state) {
     state.config.hosts.forEach(host => {
-        cy.intercept(host, request => {
+        const hostRegex = new RegExp(`^${host}`)
+
+        cy.intercept(hostRegex, request => {
             request.reply(response => {
                 captureRequest(state, request, response)
             })
