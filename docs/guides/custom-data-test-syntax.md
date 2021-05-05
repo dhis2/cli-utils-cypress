@@ -11,13 +11,14 @@ can simply write: `{value-of-the-data-test-attribute}`.
 
 ## Commands provided by `@dhis2/cypress-commands`
 
-The `get` and `find` commands have this functionality built in. You can just
-use it without having to think about this.
+The `getWithDataTest` and `findWithDataTest` commands have this functionality
+built in. You can just use it without having to think about this.
 
-**NOTE:** This will change in the near future, we will introduce dedicated
-commands that will have the enhanced functionality instead of overwriting the
-existing commands. We will provide a codemod that you can use together with the
-`d2-utils-codemods` utility to update your test code
+**NOTE:** If you're still using version 5 or lower of this library, then this
+has slightly changed for you since version 5. Instead of useing the
+overwritten, existing `get` & `find` commands, you'll have to use the two
+commands mentioned above. We will provide a codemod that you can use together
+with the `d2-utils-codemods` utility to update your test code.
 
 ## Commands not handled by `@dhis2/cypress-commands`
 

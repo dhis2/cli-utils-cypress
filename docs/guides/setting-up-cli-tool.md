@@ -1,27 +1,64 @@
-## Setup Cypress for your project
+# Setup Cypress for your project
 
 The CLI module provides an `install` command, that will set up some
-prerequisites for Cypress, and guide you through generating a
-configuration and a local environment configuration file.
+prerequisites for Cypress:
 
 ```
 d2-utils-cypress install
 ```
 
-There are additional options to do more specific configuration as well,
-check out all the options with the `--help` command.
-
-E.g. to set up Cypress without the support scripts:
+When calling the `install` command without any arguments, you'll be prompted a
+list of groups of settings and their individual settings:
 
 ```
-d2-utils-cypress install --no-support
+d2-utils-cypress install
+d2-utils-cypress > install
+You can install all groups by simply providing "all"
+* all
+
+cypress-config
+* cypress-config/all
+* cypress-config/setBaseUrl
+* cypress-config/setRecordVideo
+* cypress-config/setProjectId
+
+login
+* login/all
+* login/setLoginUser
+* login/setLoginPassword
+* login/setLoginBackendUrl
+
+support
+* support/all
+* support/registerCommands
+* support/setDataTestPrefix
+
+network-shim
+* network-shim/all
+* network-shim/useCommandsSetupEnableNetworkShim
+* network-shim/usePluginNetworkShim
+
+cucumber
+* cucumber/all
+* cucumber/usePluginChromeAllowXSiteCookies
+* cucumber/usePluginCucumberPreprocessor
+* cucumber/setTestFilesToFeatureFiles
+* cucumber/setNonGlobalStepDefinitions
 ```
 
-And to install without the Cypress configuration, for example on a
-developer machine:
+Simply choose the group that you want to install, for fresh installations the
+`all` group is probably what you want:
 
 ```
-d2-utils-cypress install \
-    --no-cypress-config \
-    --no-support
+d2-utils-cypress install all
 ```
+
+But you can also provide specific groups and/or members if you want to skip
+some of the others:
+
+```
+d2-utils-cypress install cypress-config/all cucumber/all
+```
+
+Please refer to [Adding login credentials](./add-login-credentials.md) and
+add the required data for logging in.

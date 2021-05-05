@@ -3,6 +3,7 @@
     -   [**Setup Cypress for your project**](guides/setting-up-cli-tool)
     -   [**Enabling auto login**](guides/enable-auto-login)
     -   [**Custom data test syntax**](guides/custom-data-test-syntax)
+    -   [**Adding login credentials**](guides/add-login-credentials)
 -   [**API: Commands**](commands)
     -   [**getWithDataTest**](commands/getWithDataTest)
     -   [**findWithDataTest**](commands/findWithDataTest)
