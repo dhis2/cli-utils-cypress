@@ -1,4 +1,4 @@
-## Setup Cypress for your project
+# Setup Cypress for your project
 
 The CLI module provides an `install` command, that will set up some
 prerequisites for Cypress:
@@ -59,3 +59,6 @@ some of the others:
 ```
 d2-utils-cypress install cypress-config/all cucumber/all
 ```
+
+Please refer to [Adding login credentials](./add-login-credentials.md) and
+add the required data for logging in.
