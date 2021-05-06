@@ -19,12 +19,8 @@
         "@dhis2/cypress-commands": "file:../../packages/cypress-commands",
         "@dhis2/cypress-plugins": "file:../../packages/cypress-plugins"
     },
-    "resolutions": {
-        "@dhis2/cli-utils-cypress": "file:../../packages/cli",
-        "@dhis2/cypress-commands": "file:../../packages/cypress-commands",
-        "@dhis2/cypress-plugins": "file:../../packages/cypress-plugins"
-    },
     "scripts": {
+        "install:with-remove": "yarn install && (cd node_modules/@dhis2 && rm -rf cli-utils-cypress && rm -rf cypress-commands && rm -rf cypress-plugins)",
         "serve": "json-server src/json-server/db.js --routes ./src/json-server/routes.json --middlewares ./node_modules/json-server-reset --watch -p 1337",
         "cypress:open": "d2-utils-cypress open --appStart 'yarn start'",
         "cypress:run": "d2-utils-cypress run --appStart 'yarn start'",
