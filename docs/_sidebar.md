@@ -14,4 +14,5 @@
     -   [**enableAutoLogin**](setups/enable-auto-login)
 -   [**Developer docs**](developer)
     -   [**Install command**](developer/install)
+    -   [**Network shim**](developer/network-shim)
 -   [**Changelog**](CHANGELOG)
