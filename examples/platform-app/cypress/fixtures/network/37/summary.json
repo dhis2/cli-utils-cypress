@@ -1,0 +1,11 @@
+{
+    "count": 15,
+    "totalResponseSize": 25082,
+    "duplicates": 4,
+    "nonDeterministicResponses": 0,
+    "serverMinorVersion": 37,
+    "fixtureFiles": [
+        "listing.json",
+        "static_resources.json"
+    ]
+}
