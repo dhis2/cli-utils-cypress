@@ -1,6 +1,5 @@
 {
     "baseUrl": "http://localhost:3000",
-    "video": true,
-    "projectId": "",
-    "testFiles": "**/*.feature"
+    "video": false,
+    "experimentalInteractiveRunEvents": true
 }

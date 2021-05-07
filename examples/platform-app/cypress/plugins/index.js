@@ -1,12 +1,9 @@
 const {
-  networkShim,
-  chromeAllowXSiteCookies,
-  cucumberPreprocessor
-} = require('@dhis2/cypress-plugins');
+    networkShim,
+    chromeAllowXSiteCookies,
+} = require('@dhis2/cypress-plugins')
 
-/* eslint-disable-next-line no-unused-vars */
 module.exports = (on, config) => {
-  networkShim(on, config);
-  chromeAllowXSiteCookies(on, config);
-  cucumberPreprocessor(on, config);
+    networkShim(on, config)
+    chromeAllowXSiteCookies(on, config)
 }
