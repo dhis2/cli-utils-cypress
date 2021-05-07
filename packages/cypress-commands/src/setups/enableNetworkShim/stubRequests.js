@@ -55,6 +55,12 @@ function stubRequest(state, request) {
 
     requestStub.responseCount++
 
+    // TODO: remove this log, just for debugging
+    console.log(`Going to call request.reply for ${path} with `, {
+        body: responseBody,
+        headers: requestStub.responseHeaders,
+        statusCode: requestStub.statusCode,
+    })
     request.reply({
         body: responseBody,
         headers: requestStub.responseHeaders,
