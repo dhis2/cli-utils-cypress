@@ -55,15 +55,16 @@ function stubRequest(state, request) {
 
     requestStub.responseCount++
 
-    // TODO: remove this log, just for debugging
-    console.log(`Going to call request.reply for ${path} with `, {
-        body: responseBody,
-        headers: requestStub.responseHeaders,
-        statusCode: requestStub.statusCode,
-    })
     request.reply({
         body: responseBody,
-        headers: requestStub.responseHeaders,
+        /*
+         * TODO: currently we are excluding headers from the StaticResponse object because
+         * that breaks stub mode for DHIS2 platform apps. It is currently unclear if there
+         * is a problem with cypress' cy.intercept behaviour of our internal implementation,
+         * but we do need to address this issue, because in it's current state we will not be
+         * able to write tests that assert response header properties.
+         */
+        // headers: requestStub.responseHeaders,
         statusCode: requestStub.statusCode,
     })
 }
