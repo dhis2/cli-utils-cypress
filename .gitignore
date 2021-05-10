@@ -1,5 +1,10 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+# Producing network fixtures during a capture run and then using them
+# during a stub run is part of the e2e test suite, so we gitignore these 
+# files and have them generated on CI
+examples/platform-app/cypress/fixtures/network/
+
 .yarn
 .yarnrc
 
