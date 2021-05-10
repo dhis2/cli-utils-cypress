@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
 import { DataQuery, DataMutation } from '@dhis2/app-runtime'
+import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 import classes from './App.module.css'
 
 const query = {
@@ -40,6 +41,10 @@ const Adder = ({ refetch }) => {
     )
 }
 
+Adder.propTypes = {
+    refetch: PropTypes.func.isRequired,
+}
+
 const deleteMutation = {
     resource: 'userGroups',
     id: ({ id }) => id,
@@ -63,11 +68,16 @@ const UserGroupListItem = ({ id, displayName, refetch }) => (
     </li>
 )
 
+UserGroupListItem.propTypes = {
+    displayName: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    refetch: PropTypes.func.isRequired,
+}
+
 const MyApp = () => (
     <div className={classes.container}>
         <DataQuery query={query}>
             {({ error, loading, data, refetch }) => {
-                console.log(data)
                 if (error) return <span>ERROR</span>
                 if (loading) return <span>...</span>
                 return (

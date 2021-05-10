@@ -1,5 +1,43 @@
 [
     {
+        "path": "/api/system/info",
+        "testName": null,
+        "static": true,
+        "count": 2,
+        "nonDeterministic": true,
+        "method": "GET",
+        "requestBody": "",
+        "requestHeaders": {
+            "host": "localhost:8080",
+            "proxy-connection": "keep-alive",
+            "accept": "application/json",
+            "origin": "http://localhost:3000",
+            "sec-fetch-site": "same-site",
+            "sec-fetch-mode": "cors"
+        },
+        "statusCode": 200,
+        "responseBody": [
+            "{\"contextPath\":\"http://localhost:8080\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.93 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2021-05-10T15:07:52.331\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2021-05-10T09:13:40.137\",\"intervalSinceLastAnalyticsTableSuccess\":\"5 h, 54 m, 12 s\",\"lastAnalyticsTableRuntime\":\"383260\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"version\":\"2.37-SNAPSHOT\",\"revision\":\"c6affca\",\"buildTime\":\"2021-04-13T13:06:14.000\",\"jasperReportsVersion\":\"6.3.1\",\"environmentVariable\":\"DHIS2_HOME\",\"databaseInfo\":{\"spatialSupport\":true},\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"clusterHostname\":\"\",\"isMetadataVersionEnabled\":true,\"metadataSyncEnabled\":false}",
+            "{\"contextPath\":\"http://localhost:8080\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.93 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2021-05-10T15:07:52.882\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2021-05-10T09:13:40.137\",\"intervalSinceLastAnalyticsTableSuccess\":\"5 h, 54 m, 12 s\",\"lastAnalyticsTableRuntime\":\"383260\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"version\":\"2.37-SNAPSHOT\",\"revision\":\"c6affca\",\"buildTime\":\"2021-04-13T13:06:14.000\",\"jasperReportsVersion\":\"6.3.1\",\"environmentVariable\":\"DHIS2_HOME\",\"databaseInfo\":{\"spatialSupport\":true},\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"clusterHostname\":\"\",\"isMetadataVersionEnabled\":true,\"metadataSyncEnabled\":false}"
+        ],
+        "responseSize": 987,
+        "responseHeaders": {
+            "server": "nginx/1.19.3",
+            "content-type": "application/json;charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3000",
+            "vary": "Origin",
+            "access-control-expose-headers": "ETag, Location",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "responseLookup": [0, 1]
+    },
+    {
         "path": "/api/37/systemSettings/applicationTitle",
         "testName": null,
         "static": true,
@@ -118,7 +156,7 @@
             "sec-fetch-mode": "cors"
         },
         "statusCode": 200,
-        "responseBody": "{\"unreadInterpretations\":41,\"unreadMessageConversations\":135}",
+        "responseBody": "{\"unreadInterpretations\":41,\"unreadMessageConversations\":136}",
         "responseSize": 61,
         "responseHeaders": {
             "server": "nginx/1.19.3",
@@ -139,7 +177,7 @@
         "path": "/dhis-web-commons/menu/getModules.action",
         "testName": null,
         "static": true,
-        "count": 1,
+        "count": 2,
         "nonDeterministic": false,
         "method": "GET",
         "requestBody": "",

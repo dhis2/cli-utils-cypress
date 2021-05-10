@@ -1,39 +1,5 @@
 [
     {
-        "path": "/api/system/info",
-        "testName": "Listing -- disaplays a list of usergroups from the network (fixtures)",
-        "static": false,
-        "count": 1,
-        "nonDeterministic": false,
-        "method": "GET",
-        "requestBody": "",
-        "requestHeaders": {
-            "host": "localhost:8080",
-            "proxy-connection": "keep-alive",
-            "accept": "application/json",
-            "origin": "http://localhost:3000",
-            "sec-fetch-site": "same-site",
-            "sec-fetch-mode": "cors"
-        },
-        "statusCode": 200,
-        "responseBody": "{\"contextPath\":\"http://localhost:8080\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.93 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2021-05-10T13:46:38.617\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2021-05-10T09:13:40.137\",\"intervalSinceLastAnalyticsTableSuccess\":\"4 h, 32 m, 58 s\",\"lastAnalyticsTableRuntime\":\"383260\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"version\":\"2.37-SNAPSHOT\",\"revision\":\"c6affca\",\"buildTime\":\"2021-04-13T13:06:14.000\",\"jasperReportsVersion\":\"6.3.1\",\"environmentVariable\":\"DHIS2_HOME\",\"databaseInfo\":{\"spatialSupport\":true},\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"clusterHostname\":\"\",\"isMetadataVersionEnabled\":true,\"metadataSyncEnabled\":false}",
-        "responseSize": 987,
-        "responseHeaders": {
-            "server": "nginx/1.19.3",
-            "content-type": "application/json;charset=UTF-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-origin": "http://localhost:3000",
-            "vary": "Origin",
-            "access-control-expose-headers": "ETag, Location",
-            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
-            "x-content-type-options": "nosniff",
-            "x-xss-protection": "1; mode=block",
-            "x-frame-options": "SAMEORIGIN"
-        }
-    },
-    {
         "path": "/api/37/systemSettings/helpPageLink",
         "testName": "Listing -- disaplays a list of usergroups from the network (fixtures)",
         "static": false,
@@ -96,40 +62,6 @@
             "vary": "Origin",
             "access-control-expose-headers": "ETag, Location",
             "cache-control": "no-cache, private",
-            "x-content-type-options": "nosniff",
-            "x-xss-protection": "1; mode=block",
-            "x-frame-options": "SAMEORIGIN"
-        }
-    },
-    {
-        "path": "/api/system/info",
-        "testName": "Listing -- disaplays a list of usergroups from a local fixture",
-        "static": false,
-        "count": 1,
-        "nonDeterministic": false,
-        "method": "GET",
-        "requestBody": "",
-        "requestHeaders": {
-            "host": "localhost:8080",
-            "proxy-connection": "keep-alive",
-            "accept": "application/json",
-            "origin": "http://localhost:3000",
-            "sec-fetch-site": "same-site",
-            "sec-fetch-mode": "cors"
-        },
-        "statusCode": 200,
-        "responseBody": "{\"contextPath\":\"http://localhost:8080\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.93 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2021-05-10T13:46:39.150\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2021-05-10T09:13:40.137\",\"intervalSinceLastAnalyticsTableSuccess\":\"4 h, 32 m, 59 s\",\"lastAnalyticsTableRuntime\":\"383260\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"version\":\"2.37-SNAPSHOT\",\"revision\":\"c6affca\",\"buildTime\":\"2021-04-13T13:06:14.000\",\"jasperReportsVersion\":\"6.3.1\",\"environmentVariable\":\"DHIS2_HOME\",\"databaseInfo\":{\"spatialSupport\":true},\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"clusterHostname\":\"\",\"isMetadataVersionEnabled\":true,\"metadataSyncEnabled\":false}",
-        "responseSize": 987,
-        "responseHeaders": {
-            "server": "nginx/1.19.3",
-            "content-type": "application/json;charset=UTF-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-origin": "http://localhost:3000",
-            "vary": "Origin",
-            "access-control-expose-headers": "ETag, Location",
-            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
             "x-content-type-options": "nosniff",
             "x-xss-protection": "1; mode=block",
             "x-frame-options": "SAMEORIGIN"

@@ -22,6 +22,7 @@ module.exports.getFixturesDir = function ({ fixturesFolder, env }) {
 
 module.exports.getDefaultStaticResources = function () {
     return [
+        'system/info',
         'systemSettings/applicationTitle',
         'me',
         'dhis-web-commons/menu/getModules.action',
