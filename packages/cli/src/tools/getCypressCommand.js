@@ -1,13 +1,12 @@
 const { getCypressCommandEnvArgs } = require('./getCypressCommandEnvArgs')
 
-// TODO: revert these changes, this is just to debug the network shim
 exports.getCypressCommand = ({
-    // browser,
+    browser,
     capture,
     config,
     dhis2CoreUrl,
-    // headed,
-    // headless,
+    headed,
+    headless,
     mode,
     port,
     serverMinorVersion,
@@ -21,7 +20,7 @@ exports.getCypressCommand = ({
         tags ? 'cypress-tags' : 'cypress',
         mode,
         ...(port ? ['--port', port] : []),
-        // ...(browser ? ['--browser', browser] : []),
+        ...(browser ? ['--browser', browser] : []),
         ...(config ? ['--config', config] : []),
         ...getCypressCommandEnvArgs({
             capture,
@@ -31,10 +30,8 @@ exports.getCypressCommand = ({
             tags,
         }),
         ...(config ? ['--config', config] : []),
-        // ...(headed ? ['--headed', headed] : []),
-        // ...(headless ? ['--headless', headless] : []),
-        '--headed',
-        '--no-exit',
+        ...(headed ? ['--headed', headed] : []),
+        ...(headless ? ['--headless', headless] : []),
     ]
 
     const options = { args }

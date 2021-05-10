@@ -10,23 +10,14 @@
         "requestHeaders": {
             "host": "localhost:8080",
             "proxy-connection": "keep-alive",
-            "sec-ch-ua": "",
             "accept": "application/json",
-            "x-requested-with": "XMLHttpRequest",
-            "sec-ch-ua-mobile": "?0",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.93 Safari/537.36",
             "origin": "http://localhost:3000",
             "sec-fetch-site": "same-site",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-dest": "empty",
-            "referer": "http://localhost:3000/",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US",
-            "cookie": "JSESSIONID=640A095224DF0AFE8B20B1D882D6C543"
+            "sec-fetch-mode": "cors"
         },
         "statusCode": 200,
-        "responseBody": "{\"contextPath\":\"http://localhost:8080\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.93 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2021-05-07T11:16:42.954\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2021-03-02T11:58:17.592\",\"intervalSinceLastAnalyticsTableSuccess\":\"1583 h, 18 m, 25 s\",\"lastAnalyticsTableRuntime\":\"10 m\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"version\":\"2.37-SNAPSHOT\",\"revision\":\"c6affca\",\"buildTime\":\"2021-04-13T13:06:14.000\",\"jasperReportsVersion\":\"6.3.1\",\"environmentVariable\":\"DHIS2_HOME\",\"databaseInfo\":{\"spatialSupport\":true},\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"clusterHostname\":\"\",\"isMetadataVersionEnabled\":true,\"metadataSyncEnabled\":false}",
-        "responseSize": 988,
+        "responseBody": "{\"contextPath\":\"http://localhost:8080\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.93 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2021-05-10T13:46:38.617\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2021-05-10T09:13:40.137\",\"intervalSinceLastAnalyticsTableSuccess\":\"4 h, 32 m, 58 s\",\"lastAnalyticsTableRuntime\":\"383260\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"version\":\"2.37-SNAPSHOT\",\"revision\":\"c6affca\",\"buildTime\":\"2021-04-13T13:06:14.000\",\"jasperReportsVersion\":\"6.3.1\",\"environmentVariable\":\"DHIS2_HOME\",\"databaseInfo\":{\"spatialSupport\":true},\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"clusterHostname\":\"\",\"isMetadataVersionEnabled\":true,\"metadataSyncEnabled\":false}",
+        "responseSize": 987,
         "responseHeaders": {
             "server": "nginx/1.19.3",
             "content-type": "application/json;charset=UTF-8",
@@ -39,8 +30,7 @@
             "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
             "x-content-type-options": "nosniff",
             "x-xss-protection": "1; mode=block",
-            "x-frame-options": "SAMEORIGIN",
-            "content-encoding": "gzip"
+            "x-frame-options": "SAMEORIGIN"
         }
     },
     {
@@ -54,19 +44,10 @@
         "requestHeaders": {
             "host": "localhost:8080",
             "proxy-connection": "keep-alive",
-            "sec-ch-ua": "",
             "accept": "application/json",
-            "x-requested-with": "XMLHttpRequest",
-            "sec-ch-ua-mobile": "?0",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.93 Safari/537.36",
             "origin": "http://localhost:3000",
             "sec-fetch-site": "same-site",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-dest": "empty",
-            "referer": "http://localhost:3000/",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US",
-            "cookie": "JSESSIONID=640A095224DF0AFE8B20B1D882D6C543"
+            "sec-fetch-mode": "cors"
         },
         "statusCode": 200,
         "responseBody": "{\"helpPageLink\":\"https://dhis2.github.io/dhis2-docs/master/en/user/html/dhis2_user_manual_en.html\"}",
@@ -81,11 +62,9 @@
             "vary": "Origin",
             "access-control-expose-headers": "ETag, Location",
             "cache-control": "no-cache, private",
-            "etag": "W/\"01cda85bd268ab1c3daf89b015752c6e0\"",
             "x-content-type-options": "nosniff",
             "x-xss-protection": "1; mode=block",
-            "x-frame-options": "SAMEORIGIN",
-            "content-encoding": "gzip"
+            "x-frame-options": "SAMEORIGIN"
         }
     },
     {
@@ -99,19 +78,10 @@
         "requestHeaders": {
             "host": "localhost:8080",
             "proxy-connection": "keep-alive",
-            "sec-ch-ua": "",
             "accept": "application/json",
-            "x-requested-with": "XMLHttpRequest",
-            "sec-ch-ua-mobile": "?0",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.93 Safari/537.36",
             "origin": "http://localhost:3000",
             "sec-fetch-site": "same-site",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-dest": "empty",
-            "referer": "http://localhost:3000/",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US",
-            "cookie": "JSESSIONID=640A095224DF0AFE8B20B1D882D6C543"
+            "sec-fetch-mode": "cors"
         },
         "statusCode": 200,
         "responseBody": "{\"pager\":{\"page\":1,\"pageCount\":1,\"total\":31,\"pageSize\":50},\"userGroups\":[{\"id\":\"wl5cDMuUhmF\",\"displayName\":\"Administrators\"},{\"id\":\"vAvEltyXGbD\",\"displayName\":\"Africare HQ\"},{\"id\":\"ZoHNWQajIoe\",\"displayName\":\"Bo District M&E officers\"},{\"id\":\"th4S6ovwcr8\",\"displayName\":\"Bonthe District M&E Officers\"},{\"id\":\"wAAA1agEHin\",\"displayName\":\"Cape Town University Research Group\"},{\"id\":\"qlEhuAA77gc\",\"displayName\":\"EPI Stock Completeness Notification Recipients\"},{\"id\":\"ZrsVF7IJ93y\",\"displayName\":\"Family Health Partner\"},{\"id\":\"QYrzIjSfI8z\",\"displayName\":\"Feedback Message Recipients\"},{\"id\":\"Rg8wusV7QYi\",\"displayName\":\"HIV Program Coordinators\"},{\"id\":\"YCPJDwzbe8T\",\"displayName\":\"Kenya staff\"},{\"id\":\"jvrEwEJ2yZn\",\"displayName\":\"Malaria program\"},{\"id\":\"k3xzluFKVyw\",\"displayName\":\"Nairobi University Research Group\"},{\"id\":\"GZSvMCVowAx\",\"displayName\":\"Partner for Health International\"},{\"id\":\"xJeoKx69c8E\",\"displayName\":\"Penkies\"},{\"id\":\"lFHP5lLkzVr\",\"displayName\":\"System administrators\"},{\"id\":\"hj0nnsVsPLU\",\"displayName\":\"TB Program Coordinators\"},{\"id\":\"kkfzYelbqJk\",\"displayName\":\"Test\"},{\"id\":\"L4XTzgbdza3\",\"displayName\":\"Wakiki\"},{\"id\":\"Iqfwd3j2qe5\",\"displayName\":\"World Health Program\"},{\"id\":\"GogLpGmkL0g\",\"displayName\":\"_DATASET_Child Health Program Manager\"},{\"id\":\"tH0GcNZZ1vW\",\"displayName\":\"_DATASET_Data entry clerk\"},{\"id\":\"w900PX10L7O\",\"displayName\":\"_DATASET_M and E Officer\"},{\"id\":\"B6JNeAQ6akX\",\"displayName\":\"_DATASET_Superuser\"},{\"id\":\"zz6XckBrLlj\",\"displayName\":\"_DATASET_System administrator (ALL)\"},{\"id\":\"M1Qre0247G3\",\"displayName\":\"_PROGRAM_Antenatal care program\"},{\"id\":\"H9XnHoWRKCg\",\"displayName\":\"_PROGRAM_Child Health Tracker\"},{\"id\":\"NTC8GjJ7p8P\",\"displayName\":\"_PROGRAM_Inpatient program\"},{\"id\":\"vRoAruMnNpB\",\"displayName\":\"_PROGRAM_MNCH / PNC (Adult Woman) program\"},{\"id\":\"gXpmQO6eEOo\",\"displayName\":\"_PROGRAM_Superuser\"},{\"id\":\"pBnkuih0c1K\",\"displayName\":\"_PROGRAM_System administrator (ALL)\"},{\"id\":\"z1gNAf2zUxZ\",\"displayName\":\"_PROGRAM_WHO MCH program\"}]}",
@@ -126,11 +96,9 @@
             "vary": "Origin",
             "access-control-expose-headers": "ETag, Location",
             "cache-control": "no-cache, private",
-            "etag": "W/\"0baaec68f5318f9b3322787bac5c4c29a\"",
             "x-content-type-options": "nosniff",
             "x-xss-protection": "1; mode=block",
-            "x-frame-options": "SAMEORIGIN",
-            "content-encoding": "gzip"
+            "x-frame-options": "SAMEORIGIN"
         }
     },
     {
@@ -144,23 +112,14 @@
         "requestHeaders": {
             "host": "localhost:8080",
             "proxy-connection": "keep-alive",
-            "sec-ch-ua": "",
             "accept": "application/json",
-            "x-requested-with": "XMLHttpRequest",
-            "sec-ch-ua-mobile": "?0",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.93 Safari/537.36",
             "origin": "http://localhost:3000",
             "sec-fetch-site": "same-site",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-dest": "empty",
-            "referer": "http://localhost:3000/",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US",
-            "cookie": "JSESSIONID=640A095224DF0AFE8B20B1D882D6C543"
+            "sec-fetch-mode": "cors"
         },
         "statusCode": 200,
-        "responseBody": "{\"contextPath\":\"http://localhost:8080\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.93 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2021-05-07T11:16:43.547\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2021-03-02T11:58:17.592\",\"intervalSinceLastAnalyticsTableSuccess\":\"1583 h, 18 m, 25 s\",\"lastAnalyticsTableRuntime\":\"10 m\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"version\":\"2.37-SNAPSHOT\",\"revision\":\"c6affca\",\"buildTime\":\"2021-04-13T13:06:14.000\",\"jasperReportsVersion\":\"6.3.1\",\"environmentVariable\":\"DHIS2_HOME\",\"databaseInfo\":{\"spatialSupport\":true},\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"clusterHostname\":\"\",\"isMetadataVersionEnabled\":true,\"metadataSyncEnabled\":false}",
-        "responseSize": 988,
+        "responseBody": "{\"contextPath\":\"http://localhost:8080\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.93 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2021-05-10T13:46:39.150\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2021-05-10T09:13:40.137\",\"intervalSinceLastAnalyticsTableSuccess\":\"4 h, 32 m, 59 s\",\"lastAnalyticsTableRuntime\":\"383260\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"version\":\"2.37-SNAPSHOT\",\"revision\":\"c6affca\",\"buildTime\":\"2021-04-13T13:06:14.000\",\"jasperReportsVersion\":\"6.3.1\",\"environmentVariable\":\"DHIS2_HOME\",\"databaseInfo\":{\"spatialSupport\":true},\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"clusterHostname\":\"\",\"isMetadataVersionEnabled\":true,\"metadataSyncEnabled\":false}",
+        "responseSize": 987,
         "responseHeaders": {
             "server": "nginx/1.19.3",
             "content-type": "application/json;charset=UTF-8",
@@ -173,8 +132,7 @@
             "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
             "x-content-type-options": "nosniff",
             "x-xss-protection": "1; mode=block",
-            "x-frame-options": "SAMEORIGIN",
-            "content-encoding": "gzip"
+            "x-frame-options": "SAMEORIGIN"
         }
     },
     {
@@ -188,19 +146,10 @@
         "requestHeaders": {
             "host": "localhost:8080",
             "proxy-connection": "keep-alive",
-            "sec-ch-ua": "",
             "accept": "application/json",
-            "x-requested-with": "XMLHttpRequest",
-            "sec-ch-ua-mobile": "?0",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.93 Safari/537.36",
             "origin": "http://localhost:3000",
             "sec-fetch-site": "same-site",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-dest": "empty",
-            "referer": "http://localhost:3000/",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US",
-            "cookie": "JSESSIONID=640A095224DF0AFE8B20B1D882D6C543"
+            "sec-fetch-mode": "cors"
         },
         "statusCode": 200,
         "responseBody": "{\"helpPageLink\":\"https://dhis2.github.io/dhis2-docs/master/en/user/html/dhis2_user_manual_en.html\"}",
@@ -215,11 +164,9 @@
             "vary": "Origin",
             "access-control-expose-headers": "ETag, Location",
             "cache-control": "no-cache, private",
-            "etag": "W/\"01cda85bd268ab1c3daf89b015752c6e0\"",
             "x-content-type-options": "nosniff",
             "x-xss-protection": "1; mode=block",
-            "x-frame-options": "SAMEORIGIN",
-            "content-encoding": "gzip"
+            "x-frame-options": "SAMEORIGIN"
         }
     }
 ]

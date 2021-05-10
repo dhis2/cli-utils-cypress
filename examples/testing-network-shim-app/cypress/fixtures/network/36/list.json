@@ -11,14 +11,9 @@
             "host": "localhost:1337",
             "proxy-connection": "keep-alive",
             "accept": "application/json, text/plain, */*",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/89.0.4389.128 Safari/537.36",
             "origin": "http://localhost:3000",
             "sec-fetch-site": "same-site",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-dest": "empty",
-            "referer": "http://localhost:3000/",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US"
+            "sec-fetch-mode": "cors"
         },
         "statusCode": 200,
         "responseBody": [
@@ -28,19 +23,13 @@
         ],
         "responseSize": 73,
         "responseHeaders": {
-            "x-powered-by": "Express",
             "access-control-allow-origin": "http://localhost:3000",
             "vary": "Origin, Accept-Encoding",
             "access-control-allow-credentials": "true",
             "cache-control": "no-cache",
-            "pragma": "no-cache",
-            "expires": "-1",
             "x-content-type-options": "nosniff",
             "content-type": "application/json; charset=utf-8",
-            "content-length": "128",
-            "etag": "W/\"80-7amB96uJ+4oWmNgr+D5YpTptWdI\"",
-            "connection": "keep-alive",
-            "keep-alive": "timeout=5"
+            "connection": "keep-alive"
         },
         "responseLookup": [
             0,
@@ -65,35 +54,23 @@
             "proxy-connection": "keep-alive",
             "content-length": "16",
             "accept": "application/json, text/plain, */*",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/89.0.4389.128 Safari/537.36",
             "content-type": "application/json;charset=UTF-8",
             "origin": "http://localhost:3000",
             "sec-fetch-site": "same-site",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-dest": "empty",
-            "referer": "http://localhost:3000/",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US"
+            "sec-fetch-mode": "cors"
         },
         "statusCode": 201,
         "responseBody": "{\"name\":\"Harry\",\"id\":4}",
         "responseSize": 23,
         "responseHeaders": {
-            "x-powered-by": "Express",
             "access-control-allow-origin": "http://localhost:3000",
             "vary": "Origin, X-HTTP-Method-Override, Accept-Encoding",
             "access-control-allow-credentials": "true",
             "cache-control": "no-cache",
-            "pragma": "no-cache",
-            "expires": "-1",
             "access-control-expose-headers": "Location",
-            "location": "http://localhost:1337/names/4",
             "x-content-type-options": "nosniff",
             "content-type": "application/json; charset=utf-8",
-            "content-length": "32",
-            "etag": "W/\"20-QExGUU6otpykzJZTdalyVSclFQQ\"",
-            "connection": "keep-alive",
-            "keep-alive": "timeout=5"
+            "connection": "keep-alive"
         }
     },
     {
@@ -111,35 +88,23 @@
             "proxy-connection": "keep-alive",
             "content-length": "16",
             "accept": "application/json, text/plain, */*",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/89.0.4389.128 Safari/537.36",
             "content-type": "application/json;charset=UTF-8",
             "origin": "http://localhost:3000",
             "sec-fetch-site": "same-site",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-dest": "empty",
-            "referer": "http://localhost:3000/",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US"
+            "sec-fetch-mode": "cors"
         },
         "statusCode": 201,
         "responseBody": "{\"name\":\"Barry\",\"id\":5}",
         "responseSize": 23,
         "responseHeaders": {
-            "x-powered-by": "Express",
             "access-control-allow-origin": "http://localhost:3000",
             "vary": "Origin, X-HTTP-Method-Override, Accept-Encoding",
             "access-control-allow-credentials": "true",
             "cache-control": "no-cache",
-            "pragma": "no-cache",
-            "expires": "-1",
             "access-control-expose-headers": "Location",
-            "location": "http://localhost:1337/names/5",
             "x-content-type-options": "nosniff",
             "content-type": "application/json; charset=utf-8",
-            "content-length": "32",
-            "etag": "W/\"20-gZdtianfpW3eUnposZyQoF24weE\"",
-            "connection": "keep-alive",
-            "keep-alive": "timeout=5"
+            "connection": "keep-alive"
         }
     },
     {
@@ -154,32 +119,21 @@
             "host": "localhost:1337",
             "proxy-connection": "keep-alive",
             "accept": "application/json, text/plain, */*",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/89.0.4389.128 Safari/537.36",
             "origin": "http://localhost:3000",
             "sec-fetch-site": "same-site",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-dest": "empty",
-            "referer": "http://localhost:3000/",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US"
+            "sec-fetch-mode": "cors"
         },
         "statusCode": 200,
         "responseBody": "{}",
         "responseSize": 2,
         "responseHeaders": {
-            "x-powered-by": "Express",
             "access-control-allow-origin": "http://localhost:3000",
             "vary": "Origin, Accept-Encoding",
             "access-control-allow-credentials": "true",
             "cache-control": "no-cache",
-            "pragma": "no-cache",
-            "expires": "-1",
             "x-content-type-options": "nosniff",
             "content-type": "application/json; charset=utf-8",
-            "content-length": "2",
-            "etag": "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\"",
-            "connection": "keep-alive",
-            "keep-alive": "timeout=5"
+            "connection": "keep-alive"
         }
     },
     {
@@ -194,32 +148,21 @@
             "host": "localhost:1337",
             "proxy-connection": "keep-alive",
             "accept": "application/json, text/plain, */*",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/89.0.4389.128 Safari/537.36",
             "origin": "http://localhost:3000",
             "sec-fetch-site": "same-site",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-dest": "empty",
-            "referer": "http://localhost:3000/",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-US"
+            "sec-fetch-mode": "cors"
         },
         "statusCode": 200,
         "responseBody": "{}",
         "responseSize": 2,
         "responseHeaders": {
-            "x-powered-by": "Express",
             "access-control-allow-origin": "http://localhost:3000",
             "vary": "Origin, Accept-Encoding",
             "access-control-allow-credentials": "true",
             "cache-control": "no-cache",
-            "pragma": "no-cache",
-            "expires": "-1",
             "x-content-type-options": "nosniff",
             "content-type": "application/json; charset=utf-8",
-            "content-length": "2",
-            "etag": "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\"",
-            "connection": "keep-alive",
-            "keep-alive": "timeout=5"
+            "connection": "keep-alive"
         }
     }
 ]
