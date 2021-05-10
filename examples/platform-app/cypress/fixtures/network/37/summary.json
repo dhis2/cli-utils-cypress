@@ -1,11 +1,11 @@
 {
     "count": 16,
-    "totalResponseSize": 25082,
-    "duplicates": 4,
-    "nonDeterministicResponses": 0,
+    "totalResponseSize": 24095,
+    "duplicates": 6,
+    "nonDeterministicResponses": 1,
     "serverMinorVersion": 37,
     "fixtureFiles": [
-        "listing.json",
-        "static_resources.json"
+        "static_resources.json",
+        "listing.json"
     ]
 }
