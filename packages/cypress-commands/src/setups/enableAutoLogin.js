@@ -1,4 +1,8 @@
 export const enableAutoLogin = () => {
+    if (Cypress.env('dhis2_api_stub_mode') === 'STUB') {
+        return
+    }
+
     before(() => {
         cy.login()
     })
