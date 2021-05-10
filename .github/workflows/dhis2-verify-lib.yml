@@ -84,7 +84,7 @@ jobs:
             - name: Lint
               run: yarn lint
 
-      e2e:
+    e2e:
         runs-on: ubuntu-latest
         if: "!contains(github.event.head_commit.message, '[skip ci]')"
         needs: [install, build]
@@ -110,10 +110,10 @@ jobs:
 
             - name: JSON server app - stub run
               run: yarn workspace testing-network-shim-app cy:stub
-            
+
             - name: Platform app - stub run
-              run: yarn workspace platform-app cy:
-                
+              run: yarn workspace platform-app cy:stub
+
     publish:
         runs-on: ubuntu-latest
         needs: [build, lint]
