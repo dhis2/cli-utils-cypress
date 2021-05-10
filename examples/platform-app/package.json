@@ -5,7 +5,7 @@
     "license": "BSD-3-Clause",
     "private": true,
     "scripts": {
-        "install:with-remove": "yarn install && (cd node_modules/@dhis2 && rm -rf cli-utils-cypress && rm -rf cypress-commands && rm -rf cypress-plugins)",
+        "install:with-remove": "yarn install --frozen-lockfile && (cd node_modules/@dhis2 && rm -rf cli-utils-cypress && rm -rf cypress-commands && rm -rf cypress-plugins)",
         "build": "d2-app-scripts build",
         "start": "d2-app-scripts start",
         "test": "d2-app-scripts test",
