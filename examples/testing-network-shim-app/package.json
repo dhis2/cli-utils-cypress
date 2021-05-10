@@ -17,7 +17,8 @@
     "devDependencies": {
         "@dhis2/cli-utils-cypress": "file:../../packages/cli",
         "@dhis2/cypress-commands": "file:../../packages/cypress-commands",
-        "@dhis2/cypress-plugins": "file:../../packages/cypress-plugins"
+        "@dhis2/cypress-plugins": "file:../../packages/cypress-plugins",
+        "concurrently": "^6.1.0"
     },
     "scripts": {
         "install:with-remove": "yarn install --frozen-lockfile && (cd node_modules/@dhis2 && rm -rf cli-utils-cypress && rm -rf cypress-commands && rm -rf cypress-plugins)",
