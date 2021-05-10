@@ -35,10 +35,7 @@
             "x-xss-protection": "1; mode=block",
             "x-frame-options": "SAMEORIGIN"
         },
-        "responseLookup": [
-            0,
-            1
-        ]
+        "responseLookup": [0, 1]
     },
     {
         "path": "/api/37/systemSettings/applicationTitle",

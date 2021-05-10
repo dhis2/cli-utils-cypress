@@ -28,6 +28,7 @@
         "@dhis2/cypress-plugins": "file:../../packages/cypress-plugins"
     },
     "dependencies": {
-        "@dhis2/app-runtime": "^2.8.0"
+        "@dhis2/app-runtime": "^2.8.0",
+        "prop-types": "^15.7.2"
     }
 }
