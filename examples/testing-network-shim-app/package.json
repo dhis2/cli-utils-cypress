@@ -19,7 +19,7 @@
     },
     "scripts": {
         "install:with-remove": "yarn install && (cd node_modules/@dhis2 && rm -rf cli-utils-cypress && rm -rf cypress-commands && rm -rf cypress-plugins)",
-        "serve": "json-server src/json-server/db.js --routes ./src/json-server/routes.json --middlewares ./node_modules/json-server-reset --watch -p 1337",
+        "serve": "json-server src/json-server/db.js --routes ./src/json-server/routes.json --middlewares ../../node_modules/json-server-reset --watch -p 1337",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
