@@ -32,7 +32,7 @@ jobs:
 
             - name: Install
               if: steps.yarn-cache.outputs.cache-hit != 'true'
-              run: yarn install && yarn workspace testing-network-shim-app install && yarn workspace platform-app
+              run: yarn install
 
     build:
         runs-on: ubuntu-latest
@@ -104,6 +104,9 @@ jobs:
             - uses: actions/download-artifact@v2
               with:
                   name: lib-build
+
+            - name: Install example app deps
+              run: yarn workspace testing-network-shim-app install && yarn workspace platform-app install
 
             - name: JSON server app - capture run
               run: yarn workspace testing-network-shim-app cy:capture-ci
