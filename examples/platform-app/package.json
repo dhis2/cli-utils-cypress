@@ -17,7 +17,7 @@
         "cy:open": "d2-utils-cypress open --appStart 'yarn cy:start'",
         "cy:run": "d2-utils-cypress run --appStart 'yarn cy:start'",
         "cy:capture": "d2-utils-cypress run --capture --appStart 'yarn cy:start' --serverMinorVersion 37",
-        "cy:stub": "../packages/cli/bin/d2-utils-cypress run --stub --appStart 'yarn cy:start' --serverMinorVersion 37",
+        "cy:stub": "d2-utils-cypress run --stub --appStart 'yarn cy:start' --serverMinorVersion 37",
         "cy:stub-debug": "DEBUG=cypress:network:*,cypress:net-stubbing* d2-utils-cypress run --stub --appStart 'yarn cy:start' --serverMinorVersion 37"
     },
     "devDependencies": {
