@@ -32,7 +32,7 @@ jobs:
 
             - name: Install
               if: steps.yarn-cache.outputs.cache-hit != 'true'
-              run: yarn install --frozen-lockfile && yarn workspace testing-network-shim-app install --frozen-lockfile && yarn workspace platform-app --frozen-lockfile
+              run: yarn install && yarn workspace testing-network-shim-app install && yarn workspace platform-app
 
     build:
         runs-on: ubuntu-latest
