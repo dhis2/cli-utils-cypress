@@ -106,10 +106,10 @@ jobs:
                   name: lib-build
 
             - name: JSON server app - capture run
-              run: yarn workspace testing-network-shim-app cy:capture
+              run: yarn workspace testing-network-shim-app cy:capture-ci
 
             - name: JSON server app - stub run
-              run: yarn workspace testing-network-shim-app cy:stub
+              run: yarn workspace testing-network-shim-app cy:stub-ci
 
             - name: Platform app - stub run
               run: yarn workspace platform-app cy:stub
