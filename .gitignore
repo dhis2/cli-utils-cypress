@@ -3,7 +3,7 @@
 # Producing network fixtures during a capture run and then using them
 # during a stub run is part of the e2e test suite, so we gitignore these 
 # files and have them generated on CI
-examples/platform-app/cypress/fixtures/network/
+examples/testing-network-shim-app/cypress/fixtures/network
 
 .yarn
 .yarnrc
@@ -36,4 +36,3 @@ bundle.stats.json
 
 # d2
 .d2/
-
