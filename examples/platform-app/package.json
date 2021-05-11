@@ -22,10 +22,7 @@
     },
     "devDependencies": {
         "@dhis2/cli-app-scripts": "^6.1.1",
-        "@dhis2/cli-style": "^8.0.0",
-        "@dhis2/cli-utils-cypress": "file:../../packages/cli",
-        "@dhis2/cypress-commands": "file:../../packages/cypress-commands",
-        "@dhis2/cypress-plugins": "file:../../packages/cypress-plugins"
+        "@dhis2/cli-style": "^8.0.0"
     },
     "dependencies": {
         "@dhis2/app-runtime": "^2.8.0",

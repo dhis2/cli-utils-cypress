@@ -28,8 +28,8 @@
         "cy:serve-and-start": "concurrently \"yarn serve\" \"yarn cy:start\"",
         "cy:open": "d2-utils-cypress open --appStart 'yarn start'",
         "cy:run": "d2-utils-cypress run --appStart 'yarn start'",
-        "cy:capture": "../../packages/cli/bin/d2-utils-cypress run --capture --appStart 'yarn cy:serve-and-start' --serverMinorVersion 36",
-        "cy:stub": "../../packages/cli/bin/d2-utils-cypress run --stub --appStart 'yarn cy:start' --serverMinorVersion 36"
+        "cy:capture": "d2-utils-cypress run --capture --appStart 'yarn cy:serve-and-start' --serverMinorVersion 36",
+        "cy:stub": "d2-utils-cypress run --stub --appStart 'yarn cy:start' --serverMinorVersion 36"
     },
     "browserslist": {
         "production": [
