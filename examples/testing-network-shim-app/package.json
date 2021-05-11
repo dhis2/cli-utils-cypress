@@ -21,7 +21,7 @@
         "concurrently": "^6.1.0"
     },
     "scripts": {
-        "install:with-remove": "yarn install --frozen-lockfile && (cd node_modules/@dhis2 && rm -rf cli-utils-cypress && rm -rf cypress-commands && rm -rf cypress-plugins)",
+        "install:with-remove": "yarn install && (cd node_modules/@dhis2 && rm -rf cli-utils-cypress && rm -rf cypress-commands && rm -rf cypress-plugins)",
         "serve": "json-server src/json-server/db.js --routes ./src/json-server/routes.json --middlewares ./node_modules/json-server-reset --watch -p 1337",
         "start": "react-scripts start",
         "serve-and-start": "concurrently \"yarn serve\" \"yarn start\"",
