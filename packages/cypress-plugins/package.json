@@ -13,5 +13,8 @@
     "private": false,
     "publishConfig": {
         "access": "public"
+    },
+    "scripts": {
+        "build": "d2-app-scripts build"
     }
 }
