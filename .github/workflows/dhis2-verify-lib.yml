@@ -109,10 +109,10 @@ jobs:
               run: yarn workspace testing-network-shim-app install && yarn workspace platform-app install
 
             - name: JSON server app - capture run
-              run: yarn workspace testing-network-shim-app cy:capture-ci
+              run: yarn workspace testing-network-shim-app cy:capture
 
             - name: JSON server app - stub run
-              run: yarn workspace testing-network-shim-app cy:stub-ci
+              run: yarn workspace testing-network-shim-app cy:stub
 
             - name: Platform app - stub run
               run: yarn workspace platform-app cy:stub
