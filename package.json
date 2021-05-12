@@ -20,7 +20,6 @@
         }
     ],
     "scripts": {
-        "install:all": "yarn install && yarn workspace testing-network-shim-app install:with-remove && yarn workspace platform-app install:with-remove",
         "lint": "yarn lint:js && yarn lint:text",
         "lint:js": "d2-style js check",
         "lint:text": "d2-style text check",

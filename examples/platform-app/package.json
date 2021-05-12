@@ -5,7 +5,6 @@
     "license": "BSD-3-Clause",
     "private": true,
     "scripts": {
-        "install:with-remove": "yarn install --frozen-lockfile && (cd node_modules/@dhis2 && rm -rf cli-utils-cypress && rm -rf cypress-commands && rm -rf cypress-plugins)",
         "build": "d2-app-scripts build",
         "start": "d2-app-scripts start",
         "test": "d2-app-scripts test",
@@ -14,14 +13,15 @@
         "format": "yarn d2-style apply",
         "format:staged": "yarn format --staged",
         "cy:start": "BROWSER=none REACT_APP_DHIS2_BASE_URL=http://localhost:8080 REACT_APP_DHIS2_API_VERSION=37 yarn start",
-        "cy:open": "../../packages/cli/bin/d2-utils-cypress open --appStart 'yarn cy:start'",
-        "cy:run": "../../packages/cli/bin/d2-utils-cypress run --appStart 'yarn cy:start'",
-        "cy:capture": "../../packages/cli/bin/d2-utils-cypress run --capture --appStart 'yarn cy:start' --serverMinorVersion 37",
-        "cy:stub": "../../packages/cli/bin/d2-utils-cypress run --stub --appStart 'yarn cy:start' --serverMinorVersion 37",
+        "cy:open": "d2-utils-cypress open --appStart 'yarn cy:start'",
+        "cy:run": "d2-utils-cypress run --appStart 'yarn cy:start'",
+        "cy:capture": "d2-utils-cypress run --capture --appStart 'yarn cy:start' --serverMinorVersion 37",
+        "cy:stub": "d2-utils-cypress run --stub --appStart 'yarn cy:start' --serverMinorVersion 37",
         "cy:stub-debug": "DEBUG=cypress:network:*,cypress:net-stubbing* d2-utils-cypress run --stub --appStart 'yarn cy:start' --serverMinorVersion 37"
     },
     "devDependencies": {
         "@dhis2/cli-app-scripts": "^6.1.1",
+        "@dhis2/cli-utils-cypress": "*",
         "@dhis2/cli-style": "^8.0.0"
     },
     "dependencies": {
