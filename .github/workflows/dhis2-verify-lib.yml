@@ -106,7 +106,9 @@ jobs:
                   name: lib-build
 
             - name: Install Cypress binary
-              run: yarn cypress install
+              run: |
+                  yarn workspace testing-network-shim-app cypress install
+                  yarn workspace platform-app cypress install
 
             - name: JSON server app - capture run
               run: yarn workspace testing-network-shim-app cy:capture
