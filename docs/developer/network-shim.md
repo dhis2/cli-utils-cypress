@@ -73,8 +73,20 @@ made.
 If yes, the response body of the already recorded data changes from a
 string to an array to store all possible, different responses. Additionally a
 lookup array is added to map the request sequence to the stored responses while
-aavoiding duplication of the responses. Requests that respond with a 304 status
+avoiding duplication of the responses. Requests that respond with a 304 status
 code are treated as deterministic responses, even if the response body does not
 match with the response body of the previous request.
 
 If no, then the response will be added to the requestStubs.
+
+## The test suite
+
+The network shim currently doesn't have any test coverage via unit tests, but it does have a e2e test suite that verifies it is working correctly. Since the network shim is a cypress tool, we have created a test suite via example apps that implement the network shim:
+
+-   Both capture and stub mode are being tested in the `testing-network-shim-app`, since this is using a simple json-server as a backend which can be spun up on CI.
+-   The test-suite for the `testing-network-shim-app` verifies that basic capturing and stubbing process works and includes a few particular tests that assert specific behaviour:
+    -   Dealing with repeating requests and 304's
+    -   Dealing with nonDeterministic responses
+    -   Dealing with query parameters
+    -   Override behaviour of `cy.intercept`
+-   The test-suite in the platform app is only there as a smoke test for DHIS2 platform apps. On CI we can only use stub mode, because we can't access a real stable backend. The captured network fixtures are committed, so stub mode can run on CI.
