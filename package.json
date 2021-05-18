@@ -32,7 +32,8 @@
         "docs:start": "d2-utils-docsite serve ./docs -o ./dist",
         "build": "yarn workspace @dhis2/cypress-commands build",
         "watch": "yarn workspace @dhis2/cypress-commands build --watch",
-        "test": "jest"
+        "test": "jest",
+        "cy:local": "yarn workspace testing-network-shim-app cy:capture-and-stub && yarn workspace platform-app cy:capture-and-stub"
     },
     "version": "7.0.1",
     "devDependencies": {
