@@ -3,7 +3,9 @@
     "workspaces": [
         "./packages/cli",
         "./packages/cypress-commands",
-        "./packages/cypress-plugins"
+        "./packages/cypress-plugins",
+        "./examples/platform-app",
+        "./examples/testing-network-shim-app"
     ],
     "author": "Viktor Varland <viktor@dhis2.org>",
     "contributors": [
@@ -30,7 +32,10 @@
         "docs:start": "d2-utils-docsite serve ./docs -o ./dist",
         "build": "yarn workspace @dhis2/cypress-commands build",
         "watch": "yarn workspace @dhis2/cypress-commands build --watch",
-        "test": "jest"
+        "test": "jest",
+        "test:network-shim-app": "yarn workspace testing-network-shim-app cy:capture-and-stub",
+        "test:platform-app": "yarn workspace platform-app cy:capture-and-stub",
+        "cy:local": "yarn build && yarn test:network-shim-app && test:platform-app"
     },
     "version": "7.0.1",
     "devDependencies": {

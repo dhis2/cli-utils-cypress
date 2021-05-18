@@ -13,7 +13,9 @@ import {
  */
 export default function stubRequests(state) {
     state.config.hosts.forEach(host => {
-        cy.intercept(host, request => {
+        const hostRegex = new RegExp(`^${host}`)
+
+        cy.intercept(hostRegex, request => {
             stubRequest(state, request)
         })
     })
