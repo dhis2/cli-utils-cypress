@@ -81,7 +81,7 @@ If no, then the response will be added to the requestStubs.
 
 ## The test suite
 
-The network shim currently doesn't have any test coverage via unit tests, but it does have a e2e test suite that verifies it is working correctly. Since the network shim is a cypress tool, we have created a test suite via example apps that implement the network shim:
+The network shim currently doesn't have any test coverage via unit tests, but it does have an e2e test suite which can be executed on CI and verifies it is working correctly. Since the network shim is a cypress tool, we have created a test suite via example apps that implement the network shim:
 
 -   Both capture and stub mode are being tested in the `testing-network-shim-app`, since this is using a simple json-server as a backend which can be spun up on CI.
 -   The test-suite for the `testing-network-shim-app` verifies that basic capturing and stubbing process works and includes a few particular tests that assert specific behaviour:
@@ -90,3 +90,11 @@ The network shim currently doesn't have any test coverage via unit tests, but it
     -   Dealing with query parameters
     -   Override behaviour of `cy.intercept`
 -   The test-suite in the platform app is only there as a smoke test for DHIS2 platform apps. On CI we can only use stub mode, because we can't access a real stable backend. The captured network fixtures are committed, so stub mode can run on CI.
+
+The full test suite, including capture mode on a platform app, can be executed _locally_ by issuing the following command:
+
+```bash
+yarn cy:local
+```
+
+Information about troubleshooting the platform-app capture-run can be found [here](developer/troubleshooting#executing-a-network-shim-capture-run-in-the-platform-app).
