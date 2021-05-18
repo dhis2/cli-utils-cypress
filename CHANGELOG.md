@@ -1,3 +1,37 @@
+# [8.0.0-alpha.1](https://github.com/dhis2/cli-utils-cypress/compare/v7.0.1...v8.0.0-alpha.1) (2021-05-18)
+
+
+### Bug Fixes
+
+* **network-shim:** ensure in-test fixtures are used instead of shim fixtures ([#176](https://github.com/dhis2/cli-utils-cypress/issues/176)) ([84a1907](https://github.com/dhis2/cli-utils-cypress/commit/84a1907dd629051e268c4b8fe2c21bbd1fcb24c3))
+
+
+### BREAKING CHANGES
+
+* **network-shim:** bumps cypress 1 major version, to v7
+
+* fix(network-shim): filter request and response headers properties
+
+This was planned anyway to keep fixtures stable.
+But also turned out to be required due to a bug:
+https://github.com/cypress-io/cypress/issues/16420
+
+* fix(network-shim): disable auto-login during stub run
+
+* fix(network-shim): add 'system/info' resource to static resources list
+
+* feat(network-shim): run tests suite on CI
+
+* docs(network-shim): add info about the network-shim test suite
+
+* chore(network-shim): add command to locally run full e2e suite
+
+* docs(network-shim): add info reg troubleshooting and local full test run
+
+* chore(cy local): run build command before cypress commands
+
+Co-authored-by: Jan-Gerke Salomon <jgs.salomon@gmail.com>
+
 ## [7.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v7.0.0...v7.0.1) (2021-03-10)
 
 
