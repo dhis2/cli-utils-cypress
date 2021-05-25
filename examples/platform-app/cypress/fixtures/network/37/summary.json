@@ -1,8 +1,12 @@
 {
-    "count": 16,
-    "totalResponseSize": 24098,
-    "duplicates": 5,
-    "nonDeterministicResponses": 1,
+    "count": 46,
+    "totalResponseSize": 32064,
+    "duplicates": 29,
+    "nonDeterministicResponses": 5,
     "serverMinorVersion": 37,
-    "fixtureFiles": ["static_resources.json", "listing.json"]
+    "fixtureFiles": [
+        "static_resources.json",
+        "the_creating_user_groups.json",
+        "the_app_lists_user_groups.json"
+    ]
 }
