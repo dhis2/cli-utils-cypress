@@ -1,7 +1,7 @@
 [
     {
         "path": "/api/37/systemSettings/helpPageLink",
-        "testName": "The app lists user groups -- The app displays user groups from the database",
+        "testName": "Creating user groups with intercept and fixture -- Creating a user - intercept fixture",
         "static": false,
         "count": 1,
         "nonDeterministic": false,
@@ -35,7 +35,7 @@
     },
     {
         "path": "/api/37/userGroups",
-        "testName": "The app lists user groups -- The app displays user groups from the database",
+        "testName": "Creating user groups with intercept and fixture -- Creating a user - intercept fixture",
         "static": false,
         "count": 1,
         "nonDeterministic": false,

@@ -3,7 +3,7 @@
         "path": "/api/system/info",
         "testName": null,
         "static": true,
-        "count": 5,
+        "count": 3,
         "nonDeterministic": true,
         "method": "GET",
         "requestBody": "",
@@ -17,13 +17,11 @@
         },
         "statusCode": 200,
         "responseBody": [
-            "{\"contextPath\":\"http://localhost:8080\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.212 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2021-05-25T15:10:11.132\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2021-05-10T09:13:40.137\",\"intervalSinceLastAnalyticsTableSuccess\":\"365 h, 56 m, 30 s\",\"lastAnalyticsTableRuntime\":\"383260\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"version\":\"2.37-SNAPSHOT\",\"revision\":\"c6affca\",\"buildTime\":\"2021-04-13T13:06:14.000\",\"jasperReportsVersion\":\"6.3.1\",\"environmentVariable\":\"DHIS2_HOME\",\"databaseInfo\":{\"spatialSupport\":true},\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"clusterHostname\":\"\",\"isMetadataVersionEnabled\":true,\"metadataSyncEnabled\":false}",
-            "{\"contextPath\":\"http://localhost:8080\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.212 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2021-05-25T15:10:16.997\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2021-05-10T09:13:40.137\",\"intervalSinceLastAnalyticsTableSuccess\":\"365 h, 56 m, 36 s\",\"lastAnalyticsTableRuntime\":\"383260\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"version\":\"2.37-SNAPSHOT\",\"revision\":\"c6affca\",\"buildTime\":\"2021-04-13T13:06:14.000\",\"jasperReportsVersion\":\"6.3.1\",\"environmentVariable\":\"DHIS2_HOME\",\"databaseInfo\":{\"spatialSupport\":true},\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"clusterHostname\":\"\",\"isMetadataVersionEnabled\":true,\"metadataSyncEnabled\":false}",
-            "{\"contextPath\":\"http://localhost:8080\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.212 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2021-05-25T15:10:22.597\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2021-05-10T09:13:40.137\",\"intervalSinceLastAnalyticsTableSuccess\":\"365 h, 56 m, 42 s\",\"lastAnalyticsTableRuntime\":\"383260\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"version\":\"2.37-SNAPSHOT\",\"revision\":\"c6affca\",\"buildTime\":\"2021-04-13T13:06:14.000\",\"jasperReportsVersion\":\"6.3.1\",\"environmentVariable\":\"DHIS2_HOME\",\"databaseInfo\":{\"spatialSupport\":true},\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"clusterHostname\":\"\",\"isMetadataVersionEnabled\":true,\"metadataSyncEnabled\":false}",
-            "{\"contextPath\":\"http://localhost:8080\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.212 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2021-05-25T15:10:28.048\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2021-05-10T09:13:40.137\",\"intervalSinceLastAnalyticsTableSuccess\":\"365 h, 56 m, 47 s\",\"lastAnalyticsTableRuntime\":\"383260\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"version\":\"2.37-SNAPSHOT\",\"revision\":\"c6affca\",\"buildTime\":\"2021-04-13T13:06:14.000\",\"jasperReportsVersion\":\"6.3.1\",\"environmentVariable\":\"DHIS2_HOME\",\"databaseInfo\":{\"spatialSupport\":true},\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"clusterHostname\":\"\",\"isMetadataVersionEnabled\":true,\"metadataSyncEnabled\":false}",
-            "{\"contextPath\":\"http://localhost:8080\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.212 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2021-05-25T15:10:28.593\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2021-05-10T09:13:40.137\",\"intervalSinceLastAnalyticsTableSuccess\":\"365 h, 56 m, 48 s\",\"lastAnalyticsTableRuntime\":\"383260\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"version\":\"2.37-SNAPSHOT\",\"revision\":\"c6affca\",\"buildTime\":\"2021-04-13T13:06:14.000\",\"jasperReportsVersion\":\"6.3.1\",\"environmentVariable\":\"DHIS2_HOME\",\"databaseInfo\":{\"spatialSupport\":true},\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"clusterHostname\":\"\",\"isMetadataVersionEnabled\":true,\"metadataSyncEnabled\":false}"
+            "{\"contextPath\":\"http://localhost:8080\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.212 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2021-05-26T14:17:27.797\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2021-05-10T09:13:40.137\",\"intervalSinceLastAnalyticsTableSuccess\":\"389 h, 3 m, 47 s\",\"lastAnalyticsTableRuntime\":\"383260\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"version\":\"2.37-SNAPSHOT\",\"revision\":\"c6affca\",\"buildTime\":\"2021-04-13T13:06:14.000\",\"jasperReportsVersion\":\"6.3.1\",\"environmentVariable\":\"DHIS2_HOME\",\"databaseInfo\":{\"spatialSupport\":true},\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"clusterHostname\":\"\",\"isMetadataVersionEnabled\":true,\"metadataSyncEnabled\":false}",
+            "{\"contextPath\":\"http://localhost:8080\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.212 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2021-05-26T14:17:33.728\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2021-05-10T09:13:40.137\",\"intervalSinceLastAnalyticsTableSuccess\":\"389 h, 3 m, 53 s\",\"lastAnalyticsTableRuntime\":\"383260\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"version\":\"2.37-SNAPSHOT\",\"revision\":\"c6affca\",\"buildTime\":\"2021-04-13T13:06:14.000\",\"jasperReportsVersion\":\"6.3.1\",\"environmentVariable\":\"DHIS2_HOME\",\"databaseInfo\":{\"spatialSupport\":true},\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"clusterHostname\":\"\",\"isMetadataVersionEnabled\":true,\"metadataSyncEnabled\":false}",
+            "{\"contextPath\":\"http://localhost:8080\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/90.0.4430.212 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2021-05-26T14:17:34.265\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2021-05-10T09:13:40.137\",\"intervalSinceLastAnalyticsTableSuccess\":\"389 h, 3 m, 54 s\",\"lastAnalyticsTableRuntime\":\"383260\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"version\":\"2.37-SNAPSHOT\",\"revision\":\"c6affca\",\"buildTime\":\"2021-04-13T13:06:14.000\",\"jasperReportsVersion\":\"6.3.1\",\"environmentVariable\":\"DHIS2_HOME\",\"databaseInfo\":{\"spatialSupport\":true},\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"clusterHostname\":\"\",\"isMetadataVersionEnabled\":true,\"metadataSyncEnabled\":false}"
         ],
-        "responseSize": 990,
+        "responseSize": 989,
         "responseHeaders": {
             "server": "nginx/1.19.3",
             "content-type": "application/json;charset=UTF-8",
@@ -38,47 +36,13 @@
             "x-xss-protection": "1; mode=block",
             "x-frame-options": "SAMEORIGIN"
         },
-        "responseLookup": [0, 1, 2, 3, 4]
-    },
-    {
-        "path": "/api/37/systemSettings/applicationTitle",
-        "testName": null,
-        "static": true,
-        "count": 5,
-        "nonDeterministic": false,
-        "method": "GET",
-        "requestBody": "",
-        "requestHeaders": {
-            "host": "localhost:8080",
-            "proxy-connection": "keep-alive",
-            "accept": "application/json",
-            "origin": "http://localhost:3000",
-            "sec-fetch-site": "same-site",
-            "sec-fetch-mode": "cors"
-        },
-        "statusCode": 200,
-        "responseBody": "{\"applicationTitle\":\"DHIS 2 Demo - Sierra Leone\"}",
-        "responseSize": 49,
-        "responseHeaders": {
-            "server": "nginx/1.19.3",
-            "content-type": "application/json;charset=UTF-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-origin": "http://localhost:3000",
-            "vary": "Origin",
-            "access-control-expose-headers": "ETag, Location",
-            "cache-control": "no-cache, private",
-            "x-content-type-options": "nosniff",
-            "x-xss-protection": "1; mode=block",
-            "x-frame-options": "SAMEORIGIN"
-        }
+        "responseLookup": [0, 1, 2]
     },
     {
         "path": "/api/37/me/dashboard",
         "testName": null,
         "static": true,
-        "count": 5,
+        "count": 3,
         "nonDeterministic": false,
         "method": "GET",
         "requestBody": "",
@@ -109,44 +73,10 @@
         }
     },
     {
-        "path": "/api/37/userSettings",
-        "testName": null,
-        "static": true,
-        "count": 5,
-        "nonDeterministic": false,
-        "method": "GET",
-        "requestBody": "",
-        "requestHeaders": {
-            "host": "localhost:8080",
-            "proxy-connection": "keep-alive",
-            "accept": "application/json",
-            "origin": "http://localhost:3000",
-            "sec-fetch-site": "same-site",
-            "sec-fetch-mode": "cors"
-        },
-        "statusCode": 200,
-        "responseBody": "{\"keyMessageSmsNotification\":false,\"keyTrackerDashboardLayout\":\"{\\\"IpHINAT79UW\\\":{\\\"widgets\\\":[{\\\"title\\\":\\\"enrollment\\\",\\\"view\\\":\\\"components/enrollment/enrollment.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":0},{\\\"title\\\":\\\"indicators\\\",\\\"view\\\":\\\"components/rulebound/rulebound.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":1},{\\\"title\\\":\\\"dataentry\\\",\\\"view\\\":\\\"components/dataentry/dataentry.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":2},{\\\"title\\\":\\\"report\\\",\\\"view\\\":\\\"components/report/tei-report.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":3},{\\\"title\\\":\\\"current_selections\\\",\\\"view\\\":\\\"components/selected/selected.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":0},{\\\"title\\\":\\\"feedback\\\",\\\"view\\\":\\\"components/rulebound/rulebound.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":1},{\\\"title\\\":\\\"profile\\\",\\\"view\\\":\\\"components/profile/profile.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":2},{\\\"title\\\":\\\"relationships\\\",\\\"view\\\":\\\"components/relationship/relationship.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":4},{\\\"title\\\":\\\"notes\\\",\\\"view\\\":\\\"components/notes/notes.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":5},{\\\"title\\\":\\\"messaging\\\",\\\"view\\\":\\\"components/messaging/messaging.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":5},{\\\"title\\\":\\\"dataentryTabular\\\",\\\"view\\\":\\\"components/dataentry/dataentry-tabular-layout.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":3}],\\\"program\\\":\\\"IpHINAT79UW\\\"},\\\"ur1Edk5Oe2n\\\":{\\\"widgets\\\":[{\\\"title\\\":\\\"enrollment\\\",\\\"view\\\":\\\"components/enrollment/enrollment.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":0},{\\\"title\\\":\\\"indicators\\\",\\\"view\\\":\\\"components/rulebound/rulebound.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":1},{\\\"title\\\":\\\"dataentry\\\",\\\"view\\\":\\\"components/dataentry/dataentry.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":2},{\\\"title\\\":\\\"report\\\",\\\"view\\\":\\\"components/report/tei-report.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":3},{\\\"title\\\":\\\"current_selections\\\",\\\"view\\\":\\\"components/selected/selected.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":0},{\\\"title\\\":\\\"feedback\\\",\\\"view\\\":\\\"components/rulebound/rulebound.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":1},{\\\"title\\\":\\\"profile\\\",\\\"view\\\":\\\"components/profile/profile.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":2},{\\\"title\\\":\\\"relationships\\\",\\\"view\\\":\\\"components/relationship/relationship.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":3},{\\\"title\\\":\\\"notes\\\",\\\"view\\\":\\\"components/notes/notes.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":4},{\\\"title\\\":\\\"messaging\\\",\\\"view\\\":\\\"components/messaging/messaging.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":5},{\\\"title\\\":\\\"dataentryTabular\\\",\\\"view\\\":\\\"components/dataentry/dataentry-tabular-layout.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":3}],\\\"program\\\":\\\"ur1Edk5Oe2n\\\"}}\",\"keyCurrentStyle\":\"light_blue/light_blue.css\",\"keyStyle\":\"light_blue/light_blue.css\",\"keyUiLocale\":\"nb\",\"keyAnalysisDisplayProperty\":\"name\",\"keyMessageEmailNotification\":false}",
-        "responseSize": 3609,
-        "responseHeaders": {
-            "server": "nginx/1.19.3",
-            "content-type": "application/json;charset=UTF-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-origin": "http://localhost:3000",
-            "vary": "Origin",
-            "access-control-expose-headers": "ETag, Location",
-            "cache-control": "no-cache, private",
-            "x-content-type-options": "nosniff",
-            "x-xss-protection": "1; mode=block",
-            "x-frame-options": "SAMEORIGIN"
-        }
-    },
-    {
         "path": "/api/37/me?fields=authorities,avatar,email,name,settings",
         "testName": null,
         "static": true,
-        "count": 5,
+        "count": 3,
         "nonDeterministic": false,
         "method": "GET",
         "requestBody": "",
@@ -177,10 +107,78 @@
         }
     },
     {
+        "path": "/api/37/userSettings",
+        "testName": null,
+        "static": true,
+        "count": 3,
+        "nonDeterministic": false,
+        "method": "GET",
+        "requestBody": "",
+        "requestHeaders": {
+            "host": "localhost:8080",
+            "proxy-connection": "keep-alive",
+            "accept": "application/json",
+            "origin": "http://localhost:3000",
+            "sec-fetch-site": "same-site",
+            "sec-fetch-mode": "cors"
+        },
+        "statusCode": 200,
+        "responseBody": "{\"keyMessageSmsNotification\":false,\"keyTrackerDashboardLayout\":\"{\\\"IpHINAT79UW\\\":{\\\"widgets\\\":[{\\\"title\\\":\\\"enrollment\\\",\\\"view\\\":\\\"components/enrollment/enrollment.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":0},{\\\"title\\\":\\\"indicators\\\",\\\"view\\\":\\\"components/rulebound/rulebound.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":1},{\\\"title\\\":\\\"dataentry\\\",\\\"view\\\":\\\"components/dataentry/dataentry.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":2},{\\\"title\\\":\\\"report\\\",\\\"view\\\":\\\"components/report/tei-report.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":3},{\\\"title\\\":\\\"current_selections\\\",\\\"view\\\":\\\"components/selected/selected.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":0},{\\\"title\\\":\\\"feedback\\\",\\\"view\\\":\\\"components/rulebound/rulebound.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":1},{\\\"title\\\":\\\"profile\\\",\\\"view\\\":\\\"components/profile/profile.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":2},{\\\"title\\\":\\\"relationships\\\",\\\"view\\\":\\\"components/relationship/relationship.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":4},{\\\"title\\\":\\\"notes\\\",\\\"view\\\":\\\"components/notes/notes.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":5},{\\\"title\\\":\\\"messaging\\\",\\\"view\\\":\\\"components/messaging/messaging.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":5},{\\\"title\\\":\\\"dataentryTabular\\\",\\\"view\\\":\\\"components/dataentry/dataentry-tabular-layout.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":3}],\\\"program\\\":\\\"IpHINAT79UW\\\"},\\\"ur1Edk5Oe2n\\\":{\\\"widgets\\\":[{\\\"title\\\":\\\"enrollment\\\",\\\"view\\\":\\\"components/enrollment/enrollment.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":0},{\\\"title\\\":\\\"indicators\\\",\\\"view\\\":\\\"components/rulebound/rulebound.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":1},{\\\"title\\\":\\\"dataentry\\\",\\\"view\\\":\\\"components/dataentry/dataentry.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":2},{\\\"title\\\":\\\"report\\\",\\\"view\\\":\\\"components/report/tei-report.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":3},{\\\"title\\\":\\\"current_selections\\\",\\\"view\\\":\\\"components/selected/selected.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":0},{\\\"title\\\":\\\"feedback\\\",\\\"view\\\":\\\"components/rulebound/rulebound.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":1},{\\\"title\\\":\\\"profile\\\",\\\"view\\\":\\\"components/profile/profile.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":2},{\\\"title\\\":\\\"relationships\\\",\\\"view\\\":\\\"components/relationship/relationship.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":3},{\\\"title\\\":\\\"notes\\\",\\\"view\\\":\\\"components/notes/notes.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":4},{\\\"title\\\":\\\"messaging\\\",\\\"view\\\":\\\"components/messaging/messaging.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":5},{\\\"title\\\":\\\"dataentryTabular\\\",\\\"view\\\":\\\"components/dataentry/dataentry-tabular-layout.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":3}],\\\"program\\\":\\\"ur1Edk5Oe2n\\\"}}\",\"keyCurrentStyle\":\"light_blue/light_blue.css\",\"keyStyle\":\"light_blue/light_blue.css\",\"keyUiLocale\":\"nb\",\"keyAnalysisDisplayProperty\":\"name\",\"keyMessageEmailNotification\":false}",
+        "responseSize": 3609,
+        "responseHeaders": {
+            "server": "nginx/1.19.3",
+            "content-type": "application/json;charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3000",
+            "vary": "Origin",
+            "access-control-expose-headers": "ETag, Location",
+            "cache-control": "no-cache, private",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN"
+        }
+    },
+    {
+        "path": "/api/37/systemSettings/applicationTitle",
+        "testName": null,
+        "static": true,
+        "count": 3,
+        "nonDeterministic": false,
+        "method": "GET",
+        "requestBody": "",
+        "requestHeaders": {
+            "host": "localhost:8080",
+            "proxy-connection": "keep-alive",
+            "accept": "application/json",
+            "origin": "http://localhost:3000",
+            "sec-fetch-site": "same-site",
+            "sec-fetch-mode": "cors"
+        },
+        "statusCode": 200,
+        "responseBody": "{\"applicationTitle\":\"DHIS 2 Demo - Sierra Leone\"}",
+        "responseSize": 49,
+        "responseHeaders": {
+            "server": "nginx/1.19.3",
+            "content-type": "application/json;charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3000",
+            "vary": "Origin",
+            "access-control-expose-headers": "ETag, Location",
+            "cache-control": "no-cache, private",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN"
+        }
+    },
+    {
         "path": "/dhis-web-commons/menu/getModules.action",
         "testName": null,
         "static": true,
-        "count": 5,
+        "count": 2,
         "nonDeterministic": false,
         "method": "GET",
         "requestBody": "",
@@ -214,7 +212,7 @@
         "path": "/api/37/staticContent/logo_banner",
         "testName": null,
         "static": true,
-        "count": 4,
+        "count": 2,
         "nonDeterministic": false,
         "method": "GET",
         "requestBody": "",

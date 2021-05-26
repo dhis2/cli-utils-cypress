@@ -11,10 +11,9 @@ const query = {
 const addMutation = {
     resource: 'userGroups',
     type: 'create',
-    data: data => {
-        console.log('whats my name!', data)
-        return { name: data.name }
-    },
+    data: data => ({
+        name: data.name,
+    }),
 }
 
 const Adder = ({ refetch }) => {
