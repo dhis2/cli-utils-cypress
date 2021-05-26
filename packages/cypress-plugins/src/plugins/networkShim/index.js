@@ -1,8 +1,10 @@
 const createFixturesFromState = require('./createFixturesFromState.js')
+const reportMissingRequestStubs = require('./reportMissingRequestStubs.js')
 const createState = require('./createState.js')
 const {
     isCaptureMode,
     isDisabledMode,
+    isStubMode,
     getDefaultStaticResources,
 } = require('./utils.js')
 
@@ -37,9 +39,12 @@ module.exports = function networkShim(
         },
     })
 
-    on('after:run', () => {
+    on('after:run', results => {
         if (isCaptureMode(env)) {
             createFixturesFromState(state, config)
+        }
+        if (isStubMode(env)) {
+            reportMissingRequestStubs(state, results)
         }
     })
 }

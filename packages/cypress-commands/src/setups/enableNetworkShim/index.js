@@ -30,7 +30,7 @@ export function enableNetworkShim() {
     })
 
     afterEach(() => {
-        if (isCaptureMode()) {
+        if (!isDisabledMode()) {
             // First get the updated local state from the alias
             cy.get('@networkShimState').then(networkShimState => {
                 // Then update the plugin state
