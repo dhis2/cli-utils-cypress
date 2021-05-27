@@ -1,3 +1,10 @@
+# [8.0.0-alpha.4](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.3...v8.0.0-alpha.4) (2021-05-27)
+
+
+### Bug Fixes
+
+* **network-shim:** only incrementally update missing request stub state ([#209](https://github.com/dhis2/cli-utils-cypress/issues/209)) ([e2ccea8](https://github.com/dhis2/cli-utils-cypress/commit/e2ccea84ac867006c412406f2db45d4aa8540a2c))
+
 # [8.0.0-alpha.3](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.2...v8.0.0-alpha.3) (2021-05-27)
 
 

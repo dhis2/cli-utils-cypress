@@ -37,7 +37,7 @@
         "test:platform-app": "yarn workspace platform-app cy:capture-and-stub",
         "cy:local": "yarn build && yarn test:network-shim-app && yarn test:platform-app"
     },
-    "version": "8.0.0-alpha.3",
+    "version": "8.0.0-alpha.4",
     "devDependencies": {
         "@dhis2/cli-style": "^7.2.1",
         "@dhis2/cli-utils-docsite": "^1.3.0",
