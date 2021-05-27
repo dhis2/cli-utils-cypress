@@ -54,9 +54,9 @@ function stubRequest(state, request) {
          * from being sent to the destination server
          */
         request.reply({
-            body: {},
+            body: `Network shim did not find a recorded fixture for this request in test "${testName}"`,
             headers: {},
-            statusCode: 200,
+            statusCode: 404,
         })
     } else {
         const responseBody = getRequesStubResponseBody(requestStub)
