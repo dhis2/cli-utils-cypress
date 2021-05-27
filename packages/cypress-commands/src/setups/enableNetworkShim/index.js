@@ -36,7 +36,7 @@ export function enableNetworkShim() {
             cy.get('@networkShimState').then(networkShimState => {
                 /*
                  * In capture mode the state needs to be incrementally updated
-                 * accross tests, so after every feature the entire plugin state
+                 * across tests, so after every feature the entire plugin state
                  * gets overwritten.
                  */
                 if (isCaptureMode()) {
