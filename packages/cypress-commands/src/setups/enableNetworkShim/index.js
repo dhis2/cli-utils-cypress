@@ -1,4 +1,4 @@
-import { isDisabledMode, isCaptureMode } from './utils.js'
+import { isDisabledMode, isStubMode, isCaptureMode } from './utils.js'
 import captureRequests from './captureRequests.js'
 import stubRequests from './stubRequests.js'
 import validateVersionMinor from './validateVersionMinor.js'
@@ -24,6 +24,7 @@ export function enableNetworkShim() {
                 // This will mutate the state
                 captureRequests(networkShimState)
             } else {
+                // This also mutates the state
                 stubRequests(networkShimState)
             }
         })
@@ -33,8 +34,26 @@ export function enableNetworkShim() {
         if (!isDisabledMode()) {
             // First get the updated local state from the alias
             cy.get('@networkShimState').then(networkShimState => {
-                // Then update the plugin state
-                cy.task('setNetworkShimState', networkShimState)
+                /*
+                 * In capture mode the state needs to be incrementally updated
+                 * across tests, so after every feature the entire plugin state
+                 * gets overwritten.
+                 */
+                if (isCaptureMode()) {
+                    cy.task('setNetworkShimState', networkShimState)
+                }
+                /*
+                 * In stub mode the state needs to be kept static across features
+                 * apart from the missing request stubs which do need to be
+                 * incrementally updated across features. So in stub mode we only
+                 * update that state property in the plugin.
+                 */
+                if (isStubMode()) {
+                    cy.task(
+                        'setNetworkShimMissingRequestStubs',
+                        networkShimState.missingRequestStubs
+                    )
+                }
             })
         }
     })
