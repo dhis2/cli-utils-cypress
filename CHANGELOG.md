@@ -1,3 +1,10 @@
+# [8.0.0-alpha.3](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.2...v8.0.0-alpha.3) (2021-05-27)
+
+
+### Bug Fixes
+
+* **network-shim:** report missing stubs if at least one is found ([#208](https://github.com/dhis2/cli-utils-cypress/issues/208)) ([45b3331](https://github.com/dhis2/cli-utils-cypress/commit/45b3331f866f6c0644e40a7a02c5fbdd40e7b842))
+
 # [8.0.0-alpha.2](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.1...v8.0.0-alpha.2) (2021-05-27)
 
 
