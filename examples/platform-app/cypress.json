@@ -1,5 +1,7 @@
 {
     "baseUrl": "http://localhost:3000",
     "video": false,
-    "experimentalInteractiveRunEvents": true
+    "experimentalInteractiveRunEvents": true,
+    "testFiles": "**/*.feature",
+    "integrationFolder": "."
 }

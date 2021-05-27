@@ -1,0 +1,70 @@
+[
+    {
+        "path": "/api/37/systemSettings/helpPageLink",
+        "testName": "Creating user groups with intercept and fixture -- Creating a user - intercept fixture",
+        "static": false,
+        "count": 1,
+        "nonDeterministic": false,
+        "method": "GET",
+        "requestBody": "",
+        "requestHeaders": {
+            "host": "localhost:8080",
+            "proxy-connection": "keep-alive",
+            "accept": "application/json",
+            "origin": "http://localhost:3000",
+            "sec-fetch-site": "same-site",
+            "sec-fetch-mode": "cors"
+        },
+        "statusCode": 200,
+        "responseBody": "{\"helpPageLink\":\"https://dhis2.github.io/dhis2-docs/master/en/user/html/dhis2_user_manual_en.html\"}",
+        "responseSize": 99,
+        "responseHeaders": {
+            "server": "nginx/1.19.3",
+            "content-type": "application/json;charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3000",
+            "vary": "Origin",
+            "access-control-expose-headers": "ETag, Location",
+            "cache-control": "no-cache, private",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN"
+        }
+    },
+    {
+        "path": "/api/37/userGroups",
+        "testName": "Creating user groups with intercept and fixture -- Creating a user - intercept fixture",
+        "static": false,
+        "count": 1,
+        "nonDeterministic": false,
+        "method": "GET",
+        "requestBody": "",
+        "requestHeaders": {
+            "host": "localhost:8080",
+            "proxy-connection": "keep-alive",
+            "accept": "application/json",
+            "origin": "http://localhost:3000",
+            "sec-fetch-site": "same-site",
+            "sec-fetch-mode": "cors"
+        },
+        "statusCode": 200,
+        "responseBody": "{\"pager\":{\"page\":1,\"pageCount\":2,\"total\":69,\"pageSize\":50,\"nextPage\":\"/37/userGroups?page=2\"},\"userGroups\":[{\"id\":\"ACqEyEykXw5\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"EDggDryeIQE\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"EZdoOzMxMfg\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"EiS2dmV3g9l\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"IcTNMsirK3l\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"Jl3ZjQ35gV3\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"Jx71IWpmULx\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"KveMla2WkFY\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"M1D5OMTzhVY\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"MU1ndR5wngH\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"Mq7feqpgtVf\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"PxLdKPgQqEe\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"Sh22UYzkjL4\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"TEZIw6ZwKqg\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"TdxdbuuzGPI\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"U3h4f4zTodc\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"U8Hk2IDvQc7\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"Uc8fKcOK9yf\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"UeKTu8YRA30\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"V70CXihjK4g\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"VjBD8pVfJn5\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"WtPEf9EQueT\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"XH0a1ZJLjSa\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"XtRO4gHGnq5\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"d7234rtN6iS\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"eQENaTFRfwf\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"hfL7zdMG0wV\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"hrP8MGV1H7Z\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"mheJov6QsE9\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"mzlqCvOvEKT\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"pBYWZIyFFed\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"q5e7TniPnfO\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"qmIidnVVY1I\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"spsCcIbg3SD\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"vNHyMXIbvBo\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"y2pl19uEHgf\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"yAE3qeDmPox\",\"displayName\":\"AAAAAAA_CREATED_IN_TEST\"},{\"id\":\"wl5cDMuUhmF\",\"displayName\":\"Administrators\"},{\"id\":\"vAvEltyXGbD\",\"displayName\":\"Africare HQ\"},{\"id\":\"ZoHNWQajIoe\",\"displayName\":\"Bo District M&E officers\"},{\"id\":\"th4S6ovwcr8\",\"displayName\":\"Bonthe District M&E Officers\"},{\"id\":\"wAAA1agEHin\",\"displayName\":\"Cape Town University Research Group\"},{\"id\":\"qlEhuAA77gc\",\"displayName\":\"EPI Stock Completeness Notification Recipients\"},{\"id\":\"ZrsVF7IJ93y\",\"displayName\":\"Family Health Partner\"},{\"id\":\"QYrzIjSfI8z\",\"displayName\":\"Feedback Message Recipients\"},{\"id\":\"Rg8wusV7QYi\",\"displayName\":\"HIV Program Coordinators\"},{\"id\":\"YCPJDwzbe8T\",\"displayName\":\"Kenya staff\"},{\"id\":\"jvrEwEJ2yZn\",\"displayName\":\"Malaria program\"},{\"id\":\"k3xzluFKVyw\",\"displayName\":\"Nairobi University Research Group\"},{\"id\":\"GZSvMCVowAx\",\"displayName\":\"Partner for Health International\"}]}",
+        "responseSize": 3206,
+        "responseHeaders": {
+            "server": "nginx/1.19.3",
+            "content-type": "application/json;charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3000",
+            "vary": "Origin",
+            "access-control-expose-headers": "ETag, Location",
+            "cache-control": "no-cache, private",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN"
+        }
+    }
+]
