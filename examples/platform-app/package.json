@@ -1,6 +1,6 @@
 {
     "name": "platform-app",
-    "version": "8.0.0-alpha.1",
+    "version": "8.0.0-alpha.2",
     "description": "",
     "license": "BSD-3-Clause",
     "private": true,
@@ -22,9 +22,9 @@
     "devDependencies": {
         "@dhis2/cli-app-scripts": "^6.1.1",
         "@dhis2/cli-style": "^8.0.0",
-        "@dhis2/cli-utils-cypress": "8.0.0-alpha.1",
-        "@dhis2/cypress-commands": "8.0.0-alpha.1",
-        "@dhis2/cypress-plugins": "8.0.0-alpha.1",
+        "@dhis2/cli-utils-cypress": "8.0.0-alpha.2",
+        "@dhis2/cypress-commands": "8.0.0-alpha.2",
+        "@dhis2/cypress-plugins": "8.0.0-alpha.2",
         "cypress": "^7.4.0",
         "wait-on": "^5.3.0"
     },

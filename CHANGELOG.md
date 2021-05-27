@@ -1,3 +1,10 @@
+# [8.0.0-alpha.2](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.1...v8.0.0-alpha.2) (2021-05-27)
+
+
+### Bug Fixes
+
+* **network-shim:** fix before hook bug ([#201](https://github.com/dhis2/cli-utils-cypress/issues/201)) ([0e1cd4c](https://github.com/dhis2/cli-utils-cypress/commit/0e1cd4c551f2a5a54ece2b46aa10279e8e6b5335))
+
 # [8.0.0-alpha.1](https://github.com/dhis2/cli-utils-cypress/compare/v7.0.1...v8.0.0-alpha.1) (2021-05-18)
 
 
