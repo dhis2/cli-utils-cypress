@@ -4,7 +4,7 @@ module.exports = function reportMissingRequestStubs(state, results) {
     if (
         results.totalFailed > 0 &&
         Array.isArray(state.missingRequestStubs) &&
-        state.missingRequestStubs.length > 1
+        state.missingRequestStubs.length > 0
     ) {
         const list = state.missingRequestStubs
             .map(
