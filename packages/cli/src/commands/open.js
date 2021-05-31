@@ -1,7 +1,6 @@
 const log = require('@dhis2/cli-helpers-engine').reporter
 const { execCypress } = require('../tools/execCypress.js')
 const {
-    appStart,
     config,
     port,
     // serverMinorVersion,
@@ -13,7 +12,6 @@ exports.aliases = ['o']
 exports.desc = 'Open Cypress UI'
 exports.builder = yargs =>
     yargs
-        .option('appStart', appStart)
         .option('config', config)
         .option('port', port)
         /*
@@ -27,9 +25,8 @@ exports.builder = yargs =>
         // .option('stub', stub)
 
 exports.handler = argv => {
-    const { appStart, ...argvRest } = argv
-    const cypressOptions = { mode: 'open', ...argvRest }
+    const cypressOptions = { mode: 'open', ...argv }
 
     log.info('d2-utils-cypress > open')
-    execCypress({ appStart, cypressOptions })
+    execCypress({ cypressOptions })
 }

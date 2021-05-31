@@ -1,9 +1,3 @@
-const appStart = {
-    describe: 'Command to start app (disabled with empty string)',
-    type: 'string',
-    default: 'yarn start',
-}
-
 const config = {
     describe: 'Cypress config flags',
     type: 'string',
@@ -30,7 +24,6 @@ const stub = {
 }
 
 module.exports = {
-    appStart,
     config,
     port,
     serverMinorVersion,

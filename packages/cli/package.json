@@ -19,7 +19,6 @@
     },
     "dependencies": {
         "@dhis2/cli-helpers-engine": "^2.2.0",
-        "concurrently": "^5.2.0",
         "cypress": "^7.4.0",
         "cypress-cucumber-preprocessor": "^2.0.1",
         "fs-extra": "^8.1.0",
