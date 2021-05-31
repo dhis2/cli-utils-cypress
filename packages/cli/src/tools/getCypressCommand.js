@@ -13,11 +13,9 @@ exports.getCypressCommand = ({
     stub,
     tags,
 }) => {
-    const cmd = 'npx'
+    const cmd = tags ? 'cypress-tags' : 'cypress'
 
     const args = [
-        '--no-install',
-        tags ? 'cypress-tags' : 'cypress',
         mode,
         ...(port ? ['--port', port] : []),
         ...(browser ? ['--browser', browser] : []),
@@ -34,6 +32,5 @@ exports.getCypressCommand = ({
         ...(headless ? ['--headless', headless] : []),
     ]
 
-    const options = { args }
-    return { cmd, options }
+    return { cmd, args }
 }
