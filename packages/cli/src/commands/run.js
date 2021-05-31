@@ -18,9 +18,6 @@ exports.builder = yargs =>
         .option('browser', {
             describe: 'Browser name or filesystem path',
             type: 'string',
-            // TODO: Should default to electron but the network shim
-            // will require support for 304s for that
-            default: 'chrome',
         })
         .option('capture', {
             describe: 'Enable netowrk shim capture mode',
