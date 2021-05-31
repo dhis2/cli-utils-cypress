@@ -1,3 +1,10 @@
+# [8.0.0-alpha.5](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.4...v8.0.0-alpha.5) (2021-05-31)
+
+
+### Bug Fixes
+
+* **network-shim:** use electron instead of chrome for runs ([#213](https://github.com/dhis2/cli-utils-cypress/issues/213)) ([ae73686](https://github.com/dhis2/cli-utils-cypress/commit/ae73686835a5b7aadc4c05dd6f9361502fbd13d5))
+
 # [8.0.0-alpha.4](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.3...v8.0.0-alpha.4) (2021-05-27)
 
 
