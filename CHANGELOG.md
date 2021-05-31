@@ -1,3 +1,10 @@
+# [8.0.0-alpha.6](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.5...v8.0.0-alpha.6) (2021-05-31)
+
+
+### Bug Fixes
+
+* **network-shim:** ensure DHIS2_BASE_URL is available in localStorage ([#214](https://github.com/dhis2/cli-utils-cypress/issues/214)) ([741ab4b](https://github.com/dhis2/cli-utils-cypress/commit/741ab4b0a78a9aa889654aaf94fba5385cabc881))
+
 # [8.0.0-alpha.5](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.4...v8.0.0-alpha.5) (2021-05-31)
 
 
