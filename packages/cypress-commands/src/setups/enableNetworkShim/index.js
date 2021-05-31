@@ -1,4 +1,9 @@
-import { isDisabledMode, isStubMode, isCaptureMode } from './utils.js'
+import {
+    isDisabledMode,
+    isStubMode,
+    isCaptureMode,
+    setBaseUrlToLocalStorage,
+} from './utils.js'
 import captureRequests from './captureRequests.js'
 import stubRequests from './stubRequests.js'
 import validateVersionMinor from './validateVersionMinor.js'
@@ -23,7 +28,11 @@ export function enableNetworkShim() {
             if (isCaptureMode()) {
                 // This will mutate the state
                 captureRequests(networkShimState)
-            } else {
+            }
+            if (isStubMode()) {
+                // This is needed to ensure the app-shell doesn't lose its reference
+                // to the server baseUrl
+                setBaseUrlToLocalStorage()
                 // This also mutates the state
                 stubRequests(networkShimState)
             }
