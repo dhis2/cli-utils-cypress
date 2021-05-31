@@ -8,9 +8,9 @@
         "build": "d2-app-scripts build",
         "start": "d2-app-scripts start",
         "test": "d2-app-scripts test",
-        "lint": "yarn d2-style check",
+        "lint": "d2-style check",
         "lint:staged": "yarn lint --staged",
-        "format": "yarn d2-style apply",
+        "format": "d2-style apply",
         "format:staged": "yarn format --staged",
         "cy:start": "BROWSER=none yarn start",
         "cy:open": "concurrently 'yarn:cy:start' 'd2-utils-cypress open' --kill-others",
@@ -18,13 +18,6 @@
         "cy:capture": "concurrently 'yarn:cy:start' 'd2-utils-cypress run --capture --serverMinorVersion 37' --kill-others",
         "cy:stub": "concurrently 'yarn:cy:start' 'd2-utils-cypress run --stub --serverMinorVersion 37' --kill-others",
         "cy:capture-and-stub": "yarn cy:capture && yarn cy:stub"
-    },
-    "devDependencies": {
-        "@dhis2/cli-app-scripts": "^6.1.1",
-        "@dhis2/cli-style": "^8.0.0",
-        "@dhis2/cli-utils-cypress": "8.0.0-alpha.6",
-        "@dhis2/cypress-commands": "8.0.0-alpha.6",
-        "@dhis2/cypress-plugins": "8.0.0-alpha.6"
     },
     "dependencies": {
         "@dhis2/app-runtime": "^2.8.0",

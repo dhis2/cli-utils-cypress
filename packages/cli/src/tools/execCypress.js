@@ -1,5 +1,6 @@
 const log = require('@dhis2/cli-helpers-engine').reporter
 const { bin } = require('@dhis2/cli-helpers-engine').exec
+const { findProjectRoot } = require('@dhis2/cli-helpers-engine')
 const { getCypressCommandEnvArgs } = require('./getCypressCommandEnvArgs.js')
 
 exports.execCypress = ({ cypressOptions }) => {
@@ -35,5 +36,5 @@ exports.execCypress = ({ cypressOptions }) => {
         }),
     ]
 
-    bin(cmd, { args, cwd: process.cwd() })
+    bin(cmd, { args, cwd: findProjectRoot() })
 }
