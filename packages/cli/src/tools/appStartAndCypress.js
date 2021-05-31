@@ -2,11 +2,9 @@ const log = require('@dhis2/cli-helpers-engine').reporter
 const concurrently = require('concurrently')
 const { getCypressCommand } = require('./getCypressCommand.js')
 
-exports.waitOnAndCypress = ({ appStart, waitOn, cypressOptions }) => {
+exports.appStartAndCypress = ({ appStart, cypressOptions }) => {
     const { cmd, options } = getCypressCommand(cypressOptions)
     const cypressCommand = [cmd, ...options.args].join(' ')
-    const waitOnCommand = `npx --no-install wait-on ${waitOn}`
-    const waitAndCypress = `${waitOnCommand} && ${cypressCommand}`
 
     // reflects the position of the cypress command passed to concurrently
     const cypressCommandIndex = 1
@@ -14,7 +12,7 @@ exports.waitOnAndCypress = ({ appStart, waitOn, cypressOptions }) => {
     concurrently(
         [
             { command: appStart, name: 'app' },
-            { command: waitAndCypress, name: 'cypress' },
+            { command: cypressCommand, name: 'cypress' },
         ],
         { killOthers: ['success', 'failure'] }
     ).then(

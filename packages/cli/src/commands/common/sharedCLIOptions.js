@@ -29,17 +29,10 @@ const stub = {
     implies: 'serverMinorVersion',
 }
 
-const waitOn = {
-    describe: 'Url to wait for before running cypress',
-    type: 'string',
-    default: 'http-get://localhost:3000',
-}
-
 module.exports = {
     appStart,
     config,
     port,
     serverMinorVersion,
     stub,
-    waitOn,
 }

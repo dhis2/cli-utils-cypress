@@ -6,7 +6,6 @@ const {
     port,
     serverMinorVersion,
     stub,
-    waitOn,
 } = require('./common/sharedCLIOptions.js')
 
 exports.command = 'run'
@@ -50,12 +49,11 @@ exports.builder = yargs =>
             type: 'string',
             default: '',
         })
-        .option('waitOn', waitOn)
 
 exports.handler = argv => {
-    const { appStart, waitOn, ...argvRest } = argv
+    const { appStart, ...argvRest } = argv
     const cypressOptions = { mode: 'run', ...argvRest }
 
     log.info('d2-utils-cypress > run')
-    execCypress({ appStart, waitOn, cypressOptions })
+    execCypress({ appStart, cypressOptions })
 }
