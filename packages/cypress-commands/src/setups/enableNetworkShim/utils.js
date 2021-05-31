@@ -19,6 +19,11 @@ export const getApiBaseUrl = () => {
     return baseUrl
 }
 
+export const setBaseUrlToLocalStorage = () => {
+    const baseUrl = getApiBaseUrl()
+    localStorage.setItem('DHIS2_BASE_URL', baseUrl)
+}
+
 export const isStaticResource = (path, { staticResources }) => {
     const cleanedPath = path.split('?')[0]
     return staticResources.some(resourcePath =>
