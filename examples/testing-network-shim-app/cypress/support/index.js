@@ -2,7 +2,7 @@ import { enableNetworkShim } from '@dhis2/cypress-commands'
 import { resetDb } from '../../src/json-server/resetDb'
 
 afterEach(() => {
-    if (Cypress.env('dhis2_api_stub_mode') === 'CAPTURE') {
+    if (Cypress.env('DHIS2_API_STUB_MODE') === 'CAPTURE') {
         resetDb()
     }
 })

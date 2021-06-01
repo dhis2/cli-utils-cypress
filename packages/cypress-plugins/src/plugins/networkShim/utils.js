@@ -1,22 +1,22 @@
 const path = require('path')
 
 module.exports.isCaptureMode = function (env) {
-    return env.dhis2_api_stub_mode === 'CAPTURE'
+    return env.DHIS2_API_STUB_MODE === 'CAPTURE'
 }
 
 module.exports.isStubMode = function (env) {
-    return env.dhis2_api_stub_mode === 'STUB'
+    return env.DHIS2_API_STUB_MODE === 'STUB'
 }
 
 module.exports.isDisabledMode = function (env) {
-    return !env.dhis2_api_stub_mode || env.dhis2_api_stub_mode === 'DISABLED'
+    return !env.DHIS2_API_STUB_MODE || env.DHIS2_API_STUB_MODE === 'DISABLED'
 }
 
 module.exports.getFixturesDir = function ({ fixturesFolder, env }) {
     return path.join(
         fixturesFolder,
         'network',
-        env.dhis2_server_minor_version.toString()
+        env.DHIS2_SERVER_MINOR_VERSION.toString()
     )
 }
 

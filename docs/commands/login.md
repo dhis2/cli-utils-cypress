@@ -3,9 +3,9 @@
 This command will log a specified user in through the login endpoint.
 It uses the following required environment variables:
 
--   `dhis2_username`
--   `dhis2_password`
--   `dhis2_base_url`
+-   `DHIS2_USERNAME`
+-   `DHIS2_PASSWORD`
+-   `DHIS2_BASE_URL`
 
 Please refer to the [official
 docs](https://docs.cypress.io/guides/guides/environment-variables.html) for

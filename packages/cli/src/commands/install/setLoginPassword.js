@@ -18,7 +18,7 @@ module.exports.setLoginPassword = async ({ options, state }) => {
         ...state,
         cypressEnvJson: {
             ...state.cypressEnvJson,
-            dhis2_password: envAnswers.password,
+            DHIS2_PASSWORD: envAnswers.password,
         },
     }
 }

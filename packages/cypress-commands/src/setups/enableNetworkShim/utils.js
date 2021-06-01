@@ -1,18 +1,18 @@
 export const isDisabledMode = () =>
-    !Cypress.env('dhis2_api_stub_mode') ||
-    Cypress.env('dhis2_api_stub_mode') === 'DISABLED'
+    !Cypress.env('DHIS2_API_STUB_MODE') ||
+    Cypress.env('DHIS2_API_STUB_MODE') === 'DISABLED'
 
 export const isCaptureMode = () =>
-    Cypress.env('dhis2_api_stub_mode') === 'CAPTURE'
+    Cypress.env('DHIS2_API_STUB_MODE') === 'CAPTURE'
 
-export const isStubMode = () => Cypress.env('dhis2_api_stub_mode') === 'STUB'
+export const isStubMode = () => Cypress.env('DHIS2_API_STUB_MODE') === 'STUB'
 
 export const getApiBaseUrl = () => {
-    const baseUrl = Cypress.env('dhis2_base_url')
+    const baseUrl = Cypress.env('DHIS2_BASE_URL')
 
     if (!baseUrl) {
         throw new Error(
-            'No `dhis2_base_url` found. Please make sure to add it to `cypress.env.json`'
+            'No `DHIS2_BASE_URL` found. Please make sure to add it to `cypress.env.json`'
         )
     }
 

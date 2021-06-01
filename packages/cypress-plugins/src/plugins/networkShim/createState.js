@@ -58,12 +58,12 @@ const { isCaptureMode, isStubMode, getFixturesDir } = require('./utils.js')
 module.exports = function createState(cypressConfig, hosts, staticResources) {
     try {
         const env = cypressConfig.env
-        const serverMinorVersion = env.dhis2_server_minor_version
+        const serverMinorVersion = env.DHIS2_SERVER_MINOR_VERSION
         const fixturesDir = getFixturesDir(cypressConfig)
         const config = {
             serverMinorVersion,
-            mode: env.dhis2_api_stub_mode,
-            hosts: hosts || [env.dhis2_base_url],
+            mode: env.DHIS2_API_STUB_MODE,
+            hosts: hosts || [env.DHIS2_BASE_URL],
             staticResources,
         }
 

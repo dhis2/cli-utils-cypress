@@ -18,7 +18,7 @@ module.exports.setLoginUser = async ({ options, state }) => {
         ...state,
         cypressEnvJson: {
             ...state.cypressEnvJson,
-            dhis2_username: envAnswers.username,
+            DHIS2_USERNAME: envAnswers.username,
         },
     }
 }

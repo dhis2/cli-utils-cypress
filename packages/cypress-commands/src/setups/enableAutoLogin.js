@@ -1,5 +1,5 @@
 export const enableAutoLogin = () => {
-    if (Cypress.env('dhis2_api_stub_mode') === 'STUB') {
+    if (Cypress.env('DHIS2_API_STUB_MODE') === 'STUB') {
         return
     }
 
@@ -14,7 +14,7 @@ export const enableAutoLogin = () => {
         // This ensures the app platform knows which URL to use even if
         // REACT_APP_DHIS2_BASE_URL is undefined It also ensures that the value
         // from the cypress env is used instead of REACT_APP_DHIS2_BASE_URL
-        const loginUrl = Cypress.env('dhis2_base_url')
+        const loginUrl = Cypress.env('DHIS2_BASE_URL')
         localStorage.setItem('DHIS2_BASE_URL', loginUrl)
     })
 }

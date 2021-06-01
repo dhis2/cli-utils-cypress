@@ -5,7 +5,7 @@ const log = require('@dhis2/cli-helpers-engine').reporter
 
 module.exports = function clearNetworkFixtures({ fixturesFolder, env }) {
     try {
-        const serverMinorVersion = env.dhis2_server_minor_version.toString()
+        const serverMinorVersion = env.DHIS2_SERVER_MINOR_VERSION.toString()
         const versionMinorDir = path.join(fixturesFolder, serverMinorVersion)
 
         if (fs.existsSync(versionMinorDir)) {
