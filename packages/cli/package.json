@@ -18,7 +18,7 @@
         "node": ">=10"
     },
     "dependencies": {
-        "@dhis2/cli-helpers-engine": "^1.5.0",
+        "@dhis2/cli-helpers-engine": "^2.3.0",
         "concurrently": "^5.2.0",
         "cross-spawn": "^7.0.1",
         "cypress": "^6.0.1",
