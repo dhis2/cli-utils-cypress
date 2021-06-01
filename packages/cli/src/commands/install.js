@@ -1,11 +1,10 @@
 const log = require('@dhis2/cli-helpers-engine').reporter
-
+const { makePaths } = require('../utils/makePaths.js')
 const { applyState } = require('./install/applyState.js')
 const { askForPackageManager } = require('./install/askForPackageManager.js')
 const {
     computeProvidedOptions,
 } = require('./install/computeProvidedOptions.js')
-const { makePaths } = require('../utils/makePaths.js')
 const { options } = require('./install/options.js')
 const { prettifyOptions } = require('./install/prettifyOptions.js')
 const { processOptions } = require('./install/processOptions.js')

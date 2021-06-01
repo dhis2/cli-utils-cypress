@@ -1,11 +1,11 @@
+import captureRequests from './captureRequests.js'
+import stubRequests from './stubRequests.js'
 import {
     isDisabledMode,
     isStubMode,
     isCaptureMode,
     setBaseUrlToLocalStorage,
 } from './utils.js'
-import captureRequests from './captureRequests.js'
-import stubRequests from './stubRequests.js'
 import validateVersionMinor from './validateVersionMinor.js'
 
 export function enableNetworkShim() {

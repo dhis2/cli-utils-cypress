@@ -1,6 +1,6 @@
 const createFixturesFromState = require('./createFixturesFromState.js')
-const reportMissingRequestStubs = require('./reportMissingRequestStubs.js')
 const createState = require('./createState.js')
+const reportMissingRequestStubs = require('./reportMissingRequestStubs.js')
 const {
     isCaptureMode,
     isDisabledMode,

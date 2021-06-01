@@ -24,7 +24,7 @@
         "cy:serve-and-start": "concurrently \"yarn serve\" \"yarn cy:start\"",
         "cy:open": "d2-utils-cypress open",
         "cy:run": "d2-utils-cypress run",
-        "cy:capture": "concurrently 'yarn serve' 'yarn cy:serve-and-start' 'd2-utils-cypress run --capture --serverMinorVersion 36'",
+        "cy:capture": "concurrently 'yarn cy:serve-and-start' 'd2-utils-cypress run --capture --serverMinorVersion 36'",
         "cy:stub": "concurrently 'yarn serve' 'yarn cy:start' 'd2-utils-cypress run --stub --serverMinorVersion 36'",
         "cy:capture-and-stub": "yarn cy:capture && yarn cy:stub"
     },

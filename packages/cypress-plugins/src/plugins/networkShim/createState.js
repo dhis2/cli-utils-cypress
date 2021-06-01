@@ -1,7 +1,7 @@
-const fs = require('fs-extra')
 const path = require('path')
-const rimraf = require('rimraf')
 const log = require('@dhis2/cli-helpers-engine').reporter
+const fs = require('fs-extra')
+const rimraf = require('rimraf')
 const { isCaptureMode, isStubMode, getFixturesDir } = require('./utils.js')
 
 /**

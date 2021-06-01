@@ -1,5 +1,5 @@
-const fs = require('fs-extra')
 const inquirer = require('@dhis2/cli-helpers-engine').inquirer
+const fs = require('fs-extra')
 
 module.exports.askForPackageManager = async paths => {
     const hasYarnLockFile = fs.existsSync(paths.YARN_LOCK)

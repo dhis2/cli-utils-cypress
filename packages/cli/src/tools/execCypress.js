@@ -1,10 +1,9 @@
-const log = require('@dhis2/cli-helpers-engine').reporter
 const { bin } = require('@dhis2/cli-helpers-engine').exec
 const { findProjectRoot } = require('@dhis2/cli-helpers-engine')
 const { getCypressCommandEnvArgs } = require('./getCypressCommandEnvArgs.js')
 
 exports.execCypress = ({ cypressOptions }) => {
-     const {
+    const {
         browser,
         capture,
         config,

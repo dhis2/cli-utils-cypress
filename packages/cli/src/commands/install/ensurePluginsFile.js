@@ -1,5 +1,5 @@
-const fs = require('fs-extra')
 const log = require('@dhis2/cli-helpers-engine').reporter
+const fs = require('fs-extra')
 const { copy } = require('../../utils/fs.js')
 
 module.exports.ensurePluginsFile = paths => {
