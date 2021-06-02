@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
 import propTypes from 'prop-types'
+import React, { useState, useEffect } from 'react'
 
 export const AddUpdateName = ({ submit, clear, selectedName }) => {
     const [name, setName] = useState('')
