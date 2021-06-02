@@ -5,7 +5,7 @@ const rimraf = require('rimraf')
 
 module.exports = function clearNetworkFixtures({ fixturesFolder, env }) {
     try {
-        const serverMinorVersion = env.dhis2_server_minor_version.toString()
+        const serverMinorVersion = env.dhis2ApiVersion.toString()
         const versionMinorDir = path.join(fixturesFolder, serverMinorVersion)
 
         if (fs.existsSync(versionMinorDir)) {

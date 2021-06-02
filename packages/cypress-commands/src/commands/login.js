@@ -6,9 +6,9 @@ export const LOGIN_ENDPOINT = 'dhis-web-commons-security/login.action'
  * https://docs.cypress.io/guides/guides/web-security.html#One-Superdomain-per-Test
  */
 export const login = () => {
-    const username = Cypress.env('dhis2_username')
-    const password = Cypress.env('dhis2_password')
-    const loginUrl = Cypress.env('dhis2_base_url')
+    const username = Cypress.env('dhis2Username')
+    const password = Cypress.env('dhis2Password')
+    const loginUrl = Cypress.env('dhis2BaseUrl')
 
     cy.request({
         url: `${loginUrl}/${LOGIN_ENDPOINT}`,

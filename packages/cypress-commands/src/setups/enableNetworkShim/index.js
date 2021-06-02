@@ -1,15 +1,15 @@
-import captureRequests from './captureRequests.js'
-import stubRequests from './stubRequests.js'
+import { setDhis2BaseUrlToLocalStorage } from '../../helper/dhis2BaseUrl.js'
 import {
-    isDisabledMode,
+    isLiveMode,
     isStubMode,
     isCaptureMode,
-    setBaseUrlToLocalStorage,
-} from './utils.js'
+} from '../../helper/networkMode.js'
+import captureRequests from './captureRequests.js'
+import stubRequests from './stubRequests.js'
 import validateVersionMinor from './validateVersionMinor.js'
 
 export function enableNetworkShim() {
-    if (isDisabledMode()) {
+    if (isLiveMode()) {
         return
     }
 
@@ -32,7 +32,7 @@ export function enableNetworkShim() {
             if (isStubMode()) {
                 // This is needed to ensure the app-shell doesn't lose its reference
                 // to the server baseUrl
-                setBaseUrlToLocalStorage()
+                setDhis2BaseUrlToLocalStorage()
                 // This also mutates the state
                 stubRequests(networkShimState)
             }
@@ -40,7 +40,7 @@ export function enableNetworkShim() {
     })
 
     afterEach(() => {
-        if (!isDisabledMode()) {
+        if (!isLiveMode()) {
             // First get the updated local state from the alias
             cy.get('@networkShimState').then(networkShimState => {
                 /*

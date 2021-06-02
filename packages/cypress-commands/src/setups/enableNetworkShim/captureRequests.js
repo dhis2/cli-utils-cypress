@@ -1,5 +1,5 @@
+import { getDhis2BaseUrl } from '../../helper/dhis2BaseUrl.js'
 import {
-    getApiBaseUrl,
     getFullTestName,
     splitHostAndPath,
     toJsonBlob,
@@ -193,7 +193,7 @@ function processDuplicatedRequest({
  * @returns {string} Response body text blob without references to api endpoint
  */
 function removeApiEndpointFromResponseBodyBlob(text) {
-    const apiEndpointUrl = new RegExp(`${getApiBaseUrl()}/api`, 'gi')
+    const apiEndpointUrl = new RegExp(`${getDhis2BaseUrl()}/api`, 'gi')
 
     return text.replace(apiEndpointUrl, '')
 }

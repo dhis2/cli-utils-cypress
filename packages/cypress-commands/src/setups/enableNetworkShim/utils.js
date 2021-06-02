@@ -1,29 +1,3 @@
-export const isDisabledMode = () =>
-    !Cypress.env('dhis2_api_stub_mode') ||
-    Cypress.env('dhis2_api_stub_mode') === 'DISABLED'
-
-export const isCaptureMode = () =>
-    Cypress.env('dhis2_api_stub_mode') === 'CAPTURE'
-
-export const isStubMode = () => Cypress.env('dhis2_api_stub_mode') === 'STUB'
-
-export const getApiBaseUrl = () => {
-    const baseUrl = Cypress.env('dhis2_base_url')
-
-    if (!baseUrl) {
-        throw new Error(
-            'No `dhis2_base_url` found. Please make sure to add it to `cypress.env.json`'
-        )
-    }
-
-    return baseUrl
-}
-
-export const setBaseUrlToLocalStorage = () => {
-    const baseUrl = getApiBaseUrl()
-    localStorage.setItem('DHIS2_BASE_URL', baseUrl)
-}
-
 export const isStaticResource = (path, { staticResources }) => {
     const cleanedPath = path.split('?')[0]
     return staticResources.some(resourcePath =>
