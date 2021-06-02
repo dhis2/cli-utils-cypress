@@ -1,4 +1,4 @@
-const inquirer = require('inquirer')
+const inquirer = require('@dhis2/cli-helpers-engine').inquirer
 const { readJson } = require('../../utils/fs.js')
 
 const extractOrgName = moduleName => {

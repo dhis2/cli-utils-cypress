@@ -1,12 +1,10 @@
 const log = require('@dhis2/cli-helpers-engine').reporter
 const { execCypress } = require('../tools/execCypress.js')
 const {
-    appStart,
     config,
     port,
     serverMinorVersion,
     stub,
-    waitOn,
 } = require('./common/sharedCLIOptions.js')
 
 exports.command = 'run'
@@ -14,7 +12,6 @@ exports.aliases = ['r']
 exports.desc = 'Run Cypress tests'
 exports.builder = yargs =>
     yargs
-        .option('appStart', appStart)
         .option('browser', {
             describe: 'Browser name or filesystem path',
             type: 'string',
@@ -50,12 +47,10 @@ exports.builder = yargs =>
             type: 'string',
             default: '',
         })
-        .option('waitOn', waitOn)
 
 exports.handler = argv => {
-    const { appStart, waitOn, ...argvRest } = argv
-    const cypressOptions = { mode: 'run', ...argvRest }
+    const cypressOptions = { mode: 'run', ...argv }
 
     log.info('d2-utils-cypress > run')
-    execCypress({ appStart, waitOn, cypressOptions })
+    execCypress({ cypressOptions })
 }

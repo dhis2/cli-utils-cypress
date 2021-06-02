@@ -1,4 +1,4 @@
-const inquirer = require('inquirer')
+const inquirer = require('@dhis2/cli-helpers-engine').inquirer
 
 module.exports.setProjectId = async ({ options, state }) => {
     if (!options.setProjectId) return state

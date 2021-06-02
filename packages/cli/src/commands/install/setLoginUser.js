@@ -1,4 +1,4 @@
-const inquirer = require('inquirer')
+const inquirer = require('@dhis2/cli-helpers-engine').inquirer
 
 module.exports.setLoginUser = async ({ options, state }) => {
     if (!options.setLoginUser) return state

@@ -14,14 +14,6 @@
         "react-scripts": "4.0.1",
         "web-vitals": "^0.2.4"
     },
-    "devDependencies": {
-        "@dhis2/cli-utils-cypress": "8.0.0-alpha.6",
-        "@dhis2/cypress-commands": "8.0.0-alpha.6",
-        "@dhis2/cypress-plugins": "8.0.0-alpha.6",
-        "concurrently": "^6.1.0",
-        "cypress": "^7.4.0",
-        "wait-on": "^5.3.0"
-    },
     "scripts": {
         "serve": "json-server src/json-server/db.js --routes ./src/json-server/routes.json --middlewares ../../node_modules/json-server-reset --watch -p 1337",
         "start": "react-scripts start",
@@ -30,10 +22,10 @@
         "eject": "react-scripts eject",
         "cy:start": "BROWSER=none yarn start",
         "cy:serve-and-start": "concurrently \"yarn serve\" \"yarn cy:start\"",
-        "cy:open": "d2-utils-cypress open --appStart 'yarn start'",
-        "cy:run": "d2-utils-cypress run --appStart 'yarn start'",
-        "cy:capture": "d2-utils-cypress run --capture --appStart 'yarn cy:serve-and-start' --serverMinorVersion 36",
-        "cy:stub": "d2-utils-cypress run --stub --appStart 'yarn cy:start' --serverMinorVersion 36",
+        "cy:open": "d2-utils-cypress open",
+        "cy:run": "d2-utils-cypress run",
+        "cy:capture": "concurrently 'yarn cy:serve-and-start' 'd2-utils-cypress run --capture --serverMinorVersion 36'",
+        "cy:stub": "concurrently 'yarn serve' 'yarn cy:start' 'd2-utils-cypress run --stub --serverMinorVersion 36'",
         "cy:capture-and-stub": "yarn cy:capture && yarn cy:stub"
     },
     "browserslist": {

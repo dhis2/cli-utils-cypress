@@ -1,9 +1,3 @@
-const appStart = {
-    describe: 'Command to start app (disabled with empty string)',
-    type: 'string',
-    default: 'yarn start',
-}
-
 const config = {
     describe: 'Cypress config flags',
     type: 'string',
@@ -29,17 +23,9 @@ const stub = {
     implies: 'serverMinorVersion',
 }
 
-const waitOn = {
-    describe: 'Url to wait for before running cypress',
-    type: 'string',
-    default: 'http-get://localhost:3000',
-}
-
 module.exports = {
-    appStart,
     config,
     port,
     serverMinorVersion,
     stub,
-    waitOn,
 }
