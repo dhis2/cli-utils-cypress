@@ -1,3 +1,23 @@
+# [8.0.0-alpha.7](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.6...v8.0.0-alpha.7) (2021-06-02)
+
+
+### Code Refactoring
+
+* drop the app-start flag ([9674d87](https://github.com/dhis2/cli-utils-cypress/commit/9674d870115dd222da46cf2d0dba636b1dbce536))
+* wait for baseUrl to become available ([745194f](https://github.com/dhis2/cli-utils-cypress/commit/745194fb1be5abf3c3a3b87eb2435a0c3d6576f3))
+
+
+### BREAKING CHANGES
+
+* Drop the --waitOn flag
+As of now we wait on the baseUrl that is defined in cypress.json, as
+that is the URL that the tests are going to run against.
+* Drop support for the --appStart flag.
+As a consumer, you are expected to either use something like
+concurrently to run the app server and the cypress server in a single
+process, or run then manually in two separate processes. This is no
+longer done automatically.
+
 # [8.0.0-alpha.6](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.5...v8.0.0-alpha.6) (2021-05-31)
 
 
