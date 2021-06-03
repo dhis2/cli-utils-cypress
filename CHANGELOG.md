@@ -1,3 +1,40 @@
+# [8.0.0-alpha.8](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.7...v8.0.0-alpha.8) (2021-06-03)
+
+
+### Code Refactoring
+
+* simplify cypress-plugin and cli-utils-cypress ([dc58462](https://github.com/dhis2/cli-utils-cypress/commit/dc58462b7e131b5c3aeb49e0f8ba6e520ba89030))
+
+
+### BREAKING CHANGES
+
+* Drop run and open commands
+We want to be consistent with how Cypress runs locally and in CI and
+since we cannot use d2-utils-cypress in CI, we shouldn't run it through
+d2-utils-cypress locally either.
+* Change configuration keys to camelCase.
+- dhis2_username => dhis2Username
+- dhis2_password => dhis2Password
+- dhis2_base_url => dhis2BaseUrl
+- dhis2_datatest_prefix => dhis2DataTestPrefix
+- dhis2_api_version => dhis2ApiVersion
+* dhis2_api_stub_mode renamed to networkMode
+Instead of describing the mode of the plugin, it is a bit easier to
+understand if we speak in terms of the network:
+- do we want to capture the network traffic (networkMode=capture),
+- do we want to stub it (networkMode=stub),
+- or do we want to run it against a live backend (networkMode=live)?
+* 'DISABLED' renamed to 'LIVE'
+To better describe the state of the network when running tests instead
+of describing the state of the plugin, DISABLED is now LIVE.
+* isDisabledMode renamed to isLiveMode.
+Similar to the above, to better describe the state of the network vs.
+the state of the plugin, replace usages of isDisabledMode with
+isLiveMode.
+* 'CAPTURE'|'STUB'|'LIVE' are now lowercase when passed
+to the environment.
+Replace networkMode=LIVE with networkMode=live.
+
 # [8.0.0-alpha.7](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.6...v8.0.0-alpha.7) (2021-06-02)
 
 
