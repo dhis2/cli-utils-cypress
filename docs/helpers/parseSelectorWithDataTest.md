@@ -10,7 +10,7 @@ const customSelector = '{navigation-item}:first-child {link-text}'
 const validCssSelector = dataTestNameToSelector(customSelector)
 ```
 
-With the `dhis2_datatest_prefix` env variable set to `dhis2-libname`:
+With the `dhis2DataTestPrefix` env variable set to `dhis2-libname`:
 
 ```js
 const customSelector = '{navigation-item}:first-child {link-text}'
@@ -38,7 +38,7 @@ A data test selector with custom syntax.
 
 **prefix**<br />
 Type: String<br />
-An optional prefix. By default the function uses the `dhis2_datatest_prefix`
+An optional prefix. By default the function uses the `dhis2DataTestPrefix`
 environment variable or use an empty string when the env var has not been set.
 
 ---

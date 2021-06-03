@@ -2,9 +2,9 @@
 
 The cypress utility expects three values to be present in that file:
 
-1. `dhis2_base_url`
-1. `dhis2_username`
-1. `dhis2_password`
+1. `dhis2BaseUrl`
+1. `dhis2Username`
+1. `dhis2Password`
 
 There are various ways how to add enviroment variables to your cypress setup,
 please refer to the official docs to get an overview.
@@ -20,9 +20,9 @@ Here is an example what a `cypress.env.json` could look like
 
 ```json
 {
-    "dhis2_base_url": "https://localhost:8080",
-    "dhis2_username": "admin",
-    "dhis2_password": "district"
+    "dhis2BaseUrl": "https://localhost:8080",
+    "dhis2Username": "admin",
+    "dhis2Password": "district"
 }
 ```
 

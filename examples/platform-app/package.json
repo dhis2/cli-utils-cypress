@@ -13,10 +13,10 @@
         "format": "d2-style apply",
         "format:staged": "yarn format --staged",
         "cy:start": "BROWSER=none yarn start",
-        "cy:open": "concurrently 'yarn:cy:start' 'd2-utils-cypress open' --kill-others",
-        "cy:run": "concurrently 'yarn:cy:start' 'd2-utils-cypress run' --kill-others",
-        "cy:capture": "concurrently 'yarn:cy:start' 'd2-utils-cypress run --capture --serverMinorVersion 37' --kill-others",
-        "cy:stub": "concurrently 'yarn:cy:start' 'd2-utils-cypress run --stub --serverMinorVersion 37' --kill-others",
+        "cy:open": "wait-on 'http://localhost:3000' && cypress open",
+        "cy:run": "wait-on 'http://localhost:3000' && cypress run",
+        "cy:capture": "concurrently 'yarn cy:start' 'yarn cy:run --env networkMode=capture' --kill-others --success first",
+        "cy:stub": "concurrently 'yarn cy:start' 'yarn cy:run --env networkMode=stub' --kill-others --success first",
         "cy:capture-and-stub": "yarn cy:capture && yarn cy:stub"
     },
     "dependencies": {

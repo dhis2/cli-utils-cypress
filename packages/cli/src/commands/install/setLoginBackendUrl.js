@@ -18,7 +18,7 @@ module.exports.setLoginBackendUrl = async ({ options, state }) => {
         ...state,
         cypressEnvJson: {
             ...state.cypressEnvJson,
-            dhis2_base_url: envAnswers.dhis2Url,
+            dhis2BaseUrl: envAnswers.dhis2Url,
         },
     }
 }

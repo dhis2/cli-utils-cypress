@@ -3,7 +3,7 @@ const createState = require('./createState.js')
 const reportMissingRequestStubs = require('./reportMissingRequestStubs.js')
 const {
     isCaptureMode,
-    isDisabledMode,
+    isLiveMode,
     isStubMode,
     getDefaultStaticResources,
 } = require('./utils.js')
@@ -24,7 +24,7 @@ module.exports = function networkShim(
             )
         }
 
-        if (!isDisabledMode(env)) {
+        if (!isLiveMode(env)) {
             state = createState(config, hosts, staticResources)
         }
     })

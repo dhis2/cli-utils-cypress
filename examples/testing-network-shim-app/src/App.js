@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-
+import React, { useEffect, useState } from 'react'
+import { AddUpdateName } from './AddUpdateName'
 import { NameFilter } from './NameFilter'
 import { NamesList } from './NamesList'
-import { AddUpdateName } from './AddUpdateName'
 import { resourcePath } from './resourcePath'
 
 function App() {

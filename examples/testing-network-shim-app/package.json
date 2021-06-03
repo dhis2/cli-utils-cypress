@@ -21,11 +21,10 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "cy:start": "BROWSER=none yarn start",
-        "cy:serve-and-start": "concurrently \"yarn serve\" \"yarn cy:start\"",
-        "cy:open": "d2-utils-cypress open",
-        "cy:run": "d2-utils-cypress run",
-        "cy:capture": "concurrently 'yarn cy:serve-and-start' 'd2-utils-cypress run --capture --serverMinorVersion 36'",
-        "cy:stub": "concurrently 'yarn serve' 'yarn cy:start' 'd2-utils-cypress run --stub --serverMinorVersion 36'",
+        "cy:open": "wait-on 'http://localhost:3000' && cypress open",
+        "cy:run": "wait-on 'http://localhost:3000' && cypress run",
+        "cy:capture": "concurrently 'yarn serve' 'yarn cy:start' 'yarn cy:run --env networkMode=capture' --kill-others --success first",
+        "cy:stub": "concurrently 'yarn cy:start' 'yarn cy:run --env networkMode=stub' --kill-others --success first",
         "cy:capture-and-stub": "yarn cy:capture && yarn cy:stub"
     },
     "browserslist": {
