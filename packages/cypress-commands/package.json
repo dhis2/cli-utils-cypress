@@ -19,7 +19,7 @@
         "@babel/core": "^7.12.3",
         "@babel/preset-env": "^7.12.1",
         "@dhis2/cli-app-scripts": "^4.0.4",
-        "@dhis2/cli-style": "^7.2.1"
+        "@dhis2/cli-style": "^8.4.0"
     },
     "publishConfig": {
         "access": "public"
