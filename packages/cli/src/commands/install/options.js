@@ -1,4 +1,5 @@
 const { enableAutoLogin } = require('./enableAutoLogin.js')
+const { enableNetworkShim } = require('./enableNetworkShim.js')
 const { registerCommands } = require('./registerCommands.js')
 const { setBaseUrl } = require('./setBaseUrl.js')
 const { setDataTestPrefix } = require('./setDataTestPrefix.js')
@@ -14,15 +15,11 @@ const {
     setTestFilesToFeatureFiles,
 } = require('./setTestFilesToFeatureFiles.js')
 const {
-    useCommandsSetupEnableNetworkShim,
-} = require('./useCommandsSetupEnableNetworkShim.js')
-const {
     usePluginChromeAllowXSiteCookies,
 } = require('./usePluginChromeAllowXSiteCookies.js')
 const {
     usePluginCucumberPreprocessor,
 } = require('./usePluginCucumberPreprocessor.js')
-const { usePluginNetworkShim } = require('./usePluginNetworkShim.js')
 
 const groups = {
     CYPRESS_CONFIG: 'cypress-config',
@@ -79,14 +76,9 @@ const options = [
         handler: setDataTestPrefix,
     },
     {
-        name: 'useCommandsSetupEnableNetworkShim',
+        name: 'enableNetworkShim',
         group: groups.NETWORK_SHIM,
-        handler: useCommandsSetupEnableNetworkShim,
-    },
-    {
-        name: 'usePluginNetworkShim',
-        group: groups.NETWORK_SHIM,
-        handler: usePluginNetworkShim,
+        handler: enableNetworkShim,
     },
     {
         name: 'usePluginChromeAllowXSiteCookies',
