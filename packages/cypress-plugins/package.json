@@ -13,5 +13,9 @@
     "private": false,
     "publishConfig": {
         "access": "public"
+    },
+    "peerDependencies": {
+        "cypress": "^7",
+        "cypress-cucumber-preprocessor": "^4"
     }
 }
