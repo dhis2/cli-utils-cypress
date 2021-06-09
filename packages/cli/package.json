@@ -15,7 +15,7 @@
     "license": "BSD-3-Clause",
     "private": false,
     "engines": {
-        "node": ">=10"
+        "node": ">=12"
     },
     "dependencies": {
         "@dhis2/cli-helpers-engine": "^2.3.0",
