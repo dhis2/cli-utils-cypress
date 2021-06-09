@@ -3,6 +3,9 @@ module.exports.usePluginNetworkShim = ({ options, state }) => {
 
     return {
         ...state,
-        plugins: [...state.plugins, 'networkShim'],
+        plugins: [...state.plugins, {
+            name: 'networkShim',
+            needsConfig: false,
+        }],
     }
 }

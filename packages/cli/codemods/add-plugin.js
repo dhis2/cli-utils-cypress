@@ -21,12 +21,12 @@ module.exports = function addPlugin(fileInfo, api, options = {}) {
 
     const existingPluginInits = ast
         .find(j.CallExpression)
-        .filter(path => pluginInits.includes(path.value.callee.name))
+        .filter(path => pluginInits.find(({ name }) => name === path.value.callee.name))
         .nodes()
         .map(path => path.callee.name)
 
     const missingPluginInits = pluginInits.filter(
-        pluginInit => !existingPluginInits.includes(pluginInit)
+        ({ name }) => !existingPluginInits.includes(name)
     )
 
     const callBody = ast
@@ -53,11 +53,11 @@ module.exports = function addPlugin(fileInfo, api, options = {}) {
         )
     }
 
-    missingPluginInits.reverse().forEach(missingPluginInit => {
-        const callExpression = j.callExpression(
-            j.identifier(missingPluginInit),
-            [j.identifier('on'), j.identifier('config')]
-        )
+    missingPluginInits.reverse().forEach(({ name, needsConfig }) => {
+        const args = [j.identifier('on')]
+        if (needsConfig) args.push(j.identifier('config'))
+
+        const callExpression = j.callExpression(j.identifier(name), args)
 
         callBody.forEach(path => {
             path.get('body').value.unshift(
