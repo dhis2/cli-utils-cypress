@@ -1,3 +1,4 @@
+const { enableAutoLogin } = require('./enableAutoLogin.js')
 const { registerCommands } = require('./registerCommands.js')
 const { setBaseUrl } = require('./setBaseUrl.js')
 const { setDataTestPrefix } = require('./setDataTestPrefix.js')
@@ -61,6 +62,11 @@ const options = [
         name: 'setLoginBackendUrl',
         group: groups.LOGIN,
         handler: setLoginBackendUrl,
+    },
+    {
+        name: 'enableAutoLogin',
+        group: groups.LOGIN,
+        handler: enableAutoLogin,
     },
     {
         name: 'registerCommands',
