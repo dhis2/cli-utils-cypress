@@ -49,7 +49,7 @@ module.exports.setDataTestPrefix = async ({ options, state, paths }) => {
         cypressJson: {
             ...state.cypressJson,
             env: {
-                ...(state.cypressJson.env || {}),
+                ...state.cypressJson.env,
                 dhis2DataTestPrefix: envAnswers.dhis2DatatestPrefix,
             },
         },
