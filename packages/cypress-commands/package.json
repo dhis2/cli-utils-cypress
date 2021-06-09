@@ -24,5 +24,9 @@
     },
     "scripts": {
         "build": "d2-app-scripts build"
+    },
+    "peerDependencies": {
+        "cypress": "^7",
+        "cypress-cucumber-preprocessor": "^4"
     }
 }

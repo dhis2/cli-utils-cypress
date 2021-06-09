@@ -6,8 +6,10 @@ const onlyUnique = (value, index, self) => self.indexOf(value) === index
 module.exports = function addRequireStatement(
     fileInfo,
     api,
-    { importNames, packageName } = {}
+    { plugins, packageName } = {}
 ) {
+    const importNames = plugins.map(({ name }) => name)
+
     try {
         const j = api.jscodeshift
         const ast = j(fileInfo.source)

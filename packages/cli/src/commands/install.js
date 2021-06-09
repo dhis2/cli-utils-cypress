@@ -86,6 +86,20 @@ const handler = async argv => {
                 'Make sure to add `cypress.env.json` to the `.gitignore` file!'
             )
         }
+
+        /*
+         * This is only a temporary solution until we've figured out how to
+         * install the peer dependencies of the commands & plugins packages
+         * with the correct version, see: https://jira.dhis2.org/browse/CLI-56
+         */
+        let requiredPackages = '"cypress"'
+        if (processOptions.usePluginCucumberPreprocessor) {
+            requiredPackages += ' & "cypress-cucumber"'
+        }
+
+        log.warn(
+            `Please install the following package(s) as peer dependency: ${requiredPackages}`
+        )
     } catch (e) {
         log.error(e)
     }
