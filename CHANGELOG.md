@@ -1,3 +1,28 @@
+# [8.0.0-alpha.9](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.8...v8.0.0-alpha.9) (2021-06-09)
+
+
+### chore
+
+* remove node 10 support ([6245ef2](https://github.com/dhis2/cli-utils-cypress/commit/6245ef22f2df4964e05099939b4f9f821331ebf4))
+
+
+### Code Refactoring
+
+* **install command:** combine network shim command & plugin options ([4bc9a4e](https://github.com/dhis2/cli-utils-cypress/commit/4bc9a4efe3a956078d82d3cb8101ada88895f2ca))
+
+
+### Features
+
+* **enable auto login:** add option to install command ([e9dde4e](https://github.com/dhis2/cli-utils-cypress/commit/e9dde4e4f2a977160ae9da7f83667d25f4de20b2))
+* **install cmd:** warn about potentially missing peer depds (temporarily) ([c3046aa](https://github.com/dhis2/cli-utils-cypress/commit/c3046aaccf22b152cf6743037c00a1d4fcbdc761))
+
+
+### BREAKING CHANGES
+
+* **install command:** The two options are merged into one, which is now
+called "enableNetworkShim".
+* New minimum version for NodeJS is 12.x.
+
 # [8.0.0-alpha.8](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.7...v8.0.0-alpha.8) (2021-06-03)
 
 
