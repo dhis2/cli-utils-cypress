@@ -21,7 +21,9 @@ module.exports = function addPlugin(fileInfo, api, options = {}) {
 
     const existingPluginInits = ast
         .find(j.CallExpression)
-        .filter(path => pluginInits.find(({ name }) => name === path.value.callee.name))
+        .filter(path =>
+            pluginInits.find(({ name }) => name === path.value.callee.name)
+        )
         .nodes()
         .map(path => path.callee.name)
 

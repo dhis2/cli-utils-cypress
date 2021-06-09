@@ -3,9 +3,12 @@ module.exports.usePluginChromeAllowXSiteCookies = ({ options, state }) => {
 
     return {
         ...state,
-        plugins: [...state.plugins, {
-            name: 'chromeAllowXSiteCookies',
-            needsConfig: false,
-        }],
+        plugins: [
+            ...state.plugins,
+            {
+                name: 'chromeAllowXSiteCookies',
+                needsConfig: false,
+            },
+        ],
     }
 }

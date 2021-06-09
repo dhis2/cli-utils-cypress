@@ -21,13 +21,16 @@ module.exports.enableNetworkShim = async ({ options, state }) => {
             env: {
                 ...(state.cypressJson.env || {}),
                 network: 'live',
-            }
+            },
         },
         support: [...state.support, 'enableNetworkShim'],
-        plugins: [...state.plugins, {
-            name: 'networkShim',
-            needsConfig: false,
-        }],
+        plugins: [
+            ...state.plugins,
+            {
+                name: 'networkShim',
+                needsConfig: false,
+            },
+        ],
     }
 
     if (serverMinorVersion) {
