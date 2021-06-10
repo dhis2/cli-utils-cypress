@@ -1,3 +1,154 @@
+# [8.0.0-alpha.9](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.8...v8.0.0-alpha.9) (2021-06-09)
+
+
+### chore
+
+* remove node 10 support ([6245ef2](https://github.com/dhis2/cli-utils-cypress/commit/6245ef22f2df4964e05099939b4f9f821331ebf4))
+
+
+### Code Refactoring
+
+* **install command:** combine network shim command & plugin options ([4bc9a4e](https://github.com/dhis2/cli-utils-cypress/commit/4bc9a4efe3a956078d82d3cb8101ada88895f2ca))
+
+
+### Features
+
+* **enable auto login:** add option to install command ([e9dde4e](https://github.com/dhis2/cli-utils-cypress/commit/e9dde4e4f2a977160ae9da7f83667d25f4de20b2))
+* **install cmd:** warn about potentially missing peer depds (temporarily) ([c3046aa](https://github.com/dhis2/cli-utils-cypress/commit/c3046aaccf22b152cf6743037c00a1d4fcbdc761))
+
+
+### BREAKING CHANGES
+
+* **install command:** The two options are merged into one, which is now
+called "enableNetworkShim".
+* New minimum version for NodeJS is 12.x.
+
+# [8.0.0-alpha.8](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.7...v8.0.0-alpha.8) (2021-06-03)
+
+
+### Code Refactoring
+
+* simplify cypress-plugin and cli-utils-cypress ([dc58462](https://github.com/dhis2/cli-utils-cypress/commit/dc58462b7e131b5c3aeb49e0f8ba6e520ba89030))
+
+
+### BREAKING CHANGES
+
+* Drop run and open commands
+We want to be consistent with how Cypress runs locally and in CI and
+since we cannot use d2-utils-cypress in CI, we shouldn't run it through
+d2-utils-cypress locally either.
+* Change configuration keys to camelCase.
+- dhis2_username => dhis2Username
+- dhis2_password => dhis2Password
+- dhis2_base_url => dhis2BaseUrl
+- dhis2_datatest_prefix => dhis2DataTestPrefix
+- dhis2_api_version => dhis2ApiVersion
+* dhis2_api_stub_mode renamed to networkMode
+Instead of describing the mode of the plugin, it is a bit easier to
+understand if we speak in terms of the network:
+- do we want to capture the network traffic (networkMode=capture),
+- do we want to stub it (networkMode=stub),
+- or do we want to run it against a live backend (networkMode=live)?
+* 'DISABLED' renamed to 'LIVE'
+To better describe the state of the network when running tests instead
+of describing the state of the plugin, DISABLED is now LIVE.
+* isDisabledMode renamed to isLiveMode.
+Similar to the above, to better describe the state of the network vs.
+the state of the plugin, replace usages of isDisabledMode with
+isLiveMode.
+* 'CAPTURE'|'STUB'|'LIVE' are now lowercase when passed
+to the environment.
+Replace networkMode=LIVE with networkMode=live.
+
+# [8.0.0-alpha.7](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.6...v8.0.0-alpha.7) (2021-06-02)
+
+
+### Code Refactoring
+
+* drop the app-start flag ([9674d87](https://github.com/dhis2/cli-utils-cypress/commit/9674d870115dd222da46cf2d0dba636b1dbce536))
+* wait for baseUrl to become available ([745194f](https://github.com/dhis2/cli-utils-cypress/commit/745194fb1be5abf3c3a3b87eb2435a0c3d6576f3))
+
+
+### BREAKING CHANGES
+
+* Drop the --waitOn flag
+As of now we wait on the baseUrl that is defined in cypress.json, as
+that is the URL that the tests are going to run against.
+* Drop support for the --appStart flag.
+As a consumer, you are expected to either use something like
+concurrently to run the app server and the cypress server in a single
+process, or run then manually in two separate processes. This is no
+longer done automatically.
+
+# [8.0.0-alpha.6](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.5...v8.0.0-alpha.6) (2021-05-31)
+
+
+### Bug Fixes
+
+* **network-shim:** ensure DHIS2_BASE_URL is available in localStorage ([#214](https://github.com/dhis2/cli-utils-cypress/issues/214)) ([741ab4b](https://github.com/dhis2/cli-utils-cypress/commit/741ab4b0a78a9aa889654aaf94fba5385cabc881))
+
+# [8.0.0-alpha.5](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.4...v8.0.0-alpha.5) (2021-05-31)
+
+
+### Bug Fixes
+
+* **network-shim:** use electron instead of chrome for runs ([#213](https://github.com/dhis2/cli-utils-cypress/issues/213)) ([ae73686](https://github.com/dhis2/cli-utils-cypress/commit/ae73686835a5b7aadc4c05dd6f9361502fbd13d5))
+
+# [8.0.0-alpha.4](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.3...v8.0.0-alpha.4) (2021-05-27)
+
+
+### Bug Fixes
+
+* **network-shim:** only incrementally update missing request stub state ([#209](https://github.com/dhis2/cli-utils-cypress/issues/209)) ([e2ccea8](https://github.com/dhis2/cli-utils-cypress/commit/e2ccea84ac867006c412406f2db45d4aa8540a2c))
+
+# [8.0.0-alpha.3](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.2...v8.0.0-alpha.3) (2021-05-27)
+
+
+### Bug Fixes
+
+* **network-shim:** report missing stubs if at least one is found ([#208](https://github.com/dhis2/cli-utils-cypress/issues/208)) ([45b3331](https://github.com/dhis2/cli-utils-cypress/commit/45b3331f866f6c0644e40a7a02c5fbdd40e7b842))
+
+# [8.0.0-alpha.2](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0-alpha.1...v8.0.0-alpha.2) (2021-05-27)
+
+
+### Bug Fixes
+
+* **network-shim:** fix before hook bug ([#201](https://github.com/dhis2/cli-utils-cypress/issues/201)) ([0e1cd4c](https://github.com/dhis2/cli-utils-cypress/commit/0e1cd4c551f2a5a54ece2b46aa10279e8e6b5335))
+
+# [8.0.0-alpha.1](https://github.com/dhis2/cli-utils-cypress/compare/v7.0.1...v8.0.0-alpha.1) (2021-05-18)
+
+
+### Bug Fixes
+
+* **network-shim:** ensure in-test fixtures are used instead of shim fixtures ([#176](https://github.com/dhis2/cli-utils-cypress/issues/176)) ([84a1907](https://github.com/dhis2/cli-utils-cypress/commit/84a1907dd629051e268c4b8fe2c21bbd1fcb24c3))
+
+
+### BREAKING CHANGES
+
+* **network-shim:** bumps cypress 1 major version, to v7
+
+* fix(network-shim): filter request and response headers properties
+
+This was planned anyway to keep fixtures stable.
+But also turned out to be required due to a bug:
+https://github.com/cypress-io/cypress/issues/16420
+
+* fix(network-shim): disable auto-login during stub run
+
+* fix(network-shim): add 'system/info' resource to static resources list
+
+* feat(network-shim): run tests suite on CI
+
+* docs(network-shim): add info about the network-shim test suite
+
+* chore(network-shim): add command to locally run full e2e suite
+
+* docs(network-shim): add info reg troubleshooting and local full test run
+
+* chore(cy local): run build command before cypress commands
+
+Co-authored-by: Jan-Gerke Salomon <jgs.salomon@gmail.com>
+
 ## [7.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v7.0.0...v7.0.1) (2021-03-10)
 
 

@@ -3,6 +3,12 @@ module.exports.usePluginCucumberPreprocessor = ({ options, state }) => {
 
     return {
         ...state,
-        plugins: [...state.plugins, 'cucumberPreprocessor'],
+        plugins: [
+            ...state.plugins,
+            {
+                name: 'cucumberPreprocessor',
+                needsConfig: true,
+            },
+        ],
     }
 }

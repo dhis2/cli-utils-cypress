@@ -1,2 +1,3 @@
 .vscode/
+examples/platform-app/src/locales/
 examples/testing-network-shim-app/cypress/fixtures

@@ -1,5 +1,5 @@
-const { runCodemod } = require('../../utils/runCodemod.js')
 const path = require('path')
+const { runCodemod } = require('../../utils/runCodemod.js')
 
 const identity = arg => arg
 

@@ -1,10 +1,15 @@
-import { isDisabledMode, isCaptureMode } from './utils.js'
+import { setDhis2BaseUrlToLocalStorage } from '../../helper/dhis2BaseUrl.js'
+import {
+    isLiveMode,
+    isStubMode,
+    isCaptureMode,
+} from '../../helper/networkMode.js'
 import captureRequests from './captureRequests.js'
 import stubRequests from './stubRequests.js'
 import validateVersionMinor from './validateVersionMinor.js'
 
 export function enableNetworkShim() {
-    if (isDisabledMode()) {
+    if (isLiveMode()) {
         return
     }
 
@@ -23,18 +28,41 @@ export function enableNetworkShim() {
             if (isCaptureMode()) {
                 // This will mutate the state
                 captureRequests(networkShimState)
-            } else {
+            }
+            if (isStubMode()) {
+                // This is needed to ensure the app-shell doesn't lose its reference
+                // to the server baseUrl
+                setDhis2BaseUrlToLocalStorage()
+                // This also mutates the state
                 stubRequests(networkShimState)
             }
         })
     })
 
     afterEach(() => {
-        if (isCaptureMode()) {
+        if (!isLiveMode()) {
             // First get the updated local state from the alias
             cy.get('@networkShimState').then(networkShimState => {
-                // Then update the plugin state
-                cy.task('setNetworkShimState', networkShimState)
+                /*
+                 * In capture mode the state needs to be incrementally updated
+                 * across tests, so after every feature the entire plugin state
+                 * gets overwritten.
+                 */
+                if (isCaptureMode()) {
+                    cy.task('setNetworkShimState', networkShimState)
+                }
+                /*
+                 * In stub mode the state needs to be kept static across features
+                 * apart from the missing request stubs which do need to be
+                 * incrementally updated across features. So in stub mode we only
+                 * update that state property in the plugin.
+                 */
+                if (isStubMode()) {
+                    cy.task(
+                        'setNetworkShimMissingRequestStubs',
+                        networkShimState.missingRequestStubs
+                    )
+                }
             })
         }
     })

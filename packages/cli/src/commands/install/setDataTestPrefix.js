@@ -1,4 +1,4 @@
-const inquirer = require('inquirer')
+const inquirer = require('@dhis2/cli-helpers-engine').inquirer
 const { readJson } = require('../../utils/fs.js')
 
 const extractOrgName = moduleName => {
@@ -46,9 +46,12 @@ module.exports.setDataTestPrefix = async ({ options, state, paths }) => {
 
     return {
         ...state,
-        cypressEnvJson: {
-            ...state.cypressEnvJson,
-            dhis2_datatest_prefix: envAnswers.dhis2DatatestPrefix,
+        cypressJson: {
+            ...state.cypressJson,
+            env: {
+                ...state.cypressJson.env,
+                dhis2DataTestPrefix: envAnswers.dhis2DatatestPrefix,
+            },
         },
     }
 }

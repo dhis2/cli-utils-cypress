@@ -1,11 +1,11 @@
 const path = require('path')
+const log = require('@dhis2/cli-helpers-engine').reporter
 const fs = require('fs-extra')
 const rimraf = require('rimraf')
-const log = require('@dhis2/cli-helpers-engine').reporter
 
 module.exports = function clearNetworkFixtures({ fixturesFolder, env }) {
     try {
-        const serverMinorVersion = env.dhis2_server_minor_version.toString()
+        const serverMinorVersion = env.dhis2ApiVersion.toString()
         const versionMinorDir = path.join(fixturesFolder, serverMinorVersion)
 
         if (fs.existsSync(versionMinorDir)) {

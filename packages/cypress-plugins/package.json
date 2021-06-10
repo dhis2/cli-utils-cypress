@@ -1,6 +1,6 @@
 {
     "name": "@dhis2/cypress-plugins",
-    "version": "7.0.1",
+    "version": "8.0.0-alpha.9",
     "description": "Cypress plugins for dhis2 related apps",
     "main": "src/index.js",
     "repository": {
@@ -13,5 +13,9 @@
     "private": false,
     "publishConfig": {
         "access": "public"
+    },
+    "peerDependencies": {
+        "cypress": "^7",
+        "cypress-cucumber-preprocessor": "^4"
     }
 }

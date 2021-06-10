@@ -1,11 +1,42 @@
+import { getDhis2BaseUrl } from '../../helper/dhis2BaseUrl.js'
 import {
-    getApiBaseUrl,
     getFullTestName,
     splitHostAndPath,
     toJsonBlob,
     isStaticResource,
     findMatchingRequestStub,
 } from './utils.js'
+
+const requestHeadersAllowList = new Set([
+    'host',
+    'proxy-connection',
+    'accept',
+    'origin',
+    'sec-fetch-site',
+    'sec-fetch-mode',
+    'content-type',
+    'content-length',
+    'etag',
+    'connection',
+    'keep-alive',
+])
+
+const responseHeadersAllowList = new Set([
+    'server',
+    'content-type',
+    'transfer-encoding',
+    'connection',
+    'access-control-allow-credentials',
+    'access-control-allow-origin',
+    'vary',
+    'access-control-expose-headers',
+    'cache-control',
+    'x-content-type-options',
+    'x-xss-protection',
+    'x-frame-options',
+    // See https://github.com/cypress-io/cypress/issues/16420
+    // 'content-encoding',
+])
 
 /**
  * @description
@@ -15,7 +46,9 @@ import {
  */
 export default function captureRequests(state) {
     state.config.hosts.forEach(host => {
-        cy.intercept(host, request => {
+        const hostRegex = new RegExp(`^${host}`)
+
+        cy.intercept(hostRegex, request => {
             request.reply(response => {
                 captureRequest(state, request, response)
             })
@@ -78,11 +111,17 @@ async function captureRequest(state, request, response) {
             nonDeterministic: false,
             method: request.method,
             requestBody: request.body,
-            requestHeaders: request.headers,
+            requestHeaders: cleanHeaders(
+                request.headers,
+                requestHeadersAllowList
+            ),
             statusCode: response.statusCode,
             responseBody: scrubbedText,
             responseSize: size,
-            responseHeaders: clearDateFromResponseHeaders(response.headers),
+            responseHeaders: cleanHeaders(
+                response.headers,
+                responseHeadersAllowList
+            ),
         })
         state.totalResponseSize += size
     }
@@ -147,21 +186,6 @@ function processDuplicatedRequest({
 
 /**
  * @description
- * Removes date fields to avoid network fixtures from changing all the time
- * @param {NetworkShimState} state
- * @param {RequestStub} requestStub
- * @param {Object} Headers A response Headers instance
- * @returns {Object} plain object without date field
- */
-function clearDateFromResponseHeaders(headers) {
-    const headersClone = { ...headers }
-    delete headersClone.date
-
-    return headersClone
-}
-
-/**
- * @description
  * Removes endpoint URLs from fixtures to avoid mismatches
  * @param {string} text Response body text blob
  * @param {RequestStub} requestStub
@@ -169,7 +193,24 @@ function clearDateFromResponseHeaders(headers) {
  * @returns {string} Response body text blob without references to api endpoint
  */
 function removeApiEndpointFromResponseBodyBlob(text) {
-    const apiEndpointUrl = new RegExp(`${getApiBaseUrl()}/api`, 'gi')
+    const apiEndpointUrl = new RegExp(`${getDhis2BaseUrl()}/api`, 'gi')
 
     return text.replace(apiEndpointUrl, '')
+}
+
+/**
+ * @description
+ * Only store whitelisted header fields to prevent network fixtures changing all
+ * the time and prevent network errors due to a cypress intercept content-encoding bug
+ * @param {Object} dirtyHeaders A Headers instance
+ * @param {Set} allowListSet A whitelist stored in a Set
+ * @returns {Object} plain object without only whitelisted properties
+ */
+function cleanHeaders(dirtyHeaders, allowListSet) {
+    return Object.keys(dirtyHeaders).reduce((headers, headerKey) => {
+        if (allowListSet.has(headerKey)) {
+            headers[headerKey] = dirtyHeaders[headerKey]
+        }
+        return headers
+    }, {})
 }

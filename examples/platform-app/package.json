@@ -1,0 +1,26 @@
+{
+    "name": "platform-app",
+    "version": "8.0.0-alpha.9",
+    "description": "",
+    "license": "BSD-3-Clause",
+    "private": true,
+    "scripts": {
+        "build": "d2-app-scripts build",
+        "start": "d2-app-scripts start",
+        "test": "d2-app-scripts test",
+        "lint": "d2-style check",
+        "lint:staged": "yarn lint --staged",
+        "format": "d2-style apply",
+        "format:staged": "yarn format --staged",
+        "cy:start": "BROWSER=none yarn start",
+        "cy:open": "wait-on 'http-get://localhost:3000' && cypress open",
+        "cy:run": "wait-on 'http-get://localhost:3000' && cypress run",
+        "cy:capture": "concurrently 'yarn cy:start' 'yarn cy:run --env networkMode=capture' --kill-others --success first",
+        "cy:stub": "concurrently 'yarn cy:start' 'yarn cy:run --env networkMode=stub' --kill-others --success first",
+        "cy:capture-and-stub": "yarn cy:capture && yarn cy:stub"
+    },
+    "dependencies": {
+        "@dhis2/app-runtime": "^2.8.0",
+        "prop-types": "^15.7.2"
+    }
+}

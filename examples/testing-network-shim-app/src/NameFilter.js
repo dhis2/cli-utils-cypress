@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
 import propTypes from 'prop-types'
+import React, { useState } from 'react'
 
 export const NameFilter = ({ fetch }) => {
     const [filter, setFilter] = useState('')

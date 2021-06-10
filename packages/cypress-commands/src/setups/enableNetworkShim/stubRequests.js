@@ -13,7 +13,9 @@ import {
  */
 export default function stubRequests(state) {
     state.config.hosts.forEach(host => {
-        cy.intercept(host, request => {
+        const hostRegex = new RegExp(`^${host}`)
+
+        cy.intercept(hostRegex, request => {
             stubRequest(state, request)
         })
     })
@@ -45,19 +47,28 @@ function stubRequest(state, request) {
     const requestStub = findMatchingRequestStub(stubProps, state.requestStubs)
 
     if (!requestStub) {
-        const message = `No request stub found for a ${request.method} to "${path}" in test "${testName}". Perhaps you should try a capture run first?`
-        throw new Error(message)
+        registerMissingRequestStub(state, stubProps)
+
+        /*
+         * Reply with an dummy response to avoid the request
+         * from being sent to the destination server
+         */
+        request.reply({
+            body: `Network shim did not find a recorded fixture for this request in test "${testName}"`,
+            headers: {},
+            statusCode: 404,
+        })
+    } else {
+        const responseBody = getRequesStubResponseBody(requestStub)
+
+        requestStub.responseCount++
+
+        request.reply({
+            body: responseBody,
+            headers: requestStub.responseHeaders,
+            statusCode: requestStub.statusCode,
+        })
     }
-
-    const responseBody = getRequesStubResponseBody(requestStub)
-
-    requestStub.responseCount++
-
-    request.reply({
-        body: responseBody,
-        headers: requestStub.responseHeaders,
-        statusCode: requestStub.statusCode,
-    })
 }
 
 function getRequesStubResponseBody({
@@ -72,4 +83,29 @@ function getRequesStubResponseBody({
     }
 
     return JSON.parse(responseBody)
+}
+
+function registerMissingRequestStub(state, { method, path, testName }) {
+    /*
+     * A missing requestStub could indicate there is a problem, but it
+     * could also be that an in-test cy.intercept is providing a static
+     * response object or fixture. Throwing an error here is problematic
+     * for the latter case, because the test would fail due to the error.
+     * So instead we collect missingRequestStubs on the state and let
+     * the plugin warn the user about this once the full run is completed.
+     */
+    if (!state.missingRequestStubs) {
+        state.missingRequestStubs = []
+    }
+
+    const isDuplicate = state.missingRequestStubs.some(
+        stub =>
+            stub.method === method &&
+            stub.path === path &&
+            stub.testName === testName
+    )
+
+    if (!isDuplicate) {
+        state.missingRequestStubs.push({ method, path, testName })
+    }
 }

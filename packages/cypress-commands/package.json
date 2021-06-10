@@ -1,9 +1,13 @@
 {
     "name": "@dhis2/cypress-commands",
-    "version": "7.0.1",
+    "version": "8.0.0-alpha.9",
     "description": "Cypress commands for dhis2 related apps",
-    "main": "build/cjs/lib.js",
-    "module": "build/es/lib.js",
+    "main": "./build/cjs/index.js",
+    "module": "./build/es/index.js",
+    "exports": {
+        "import": "./build/es/index.js",
+        "require": "./build/cjs/index.js"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/dhis2/cli-utils-cypress.git",
@@ -15,16 +19,14 @@
     "dependencies": {
         "jscodeshift": "^0.11.0"
     },
-    "devDependencies": {
-        "@babel/core": "^7.12.3",
-        "@babel/preset-env": "^7.12.1",
-        "@dhis2/cli-app-scripts": "^4.0.4",
-        "@dhis2/cli-style": "^7.2.1"
-    },
     "publishConfig": {
         "access": "public"
     },
     "scripts": {
         "build": "d2-app-scripts build"
+    },
+    "peerDependencies": {
+        "cypress": "^7",
+        "cypress-cucumber-preprocessor": "^4"
     }
 }

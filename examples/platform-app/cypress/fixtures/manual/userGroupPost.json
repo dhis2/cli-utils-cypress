@@ -1,0 +1,11 @@
+{
+    "httpStatus": "Created",
+    "httpStatusCode": 201,
+    "status": "OK",
+    "response": {
+        "responseType": "ObjectReport",
+        "uid": "I am a teapot",
+        "klass": "org.hisp.dhis.user.UserGroup",
+        "errorReports": []
+    }
+}

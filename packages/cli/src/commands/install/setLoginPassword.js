@@ -1,4 +1,4 @@
-const inquirer = require('inquirer')
+const inquirer = require('@dhis2/cli-helpers-engine').inquirer
 
 module.exports.setLoginPassword = async ({ options, state }) => {
     if (!options.setLoginPassword) return state
@@ -18,7 +18,7 @@ module.exports.setLoginPassword = async ({ options, state }) => {
         ...state,
         cypressEnvJson: {
             ...state.cypressEnvJson,
-            dhis2_password: envAnswers.password,
+            dhis2Password: envAnswers.password,
         },
     }
 }

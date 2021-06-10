@@ -1,7 +1,7 @@
-const fs = require('fs-extra')
 const path = require('path')
-const rimraf = require('rimraf')
 const log = require('@dhis2/cli-helpers-engine').reporter
+const fs = require('fs-extra')
+const rimraf = require('rimraf')
 const { isCaptureMode, isStubMode, getFixturesDir } = require('./utils.js')
 
 /**
@@ -11,7 +11,7 @@ const { isCaptureMode, isStubMode, getFixturesDir } = require('./utils.js')
  * @property {String[]} hosts List of domains to capture/stub requests for
  * @property {String[]} staticResources List of resources not specific to any test and guaranteed to
  *      always return the same response
- * @property {('CAPTURE'|'STUB'|'DISABLED')} mode Capture requests, return fixtures, or do nothing
+ * @property {('capture'|'stub'|'live')} mode Capture requests, return fixtures, or do nothing
  */
 
 /**
@@ -58,12 +58,12 @@ const { isCaptureMode, isStubMode, getFixturesDir } = require('./utils.js')
 module.exports = function createState(cypressConfig, hosts, staticResources) {
     try {
         const env = cypressConfig.env
-        const serverMinorVersion = env.dhis2_server_minor_version
+        const serverMinorVersion = env.dhis2ApiVersion
         const fixturesDir = getFixturesDir(cypressConfig)
         const config = {
             serverMinorVersion,
-            mode: env.dhis2_api_stub_mode,
-            hosts: hosts || [env.dhis2_base_url],
+            mode: env.networkMode,
+            hosts: hosts || [env.dhis2BaseUrl],
             staticResources,
         }
 

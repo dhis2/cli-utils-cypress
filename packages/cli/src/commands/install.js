@@ -1,11 +1,10 @@
 const log = require('@dhis2/cli-helpers-engine').reporter
-
+const { makePaths } = require('../utils/makePaths.js')
 const { applyState } = require('./install/applyState.js')
 const { askForPackageManager } = require('./install/askForPackageManager.js')
 const {
     computeProvidedOptions,
 } = require('./install/computeProvidedOptions.js')
-const { makePaths } = require('../utils/makePaths.js')
 const { options } = require('./install/options.js')
 const { prettifyOptions } = require('./install/prettifyOptions.js')
 const { processOptions } = require('./install/processOptions.js')
@@ -87,6 +86,20 @@ const handler = async argv => {
                 'Make sure to add `cypress.env.json` to the `.gitignore` file!'
             )
         }
+
+        /*
+         * This is only a temporary solution until we've figured out how to
+         * install the peer dependencies of the commands & plugins packages
+         * with the correct version, see: https://jira.dhis2.org/browse/CLI-56
+         */
+        let requiredPackages = '"cypress"'
+        if (processOptions.usePluginCucumberPreprocessor) {
+            requiredPackages += ' & "cypress-cucumber"'
+        }
+
+        log.warn(
+            `Please install the following package(s) as peer dependency: ${requiredPackages}`
+        )
     } catch (e) {
         log.error(e)
     }
