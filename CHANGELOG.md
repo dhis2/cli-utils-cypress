@@ -1,3 +1,10 @@
+## [8.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0...v8.0.1) (2021-06-10)
+
+
+### Bug Fixes
+
+* **install cmd:** use correct env vars for network shim in install command ([#234](https://github.com/dhis2/cli-utils-cypress/issues/234)) ([a91da93](https://github.com/dhis2/cli-utils-cypress/commit/a91da931d8f6c86955f77f67f6a000440d44edcf))
+
 # [8.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v7.0.1...v8.0.0) (2021-06-10)
 
 
