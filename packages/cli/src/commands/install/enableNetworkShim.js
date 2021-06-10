@@ -20,7 +20,7 @@ module.exports.enableNetworkShim = async ({ options, state }) => {
             ...state.cypressJson,
             env: {
                 ...state.cypressJson.env,
-                network: 'live',
+                networkMode: 'live',
             },
         },
         support: [...state.support, 'enableNetworkShim'],
