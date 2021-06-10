@@ -2,4 +2,4 @@
   command = "yarn docs:build"
   publish = "dist"
 [build.environment]
-  NODE_VERSION = "^12"
+  NODE_VERSION = "12"

@@ -21,5 +21,5 @@ enableAutoLogin()
 
 ### Providing the login data
 
-Please refer to [Adding login credentials](./add-login-credentials.md) and
+Please refer to [Adding login credentials](guides/add-login-credentials) and
 add the required data for logging in.

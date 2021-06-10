@@ -63,13 +63,13 @@ To get up-and-running quickly do the following:
     <br/>
 
 1.  Install tools needed to run the scripts in `package.json`:
-    _(or install the `start-server-and-test` package instead)_
 
     ```bash
     yarn install -D wait-on concurrently
     ```
 
-        <br/>
+    _(or install the `start-server-and-test` package instead)_
+    <br/>
 
 1.  Create scripts `package.json` as demonstrated [here](#package-scripts-and-dependencies)
     <br/>
