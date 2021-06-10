@@ -17,7 +17,7 @@ module.exports = function createFixturesFromState(state, cypressConfig) {
         totalResponseSize: state.totalResponseSize,
         duplicates: state.duplicates,
         nonDeterministicResponses: state.nonDeterministicResponses,
-        serverMinorVersion: state.config.serverMinorVersion,
+        apiVersion: state.config.apiVersion,
         fixtureFiles: [],
     }
     const files = state.requestStubs.reduce(
