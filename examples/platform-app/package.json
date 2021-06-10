@@ -13,8 +13,8 @@
         "format": "d2-style apply",
         "format:staged": "yarn format --staged",
         "cy:start": "BROWSER=none yarn start",
-        "cy:open": "wait-on 'http://localhost:3000' && cypress open",
-        "cy:run": "wait-on 'http://localhost:3000' && cypress run",
+        "cy:open": "wait-on 'http-get://localhost:3000' && cypress open",
+        "cy:run": "wait-on 'http-get://localhost:3000' && cypress run",
         "cy:capture": "concurrently 'yarn cy:start' 'yarn cy:run --env networkMode=capture' --kill-others --success first",
         "cy:stub": "concurrently 'yarn cy:start' 'yarn cy:run --env networkMode=stub' --kill-others --success first",
         "cy:capture-and-stub": "yarn cy:capture && yarn cy:stub"
