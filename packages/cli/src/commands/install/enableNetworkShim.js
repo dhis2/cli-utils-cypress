@@ -5,10 +5,10 @@ module.exports.enableNetworkShim = async ({ options, state }) => {
 
     const prompt = inquirer.createPromptModule()
 
-    const { serverMinorVersion } = await prompt([
+    const { dhis2ApiVersion } = await prompt([
         {
             type: 'input',
-            name: 'serverMinorVersion',
+            name: 'dhis2ApiVersion',
             message: 'The minor version of the server (e. g. 37)',
             default: '',
         },
@@ -20,7 +20,7 @@ module.exports.enableNetworkShim = async ({ options, state }) => {
             ...state.cypressJson,
             env: {
                 ...state.cypressJson.env,
-                network: 'live',
+                networkMode: 'live',
             },
         },
         support: [...state.support, 'enableNetworkShim'],
@@ -33,8 +33,8 @@ module.exports.enableNetworkShim = async ({ options, state }) => {
         ],
     }
 
-    if (serverMinorVersion) {
-        nextState.cypressJson.env.serverMinorVersion = serverMinorVersion
+    if (dhis2ApiVersion) {
+        nextState.cypressJson.env.dhis2ApiVersion = dhis2ApiVersion
     }
 
     return nextState
