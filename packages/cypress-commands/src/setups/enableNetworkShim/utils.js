@@ -36,19 +36,19 @@ export const toJsonBlob = async input => {
     return { size, text }
 }
 
+export const isMatchingRequest = ({ path, method, requestBody }, requestStub) =>
+    path === requestStub.path &&
+    method === requestStub.method &&
+    (requestBody === requestStub.requestBody ||
+        JSON.stringify(requestBody) === JSON.stringify(requestStub.requestBody))
+
 export const findMatchingRequestStub = (
-    { path, method, testName, requestBody, isStatic },
+    { testName, isStatic, ...requestProps },
     requestStubs
 ) =>
-    requestStubs.find(requestStub => {
-        const isMatchingRequest =
-            path === requestStub.path &&
-            method === requestStub.method &&
-            (requestBody === requestStub.requestBody ||
-                JSON.stringify(requestBody) ===
-                    JSON.stringify(requestStub.requestBody))
-
-        return isStatic
-            ? isMatchingRequest
-            : isMatchingRequest && testName === requestStub.testName
-    })
+    requestStubs.find(requestStub =>
+        isStatic
+            ? isMatchingRequest(requestProps, requestStub)
+            : testName === requestStub.testName &&
+              isMatchingRequest(requestProps, requestStub)
+    )

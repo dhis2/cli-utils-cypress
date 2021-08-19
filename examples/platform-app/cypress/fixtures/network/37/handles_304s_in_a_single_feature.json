@@ -1,7 +1,7 @@
 [
     {
         "path": "/api/37/systemSettings/helpPageLink",
-        "testName": "The app lists user groups -- The app displays user groups from the database",
+        "testName": "Handles 304s in a single feature -- The app displays user groups from the database",
         "static": false,
         "count": 1,
         "nonDeterministic": false,
@@ -35,7 +35,7 @@
     },
     {
         "path": "/api/37/userGroups",
-        "testName": "The app lists user groups -- The app displays user groups from the database",
+        "testName": "Handles 304s in a single feature -- The app displays user groups from the database",
         "static": false,
         "count": 1,
         "nonDeterministic": false,
@@ -69,7 +69,39 @@
     },
     {
         "path": "/api/37/systemSettings/helpPageLink",
-        "testName": "The app lists user groups -- The app displays user groups from a static response",
+        "testName": "Handles 304s in a single feature -- The app displays user groups from the database AGAIN",
+        "static": false,
+        "count": 1,
+        "nonDeterministic": false,
+        "method": "GET",
+        "requestBody": "",
+        "requestHeaders": {
+            "host": "localhost:8080",
+            "proxy-connection": "keep-alive",
+            "accept": "application/json",
+            "origin": "http://localhost:3000",
+            "sec-fetch-site": "same-site",
+            "sec-fetch-mode": "cors"
+        },
+        "statusCode": 304,
+        "responseBody": "\"\"",
+        "responseSize": 2,
+        "responseHeaders": {
+            "server": "nginx/1.21.1",
+            "connection": "keep-alive",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3000",
+            "vary": "Origin",
+            "access-control-expose-headers": "ETag, Location",
+            "cache-control": "no-cache, private",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN"
+        }
+    },
+    {
+        "path": "/api/37/userGroups",
+        "testName": "Handles 304s in a single feature -- The app displays user groups from the database AGAIN",
         "static": false,
         "count": 1,
         "nonDeterministic": false,

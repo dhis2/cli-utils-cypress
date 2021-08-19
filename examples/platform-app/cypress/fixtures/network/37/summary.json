@@ -1,12 +1,13 @@
 {
-    "count": 26,
-    "totalResponseSize": 28541,
-    "duplicates": 11,
-    "nonDeterministicResponses": 2,
-    "serverMinorVersion": 37,
+    "count": 44,
+    "totalResponseSize": 28314,
+    "duplicates": 26,
+    "nonDeterministicResponses": 4,
+    "apiVersion": "37",
     "fixtureFiles": [
         "static_resources.json",
         "creating_user_groups_with_intercept_and_fixture.json",
-        "the_app_lists_user_groups.json"
+        "the_app_lists_user_groups.json",
+        "handles_304s_in_a_single_feature.json"
     ]
 }
