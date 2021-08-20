@@ -1,7 +1,6 @@
 import {
     splitHostAndPath,
     getFullTestName,
-    isMatchingRequest,
     findMatchingRequestStub,
     isStaticResource,
 } from './utils'
@@ -45,7 +44,7 @@ function stubRequest(state, request) {
         requestBody: request.body,
         isStatic: isStaticResource(path, state.config),
     }
-    const requestStub = findRequestStub(stubProps, state.requestStubs)
+    const requestStub = findMatchingRequestStub(stubProps, state.requestStubs)
 
     if (!requestStub) {
         registerMissingRequestStub(state, stubProps)
@@ -70,30 +69,6 @@ function stubRequest(state, request) {
             statusCode: requestStub.statusCode,
         })
     }
-}
-
-function findRequestStub(stubProps, requestStubs) {
-    const requestStub = findMatchingRequestStub(stubProps, requestStubs)
-    return requestStub && requestStub.statusCode === 304
-        ? find304RequestStub(stubProps, requestStubs)
-        : requestStub
-}
-
-function find304RequestStub({ testName, ...requestProps }, requestStubs) {
-    return requestStubs.find(
-        requestStub =>
-            requestStub.statusCode !== 304 &&
-            isFeatureNameMatch(testName, requestStub.testName) &&
-            isMatchingRequest(requestProps, requestStub)
-    )
-}
-
-function isFeatureNameMatch(testName, stubName) {
-    return (
-        testName &&
-        stubName &&
-        testName.split(' -- ')[0] === stubName.split(' -- ')[0]
-    )
 }
 
 function getRequesStubResponseBody({
