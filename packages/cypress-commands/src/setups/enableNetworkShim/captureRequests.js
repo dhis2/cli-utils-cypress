@@ -1,6 +1,6 @@
 import { getDhis2BaseUrl } from '../../helper/dhis2BaseUrl.js'
 import {
-    getFullTestName,
+    getFeatureName,
     splitHostAndPath,
     toJsonBlob,
     isStaticResource,
@@ -80,13 +80,13 @@ async function captureRequest(state, request, response) {
 
     state.count++
 
-    const testName = getFullTestName()
+    const featureName = getFeatureName()
     const isStatic = isStaticResource(path, state.config)
     const existingRequestStub = findMatchingRequestStub(
         {
             path,
             method: request.method,
-            testName,
+            featureName,
             requestBody: request.body,
             isStatic,
         },
@@ -105,7 +105,7 @@ async function captureRequest(state, request, response) {
     } else {
         state.requestStubs.push({
             path,
-            testName: isStatic ? null : testName,
+            featureName: isStatic ? null : featureName,
             static: isStatic,
             count: 1,
             nonDeterministic: false,

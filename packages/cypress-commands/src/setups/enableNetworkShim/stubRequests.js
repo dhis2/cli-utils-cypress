@@ -1,6 +1,6 @@
 import {
     splitHostAndPath,
-    getFullTestName,
+    getFeatureName,
     findMatchingRequestStub,
     isStaticResource,
 } from './utils'
@@ -36,11 +36,11 @@ function stubRequest(state, request) {
         return request
     }
 
-    const testName = getFullTestName()
+    const featureName = getFeatureName()
     const stubProps = {
         path,
         method: request.method,
-        testName,
+        featureName,
         requestBody: request.body,
         isStatic: isStaticResource(path, state.config),
     }
@@ -54,7 +54,7 @@ function stubRequest(state, request) {
          * from being sent to the destination server
          */
         request.reply({
-            body: `Network shim did not find a recorded fixture for this request in test "${testName}"`,
+            body: `Network shim did not find a recorded fixture for this request in test "${featureName}"`,
             headers: {},
             statusCode: 404,
         })
@@ -85,7 +85,7 @@ function getRequesStubResponseBody({
     return JSON.parse(responseBody)
 }
 
-function registerMissingRequestStub(state, { method, path, testName }) {
+function registerMissingRequestStub(state, { method, path, featureName }) {
     /*
      * A missing requestStub could indicate there is a problem, but it
      * could also be that an in-test cy.intercept is providing a static
@@ -102,10 +102,10 @@ function registerMissingRequestStub(state, { method, path, testName }) {
         stub =>
             stub.method === method &&
             stub.path === path &&
-            stub.testName === testName
+            stub.featureName === featureName
     )
 
     if (!isDuplicate) {
-        state.missingRequestStubs.push({ method, path, testName })
+        state.missingRequestStubs.push({ method, path, featureName })
     }
 }

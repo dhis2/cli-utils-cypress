@@ -1,9 +1,9 @@
 [
     {
         "path": "/api/37/systemSettings/helpPageLink",
-        "testName": "The app lists user groups -- The app displays user groups from the database",
+        "featureName": "The app lists user groups",
         "static": false,
-        "count": 1,
+        "count": 2,
         "nonDeterministic": false,
         "method": "GET",
         "requestBody": "",
@@ -35,7 +35,7 @@
     },
     {
         "path": "/api/37/userGroups",
-        "testName": "The app lists user groups -- The app displays user groups from the database",
+        "featureName": "The app lists user groups",
         "static": false,
         "count": 1,
         "nonDeterministic": false,
@@ -56,38 +56,6 @@
             "server": "nginx/1.21.1",
             "content-type": "application/json;charset=UTF-8",
             "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "access-control-allow-credentials": "true",
-            "access-control-allow-origin": "http://localhost:3000",
-            "vary": "Origin",
-            "access-control-expose-headers": "ETag, Location",
-            "cache-control": "no-cache, private",
-            "x-content-type-options": "nosniff",
-            "x-xss-protection": "1; mode=block",
-            "x-frame-options": "SAMEORIGIN"
-        }
-    },
-    {
-        "path": "/api/37/systemSettings/helpPageLink",
-        "testName": "The app lists user groups -- The app displays user groups from a static response",
-        "static": false,
-        "count": 1,
-        "nonDeterministic": false,
-        "method": "GET",
-        "requestBody": "",
-        "requestHeaders": {
-            "host": "localhost:8080",
-            "proxy-connection": "keep-alive",
-            "accept": "application/json",
-            "origin": "http://localhost:3000",
-            "sec-fetch-site": "same-site",
-            "sec-fetch-mode": "cors"
-        },
-        "statusCode": 304,
-        "responseBody": "\"\"",
-        "responseSize": 2,
-        "responseHeaders": {
-            "server": "nginx/1.21.1",
             "connection": "keep-alive",
             "access-control-allow-credentials": "true",
             "access-control-allow-origin": "http://localhost:3000",

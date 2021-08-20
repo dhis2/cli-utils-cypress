@@ -1,7 +1,7 @@
 [
     {
         "path": "/api/37/systemSettings/helpPageLink",
-        "testName": "Creating user groups with intercept and fixture -- Creating a user - intercept fixture",
+        "featureName": "Creating user groups with intercept and fixture",
         "static": false,
         "count": 1,
         "nonDeterministic": false,
@@ -35,9 +35,9 @@
     },
     {
         "path": "/api/37/userGroups",
-        "testName": "Creating user groups with intercept and fixture -- Creating a user - intercept fixture",
+        "featureName": "Creating user groups with intercept and fixture",
         "static": false,
-        "count": 1,
+        "count": 2,
         "nonDeterministic": false,
         "method": "GET",
         "requestBody": "",

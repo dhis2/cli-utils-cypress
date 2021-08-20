@@ -18,7 +18,7 @@ const { isCaptureMode, isStubMode, getFixturesDir } = require('./utils.js')
  * A request stub read from a fixture
  * @typedef {Object} RequestStub
  * @property {String} path Resource URL
- * @property {String} testName Full test name, usually "<ScenarioName> -- "
+ * @property {String} Name of the feature
  * @property {Boolean} static True if resource is in list of staticResources
  * @property {Number} count The cummulative count of the request being encountered
  * @property {Boolean} nonDeterministic A stub is classified as non-deterministic when a request is

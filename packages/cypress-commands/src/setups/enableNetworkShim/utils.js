@@ -12,19 +12,14 @@ export const splitHostAndPath = (url, hosts) => {
     return { host, path }
 }
 
-const extractTitles = (obj, titles) => {
-    if (obj && 'parent' in obj) {
-        titles.push(obj.title)
-        return extractTitles(obj.parent, titles)
+export const getFeatureName = () => {
+    let obj = Cypress.mocha.getRunner().suite.ctx.test
+    let title = null
+    while (obj && obj.parent && obj.parent.title) {
+        obj = obj.parent
+        title = obj.title
     }
-
-    return titles
-}
-
-export const getFullTestName = () => {
-    return extractTitles(Cypress.mocha.getRunner().suite.ctx.test, [])
-        .reverse()
-        .join(' -- ')
+    return title
 }
 
 export const toJsonBlob = async input => {
@@ -36,8 +31,26 @@ export const toJsonBlob = async input => {
     return { size, text }
 }
 
+const isNameMatch = (featureName, requestStub) => {
+    /**
+     * Up until v8.0.1 a network fixture would contain a `testName`
+     * which was a combination of a feature-name and a scenario-name.
+     * In PR #261 this behaviour was altered because of a bug reg.
+     * 304 requests. In PR #261 `testName` was replaced by `featureName`,
+     * which only contains the name of the feature. To prevent PR #261
+     * resulting in a breaking change we include an additional check,
+     * so that old fixture files using the `testName` property are still
+     * handled properly. This check for `testName` can be removed in v9.
+     */ 
+    if(requestStub.testName) {
+        return requestStub.testName.includes(featureName)
+    }
+
+    return featureName === requestStub.featureName
+}
+
 export const findMatchingRequestStub = (
-    { path, method, testName, requestBody, isStatic },
+    { path, method, featureName, requestBody, isStatic },
     requestStubs
 ) =>
     requestStubs.find(requestStub => {
@@ -50,5 +63,5 @@ export const findMatchingRequestStub = (
 
         return isStatic
             ? isMatchingRequest
-            : isMatchingRequest && testName === requestStub.testName
+            : isMatchingRequest && isNameMatch(featureName, requestStub)
     })
