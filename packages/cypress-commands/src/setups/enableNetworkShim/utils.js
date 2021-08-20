@@ -41,8 +41,8 @@ const isNameMatch = (featureName, requestStub) => {
      * resulting in a breaking change we include an additional check,
      * so that old fixture files using the `testName` property are still
      * handled properly. This check for `testName` can be removed in v9.
-     */ 
-    if(requestStub.testName) {
+     */
+    if (requestStub.testName) {
         return requestStub.testName.includes(featureName)
     }
 
