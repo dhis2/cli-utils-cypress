@@ -1,3 +1,10 @@
+## [8.0.2](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.1...v8.0.2) (2021-08-23)
+
+
+### Bug Fixes
+
+* **network-shim:** handle 304s from different scenarios in the same feature ([#261](https://github.com/dhis2/cli-utils-cypress/issues/261)) ([0242c1e](https://github.com/dhis2/cli-utils-cypress/commit/0242c1ef3ae9fa012f830ca3daa8e95710c21d92))
+
 ## [8.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0...v8.0.1) (2021-06-10)
 
 
