@@ -24,10 +24,7 @@ module.exports = function createFixturesFromState(state, cypressConfig) {
         (acc, request) => {
             const fileName = request.static
                 ? 'static_resources'
-                : request.testName
-                      .split(' -- ')[0]
-                      .toLowerCase()
-                      .replaceAll(' ', '_')
+                : request.featureName.toLowerCase().replaceAll(' ', '_')
 
             if (!acc[fileName]) {
                 acc[fileName] = []
