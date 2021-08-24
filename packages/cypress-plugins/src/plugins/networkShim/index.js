@@ -37,12 +37,6 @@ module.exports = function networkShim(
             state = newState
             return state
         },
-        setNetworkShimMissingRequestStubs(missingRequestStubs) {
-            if (Array.isArray(missingRequestStubs)) {
-                state.missingRequestStubs = missingRequestStubs
-            }
-            return state
-        },
     })
 
     on('after:run', results => {
