@@ -44,7 +44,7 @@ export function enableNetworkShim() {
             // First get the updated local state from the alias
             cy.get('@networkShimState').then(networkShimState => {
                 /*
-                 * In both capture and stub mode the state needs to be incrementally 
+                 * In both capture and stub mode the state needs to be incrementally
                  * updated across tests, so after every feature the entire plugin state
                  * gets overwritten.
                  */

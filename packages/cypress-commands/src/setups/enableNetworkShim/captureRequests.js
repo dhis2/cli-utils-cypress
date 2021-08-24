@@ -166,7 +166,7 @@ function processDuplicatedRequest({
         // RequestStub was already nonDeterministic, responseBody is already an array
         const matchingResponseBodyIndex = isNotModified
             ? // When isNotModified the response body is empty and the browser is expected
-              // to return the last known response, so we do the same by returning the 
+              // to return the last known response, so we do the same by returning the
               // value of the last responseLookup.
               requestStub.responseLookup[requestStub.responseLookup.length - 1]
             : requestStub.responseBody.findIndex(
