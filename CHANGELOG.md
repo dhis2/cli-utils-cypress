@@ -1,3 +1,10 @@
+## [8.0.3](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.2...v8.0.3) (2021-08-24)
+
+
+### Bug Fixes
+
+* **network-shim:** ensure 304s are dealt with correctly ([#262](https://github.com/dhis2/cli-utils-cypress/issues/262)) ([c654b9b](https://github.com/dhis2/cli-utils-cypress/commit/c654b9b7708bbd546271828371f10292ae13aea3))
+
 ## [8.0.2](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.1...v8.0.2) (2021-08-23)
 
 

@@ -1,6 +1,6 @@
 {
     "name": "@dhis2/cypress-plugins",
-    "version": "8.0.2",
+    "version": "8.0.3",
     "description": "Cypress plugins for dhis2 related apps",
     "main": "src/index.js",
     "repository": {
