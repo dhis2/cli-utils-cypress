@@ -34,7 +34,7 @@
     },
     "version": "8.0.3",
     "devDependencies": {
-        "@babel/core": "^7.12.3",
+        "@babel/core": "^7.15.4",
         "@babel/preset-env": "^7.12.1",
         "@dhis2/cli-app-scripts": "^6.2.0",
         "@dhis2/cli-style": "^8.3.0",
