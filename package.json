@@ -1,5 +1,6 @@
 {
     "private": true,
+    "repository": "https://github.com/dhis2/cli-utils-cypress.git",
     "workspaces": {
         "packages": [
             "packages/*",
