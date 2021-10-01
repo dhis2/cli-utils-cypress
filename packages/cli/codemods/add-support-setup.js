@@ -31,7 +31,7 @@ module.exports = function addSetup(fileInfo, api, options = {}) {
 
     const program = ast.find(j.Program).at(0).nodes()[0]
 
-    missingSetupInits.reverse().forEach(missingSetupInit => {
+    missingSetupInits.forEach(missingSetupInit => {
         const callExpression = j.callExpression(
             j.identifier(missingSetupInit),
             []

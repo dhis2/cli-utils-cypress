@@ -18,6 +18,7 @@ module.exports.enableNetworkShim = async ({ options, state }) => {
         ...state,
         cypressJson: {
             ...state.cypressJson,
+            experimentalInteractiveRunEvents: true,
             env: {
                 ...state.cypressJson.env,
                 networkMode: 'live',
