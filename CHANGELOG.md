@@ -1,3 +1,24 @@
+## [8.0.3](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.2...v8.0.3) (2021-08-24)
+
+
+### Bug Fixes
+
+* **network-shim:** ensure 304s are dealt with correctly ([#262](https://github.com/dhis2/cli-utils-cypress/issues/262)) ([c654b9b](https://github.com/dhis2/cli-utils-cypress/commit/c654b9b7708bbd546271828371f10292ae13aea3))
+
+## [8.0.2](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.1...v8.0.2) (2021-08-23)
+
+
+### Bug Fixes
+
+* **network-shim:** handle 304s from different scenarios in the same feature ([#261](https://github.com/dhis2/cli-utils-cypress/issues/261)) ([0242c1e](https://github.com/dhis2/cli-utils-cypress/commit/0242c1ef3ae9fa012f830ca3daa8e95710c21d92))
+
+## [8.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.0...v8.0.1) (2021-06-10)
+
+
+### Bug Fixes
+
+* **install cmd:** use correct env vars for network shim in install command ([#234](https://github.com/dhis2/cli-utils-cypress/issues/234)) ([a91da93](https://github.com/dhis2/cli-utils-cypress/commit/a91da931d8f6c86955f77f67f6a000440d44edcf))
+
 # [8.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v7.0.1...v8.0.0) (2021-06-10)
 
 

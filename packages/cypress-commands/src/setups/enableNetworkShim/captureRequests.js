@@ -1,6 +1,6 @@
 import { getDhis2BaseUrl } from '../../helper/dhis2BaseUrl.js'
 import {
-    getFullTestName,
+    getFeatureName,
     splitHostAndPath,
     toJsonBlob,
     isStaticResource,
@@ -80,13 +80,13 @@ async function captureRequest(state, request, response) {
 
     state.count++
 
-    const testName = getFullTestName()
+    const featureName = getFeatureName()
     const isStatic = isStaticResource(path, state.config)
     const existingRequestStub = findMatchingRequestStub(
         {
             path,
             method: request.method,
-            testName,
+            featureName,
             requestBody: request.body,
             isStatic,
         },
@@ -105,7 +105,7 @@ async function captureRequest(state, request, response) {
     } else {
         state.requestStubs.push({
             path,
-            testName: isStatic ? null : testName,
+            featureName: isStatic ? null : featureName,
             static: isStatic,
             count: 1,
             nonDeterministic: false,
@@ -166,8 +166,9 @@ function processDuplicatedRequest({
         // RequestStub was already nonDeterministic, responseBody is already an array
         const matchingResponseBodyIndex = isNotModified
             ? // When isNotModified the response body is empty and the browser is expected
-              // to return the last known response, so we do the same.
-              requestStub.responseBody.lenght - 1
+              // to return the last known response, so we do the same by returning the
+              // value of the last responseLookup.
+              requestStub.responseLookup[requestStub.responseLookup.length - 1]
             : requestStub.responseBody.findIndex(
                   responseBody => responseBody === newResponseBody
               )

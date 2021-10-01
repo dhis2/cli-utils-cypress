@@ -8,8 +8,8 @@ module.exports = function reportMissingRequestStubs(state, results) {
     ) {
         const list = state.missingRequestStubs
             .map(
-                ({ method, path, testName }) =>
-                    `\t- A ${method} request to "${path}" in test "${testName}"`
+                ({ method, path, featureName }) =>
+                    `\t- A ${method} request to "${path}" in feature "${featureName}"`
             )
             .join('\n')
         const warning = [

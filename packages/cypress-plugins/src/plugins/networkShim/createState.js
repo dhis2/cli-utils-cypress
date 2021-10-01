@@ -7,7 +7,7 @@ const { isCaptureMode, isStubMode, getFixturesDir } = require('./utils.js')
 /**
  * Configuration section of the network shim state
  * @typedef {Object} NetworkShimConfig
- * @property {number} serverMinorVersion DHIS2 Core instance server minor version, i.e. 36
+ * @property {number} apiVersion DHIS2 Core instance server minor version, i.e. 36
  * @property {String[]} hosts List of domains to capture/stub requests for
  * @property {String[]} staticResources List of resources not specific to any test and guaranteed to
  *      always return the same response
@@ -18,7 +18,7 @@ const { isCaptureMode, isStubMode, getFixturesDir } = require('./utils.js')
  * A request stub read from a fixture
  * @typedef {Object} RequestStub
  * @property {String} path Resource URL
- * @property {String} testName Full test name, usually "<ScenarioName> -- "
+ * @property {String} Name of the feature
  * @property {Boolean} static True if resource is in list of staticResources
  * @property {Number} count The cummulative count of the request being encountered
  * @property {Boolean} nonDeterministic A stub is classified as non-deterministic when a request is
@@ -58,17 +58,17 @@ const { isCaptureMode, isStubMode, getFixturesDir } = require('./utils.js')
 module.exports = function createState(cypressConfig, hosts, staticResources) {
     try {
         const env = cypressConfig.env
-        const serverMinorVersion = env.dhis2ApiVersion
+        const apiVersion = env.dhis2ApiVersion
         const fixturesDir = getFixturesDir(cypressConfig)
         const config = {
-            serverMinorVersion,
+            apiVersion,
             mode: env.networkMode,
             hosts: hosts || [env.dhis2BaseUrl],
             staticResources,
         }
 
         if (isCaptureMode(env)) {
-            clearFixturesDir(fixturesDir, serverMinorVersion)
+            clearFixturesDir(fixturesDir, apiVersion)
             return createInitialState(config)
         } else if (isStubMode(env)) {
             return createStateFromFixtures(config, fixturesDir)
@@ -80,16 +80,14 @@ module.exports = function createState(cypressConfig, hosts, staticResources) {
     }
 }
 
-function clearFixturesDir(fixtureDir, serverMinorVersion) {
+function clearFixturesDir(fixtureDir, apiVersion) {
     try {
         if (fs.existsSync(fixtureDir)) {
             rimraf.sync(fixtureDir)
         }
         fs.ensureDirSync(fixtureDir)
 
-        log.info(
-            `Cleared network fixture directory for version: ${serverMinorVersion}`
-        )
+        log.info(`Cleared network fixture directory for version: ${apiVersion}`)
     } catch (error) {
         throw new Error(
             `Encountered an error clearing the network fixtures directory: ${error.message}`

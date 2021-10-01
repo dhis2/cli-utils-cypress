@@ -1,9 +1,9 @@
 [
     {
         "path": "/api/37/systemSettings/helpPageLink",
-        "featureName": "Creating user groups with intercept and fixture",
+        "featureName": "Handles 304s in a single feature",
         "static": false,
-        "count": 1,
+        "count": 2,
         "nonDeterministic": false,
         "method": "GET",
         "requestBody": "",
@@ -35,7 +35,7 @@
     },
     {
         "path": "/api/37/userGroups",
-        "featureName": "Creating user groups with intercept and fixture",
+        "featureName": "Handles 304s in a single feature",
         "static": false,
         "count": 2,
         "nonDeterministic": false,

@@ -5,16 +5,14 @@ const rimraf = require('rimraf')
 
 module.exports = function clearNetworkFixtures({ fixturesFolder, env }) {
     try {
-        const serverMinorVersion = env.dhis2ApiVersion.toString()
-        const versionMinorDir = path.join(fixturesFolder, serverMinorVersion)
+        const apiVersion = env.dhis2ApiVersion.toString()
+        const versionMinorDir = path.join(fixturesFolder, apiVersion)
 
         if (fs.existsSync(versionMinorDir)) {
             rimraf.sync(versionMinorDir)
         }
 
-        log.info(
-            `Cleared network fixture directory for version: ${serverMinorVersion}`
-        )
+        log.info(`Cleared network fixture directory for version: ${apiVersion}`)
     } catch (error) {
         throw new Error(
             `Encountered an error resetting the network fixtures: ${error.message}`
