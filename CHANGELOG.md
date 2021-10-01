@@ -1,3 +1,10 @@
+## [8.0.4](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.3...v8.0.4) (2021-10-01)
+
+
+### Bug Fixes
+
+* **network shim:** add missing "experimentalInteractiveRunEvents" ([880c490](https://github.com/dhis2/cli-utils-cypress/commit/880c490b54eb91a84ba7af6ae760af409ff1affb))
+
 ## [8.0.3](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.2...v8.0.3) (2021-08-24)
 
 
