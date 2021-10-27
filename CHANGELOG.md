@@ -1,3 +1,10 @@
+## [8.0.5](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.4...v8.0.5) (2021-10-27)
+
+
+### Bug Fixes
+
+* **network-shim:** fix out-of-bound index of non-deterministic requests ([#287](https://github.com/dhis2/cli-utils-cypress/issues/287)) ([ea407a9](https://github.com/dhis2/cli-utils-cypress/commit/ea407a90203153d134d2002c3bb86acb9a5822cb))
+
 ## [8.0.4](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.3...v8.0.4) (2021-10-01)
 
 
