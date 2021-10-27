@@ -76,10 +76,26 @@ function getRequesStubResponseBody({
     responseBody,
     responseLookup,
     responseCount,
+    method,
+    path,
 }) {
     if (nonDeterministic) {
+        const responseBodyArray = responseBody
         const responseBodyIndex = responseLookup[responseCount]
-        return JSON.parse(responseBody[responseBodyIndex])
+        let nonDeterministicResponseBody = responseBodyArray[responseBodyIndex]
+
+        if (!nonDeterministicResponseBody) {
+            // Just get the last one
+            nonDeterministicResponseBody =
+                responseBodyArray[responseBodyArray.length - 1]
+            // This warning will only be visible when debugging the stub run in a headed browser, but that's OK
+            const uriDecodedPath = decodeURIComponent(path)
+            console.warn(
+                `Could not identify a response body for a non-deterministic ${method} request to "${uriDecodedPath}". Response count ${responseCount} is out of bounds of the response lookup table. Returning the last response body instead.`
+            )
+        }
+
+        return JSON.parse(nonDeterministicResponseBody)
     }
 
     return JSON.parse(responseBody)
