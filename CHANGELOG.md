@@ -1,3 +1,10 @@
+## [8.0.6](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.5...v8.0.6) (2021-10-28)
+
+
+### Bug Fixes
+
+* require module in function scope ([#288](https://github.com/dhis2/cli-utils-cypress/issues/288)) ([c51ab5d](https://github.com/dhis2/cli-utils-cypress/commit/c51ab5d6d8d642fa93e8583cb7769146a02160d2))
+
 ## [8.0.5](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.4...v8.0.5) (2021-10-27)
 
 
