@@ -1,3 +1,20 @@
+# [9.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.6...v9.0.0) (2021-11-04)
+
+
+### Bug Fixes
+
+* **network shim:** use "Cypress.currentTest" in "getFeatureName" ([573bd78](https://github.com/dhis2/cli-utils-cypress/commit/573bd78943c4b301b49c9c94ae57eb00e78a3e56))
+
+
+### chore
+
+* **dependencies:** add cypress@^8.2 as peer dependency ([e0c40e7](https://github.com/dhis2/cli-utils-cypress/commit/e0c40e79c38a99c2e2f5096bd5afb209ddc34197))
+
+
+### BREAKING CHANGES
+
+* **dependencies:** Adds cypress with min version 8.2 as peer dependency
+
 ## [8.0.6](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.5...v8.0.6) (2021-10-28)
 
 
