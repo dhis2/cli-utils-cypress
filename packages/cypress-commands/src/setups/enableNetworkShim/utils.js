@@ -13,13 +13,7 @@ export const splitHostAndPath = (url, hosts) => {
 }
 
 export const getFeatureName = () => {
-    let obj = Cypress.mocha.getRunner().suite.ctx.test
-    let title = null
-    while (obj && obj.parent && obj.parent.title) {
-        obj = obj.parent
-        title = obj.title
-    }
-    return title
+    return Cypress.currentTest.titlePath[0]
 }
 
 export const toJsonBlob = async input => {
