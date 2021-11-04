@@ -15,7 +15,7 @@
         "access": "public"
     },
     "peerDependencies": {
-        "cypress": "^7",
+        "cypress": "^8.2",
         "cypress-cucumber-preprocessor": "^4"
     }
 }
