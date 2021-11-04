@@ -9,6 +9,9 @@
     "bin": {
         "d2-utils-cypress": "./bin/d2-utils-cypress"
     },
+    "scripts": {
+        "test": "d2-app-scripts test"
+    },
     "main": "src/index.js",
     "version": "8.0.6",
     "author": "Viktor Varland <viktor@dhis2.org>",
@@ -19,10 +22,13 @@
     },
     "dependencies": {
         "@dhis2/cli-helpers-engine": "^2.3.0",
-        "cypress": "^7.4.0",
-        "cypress-cucumber-preprocessor": "^2.0.1",
         "fs-extra": "^8.1.0",
         "jscodeshift": "^0.11.0"
+    },
+    "devDependencies": {
+        "@dhis2/cli-app-scripts": "^6.2.0",
+        "cypress": "^8.2",
+        "cypress-cucumber-preprocessor": "^4"
     },
     "publishConfig": {
         "access": "public"

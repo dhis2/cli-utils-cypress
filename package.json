@@ -29,7 +29,10 @@
         "docs:start": "d2-utils-docsite serve ./docs -o ./dist",
         "build": "yarn workspace @dhis2/cypress-commands build",
         "watch": "yarn workspace @dhis2/cypress-commands build --watch",
-        "test": "jest",
+        "test": "yarn test:cli && yarn test:commands && yarn test:plugins",
+        "test:cli": "yarn workspace @dhis2/cli-utils-cypress test",
+        "test:commands": "yarn workspace @dhis2/cypress-commands test",
+        "test:plugins": "exit 0 # no tests yet",
         "test:network-shim-app": "yarn workspace testing-network-shim-app cy:capture-and-stub",
         "test:platform-app": "yarn workspace platform-app cy:capture-and-stub",
         "cy:local": "yarn build && yarn test:network-shim-app && yarn test:platform-app"
@@ -44,7 +47,6 @@
         "concurrently": "^6.2.0",
         "eslint-plugin-cypress": "^2.11.2",
         "eslint-plugin-prettier": "^3.2.0",
-        "jest": "^26.6.3",
         "wait-on": "^5.3.0"
     },
     "d2": {

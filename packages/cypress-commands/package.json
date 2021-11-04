@@ -23,10 +23,14 @@
         "access": "public"
     },
     "scripts": {
-        "build": "d2-app-scripts build"
+        "build": "d2-app-scripts build",
+        "test": "d2-app-scripts test"
+    },
+    "devDependencies": {
+        "@dhis2/cli-app-scripts": "^6.2.0"
     },
     "peerDependencies": {
-        "cypress": "^7",
+        "cypress": "^8.2",
         "cypress-cucumber-preprocessor": "^4"
     }
 }
