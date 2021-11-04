@@ -8,11 +8,17 @@
         "url": "https://github.com/dhis2/cli-utils-cypress.git",
         "folder": "packages/cypress-plugins"
     },
+    "scripts": {
+        "test": "d2-app-scripts test"
+    },
     "author": "Jan-Gerke Salomon",
     "license": "BSD-3-Clause",
     "private": false,
     "publishConfig": {
         "access": "public"
+    },
+    "devDependencies": {
+        "@dhis2/cli-app-scripts": "^6.2.0"
     },
     "peerDependencies": {
         "cypress": "^8.2",
