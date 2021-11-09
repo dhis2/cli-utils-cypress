@@ -1,3 +1,10 @@
+## [9.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v9.0.0...v9.0.1) (2021-11-09)
+
+
+### Bug Fixes
+
+* **network shim:** wait for network idle after tests ([d025422](https://github.com/dhis2/cli-utils-cypress/commit/d025422296fb6e60d8534440bb2b5c433f7c9bfe))
+
 # [9.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v8.0.6...v9.0.0) (2021-11-04)
 
 
