@@ -1,3 +1,4 @@
+import './waitForResources.js'
 import { setDhis2BaseUrlToLocalStorage } from '../../helper/dhis2BaseUrl.js'
 import {
     isLiveMode,
@@ -41,6 +42,8 @@ export function enableNetworkShim() {
 
     afterEach(() => {
         if (!isLiveMode()) {
+            cy.waitForResources()
+
             // First get the updated local state from the alias
             cy.get('@networkShimState').then(networkShimState => {
                 /*
