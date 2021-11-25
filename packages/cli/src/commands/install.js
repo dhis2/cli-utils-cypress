@@ -92,14 +92,20 @@ const handler = async argv => {
          * install the peer dependencies of the commands & plugins packages
          * with the correct version, see: https://jira.dhis2.org/browse/CLI-56
          */
-        let requiredPackages = '"cypress"'
-        if (processOptions.usePluginCucumberPreprocessor) {
-            requiredPackages += ' & "cypress-cucumber"'
+        const requiredPackages = ['cypress']
+        if (
+            groups.includes('all') ||
+            processOptions.usePluginCucumberPreprocessor
+        ) {
+            requiredPackages.push('cypress-cucumber-preprocessor')
         }
 
-        log.warn(
-            `Please install the following package(s) as peer dependency: ${requiredPackages}`
-        )
+        if (requiredPackages.length) {
+            const formatted = requiredPackages.map(pkg => `"${pkg}"`).join(', ')
+            log.warn(
+                `Please install the following package(s) as peer dependency: ${formatted}`
+            )
+        }
     } catch (e) {
         log.error(e)
     }
