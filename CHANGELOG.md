@@ -1,3 +1,10 @@
+## [9.0.2](https://github.com/dhis2/cli-utils-cypress/compare/v9.0.1...v9.0.2) (2022-02-07)
+
+
+### Bug Fixes
+
+* **create fixtures from state:** use `replace` instead of `replaceAll` ([088a5fc](https://github.com/dhis2/cli-utils-cypress/commit/088a5fcf5c60c7e6a546108b7f7e8b0fc79f1e7d))
+
 ## [9.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v9.0.0...v9.0.1) (2021-11-09)
 
 
