@@ -1,6 +1,6 @@
 const path = require('path')
 
-module.exports.makePaths = cwd => {
+module.exports.makePaths = (cwd) => {
     const CLI_TOOL_ROOT = path.join(__dirname, '..', '..')
     const PACKAGE_JSON = path.join(cwd, 'package.json')
     const YARN_LOCK = path.join(cwd, 'yarn.lock')

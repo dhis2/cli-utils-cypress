@@ -45,11 +45,11 @@ const responseHeadersAllowList = new Set([
  * @returns {undefined}
  */
 export default function captureRequests(state) {
-    state.config.hosts.forEach(host => {
+    state.config.hosts.forEach((host) => {
         const hostRegex = new RegExp(`^${host}`)
 
-        cy.intercept(hostRegex, request => {
-            request.reply(response => {
+        cy.intercept(hostRegex, (request) => {
+            request.reply((response) => {
                 captureRequest(state, request, response)
             })
         })
@@ -170,7 +170,7 @@ function processDuplicatedRequest({
               // value of the last responseLookup.
               requestStub.responseLookup[requestStub.responseLookup.length - 1]
             : requestStub.responseBody.findIndex(
-                  responseBody => responseBody === newResponseBody
+                  (responseBody) => responseBody === newResponseBody
               )
 
         if (matchingResponseBodyIndex >= 0) {

@@ -1,5 +1,7 @@
 module.exports.usePluginChromeAllowXSiteCookies = ({ options, state }) => {
-    if (!options.usePluginChromeAllowXSiteCookies) return state
+    if (!options.usePluginChromeAllowXSiteCookies) {
+        return state
+    }
 
     return {
         ...state,

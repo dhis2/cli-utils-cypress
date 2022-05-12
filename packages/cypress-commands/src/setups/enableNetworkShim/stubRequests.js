@@ -12,10 +12,10 @@ import {
  * @returns {void}
  */
 export default function stubRequests(state) {
-    state.config.hosts.forEach(host => {
+    state.config.hosts.forEach((host) => {
         const hostRegex = new RegExp(`^${host}`)
 
-        cy.intercept(hostRegex, request => {
+        cy.intercept(hostRegex, (request) => {
             stubRequest(state, request)
         })
     })
@@ -115,7 +115,7 @@ function registerMissingRequestStub(state, { method, path, featureName }) {
     }
 
     const isDuplicate = state.missingRequestStubs.some(
-        stub =>
+        (stub) =>
             stub.method === method &&
             stub.path === path &&
             stub.featureName === featureName

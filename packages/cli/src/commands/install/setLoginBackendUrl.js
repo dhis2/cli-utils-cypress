@@ -1,7 +1,9 @@
 const inquirer = require('@dhis2/cli-helpers-engine').inquirer
 
 module.exports.setLoginBackendUrl = async ({ options, state }) => {
-    if (!options.setLoginBackendUrl) return state
+    if (!options.setLoginBackendUrl) {
+        return state
+    }
 
     const prompt = inquirer.createPromptModule()
 

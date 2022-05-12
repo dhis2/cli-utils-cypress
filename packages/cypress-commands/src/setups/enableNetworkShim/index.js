@@ -23,7 +23,7 @@ export function enableNetworkShim() {
     beforeEach(() => {
         // Get network state from plugin and make available as an alias
         // which can be accessed again in the afterEach lifecycle hook
-        cy.task('getNetworkShimState').then(networkShimState => {
+        cy.task('getNetworkShimState').then((networkShimState) => {
             cy.wrap(networkShimState).as('networkShimState')
 
             if (isCaptureMode()) {
@@ -45,7 +45,7 @@ export function enableNetworkShim() {
             cy.waitForResources()
 
             // First get the updated local state from the alias
-            cy.get('@networkShimState').then(networkShimState => {
+            cy.get('@networkShimState').then((networkShimState) => {
                 /*
                  * In both capture and stub mode the state needs to be incrementally
                  * updated across tests, so after every feature the entire plugin state

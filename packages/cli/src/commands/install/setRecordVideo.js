@@ -1,5 +1,7 @@
 module.exports.setRecordVideo = ({ options, state }) => {
-    if (!options.setRecordVideo) return state
+    if (!options.setRecordVideo) {
+        return state
+    }
 
     return {
         ...state,

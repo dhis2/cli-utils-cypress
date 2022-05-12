@@ -1,7 +1,7 @@
 const path = require('path')
 const { runCodemod } = require('../../utils/runCodemod.js')
 
-const identity = arg => arg
+const identity = (arg) => arg
 
 /**
  * Copied from: https://stackoverflow.com/questions/1960473/get-all-unique-values-in-a-javascript-array-remove-duplicates

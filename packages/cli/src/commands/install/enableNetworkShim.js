@@ -1,7 +1,9 @@
 const inquirer = require('@dhis2/cli-helpers-engine').inquirer
 
 module.exports.enableNetworkShim = async ({ options, state }) => {
-    if (!options.enableNetworkShim) return state
+    if (!options.enableNetworkShim) {
+        return state
+    }
 
     const prompt = inquirer.createPromptModule()
 

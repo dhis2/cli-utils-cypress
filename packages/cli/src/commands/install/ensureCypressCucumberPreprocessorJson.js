@@ -2,7 +2,7 @@ const log = require('@dhis2/cli-helpers-engine').reporter
 const fs = require('fs-extra')
 const { copy } = require('../../utils/fs.js')
 
-module.exports.ensureCypressCucumberPreprocessorJson = paths => {
+module.exports.ensureCypressCucumberPreprocessorJson = (paths) => {
     if (fs.existsSync(paths.CYPRESS_CUCUMBER_PREPROCESSOR_JSON_DESTINATION)) {
         log.debug(
             `"${paths.CYPRESS_CUCUMBER_PREPROCESSOR_JSON_DESTINATION}" already exists`

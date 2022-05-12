@@ -1,7 +1,9 @@
 const inquirer = require('@dhis2/cli-helpers-engine').inquirer
 
 module.exports.setLoginPassword = async ({ options, state }) => {
-    if (!options.setLoginPassword) return state
+    if (!options.setLoginPassword) {
+        return state
+    }
 
     const prompt = inquirer.createPromptModule()
 

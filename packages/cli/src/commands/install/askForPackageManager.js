@@ -1,7 +1,7 @@
 const inquirer = require('@dhis2/cli-helpers-engine').inquirer
 const fs = require('fs-extra')
 
-module.exports.askForPackageManager = async paths => {
+module.exports.askForPackageManager = async (paths) => {
     const hasYarnLockFile = fs.existsSync(paths.YARN_LOCK)
     const hasNpmLockFile = fs.existsSync(paths.PACKAGE_JSON_LOCK)
     const defaultOption = hasYarnLockFile ? 0 : hasNpmLockFile ? 1 : 2

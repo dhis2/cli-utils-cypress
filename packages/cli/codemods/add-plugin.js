@@ -21,11 +21,11 @@ module.exports = function addPlugin(fileInfo, api, options = {}) {
 
     const existingPluginInits = ast
         .find(j.CallExpression)
-        .filter(path =>
+        .filter((path) =>
             pluginInits.find(({ name }) => name === path.value.callee.name)
         )
         .nodes()
-        .map(path => path.callee.name)
+        .map((path) => path.callee.name)
 
     const missingPluginInits = pluginInits.filter(
         ({ name }) => !existingPluginInits.includes(name)
@@ -34,7 +34,7 @@ module.exports = function addPlugin(fileInfo, api, options = {}) {
     const callBody = ast
         .find(j.BlockStatement)
         .filter(
-            path =>
+            (path) =>
                 path.parentPath &&
                 path.parentPath.parentPath &&
                 path.parentPath.parentPath.value &&
@@ -57,11 +57,13 @@ module.exports = function addPlugin(fileInfo, api, options = {}) {
 
     missingPluginInits.reverse().forEach(({ name, needsConfig }) => {
         const args = [j.identifier('on')]
-        if (needsConfig) args.push(j.identifier('config'))
+        if (needsConfig) {
+            args.push(j.identifier('config'))
+        }
 
         const callExpression = j.callExpression(j.identifier(name), args)
 
-        callBody.forEach(path => {
+        callBody.forEach((path) => {
             path.get('body').value.unshift(
                 j.expressionStatement(callExpression)
             )

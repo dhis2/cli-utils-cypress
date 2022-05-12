@@ -1,5 +1,7 @@
 module.exports.enableAutoLogin = ({ options, state }) => {
-    if (!options.enableAutoLogin) return state
+    if (!options.enableAutoLogin) {
+        return state
+    }
 
     return {
         ...state,

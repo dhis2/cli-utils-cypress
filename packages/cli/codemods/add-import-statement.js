@@ -2,7 +2,7 @@
  * Copied from: https://stackoverflow.com/questions/1960473/get-all-unique-values-in-a-javascript-array-remove-duplicates
  */
 const onlyUnique = (value, index, self) => self.indexOf(value) === index
-const identity = value => value
+const identity = (value) => value
 
 module.exports = function addImportStatement(
     fileInfo,
@@ -14,7 +14,7 @@ module.exports = function addImportStatement(
 
     const importDeclarations = ast.find(j.ImportDeclaration)
     const existingPackageImport = importDeclarations.filter(
-        path => path.node.source.value === packageName
+        (path) => path.node.source.value === packageName
     )
     const alreadyImportsPackage = existingPackageImport.length
 
@@ -33,7 +33,7 @@ module.exports = function addImportStatement(
     const alreadyImportedNames = existingPackageImport
         .find(j.ImportSpecifier)
         .nodes()
-        .map(path => path.imported.name)
+        .map((path) => path.imported.name)
 
     const allImportSpecifiers = [
         ...alreadyImportedNames,
@@ -41,7 +41,7 @@ module.exports = function addImportStatement(
     ]
         .filter(identity)
         .filter(onlyUnique)
-        .map(name => j.importSpecifier(j.identifier(name)))
+        .map((name) => j.importSpecifier(j.identifier(name)))
 
     const importDeclaration = j.importDeclaration(
         allImportSpecifiers,
@@ -50,7 +50,7 @@ module.exports = function addImportStatement(
     )
 
     if (alreadyImportsPackage) {
-        existingPackageImport.forEach(path => path.replace(importDeclaration))
+        existingPackageImport.forEach((path) => path.replace(importDeclaration))
     } else if (!importDeclarations.length) {
         // No reference import found, add import statement to the beginning of
         // the document

@@ -1,5 +1,7 @@
 module.exports.setTestFilesToFeatureFiles = ({ options, state }) => {
-    if (!options.setTestFilesToFeatureFiles) return state
+    if (!options.setTestFilesToFeatureFiles) {
+        return state
+    }
 
     return {
         ...state,
