@@ -3,7 +3,7 @@ import {
     getFeatureName,
     findMatchingRequestStub,
     isStaticResource,
-} from './utils'
+} from './utils.js'
 
 /**
  * @description

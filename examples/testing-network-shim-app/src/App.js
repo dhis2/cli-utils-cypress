@@ -1,9 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { AddUpdateName } from './AddUpdateName'
-import { NameFilter } from './NameFilter'
-import { NamesList } from './NamesList'
-import { resourcePath } from './resourcePath'
+import { AddUpdateName } from './AddUpdateName.js'
+import { NameFilter } from './NameFilter.js'
+import { NamesList } from './NamesList.js'
+import { resourcePath } from './resourcePath.js'
 
 function App() {
     const [selectedName, setSelectedName] = useState(null)

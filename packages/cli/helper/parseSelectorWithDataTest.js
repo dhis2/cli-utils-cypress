@@ -1,4 +1,4 @@
-const dataTestNameToSelector = require('./dataTestNameToSelector')
+const dataTestNameToSelector = require('./dataTestNameToSelector.js')
 
 const parseSelectorWithDataTest = (selector, prefix) => {
     return selector.replace(/\{([^}]*)\}/g, (match, dataTestName) =>
