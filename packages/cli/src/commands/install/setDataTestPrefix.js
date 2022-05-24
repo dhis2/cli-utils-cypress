@@ -1,7 +1,7 @@
 const inquirer = require('@dhis2/cli-helpers-engine').inquirer
 const { readJson } = require('../../utils/fs.js')
 
-const extractOrgName = moduleName => {
+const extractOrgName = (moduleName) => {
     const matches = moduleName.match(/^@[^/]+(?=\/)/)
 
     if (!matches || !matches.length) {
@@ -12,7 +12,7 @@ const extractOrgName = moduleName => {
     return orgNameWithAtSymbol.replace('@', '')
 }
 
-const extractAppName = moduleName => {
+const extractAppName = (moduleName) => {
     const matches = moduleName.match(/^@[^/]+\/(.+)$/)
     const appName = matches && matches.length > 1 ? matches[1] : moduleName
 
@@ -22,7 +22,9 @@ const extractAppName = moduleName => {
 }
 
 module.exports.setDataTestPrefix = async ({ options, state, paths }) => {
-    if (!options.setDataTestPrefix) return state
+    if (!options.setDataTestPrefix) {
+        return state
+    }
 
     const prompt = inquirer.createPromptModule()
     const packageJson = readJson(paths.PACKAGE_JSON)

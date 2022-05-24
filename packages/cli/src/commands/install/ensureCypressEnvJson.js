@@ -2,7 +2,7 @@ const log = require('@dhis2/cli-helpers-engine').reporter
 const fs = require('fs-extra')
 const { copy } = require('../../utils/fs.js')
 
-module.exports.ensureCypressEnvJson = paths => {
+module.exports.ensureCypressEnvJson = (paths) => {
     if (fs.existsSync(paths.CYPRESS_ENV_JSON_DESTINATION)) {
         log.debug('cypress.env.json already exists')
         return

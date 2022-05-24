@@ -1,5 +1,7 @@
 module.exports.usePluginCucumberPreprocessor = ({ options, state }) => {
-    if (!options.usePluginCucumberPreprocessor) return state
+    if (!options.usePluginCucumberPreprocessor) {
+        return state
+    }
 
     return {
         ...state,

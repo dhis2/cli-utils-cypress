@@ -1,12 +1,12 @@
 // will automatically create the commands
-import './commands/all'
-import './commands/findWithDataTest'
-import './commands/getWithDataTest'
-import './commands/login'
+import './commands/all.js'
+import './commands/findWithDataTest.js'
+import './commands/getWithDataTest.js'
+import './commands/login.js'
 
 // helpers
-export { dataTestNameToSelector } from './helper/dataTestNameToSelector'
-export { parseSelectorWithDataTest } from './helper/parseSelectorWithDataTest'
+export { dataTestNameToSelector } from './helper/dataTestNameToSelector.js'
+export { parseSelectorWithDataTest } from './helper/parseSelectorWithDataTest.js'
 export {
     getDhis2BaseUrl,
     setDhis2BaseUrlToLocalStorage,
@@ -14,8 +14,8 @@ export {
 export { isLiveMode, isCaptureMode, isStubMode } from './helper/networkMode.js'
 
 // setup helpers
-export { enableAutoLogin } from './setups/enableAutoLogin'
-export { enableNetworkShim } from './setups/enableNetworkShim'
+export { enableAutoLogin } from './setups/enableAutoLogin.js'
+export { enableNetworkShim } from './setups/enableNetworkShim/index.js'
 
 // backward compatibility
 export const registerCommands = () => {

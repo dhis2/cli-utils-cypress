@@ -1,4 +1,4 @@
-const groupByGroupname = options =>
+const groupByGroupname = (options) =>
     options.reduce((acc, option) => {
         const { group } = option
         const existingIndex = acc.findIndex(([name]) => name === group)
@@ -23,7 +23,7 @@ const groupByGroupname = options =>
         ]
     }, [])
 
-module.exports.prettifyOptions = options => {
+module.exports.prettifyOptions = (options) => {
     const inGroups = groupByGroupname(options)
     let prettified = 'You can install all groups by simply providing "all"'
     prettified += '\n* all'

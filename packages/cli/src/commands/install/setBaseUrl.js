@@ -1,7 +1,9 @@
 const inquirer = require('@dhis2/cli-helpers-engine').inquirer
 
 module.exports.setBaseUrl = async ({ options, state }) => {
-    if (!options.setBaseUrl) return state
+    if (!options.setBaseUrl) {
+        return state
+    }
 
     const prompt = inquirer.createPromptModule()
 

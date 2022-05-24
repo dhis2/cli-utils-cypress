@@ -1,4 +1,4 @@
-import { parseSelectorWithDataTest } from '../helper/parseSelectorWithDataTest'
+import { parseSelectorWithDataTest } from '../helper/parseSelectorWithDataTest.js'
 
 /**
  * Transforms values in curly braces to a data-test selector

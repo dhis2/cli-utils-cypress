@@ -5,7 +5,7 @@
 
 let totalRunningQueries = 0
 
-const observer = new PerformanceObserver(list => {
+const observer = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
         if (entry.initiatorType === 'fetch') {
             totalRunningQueries++
@@ -20,11 +20,11 @@ observer.observe({
 Cypress.Commands.add('waitForResources', ({ maxTries = 3 } = {}) => {
     let tries = 0
 
-    return new Cypress.Promise(resolve => {
+    return new Cypress.Promise((resolve) => {
         const check = () => {
             const requests = window.performance
                 .getEntriesByType('resource')
-                .filter(n => n.initiatorType === 'fetch')
+                .filter((n) => n.initiatorType === 'fetch')
 
             if (requests.length === totalRunningQueries) {
                 tries++

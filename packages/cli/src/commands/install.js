@@ -27,7 +27,7 @@ const builder = {
     },
 }
 
-const handler = async argv => {
+const handler = async (argv) => {
     log.info('d2-utils-cypress > install')
 
     const { listGroups, groups, cwd } = argv

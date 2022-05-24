@@ -5,11 +5,11 @@ module.exports.runCodemod = (codemod, files, options) => {
     process.stdout.write = () => null
 
     return run(codemod, files, options)
-        .then(result => {
+        .then((result) => {
             process.stdout.write = origLog
             return result
         })
-        .catch(error => {
+        .catch((error) => {
             process.stdout.write = origLog
             throw error
         })

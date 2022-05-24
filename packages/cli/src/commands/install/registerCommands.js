@@ -1,5 +1,7 @@
 module.exports.registerCommands = ({ options, state }) => {
-    if (!options.registerCommands) return state
+    if (!options.registerCommands) {
+        return state
+    }
 
     return {
         ...state,

@@ -1,7 +1,9 @@
 const inquirer = require('@dhis2/cli-helpers-engine').inquirer
 
 module.exports.setProjectId = async ({ options, state }) => {
-    if (!options.setProjectId) return state
+    if (!options.setProjectId) {
+        return state
+    }
 
     const prompt = inquirer.createPromptModule()
 

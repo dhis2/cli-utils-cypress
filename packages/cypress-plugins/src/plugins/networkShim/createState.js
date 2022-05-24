@@ -112,9 +112,9 @@ function createStateFromFixtures(config, fixturesDir) {
         path.join(fixturesDir, 'summary.json')
     )
     const requestStubs = fixtureFiles
-        .map(fileName => readJsonFileSync(path.join(fixturesDir, fileName)))
+        .map((fileName) => readJsonFileSync(path.join(fixturesDir, fileName)))
         .flat()
-        .map(requestStub => ({
+        .map((requestStub) => ({
             ...requestStub,
             responseCount: 0,
         }))

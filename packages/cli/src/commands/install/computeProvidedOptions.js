@@ -1,6 +1,6 @@
 const { options } = require('./options.js')
 
-module.exports.computeProvidedOptions = groups =>
+module.exports.computeProvidedOptions = (groups) =>
     options.reduce((acc, option) => {
         const optionIsSelected =
             groups.includes('all') ||

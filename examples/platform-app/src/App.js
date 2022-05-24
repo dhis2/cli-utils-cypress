@@ -77,8 +77,8 @@ const MyApp = () => (
     <div className={classes.container}>
         <DataQuery query={query}>
             {({ error, loading, data, refetch }) => {
-                if (error) return <span>ERROR</span>
-                if (loading) return <span>...</span>
+                if (error) {return <span>ERROR</span>}
+                if (loading) {return <span>...</span>}
                 return (
                     <>
                         <Adder refetch={refetch} />

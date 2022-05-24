@@ -17,13 +17,13 @@ module.exports = function addRequireStatement(
         const requireStatements = ast
             .find(j.VariableDeclaration)
             .filter(
-                path =>
+                (path) =>
                     path.value.declarations[0].init.type === 'CallExpression' &&
                     path.value.declarations[0].init.callee.name === 'require'
             )
 
         const existingPackageImport = requireStatements.filter(
-            path =>
+            (path) =>
                 path.value.declarations[0].init.arguments.length === 1 &&
                 path.value.declarations[0].init.arguments[0].value ===
                     packageName
@@ -46,8 +46,8 @@ module.exports = function addRequireStatement(
         const alreadyImportedNames = existingPackageImport
             .find(j.Identifier)
             .nodes()
-            .map(path => path.name)
-            .filter(name => name !== 'require')
+            .map((path) => path.name)
+            .filter((name) => name !== 'require')
             .filter(onlyUnique)
 
         const allImportNames = [...alreadyImportedNames, ...importNames].filter(
@@ -57,7 +57,7 @@ module.exports = function addRequireStatement(
         const requireStatement = j.variableDeclaration('const', [
             j.variableDeclarator(
                 j.objectPattern(
-                    allImportNames.map(importName => {
+                    allImportNames.map((importName) => {
                         const identifier = j.identifier(importName)
                         const prop = j.property('init', identifier, identifier)
                         prop.shorthand = true
@@ -71,7 +71,7 @@ module.exports = function addRequireStatement(
         ])
 
         if (alreadyImportsPackage) {
-            existingPackageImport.forEach(path =>
+            existingPackageImport.forEach((path) =>
                 path.replace(requireStatement)
             )
         } else if (!requireStatements.length) {

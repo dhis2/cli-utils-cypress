@@ -14,7 +14,7 @@ module.exports = function networkShim(
 ) {
     let state, config, env
 
-    on('before:run', details => {
+    on('before:run', (details) => {
         config = details.config
         env = config.env
 
@@ -39,7 +39,7 @@ module.exports = function networkShim(
         },
     })
 
-    on('after:run', results => {
+    on('after:run', (results) => {
         if (isCaptureMode(env)) {
             createFixturesFromState(state, config)
         }

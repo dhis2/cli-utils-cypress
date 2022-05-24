@@ -21,17 +21,17 @@ module.exports = function addSetup(fileInfo, api, options = {}) {
 
     const existingSetupInits = ast
         .find(j.CallExpression)
-        .filter(path => setupInits.includes(path.value.callee.name))
+        .filter((path) => setupInits.includes(path.value.callee.name))
         .nodes()
-        .map(path => path.callee.name)
+        .map((path) => path.callee.name)
 
     const missingSetupInits = setupInits.filter(
-        pluginInit => !existingSetupInits.includes(pluginInit)
+        (pluginInit) => !existingSetupInits.includes(pluginInit)
     )
 
     const program = ast.find(j.Program).at(0).nodes()[0]
 
-    missingSetupInits.forEach(missingSetupInit => {
+    missingSetupInits.forEach((missingSetupInit) => {
         const callExpression = j.callExpression(
             j.identifier(missingSetupInit),
             []

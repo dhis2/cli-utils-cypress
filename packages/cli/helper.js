@@ -1,5 +1,5 @@
-const dataTestNameToSelector = require('./helper/dataTestNameToSelector')
-const parseSelectorWithDataTest = require('./helper/parseSelectorWithDataTest')
+const dataTestNameToSelector = require('./helper/dataTestNameToSelector.js')
+const parseSelectorWithDataTest = require('./helper/parseSelectorWithDataTest.js')
 
 module.exports = {
     dataTestNameToSelector,
