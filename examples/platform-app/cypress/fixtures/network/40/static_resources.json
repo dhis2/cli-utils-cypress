@@ -38,13 +38,7 @@
             "x-xss-protection": "1; mode=block",
             "x-frame-options": "SAMEORIGIN"
         },
-        "responseLookup": [
-            0,
-            1,
-            2,
-            3,
-            4
-        ]
+        "responseLookup": [0, 1, 2, 3, 4]
     },
     {
         "path": "/api/40/userSettings",
