@@ -37,7 +37,7 @@
         "path": "/api/40/userGroups",
         "featureName": "Creating user groups with intercept and fixture",
         "static": false,
-        "count": 2,
+        "count": 1,
         "nonDeterministic": false,
         "method": "GET",
         "requestBody": "",
