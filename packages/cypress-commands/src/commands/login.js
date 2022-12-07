@@ -10,17 +10,25 @@ export const login = () => {
     const password = Cypress.env('dhis2Password')
     const loginUrl = Cypress.env('dhis2BaseUrl')
 
-    cy.request({
-        url: `${loginUrl}/${LOGIN_ENDPOINT}`,
-        method: 'POST',
-        form: true,
-        followRedirect: true,
-        body: {
-            j_username: username,
-            j_password: password,
-            '2fa_code': '',
+    cy.session(
+        'user',
+        () => {
+            cy.request({
+                url: `${loginUrl}/${LOGIN_ENDPOINT}`,
+                method: 'POST',
+                form: true,
+                followRedirect: true,
+                body: {
+                    j_username: username,
+                    j_password: password,
+                    '2fa_code': '',
+                },
+            })
         },
-    })
+        {
+            cacheAcrossSpecs: true,
+        }
+    )
 }
 
 Cypress.Commands.add('login', login)
