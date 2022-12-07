@@ -20,6 +20,8 @@
         "cy:capture-and-stub": "yarn cy:capture && yarn cy:stub"
     },
     "dependencies": {
+        "@babel/helper-builder-react-jsx": "^7.19.0",
+        "@babel/helper-builder-react-jsx-experimental": "^7.12.11",
         "@dhis2/app-runtime": "^2.8.0",
         "prop-types": "^15.7.2"
     }

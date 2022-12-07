@@ -1,0 +1,70 @@
+[
+    {
+        "path": "/api/40/systemSettings/helpPageLink",
+        "featureName": "The app lists user groups",
+        "static": false,
+        "count": 1,
+        "nonDeterministic": false,
+        "method": "GET",
+        "requestBody": "",
+        "requestHeaders": {
+            "host": "localhost:8080",
+            "proxy-connection": "keep-alive",
+            "accept": "application/json",
+            "origin": "http://localhost:3000",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-site"
+        },
+        "statusCode": 200,
+        "responseBody": "{\"helpPageLink\":\"https://dhis2.github.io/dhis2-docs/master/en/user/html/dhis2_user_manual_en.html\"}",
+        "responseSize": 99,
+        "responseHeaders": {
+            "server": "nginx/1.21.6",
+            "content-type": "application/json;charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3000",
+            "vary": "Origin",
+            "access-control-expose-headers": "ETag, Location",
+            "cache-control": "no-cache, private",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN"
+        }
+    },
+    {
+        "path": "/api/40/userGroups",
+        "featureName": "The app lists user groups",
+        "static": false,
+        "count": 1,
+        "nonDeterministic": false,
+        "method": "GET",
+        "requestBody": "",
+        "requestHeaders": {
+            "host": "localhost:8080",
+            "proxy-connection": "keep-alive",
+            "accept": "application/json",
+            "origin": "http://localhost:3000",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-site"
+        },
+        "statusCode": 200,
+        "responseBody": "{\"pager\":{\"page\":1,\"total\":31,\"pageSize\":50,\"pageCount\":1},\"userGroups\":[{\"displayName\":\"Administrators\",\"id\":\"wl5cDMuUhmF\"},{\"displayName\":\"Africare HQ\",\"id\":\"vAvEltyXGbD\"},{\"displayName\":\"Bo District M&E officers\",\"id\":\"ZoHNWQajIoe\"},{\"displayName\":\"Bonthe District M&E Officers\",\"id\":\"th4S6ovwcr8\"},{\"displayName\":\"Cape Town University Research Group\",\"id\":\"wAAA1agEHin\"},{\"displayName\":\"EPI Stock Completeness Notification Recipients\",\"id\":\"qlEhuAA77gc\"},{\"displayName\":\"Family Health Partner\",\"id\":\"ZrsVF7IJ93y\"},{\"displayName\":\"Family Planning Program Coordinators\",\"id\":\"sZRhXMPbcWc\"},{\"displayName\":\"Feedback Message Recipients\",\"id\":\"QYrzIjSfI8z\"},{\"displayName\":\"HIV Program Coordinators\",\"id\":\"Rg8wusV7QYi\"},{\"displayName\":\"Kenya staff\",\"id\":\"YCPJDwzbe8T\"},{\"displayName\":\"Malaria program\",\"id\":\"jvrEwEJ2yZn\"},{\"displayName\":\"Nairobi University Research Group\",\"id\":\"k3xzluFKVyw\"},{\"displayName\":\"Partner for Health International\",\"id\":\"GZSvMCVowAx\"},{\"displayName\":\"System administrators\",\"id\":\"lFHP5lLkzVr\"},{\"displayName\":\"TB Program Coordinators\",\"id\":\"hj0nnsVsPLU\"},{\"displayName\":\"Wakiki\",\"id\":\"L4XTzgbdza3\"},{\"displayName\":\"World Health Program\",\"id\":\"Iqfwd3j2qe5\"},{\"displayName\":\"_DATASET_Child Health Program Manager\",\"id\":\"GogLpGmkL0g\"},{\"displayName\":\"_DATASET_Data entry clerk\",\"id\":\"tH0GcNZZ1vW\"},{\"displayName\":\"_DATASET_M and E Officer\",\"id\":\"w900PX10L7O\"},{\"displayName\":\"_DATASET_Superuser\",\"id\":\"B6JNeAQ6akX\"},{\"displayName\":\"_DATASET_System administrator (ALL)\",\"id\":\"zz6XckBrLlj\"},{\"displayName\":\"_PROGRAM_Antenatal care program\",\"id\":\"M1Qre0247G3\"},{\"displayName\":\"_PROGRAM_Child Health Tracker\",\"id\":\"H9XnHoWRKCg\"},{\"displayName\":\"_PROGRAM_Inpatient program\",\"id\":\"NTC8GjJ7p8P\"},{\"displayName\":\"_PROGRAM_MNCH / PNC (Adult Woman) program\",\"id\":\"vRoAruMnNpB\"},{\"displayName\":\"_PROGRAM_Superuser\",\"id\":\"gXpmQO6eEOo\"},{\"displayName\":\"_PROGRAM_System administrator (ALL)\",\"id\":\"pBnkuih0c1K\"},{\"displayName\":\"_PROGRAM_TB program\",\"id\":\"Kk12LkEWtXp\"},{\"displayName\":\"_PROGRAM_WHO MCH program\",\"id\":\"z1gNAf2zUxZ\"}]}",
+        "responseSize": 2041,
+        "responseHeaders": {
+            "server": "nginx/1.21.6",
+            "content-type": "application/json;charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3000",
+            "vary": "Origin",
+            "access-control-expose-headers": "ETag, Location",
+            "cache-control": "no-cache, private",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN"
+        }
+    }
+]
