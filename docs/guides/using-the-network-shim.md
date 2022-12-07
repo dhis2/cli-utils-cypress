@@ -266,7 +266,7 @@ e2e:
             uses: actions/checkout@v2
         - uses: actions/setup-node@v1
             with:
-                node-version: 12.x
+                node-version: 16.x
         - name: End-to-End tests
             uses: cypress-io/github-action@v2
             with:
