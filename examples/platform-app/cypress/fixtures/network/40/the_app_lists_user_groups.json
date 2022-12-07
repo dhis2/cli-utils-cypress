@@ -3,7 +3,7 @@
         "path": "/api/40/systemSettings/helpPageLink",
         "featureName": "The app lists user groups",
         "static": false,
-        "count": 1,
+        "count": 2,
         "nonDeterministic": false,
         "method": "GET",
         "requestBody": "",

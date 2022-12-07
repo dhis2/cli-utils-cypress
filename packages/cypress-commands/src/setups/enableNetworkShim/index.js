@@ -16,6 +16,7 @@ export function enableNetworkShim() {
 
     before(() => {
         if (isCaptureMode()) {
+            cy.login()
             validateVersionMinor()
         }
     })

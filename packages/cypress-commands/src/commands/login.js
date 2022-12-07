@@ -8,13 +8,13 @@ export const LOGIN_ENDPOINT = 'dhis-web-commons-security/login.action'
 export const login = () => {
     const username = Cypress.env('dhis2Username')
     const password = Cypress.env('dhis2Password')
-    const loginUrl = Cypress.env('dhis2BaseUrl')
+    const baseUrl = Cypress.env('dhis2BaseUrl')
 
     cy.session(
         'user',
         () => {
             cy.request({
-                url: `${loginUrl}/${LOGIN_ENDPOINT}`,
+                url: `${baseUrl}/${LOGIN_ENDPOINT}`,
                 method: 'POST',
                 form: true,
                 followRedirect: true,
@@ -23,6 +23,8 @@ export const login = () => {
                     j_password: password,
                     '2fa_code': '',
                 },
+            }).then(() => {
+                window.localStorage.setItem('DHIS2_BASE_URL', baseUrl)
             })
         },
         {
