@@ -1,4 +1,4 @@
-import { Before, Given, Then, When } from 'cypress-cucumber-preprocessor/steps'
+import { Before, Given, Then, When } from '@badeball/cypress-cucumber-preprocessor'
 
 Before(() => {
     cy.intercept('POST', /userGroups/, {
@@ -8,6 +8,7 @@ Before(() => {
 
 Given('the user visits the app', () => {
     cy.visit('http://localhost:3000')
+    console.log('> Cypress.env("test")', Cypress.env("test"))
 })
 
 When('the user types in the input', () => {

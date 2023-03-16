@@ -24,5 +24,12 @@
         "@babel/helper-builder-react-jsx-experimental": "^7.12.11",
         "@dhis2/app-runtime": "^2.8.0",
         "prop-types": "^15.7.2"
+    },
+    "devDependencies": {
+        "@badeball/cypress-cucumber-preprocessor": "^15.1.4",
+        "@cypress/webpack-preprocessor": "^5.17.0",
+        "@dhis2/cypress-commands": "*",
+        "@dhis2/cypress-plugins": "*",
+        "cypress": "^12.7.0"
     }
 }
