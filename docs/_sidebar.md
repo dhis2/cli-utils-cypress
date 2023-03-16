@@ -2,6 +2,7 @@
 -   [**Guides**](guides)
     -   [**Setup Cypress for your project**](guides/setting-up-cli-tool)
     -   [**Enabling auto login**](guides/enable-auto-login)
+    -   [**Logging in and user sessions**](guides/logging-in-and-user-sessions)
     -   [**Using cucumber with feature files**](guides/using-cucumber)
     -   [**Using the network shim**](guides/using-the-network-shim)
     -   [**Allowing cross-site cookies with chrome (v93 and below)**](guides/cross-site-cookies)
