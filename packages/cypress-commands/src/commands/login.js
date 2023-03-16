@@ -5,32 +5,20 @@ export const LOGIN_ENDPOINT = 'dhis-web-commons-security/login.action'
  * because Cypress doesn't allow multiple domains per test:
  * https://docs.cypress.io/guides/guides/web-security.html#One-Superdomain-per-Test
  */
-export const login = () => {
-    const username = Cypress.env('dhis2Username')
-    const password = Cypress.env('dhis2Password')
-    const baseUrl = Cypress.env('dhis2BaseUrl')
-
-    cy.session(
-        'user',
-        () => {
-            cy.request({
-                url: `${baseUrl}/${LOGIN_ENDPOINT}`,
-                method: 'POST',
-                form: true,
-                followRedirect: true,
-                body: {
-                    j_username: username,
-                    j_password: password,
-                    '2fa_code': '',
-                },
-            }).then(() => {
-                window.localStorage.setItem('DHIS2_BASE_URL', baseUrl)
-            })
+export const login = ({ username, password, baseUrl }) => {
+    cy.request({
+        url: `${baseUrl}/${LOGIN_ENDPOINT}`,
+        method: 'POST',
+        form: true,
+        followRedirect: true,
+        body: {
+            j_username: username,
+            j_password: password,
+            '2fa_code': '',
         },
-        {
-            cacheAcrossSpecs: true,
-        }
-    )
+    }).then(() => {
+        window.localStorage.setItem('DHIS2_BASE_URL', baseUrl)
+    })
 }
 
 Cypress.Commands.add('login', login)

@@ -1,9 +1,30 @@
 import { isStubMode } from '../helper/networkMode.js'
 
-export const enableAutoLogin = () => {
+export const enableAutoLogin = ({
+    username: _username,
+    password: _password,
+    baseUrl: _baseUrl,
+} = {}) => {
     if (isStubMode()) {
         return
     }
+
+    const name = _username || Cypress.env('dhis2Username')
+    const password = _password || Cypress.env('dhis2Password')
+    const server = _baseUrl || Cypress.env('dhis2BaseUrl')
+    const createSession = () => cy.session(
+        'user',
+        () => {
+            cy.visit('/')
+            cy.fillInLoginForm({ name, password, server })
+        },
+        {
+            cacheAcrossSpecs: true,
+            validate: () => {
+                cy.get('h1:contains("Please sign in")').should('not.exist')
+            },
+        }
+    )
 
     before(() => {
         /*
@@ -14,12 +35,12 @@ export const enableAutoLogin = () => {
          */
         cy.getCookie('JSESSIONID').then((cookie) => {
             if (!cookie) {
-                cy.login()
+                createSession()
             }
         })
     })
 
     beforeEach(() => {
-        cy.login()
+        createSession()
     })
 }
