@@ -33,6 +33,7 @@
         "test:cli": "yarn workspace @dhis2/cli-utils-cypress test",
         "test:commands": "yarn workspace @dhis2/cypress-commands test",
         "test:plugins": "exit 0 # no tests yet",
+        "test:examples": "yarn test:network-shim-app && yarn test:platform-app",
         "test:network-shim-app": "yarn workspace testing-network-shim-app cy:capture-and-stub",
         "test:platform-app": "yarn workspace platform-app cy:capture-and-stub",
         "cy:local": "yarn build && yarn test:network-shim-app && yarn test:platform-app"
