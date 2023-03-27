@@ -24,5 +24,10 @@
         "@badeball/cypress-cucumber-preprocessor": "^15.1.4",
         "@cypress/webpack-preprocessor": "^5.17.0",
         "cypress": "^12.0.1"
+    },
+    "peerDependenciesMeta": {
+        "@badeball/cypress-cucumber-preprocessor": {
+            "optional": true
+        }
     }
 }
