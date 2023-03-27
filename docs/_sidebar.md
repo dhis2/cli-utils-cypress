@@ -10,6 +10,8 @@
 -   [**API: Commands**](commands)
     -   [**getWithDataTest**](commands/getWithDataTest)
     -   [**findWithDataTest**](commands/findWithDataTest)
+    -   [**fillInLoginForm**](commands/fillInLoginForm)
+    -   [**all**](commands/all)
 -   [**API: Helper functions**](helpers)
     -   [**dataTestNameToSelector**](helpers/dataTestNameToSelector)
     -   [**parseSelectorWithDataTest**](helpers/parseSelectorWithDataTest)
