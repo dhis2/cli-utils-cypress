@@ -19,7 +19,7 @@ cy.all(
 
 ### Arguments
 
-* **[...Function]**
+-   **[...Function]**
 
 ### Return
 

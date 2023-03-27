@@ -12,19 +12,20 @@ export const enableAutoLogin = ({
     const name = _username || Cypress.env('dhis2Username')
     const password = _password || Cypress.env('dhis2Password')
     const server = _baseUrl || Cypress.env('dhis2BaseUrl')
-    const createSession = () => cy.session(
-        'user',
-        () => {
-            cy.visit('/')
-            cy.fillInLoginForm({ name, password, server })
-        },
-        {
-            cacheAcrossSpecs: true,
-            validate: () => {
-                cy.get('h1:contains("Please sign in")').should('not.exist')
+    const createSession = () =>
+        cy.session(
+            'user',
+            () => {
+                cy.visit('/')
+                cy.fillInLoginForm({ name, password, server })
             },
-        }
-    )
+            {
+                cacheAcrossSpecs: true,
+                validate: () => {
+                    cy.get('h1:contains("Please sign in")').should('not.exist')
+                },
+            }
+        )
 
     before(() => {
         /*

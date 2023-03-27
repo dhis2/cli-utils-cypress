@@ -102,17 +102,17 @@ This file is meant to be checked into source control, so should not contain any 
 ```js
 module.exports = defineConfig({
     experimentalInteractiveRunEvents: true,
-    projectId: "PROJECT_ID",
+    projectId: 'PROJECT_ID',
     video: false,
     e2e: {
-      setupNodeEvents: (on, config) => config,
-      baseUrl: 'http://localhost:3000',
+        setupNodeEvents: (on, config) => config,
+        baseUrl: 'http://localhost:3000',
     },
     env: {
-        dhis2DataTestPrefix: "DATA_TEST_PREFIX",
-        networkMode: "live", // default mode for the Network Shim
-        dhis2ApiVersion: "value_from_prompt"
-    }
+        dhis2DataTestPrefix: 'DATA_TEST_PREFIX',
+        networkMode: 'live', // default mode for the Network Shim
+        dhis2ApiVersion: 'value_from_prompt',
+    },
 })
 ```
 
@@ -195,11 +195,11 @@ async function setupNodeEvents(on, config) {
 }
 
 module.exports = defineConfig({
-  experimentalInteractiveRunEvents: true,
-  e2e: {
-    setupNodeEvents,
-    baseUrl: 'http://localhost:3000',
-  },
+    experimentalInteractiveRunEvents: true,
+    e2e: {
+        setupNodeEvents,
+        baseUrl: 'http://localhost:3000',
+    },
 })
 ```
 

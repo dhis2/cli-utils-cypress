@@ -2,8 +2,8 @@
 
 If you want to use feature files, you'll have to install two dependencies:
 
-* @badeball/cypress-cucumber-preprocessor
-* @cypress/webpack-preprocessor
+-   @badeball/cypress-cucumber-preprocessor
+-   @cypress/webpack-preprocessor
 
 Then you can add the `cucumberPreprocessor` to the `setupNodeEvents` function.
 It's important to note that this function has to be the first plugin in your
@@ -34,10 +34,10 @@ following entry:
 // ...
 
 module.exports = defineConfig({
-  // ...
-  e2e: {
     // ...
-    specPattern: 'cypress/e2e/**/*.feature',
-  },
+    e2e: {
+        // ...
+        specPattern: 'cypress/e2e/**/*.feature',
+    },
 })
 ```

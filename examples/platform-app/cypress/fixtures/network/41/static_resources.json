@@ -37,13 +37,7 @@
             "x-content-type-options": "nosniff",
             "x-xss-protection": "1; mode=block"
         },
-        "responseLookup": [
-            0,
-            1,
-            2,
-            3,
-            4
-        ]
+        "responseLookup": [0, 1, 2, 3, 4]
     },
     {
         "path": "/api/41/systemSettings/applicationTitle",

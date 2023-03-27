@@ -6,14 +6,14 @@ This command will fill in the login form with specified user credentials.
 
 ### Arguments
 
-* **options**
-  ```ts
-  {
-    name: string
-    password: string
-    server: string
-  }
-  ```
+-   **options**
+    ```ts
+    {
+        name: string
+        password: string
+        server: string
+    }
+    ```
 
 ### Return
 

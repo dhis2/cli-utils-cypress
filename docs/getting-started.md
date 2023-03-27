@@ -7,6 +7,7 @@ recording/replaying network requests for CI.
 ## Setting up dependencies, commands, plugins, etc
 
 ### Installing/upgrading cypress
+
 Cypress is just a peer dependency of the npm packages that we provide, so
 you'll have to install it yourself. A guide for installing cypress can be found
 on cypress' documentation
@@ -22,16 +23,16 @@ const { defineConfig } = require('cypress')
 async function setupNodeEvents(on, config) {}
 
 module.exports = defineConfig({
-  // recommended as this
-  // * increases the test run time
-  // * should not be done on CI
-  // * can be done explicitly with `--config video=false` when needed
-  video: false,
+    // recommended as this
+    // * increases the test run time
+    // * should not be done on CI
+    // * can be done explicitly with `--config video=false` when needed
+    video: false,
 
-  e2e: {
-    setupNodeEvents,
-    baseUrl: 'http://localhost:3000',
-  },
+    e2e: {
+        setupNodeEvents,
+        baseUrl: 'http://localhost:3000',
+    },
 })
 ```
 
