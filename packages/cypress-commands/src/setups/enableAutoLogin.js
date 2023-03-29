@@ -18,6 +18,7 @@ export const enableAutoLogin = ({
             () => {
                 cy.visit('/')
                 cy.fillInLoginForm({ name, password, server })
+                cy.get('#dhis2-app-root > *').should('exist')
             },
             {
                 cacheAcrossSpecs: true,
