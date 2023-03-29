@@ -1,4 +1,5 @@
 -   [**Getting Started**](getting-started)
+-   [**Upgrade guide**](upgrade-guide)
 -   [**Guides**](guides)
     -   [**Setup Cypress for your project**](guides/setting-up-cli-tool)
     -   [**Enabling auto login**](guides/enable-auto-login)

@@ -4,6 +4,10 @@ The cypress utilities provide cypress plugins and command/setups that help with
 e.g. running cucumber/gherkin feature files, automatic login before tests or
 recording/replaying network requests for CI.
 
+## Upgrading the commands & plugins libraries
+
+Please refer to the [Upgrade guide](./upgrade-guide.md).
+
 ## Setting up dependencies, commands, plugins, etc
 
 ### Installing/upgrading cypress
