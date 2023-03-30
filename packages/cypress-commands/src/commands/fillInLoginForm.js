@@ -3,7 +3,8 @@ function fillInLoginForm({ name, password, server }) {
     cy.get('h1:contains("Please sign in")').should('exist')
 
     // Enter credentials
-    cy.get('input#server').type(server)
+    // clearing as it might be stored for some reason
+    cy.get('input#server').clear().type(server)
     cy.get('input#j_username').type(name)
     cy.get('input#j_password').type(password)
     cy.get('[data-test="dhis2-adapter-loginsubmit"]').click()
