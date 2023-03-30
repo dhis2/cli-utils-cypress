@@ -1,12 +1,8 @@
 import { isStubMode } from '../enableNetworkShim/index.js'
 
 export const enableAutoLogin = (
-    {
-        username: _username,
-        password: _password,
-        baseUrl: _baseUrl,
-    } = {},
-    { timeout } = {},
+    { username: _username, password: _password, baseUrl: _baseUrl } = {},
+    { timeout } = {}
 ) => {
     if (isStubMode()) {
         return
@@ -27,9 +23,9 @@ export const enableAutoLogin = (
                 cacheAcrossSpecs: true,
                 validate: () => {
                     cy.visit('/')
-                    cy
-                        .get('h1:contains("Please sign in")', { timeout })
-                        .should('not.exist')
+                    cy.get('h1:contains("Please sign in")', { timeout }).should(
+                        'not.exist'
+                    )
                 },
             }
         )
