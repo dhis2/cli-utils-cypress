@@ -1,2 +1,2 @@
-export { enableAutoLogin } from './enableAutoLogin.js'
-export { enableNetworkShim } from './enableNetworkShim/index.js'
+export * from './enableAutoLogin/index.js'
+export * from './enableNetworkShim/index.js'
