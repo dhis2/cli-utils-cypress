@@ -1,6 +1,6 @@
 # Upgrade guide
 
-## Version 9 to Version 10
+## Version 10
 
 If you've used cypress and some of dhis2's cypress tools (which required the
 Cypress version to be 8), you'll have to make some modifications.
@@ -9,6 +9,7 @@ can be found [here](https://docs.cypress.io/guides/references/migration-guide).
 
 Here's a short list of thing that need to be updated:
 
+* Uninstall `@dhis2/cli-utils-cypress` if you're still using it
 * Cypress needs to be upgraded to version ^12.7.0
 * Cypress now uses `cypress.config.js` instead of `cypress.json`
 * If you're using cucumber, the `cypress-cucumber-preprocessor` package has to
