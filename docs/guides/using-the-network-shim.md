@@ -101,7 +101,6 @@ This file is meant to be checked into source control, so should not contain any 
 
 ```js
 module.exports = defineConfig({
-    experimentalInteractiveRunEvents: true,
     projectId: 'PROJECT_ID',
     video: false,
     e2e: {
@@ -119,7 +118,6 @@ module.exports = defineConfig({
 _Notes:_
 
 -   _Only the `env` fields are required directly by the Network Shim, but other fields are included in this example since they are required to have a working cypress setup._
--   _Interactive runs are not formally supported by the Network Shim, because `cypress open` (interactive mode) and `cypress run` have different behaviour regarding the plugin events. However, cypress is attempting to smooth things over and by setting `experimentalInteractiveRunEvents` to `true` it should theoretically be possible to at at least use stub mode in interactive mode._
 
 ##### `./cypress.env.json`
 
@@ -158,7 +156,7 @@ async function setupNodeEvents(on, config) {
 ```
 
 The `networkShim` plugin accepts a second `options` argument. For most DHIS2
-platform apps the options passed to `setupNodeEvents` will be correct so there
+platform apps the default options of the `networkShim` will be correct so there
 will be no need to pass a second argument.
 
 For most DHIS2 Cypress test suites the `enableAutoLogin` plugin can help reduce
@@ -195,7 +193,6 @@ async function setupNodeEvents(on, config) {
 }
 
 module.exports = defineConfig({
-    experimentalInteractiveRunEvents: true,
     e2e: {
         setupNodeEvents,
         baseUrl: 'http://localhost:3000',

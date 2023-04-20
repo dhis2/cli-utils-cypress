@@ -22,7 +22,6 @@ async function setupNodeEvents(on, config) {
 
 module.exports = defineConfig({
   video: false,
-  experimentalInteractiveRunEvents: true,
   e2e: {
     setupNodeEvents,
     baseUrl: 'http://localhost:3000',
