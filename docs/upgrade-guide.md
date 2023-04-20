@@ -10,6 +10,10 @@ can be found [here](https://docs.cypress.io/guides/references/migration-guide).
 Here's a short list of thing that need to be updated:
 
 -   Uninstall `@dhis2/cli-utils-cypress` if you're still using it
+-   In case you've used `d2-utils-cypress open`, you now have to use cypress
+    directly. The
+    [`package.json`](https://github.com/dhis2/aggregate-data-entry-app/blob/master/package.json)
+    of the Aggregate Data Entry app is a good example.
 -   Cypress needs to be upgraded to version ^12.7.0
 -   Cypress now uses `cypress.config.js` instead of `cypress.json`
 -   If you're using cucumber, the `cypress-cucumber-preprocessor` package has to
