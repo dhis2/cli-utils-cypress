@@ -33,42 +33,26 @@ The command-line-tool in the package `@dhis2/cli-utils-cypress` comes with an `i
 
 To get up-and-running quickly do the following:
 
-1.  Install the cli tool
+1.  Follow the getting started guide to install and configure cypress
+1.  Add user credentials to a `<root>/cypress.env.json`:
 
-    ```bash
-    yarn add --dev @dhis2/cli-utils-cypress
+    ```json
+    {
+        "dhis2Username": "USERNAME", // secret
+        "dhis2Password": "PASSWORD", // secret
+        "dhis2BaseUrl": "DHIS2_BASE_URL" // machine specific
+    }
     ```
 
-    <br/>
-
-1.  Issue the install command to generate a working setup
-
-    ```bash
-    d2-utils-cypress install all
-    ```
-
-    (_Instead of `all` another "group" can be specified._)
-    <br/>
-
-1.  Ensure to git-ignore the `./cypress.env.json` file
-    <br/>
-
-1.  Install the peer dependency
-
-    ```bash
-    yarn add cypress
-    ```
-
-    (_Also install `cypress-cucumber` when applicable_)
+    Ensure to git-ignore the `./cypress.env.json` file
     <br/>
 
 1.  Install tools needed to run the scripts in `package.json`:
 
     ```bash
-    yarn install -D wait-on concurrently
+    yarn install -D start-server-and-test
     ```
 
-    _(or install the `start-server-and-test` package instead)_
     <br/>
 
 1.  Create scripts `package.json` as demonstrated [here](#package-scripts-and-dependencies)
@@ -111,29 +95,29 @@ A workflow as described above consists of a few moving parts, which are describe
 
 The Network Shim depends on a few cypress environment variables. These can be set using the `--env` flag when interacting with the cypress CLI, but base values should be provided as well in via the following configuration files, see the [cypress docs](https://docs.cypress.io/guides/guides/environment-variables) for more information.
 
-##### `./cypress.json`
+##### `./cypress.config.js`
 
 This file is meant to be checked into source control, so should not contain any sensitive or machine-specific information.
 
-```json
-{
-    "baseUrl": "APP_URL",
-    "projectId": "PROJECT_ID",
-    "testFiles": "TEST_FILES",
-    "experimentalInteractiveRunEvents": true,
-    "video": false,
-    "env": {
-        "dhis2DataTestPrefix": "DATA_TEST_PREFIX",
-        "networkMode": "live", // default mode for the Network Shim
-        "dhis2ApiVersion": "value_from_prompt"
-    }
-}
+```js
+module.exports = defineConfig({
+    projectId: 'PROJECT_ID',
+    video: false,
+    e2e: {
+        setupNodeEvents: (on, config) => config,
+        baseUrl: 'http://localhost:3000',
+    },
+    env: {
+        dhis2DataTestPrefix: 'DATA_TEST_PREFIX',
+        networkMode: 'live', // default mode for the Network Shim
+        dhis2ApiVersion: 'value_from_prompt',
+    },
+})
 ```
 
 _Notes:_
 
 -   _Only the `env` fields are required directly by the Network Shim, but other fields are included in this example since they are required to have a working cypress setup._
--   _Interactive runs are not formally supported by the Network Shim, because `cypress open` (interactive mode) and `cypress run` have different behaviour regarding the plugin events. However, cypress is attempting to smooth things over and by setting `experimentalInteractiveRunEvents` to `true` it should theoretically be possible to at at least use stub mode in interactive mode._
 
 ##### `./cypress.env.json`
 
@@ -149,31 +133,48 @@ This file is meant to be git-ignored and we can use this to set local environmen
 
 _Note that `dhis2Username` and `dhis2Password` are not required directly by the Network Shim, but by the `enableAutologin` setup. They are included in this example since they will be needed for most use-cases._
 
-#### Plugins file
+#### Plugin setup
 
-The `networkShim` plugin should be imported and initialised in the cypress plugins file, see the [cypress docs](https://docs.cypress.io/guides/tooling/plugins-guide#Using-a-plugin) for more info. The plugin function doesn't require the second `config` argument most plugins accept.
+The `networkShim` plugin should be imported and initialised in the
+setupNodeEvents function in the cypress config file (for more information about
+the config file, see [Getting started](../getting-started.md)):
 
 ```js
-const { networkShim } = require('@dhis2/cypress-plugins')
+import { networkShim } from '@dhis2/cypress-plugins'
 
-module.exports = (on, config) => {
-    networkShim(on)
+// ...
+
+async function setupNodeEvents(on, config) {
+    // ...
+
+    networkShim(on, config)
+
+    // ...
 }
+
+// ...
 ```
 
-The `networkShim` plugin accepts a second `options` argument. For most DHIS2 platform apps the default options will be correct so there will be no need to pass a second argument.
+The `networkShim` plugin accepts a second `options` argument. For most DHIS2
+platform apps the default options of the `networkShim` will be correct so there
+will be no need to pass a second argument.
 
-For most DHIS2 Cypress test suites the `enableAutoLogin` plugin can help reduce repetitive login steps in tests. In turn, the `enableAutoLogin` setup utility requires the `chromeAllowXSiteCookies` plugin when using Chrome. So a typical DHIS2 app will use this plugin alongside the `networkShim`.
+For most DHIS2 Cypress test suites the `enableAutoLogin` plugin can help reduce
+repetitive login steps in tests. In turn, the `enableAutoLogin` setup utility
+requires the `chromeAllowXSiteCookies` plugin when using Chrome. So a typical
+DHIS2 app will use those plugin alongside the `networkShim`.
 
-Below is an example of a plugins file with `options` supplied to the `networkShim` and used in conjunction with `chromeAllowXSiteCookies`:
+Below is an example of a cypress config file with `options` supplied to the
+`networkShim` and used in conjunction with `chromeAllowXSiteCookies`:
 
 ```js
 const {
     networkShim,
     chromeAllowXSiteCookies,
 } = require('@dhis2/cypress-plugins')
+const { defineConfig } = require('cypress')
 
-const options = {
+const networkShimOptions = {
     hosts: ['https://main-api.com', 'https://secondary-api.com'],
     staticResources: [
         '/endpoint-which-always-returns-the-same-data',
@@ -181,10 +182,22 @@ const options = {
     ],
 }
 
-module.exports = (on, config) => {
-    networkShim(on, options)
+async function setupNodeEvents(on, config) {
     chromeAllowXSiteCookies(on, config)
+    networkShim(on, {
+        ...config,
+        ...networkShimOptions,
+    })
+
+    return config
 }
+
+module.exports = defineConfig({
+    e2e: {
+        setupNodeEvents,
+        baseUrl: 'http://localhost:3000',
+    },
+})
 ```
 
 #### Support file
@@ -215,29 +228,39 @@ And it is recommended to add some convenience commands to the `scripts` section,
 
 ```json
 "scripts": {
-    "cy:start": "BROWSER=none yarn start",
-    "cy:open": "wait-on 'http-get://localhost:3000' && cypress open",
-    "cy:run": "wait-on 'http-get://localhost:3000' && cypress run",
-    "cy:capture": "concurrently 'yarn cy:start' 'yarn cy:run --env networkMode=capture' --kill-others --success first",
-    "cy:stub": "concurrently 'yarn cy:start' 'yarn cy:run --env networkMode=stub' --kill-others --success first",
+    "cy:start": "REACT_APP_NODE_ENV=test BROWSER=none yarn start",
+
+    "cy:prepare": "start-server-and-test 'yarn cy:start' http://localhost:3000",
+    "cy:open: "yarn cy:prepare 'yarn cypress open --env networkMode=live'",
+    "_cy:live": "yarn cypress run --env networkMode=live",
+    "cy:live: "yarn cy:prepare 'yarn _cy:live'",
+    "_cy:capture": "yarn cypress run --env networkMode=capture",
+    "cy:capture": "yarn cy:prepare 'yarn _cy:capture'",
+    "_cy:stub": "yarn cypress run --env networkMode=stub",
+    "cy:stub": "yarn cy:prepare 'yarn _cy:stub'",
 },
 ```
+
+The reason to keep `cy:live` and `_cy:live` separate is to be able to run
+`_cy:live` again and again during development without having to wait for the app
+to start every time you want to run the tests on the cli again.
 
 _Note that `cy:stub` here is meant to perform a local stub-run, the stub run on CI should be configured differently as explained in the [GitHub workflow](#github-workflow) section._
 
 Some notes:
 
-1. These example scripts assume both `wait-on` and `concurrently` are installed available. If this is not the case, run:
+1. These example scripts assume `start-server-and-test` is available. If this is not the case, run:
     ```bash
-    yarn add -D wait-on concurrently
+    yarn add --dev start-server-and-test
     ```
-1. As an alternative to using `wait-on` and `concurrently` the package `start-server-and-test` could be used, which is recommended by cypress. An example can be found [here](https://github.com/dhis2/scheduler-app/blob/8af8ae7b8b319384f14b510b7017f2beea730f5c/package.json#L14-L16).
 1. Setting `BROWSER=none` before running `yarn start` simply means that no browser tab is going to be opened/activated once the app is ready.
 1. In the example above no `dhis2ApiVersion` is passed as a cypress env variable, even though the Network Shim relies on this. This works because that variable is declared in `./cypress.env.json` so that value is used. See the [cypress docs](https://docs.cypress.io/guides/guides/environment-variables) for more info.
 1. The example above only takes into account testing against a single backend version. If an additional v36 version of DHIS2 core was available on `http://localhost:8081` and the test-suite should be executed against that backend as well, the following scripts could be added:
     ```json
-    "cy:capture-v36": "concurrently 'yarn cy:start' 'yarn cy:run --env networkMode=capture,dhis2BaseUrl=http://localhost:8081,dhis2ApiVersion=36' --kill-others --success first",
-    "cy:stub-v36": "concurrently 'yarn cy:start' 'yarn cy:run --env networkMode=stub,dhis2BaseUrl=http://localhost:8081,dhis2ApiVersion=36' --kill-others --success first",
+    "_cy:capture-36": "yarn cypress run --env networkMode=capture,dhis2BaseUrl=http://localhost:8081,dhis2ApiVersion=36",
+    "cy:capture-36: "yarn cy:prepare 'yarn _cy:capture-36'",
+    "_cy:stub-36": "yarn cypress run --env networkMode=stub,dhis2BaseUrl=http://localhost:8081,dhis2ApiVersion=36",
+    "cy:stub-36: "yarn cy:prepare 'yarn _cy:stub-36'",
     ```
 
 ### GitHub workflow
@@ -266,7 +289,7 @@ e2e:
             uses: actions/checkout@v2
         - uses: actions/setup-node@v1
             with:
-                node-version: 12.x
+                node-version: 16.x
         - name: End-to-End tests
             uses: cypress-io/github-action@v2
             with:
