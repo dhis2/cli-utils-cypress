@@ -1,3 +1,18 @@
+# [10.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v9.0.2...v10.0.0) (2023-04-27)
+
+
+### Features
+
+* remove cli util, update cypress to v12 & small conceptual adjustments ([#393](https://github.com/dhis2/cli-utils-cypress/issues/393)) ([855e259](https://github.com/dhis2/cli-utils-cypress/commit/855e259f2ab8dcd01145fdf4e5bd6a661aa99968))
+
+
+### BREAKING CHANGES
+
+* cypress 12 uses a different naming scheme for folders, files and extensions
+* This removes the `d2-utils-cypress` cli tool!
+
+Co-authored-by: Hendrik de Graaf <hendrik@dhis2.org>
+
 ## [9.0.2](https://github.com/dhis2/cli-utils-cypress/compare/v9.0.1...v9.0.2) (2022-02-07)
 
 
