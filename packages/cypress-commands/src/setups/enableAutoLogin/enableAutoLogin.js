@@ -1,31 +1,32 @@
 import { isStubMode } from '../enableNetworkShim/index.js'
 
-export const enableAutoLogin = (
-    { username: _username, password: _password, baseUrl: _baseUrl } = {},
-    { timeout } = {}
-) => {
+export const enableAutoLogin = ({
+    username: _username,
+    password: _password,
+    baseUrl: _baseUrl,
+} = {}) => {
     if (isStubMode()) {
         return
     }
 
-    const name = _username || Cypress.env('dhis2Username')
+    const username = _username || Cypress.env('dhis2Username')
     const password = _password || Cypress.env('dhis2Password')
-    const server = _baseUrl || Cypress.env('dhis2BaseUrl')
+    const baseUrl = _baseUrl || Cypress.env('dhis2BaseUrl')
+
     const createSession = () =>
         cy.session(
             'user',
             () => {
-                cy.visit('/')
-                cy.fillInLoginForm({ name, password, server })
-                cy.get('#dhis2-app-root > *', { timeout }).should('exist')
+                // Not using the login form to log in as that's the
+                // recommendation by cypress:
+                // * https://docs.cypress.io/guides/end-to-end-testing/testing-your-app#Fully-test-the-login-flow----but-only-once
+                // * https://docs.cypress.io/api/commands/session#Multiple-login-commands
+                cy.loginByApi({ username, password, baseUrl })
             },
             {
                 cacheAcrossSpecs: true,
                 validate: () => {
-                    cy.visit('/')
-                    cy.get('h1:contains("Please sign in")', { timeout }).should(
-                        'not.exist'
-                    )
+                    cy.validateUserIsLoggedIn({ baseUrl, username })
                 },
             }
         )
