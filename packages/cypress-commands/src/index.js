@@ -1,4 +1,4 @@
-// will automatically create the commands
-import './commands/index.js'
+import './commands/index.js' // will automatically register the commands
+
 export * from './helper/index.js'
 export * from './setups/index.js'
