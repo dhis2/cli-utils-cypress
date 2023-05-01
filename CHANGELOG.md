@@ -1,3 +1,10 @@
+## [10.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v10.0.0...v10.0.1) (2023-05-01)
+
+
+### Bug Fixes
+
+* **auto login:** use api to login ([#394](https://github.com/dhis2/cli-utils-cypress/issues/394)) ([8b22e7b](https://github.com/dhis2/cli-utils-cypress/commit/8b22e7b4626c77cba1cd8e509e9bebc1d50ac667))
+
 # [10.0.0](https://github.com/dhis2/cli-utils-cypress/compare/v9.0.2...v10.0.0) (2023-04-27)
 
 

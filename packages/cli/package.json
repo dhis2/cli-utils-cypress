@@ -13,7 +13,7 @@
         "test": "d2-app-scripts test"
     },
     "main": "src/index.js",
-    "version": "10.0.0",
+    "version": "10.0.1",
     "author": "Viktor Varland <viktor@dhis2.org>",
     "license": "BSD-3-Clause",
     "private": false,

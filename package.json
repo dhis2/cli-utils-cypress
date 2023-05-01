@@ -37,7 +37,7 @@
         "test:platform-app": "yarn workspace platform-app cy:capture-and-stub",
         "cy:local": "yarn build && yarn test:network-shim-app && yarn test:platform-app"
     },
-    "version": "10.0.0",
+    "version": "10.0.1",
     "devDependencies": {
         "@babel/core": "^7.12.3",
         "@babel/preset-env": "^7.12.1",
