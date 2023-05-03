@@ -1,3 +1,10 @@
+## [10.0.2](https://github.com/dhis2/cli-utils-cypress/compare/v10.0.1...v10.0.2) (2023-05-03)
+
+
+### Bug Fixes
+
+* **cucumber plugin:** require dependencies inside plugin function ([#395](https://github.com/dhis2/cli-utils-cypress/issues/395)) ([fa8c3a7](https://github.com/dhis2/cli-utils-cypress/commit/fa8c3a7794fa4198377ede7051fd1f5247610460))
+
 ## [10.0.1](https://github.com/dhis2/cli-utils-cypress/compare/v10.0.0...v10.0.1) (2023-05-01)
 
 
