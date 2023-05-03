@@ -1,7 +1,7 @@
-const preprocessor = require('@badeball/cypress-cucumber-preprocessor')
-const webpack = require('@cypress/webpack-preprocessor')
-
 module.exports = async function cucumberPreprocessor(on, config) {
+    const preprocessor = require('@badeball/cypress-cucumber-preprocessor')
+    const webpack = require('@cypress/webpack-preprocessor')
+
     // This is required for the preprocessor to be able to generate JSON reports after each run, and more,
     await preprocessor.addCucumberPreprocessorPlugin(on, config)
 
