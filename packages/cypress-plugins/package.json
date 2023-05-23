@@ -28,6 +28,9 @@
     "peerDependenciesMeta": {
         "@badeball/cypress-cucumber-preprocessor": {
             "optional": true
+        },
+        "@cypress/webpack-preprocessor": {
+            "optional": true
         }
     }
 }
