@@ -1,3 +1,10 @@
+## [10.0.3](https://github.com/dhis2/cli-utils-cypress/compare/v10.0.2...v10.0.3) (2023-05-23)
+
+
+### Bug Fixes
+
+* **deps:** mark the webpack preprocessor as optional peer dep ([#396](https://github.com/dhis2/cli-utils-cypress/issues/396)) ([ea3d690](https://github.com/dhis2/cli-utils-cypress/commit/ea3d69021f49ef03477b48b0a2de004bf6f708fb))
+
 ## [10.0.2](https://github.com/dhis2/cli-utils-cypress/compare/v10.0.1...v10.0.2) (2023-05-03)
 
 
