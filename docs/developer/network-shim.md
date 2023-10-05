@@ -6,7 +6,7 @@ as a plugin (`@dhis2/cypress-plugins`).
 ## The state of the network shim
 
 The JSDocs detail the properties of the state, you can find it in the
-[`createState.js`](../../packages/cypress-plugins/src/plugins/networkShim/createState.js).
+[`createState.js`](https://github.com/dhis2/cli-utils-cypress/blob/master/packages/cypress-plugins/src/plugins/networkShim/createState.js).
 
 The state manages which requests have been made, which of them were static or
 non-deterministic. It also contains the fixture file names of the recorded
