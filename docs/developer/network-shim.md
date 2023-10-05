@@ -97,4 +97,4 @@ The full test suite, including capture mode on a platform app, can be executed _
 yarn cy:local
 ```
 
-Information about troubleshooting the platform-app capture-run can be found [here](developer/troubleshooting#executing-a-network-shim-capture-run-in-the-platform-app).
+Information about troubleshooting the platform-app capture-run can be found [here](./troubleshooting#executing-a-network-shim-capture-run-in-the-platform-app).
