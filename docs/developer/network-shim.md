@@ -1,4 +1,4 @@
-# Network shim - Developer documentation
+# Network shim
 
 The network shim consists of both commands (`@dhis2/cypress-commands`) as well
 as a plugin (`@dhis2/cypress-plugins`).
