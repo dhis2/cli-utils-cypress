@@ -25,7 +25,7 @@
         "lint:staged": "d2-style check --staged",
         "format": "d2-style apply",
         "format:staged": "d2-style apply --staged",
-        "docs:build": "d2-utils-docsite build ./docs -o ./dist",
+        "docs:build": "mkdir -p dist && cp docs/index.html dist/",
         "docs:start": "d2-utils-docsite serve ./docs -o ./dist",
         "build": "yarn workspace @dhis2/cypress-commands build",
         "watch": "yarn workspace @dhis2/cypress-commands build --watch",
