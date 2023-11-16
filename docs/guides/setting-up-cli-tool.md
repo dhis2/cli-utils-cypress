@@ -60,5 +60,5 @@ some of the others:
 d2-utils-cypress install cypress-config/all cucumber/all
 ```
 
-Please refer to [Adding login credentials](guides/add-login-credentials.md) and
+Please refer to [Adding login credentials](./add-login-credentials.md) and
 add the required data for logging in.

@@ -1,4 +1,4 @@
-# Network shim - Developer documentation
+# Network shim
 
 The network shim consists of both commands (`@dhis2/cypress-commands`) as well
 as a plugin (`@dhis2/cypress-plugins`).
@@ -6,7 +6,7 @@ as a plugin (`@dhis2/cypress-plugins`).
 ## The state of the network shim
 
 The JSDocs detail the properties of the state, you can find it in the
-[`createState.js`](../../packages/cypress-plugins/src/plugins/networkShim/createState.js).
+[`createState.js`](https://github.com/dhis2/cli-utils-cypress/blob/master/packages/cypress-plugins/src/plugins/networkShim/createState.js).
 
 The state manages which requests have been made, which of them were static or
 non-deterministic. It also contains the fixture file names of the recorded
@@ -97,4 +97,4 @@ The full test suite, including capture mode on a platform app, can be executed _
 yarn cy:local
 ```
 
-Information about troubleshooting the platform-app capture-run can be found [here](developer/troubleshooting#executing-a-network-shim-capture-run-in-the-platform-app).
+Information about troubleshooting the platform-app capture-run can be found [here](./troubleshooting#executing-a-network-shim-capture-run-in-the-platform-app).
