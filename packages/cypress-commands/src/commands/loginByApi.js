@@ -4,7 +4,7 @@ Cypress.Commands.add('loginByApi', ({ username, password, baseUrl }) => {
         url: `${baseUrl}/api/loginConfig`,
         method: 'GET',
     }).then((response) => {
-        // Versions <= 41
+        // Versions >= 41
         if (response.body['apiVersion']) {
             cy.request({
                 url: `${baseUrl}/api/auth/login`,
@@ -16,7 +16,7 @@ Cypress.Commands.add('loginByApi', ({ username, password, baseUrl }) => {
                 },
             })
         } else {
-            // Versions >=40
+            // Versions <=40
             cy.request({
                 url: `${baseUrl}/dhis-web-commons-security/login.action`,
                 method: 'POST',
