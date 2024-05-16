@@ -1,0 +1,235 @@
+[
+    {
+        "path": "/api/system/info",
+        "featureName": null,
+        "static": true,
+        "count": 5,
+        "nonDeterministic": true,
+        "method": "GET",
+        "requestBody": "",
+        "requestHeaders": {
+            "host": "debug.dhis2.org",
+            "connection": "keep-alive",
+            "accept": "application/json",
+            "origin": "http://localhost:3000",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "cross-site"
+        },
+        "statusCode": 200,
+        "responseBody": [
+            "{\"contextPath\":\"https://debug.dhis2.org/dev\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.7.0 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2024-05-16T11:32:25.751\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2024-05-13T09:35:19.760\",\"intervalSinceLastAnalyticsTableSuccess\":\"73 h, 57 m, 5 s\",\"lastAnalyticsTableRuntime\":\"03:28:37.673\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"databaseInfo\":{\"spatialSupport\":true,\"time\":\"2024-05-16T11:32:25.751\"},\"version\":\"2.42-SNAPSHOT\",\"revision\":\"d23b91c2\",\"buildTime\":\"2024-05-15T15:12:37.000\",\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"instanceBaseUrl\":\"https://debug.dhis2.org/dev\",\"isMetadataVersionEnabled\":true}",
+            "{\"contextPath\":\"https://debug.dhis2.org/dev\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.7.0 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2024-05-16T11:32:30.076\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2024-05-13T09:35:19.760\",\"intervalSinceLastAnalyticsTableSuccess\":\"73 h, 57 m, 10 s\",\"lastAnalyticsTableRuntime\":\"03:28:37.673\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"databaseInfo\":{\"spatialSupport\":true,\"time\":\"2024-05-16T11:32:30.077\"},\"version\":\"2.42-SNAPSHOT\",\"revision\":\"d23b91c2\",\"buildTime\":\"2024-05-15T15:12:37.000\",\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"instanceBaseUrl\":\"https://debug.dhis2.org/dev\",\"isMetadataVersionEnabled\":true}",
+            "{\"contextPath\":\"https://debug.dhis2.org/dev\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.7.0 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2024-05-16T11:32:31.390\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2024-05-13T09:35:19.760\",\"intervalSinceLastAnalyticsTableSuccess\":\"73 h, 57 m, 11 s\",\"lastAnalyticsTableRuntime\":\"03:28:37.673\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"databaseInfo\":{\"spatialSupport\":true,\"time\":\"2024-05-16T11:32:31.391\"},\"version\":\"2.42-SNAPSHOT\",\"revision\":\"d23b91c2\",\"buildTime\":\"2024-05-15T15:12:37.000\",\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"instanceBaseUrl\":\"https://debug.dhis2.org/dev\",\"isMetadataVersionEnabled\":true}",
+            "{\"contextPath\":\"https://debug.dhis2.org/dev\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.7.0 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2024-05-16T11:32:34.391\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2024-05-13T09:35:19.760\",\"intervalSinceLastAnalyticsTableSuccess\":\"73 h, 57 m, 14 s\",\"lastAnalyticsTableRuntime\":\"03:28:37.673\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"databaseInfo\":{\"spatialSupport\":true,\"time\":\"2024-05-16T11:32:34.392\"},\"version\":\"2.42-SNAPSHOT\",\"revision\":\"d23b91c2\",\"buildTime\":\"2024-05-15T15:12:37.000\",\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"instanceBaseUrl\":\"https://debug.dhis2.org/dev\",\"isMetadataVersionEnabled\":true}",
+            "{\"contextPath\":\"https://debug.dhis2.org/dev\",\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.7.0 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36\",\"calendar\":\"iso8601\",\"dateFormat\":\"yyyy-mm-dd\",\"serverDate\":\"2024-05-16T11:32:35.996\",\"serverTimeZoneId\":\"Etc/UTC\",\"serverTimeZoneDisplayName\":\"Coordinated Universal Time\",\"lastAnalyticsTableSuccess\":\"2024-05-13T09:35:19.760\",\"intervalSinceLastAnalyticsTableSuccess\":\"73 h, 57 m, 16 s\",\"lastAnalyticsTableRuntime\":\"03:28:37.673\",\"lastSystemMonitoringSuccess\":\"2019-03-26T17:07:15.418\",\"databaseInfo\":{\"spatialSupport\":true,\"time\":\"2024-05-16T11:32:35.997\"},\"version\":\"2.42-SNAPSHOT\",\"revision\":\"d23b91c2\",\"buildTime\":\"2024-05-15T15:12:37.000\",\"encryption\":false,\"emailConfigured\":false,\"redisEnabled\":false,\"systemId\":\"eed3d451-4ff5-4193-b951-ffcc68954299\",\"systemName\":\"DHIS 2 Demo - Sierra Leone\",\"instanceBaseUrl\":\"https://debug.dhis2.org/dev\",\"isMetadataVersionEnabled\":true}"
+        ],
+        "responseSize": 990,
+        "responseHeaders": {
+            "server": "nginx/1.23.0",
+            "content-type": "application/json;charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3000",
+            "vary": "Origin",
+            "access-control-expose-headers": "ETag, Location",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block"
+        },
+        "responseLookup": [0, 1, 2, 3, 4]
+    },
+    {
+        "path": "/api/42/systemSettings/applicationTitle",
+        "featureName": null,
+        "static": true,
+        "count": 5,
+        "nonDeterministic": false,
+        "method": "GET",
+        "requestBody": "",
+        "requestHeaders": {
+            "host": "debug.dhis2.org",
+            "connection": "keep-alive",
+            "accept": "application/json",
+            "origin": "http://localhost:3000",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "cross-site"
+        },
+        "statusCode": 200,
+        "responseBody": "{\"applicationTitle\":\"DHIS 2 Demo - Sierra Leone\"}",
+        "responseSize": 49,
+        "responseHeaders": {
+            "server": "nginx/1.23.0",
+            "content-type": "application/json;charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3000",
+            "vary": "Origin",
+            "access-control-expose-headers": "ETag, Location",
+            "cache-control": "no-cache, private",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block"
+        }
+    },
+    {
+        "path": "/dhis-web-commons/menu/getModules.action",
+        "featureName": null,
+        "static": true,
+        "count": 5,
+        "nonDeterministic": false,
+        "method": "GET",
+        "requestBody": "",
+        "requestHeaders": {
+            "host": "debug.dhis2.org",
+            "connection": "keep-alive",
+            "accept": "application/json",
+            "origin": "http://localhost:3000",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "cross-site"
+        },
+        "statusCode": 200,
+        "responseBody": "{\"modules\":[{\"name\":\"dhis-web-scheduler\",\"namespace\":\"/dhis-web-scheduler\",\"defaultAction\":\"../dhis-web-scheduler/index.html\",\"displayName\":\"Scheduler\",\"icon\":\"../icons/dhis-web-scheduler.png\"},{\"name\":\"dhis-web-event-reports\",\"namespace\":\"/dhis-web-event-reports\",\"defaultAction\":\"../dhis-web-event-reports/index.html\",\"displayName\":\"Event Reports\",\"icon\":\"../icons/dhis-web-event-reports.png\"},{\"name\":\"dhis-web-menu-management\",\"namespace\":\"/dhis-web-menu-management\",\"defaultAction\":\"../dhis-web-menu-management/index.html\",\"displayName\":\"Menu Management\",\"icon\":\"../icons/dhis-web-menu-management.png\"},{\"name\":\"dhis-web-cache-cleaner\",\"namespace\":\"/dhis-web-cache-cleaner\",\"defaultAction\":\"../dhis-web-cache-cleaner/index.html\",\"displayName\":\"Browser Cache Cleaner\",\"icon\":\"../icons/dhis-web-cache-cleaner.png\"},{\"name\":\"dhis-web-login\",\"namespace\":\"/dhis-web-login\",\"defaultAction\":\"../dhis-web-login/index.html\",\"displayName\":\"Login\",\"icon\":\"../icons/dhis-web-login.png\"},{\"name\":\"dhis-web-usage-analytics\",\"namespace\":\"/dhis-web-usage-analytics\",\"defaultAction\":\"../dhis-web-usage-analytics/index.html\",\"displayName\":\"Usage Analytics\",\"icon\":\"../icons/dhis-web-usage-analytics.png\"},{\"name\":\"dhis-web-capture\",\"namespace\":\"/dhis-web-capture\",\"defaultAction\":\"../dhis-web-capture/index.html\",\"displayName\":\"Capture\",\"icon\":\"../icons/dhis-web-capture.png\"},{\"name\":\"dhis-web-translations\",\"namespace\":\"/dhis-web-translations\",\"defaultAction\":\"../dhis-web-translations/index.html\",\"displayName\":\"Translations\",\"icon\":\"../icons/dhis-web-translations.png\"},{\"name\":\"dhis-web-dashboard\",\"namespace\":\"/dhis-web-dashboard\",\"defaultAction\":\"../dhis-web-dashboard/index.html\",\"displayName\":\"Dashboard\",\"icon\":\"../icons/dhis-web-dashboard.png\"},{\"name\":\"dhis-web-maintenance\",\"namespace\":\"/dhis-web-maintenance\",\"defaultAction\":\"../dhis-web-maintenance/index.html\",\"displayName\":\"Maintenance\",\"icon\":\"../icons/dhis-web-maintenance.png\"},{\"name\":\"dhis-web-reports\",\"namespace\":\"/dhis-web-reports\",\"defaultAction\":\"../dhis-web-reports/index.html\",\"displayName\":\"Reports\",\"icon\":\"../icons/dhis-web-reports.png\"},{\"name\":\"dhis-web-data-visualizer\",\"namespace\":\"/dhis-web-data-visualizer\",\"defaultAction\":\"../dhis-web-data-visualizer/index.html\",\"displayName\":\"Data Visualizer\",\"icon\":\"../icons/dhis-web-data-visualizer.png\"},{\"name\":\"dhis-web-maps\",\"namespace\":\"/dhis-web-maps\",\"defaultAction\":\"../dhis-web-maps/index.html\",\"displayName\":\"Maps\",\"icon\":\"../icons/dhis-web-maps.png\"},{\"name\":\"dhis-web-datastore\",\"namespace\":\"/dhis-web-datastore\",\"defaultAction\":\"../dhis-web-datastore/index.html\",\"displayName\":\"Datastore Management\",\"icon\":\"../icons/dhis-web-datastore.png\"},{\"name\":\"dhis-web-pivot\",\"namespace\":\"/dhis-web-pivot\",\"defaultAction\":\"../dhis-web-pivot/index.html\",\"displayName\":\"Pivot Table\",\"icon\":\"../icons/dhis-web-pivot.png\"},{\"name\":\"dhis-web-event-visualizer\",\"namespace\":\"/dhis-web-event-visualizer\",\"defaultAction\":\"../dhis-web-event-visualizer/index.html\",\"displayName\":\"Event Visualizer\",\"icon\":\"../icons/dhis-web-event-visualizer.png\"},{\"name\":\"dhis-web-data-administration\",\"namespace\":\"/dhis-web-data-administration\",\"defaultAction\":\"../dhis-web-data-administration/index.html\",\"displayName\":\"Data Administration\",\"icon\":\"../icons/dhis-web-data-administration.png\"},{\"name\":\"dhis-web-interpretation\",\"namespace\":\"/dhis-web-interpretation\",\"defaultAction\":\"../dhis-web-interpretation/index.html\",\"displayName\":\"Interpretations\",\"icon\":\"../icons/dhis-web-interpretation.png\"},{\"name\":\"dhis-web-app-management\",\"namespace\":\"/dhis-web-app-management\",\"defaultAction\":\"../dhis-web-app-management/index.html\",\"displayName\":\"App Management\",\"icon\":\"../icons/dhis-web-app-management.png\"},{\"name\":\"dhis-web-messaging\",\"namespace\":\"/dhis-web-messaging\",\"defaultAction\":\"../dhis-web-messaging/index.html\",\"displayName\":\"Messaging\",\"icon\":\"../icons/dhis-web-messaging.png\"},{\"name\":\"dhis-web-aggregate-data-entry\",\"namespace\":\"/dhis-web-aggregate-data-entry\",\"defaultAction\":\"../dhis-web-aggregate-data-entry/index.html\",\"displayName\":\"Data Entry (Beta)\",\"icon\":\"../icons/dhis-web-aggregate-data-entry.png\"},{\"name\":\"dhis-web-data-quality\",\"namespace\":\"/dhis-web-data-quality\",\"defaultAction\":\"../dhis-web-data-quality/index.html\",\"displayName\":\"Data Quality\",\"icon\":\"../icons/dhis-web-data-quality.png\"},{\"name\":\"dhis-web-sms-configuration\",\"namespace\":\"/dhis-web-sms-configuration\",\"defaultAction\":\"../dhis-web-sms-configuration/index.html\",\"displayName\":\"SMS Configuration\",\"icon\":\"../icons/dhis-web-sms-configuration.png\"},{\"name\":\"dhis-web-user\",\"namespace\":\"/dhis-web-user\",\"defaultAction\":\"../dhis-web-user/index.html\",\"displayName\":\"Users\",\"icon\":\"../icons/dhis-web-user.png\"},{\"name\":\"dhis-web-import-export\",\"namespace\":\"/dhis-web-import-export\",\"defaultAction\":\"../dhis-web-import-export/index.html\",\"displayName\":\"Import/Export\",\"icon\":\"../icons/dhis-web-import-export.png\"},{\"name\":\"dhis-web-settings\",\"namespace\":\"/dhis-web-settings\",\"defaultAction\":\"../dhis-web-settings/index.html\",\"displayName\":\"System Settings\",\"icon\":\"../icons/dhis-web-settings.png\"},{\"name\":\"dhis-web-tracker-capture\",\"namespace\":\"/dhis-web-tracker-capture\",\"defaultAction\":\"../dhis-web-tracker-capture/index.html\",\"displayName\":\"Tracker Capture\",\"icon\":\"../icons/dhis-web-tracker-capture.png\"},{\"name\":\"android-settings-app\",\"namespace\":\"android-settings-app\",\"defaultAction\":\"/apps/android-settings-app/index.html\",\"displayName\":\"Android Settings\",\"icon\":\"/apps/android-settings-app/dhis2-app-icon.png\",\"description\":\"Configure synchronization parameters for the DHIS2 Android App, customize appear\"},{\"name\":\"Visualization Navigator\",\"namespace\":\"Visualization Navigator\",\"defaultAction\":\"/apps/Visualization-Navigator/index.html\",\"displayName\":\"Visualization Navigator\",\"icon\":\"/apps/Visualization-Navigator/app-icon.png\",\"description\":\"Visualization Navigator\"},{\"name\":\"line-listing\",\"namespace\":\"line-listing\",\"defaultAction\":\"/apps/line-listing/index.html\",\"displayName\":\"Line Listing\",\"icon\":\"/apps/line-listing/dhis2-app-icon.png\",\"description\":\"DHIS2 Line Listing\"},{\"name\":\"test login\",\"namespace\":\"test login\",\"defaultAction\":\"/apps/test-login/index.html\",\"displayName\":\"test Login app\",\"icon\":\"/apps/test-login/dhis2-app-icon.png\",\"description\":\"Core app for the login page of DHIS2\"},{\"name\":\"simple-app\",\"namespace\":\"simple-app\",\"defaultAction\":\"/apps/simple-app/index.html\",\"displayName\":\"Simple Example App\",\"icon\":\"/apps/simple-app/dhis2-app-icon.png\",\"description\":\"This is a simple example application\"},{\"name\":\"query-playground\",\"namespace\":\"query-playground\",\"defaultAction\":\"/apps/query-playground/index.html\",\"displayName\":\"Data Query Playground\",\"icon\":\"/apps/query-playground/dhis2-app-icon.png\",\"description\":\"\"},{\"name\":\"data-exchange\",\"namespace\":\"data-exchange\",\"defaultAction\":\"/apps/data-exchange/index.html\",\"displayName\":\"Data Exchange\",\"icon\":\"/apps/data-exchange/dhis2-app-icon.png\",\"description\":\"\"}]}",
+        "responseSize": 7371,
+        "responseHeaders": {
+            "server": "nginx/1.23.0",
+            "content-type": "application/json;charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3000",
+            "vary": "Origin",
+            "access-control-expose-headers": "ETag, Location"
+        }
+    },
+    {
+        "path": "/api/42/userSettings",
+        "featureName": null,
+        "static": true,
+        "count": 5,
+        "nonDeterministic": false,
+        "method": "GET",
+        "requestBody": "",
+        "requestHeaders": {
+            "host": "debug.dhis2.org",
+            "connection": "keep-alive",
+            "accept": "application/json",
+            "origin": "http://localhost:3000",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "cross-site"
+        },
+        "statusCode": 200,
+        "responseBody": "{\"keyMessageSmsNotification\":false,\"keyCurrentStyle\":\"light_blue/light_blue.css\",\"keyTrackerDashboardLayout\":\"{\\\"IpHINAT79UW\\\":{\\\"widgets\\\":[{\\\"title\\\":\\\"enrollment\\\",\\\"view\\\":\\\"components/enrollment/enrollment.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":0},{\\\"title\\\":\\\"indicators\\\",\\\"view\\\":\\\"components/rulebound/rulebound.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":1},{\\\"title\\\":\\\"dataentry\\\",\\\"view\\\":\\\"components/dataentry/dataentry.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":2},{\\\"title\\\":\\\"report\\\",\\\"view\\\":\\\"components/report/tei-report.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":3},{\\\"title\\\":\\\"current_selections\\\",\\\"view\\\":\\\"components/selected/selected.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":0},{\\\"title\\\":\\\"feedback\\\",\\\"view\\\":\\\"components/rulebound/rulebound.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":1},{\\\"title\\\":\\\"profile\\\",\\\"view\\\":\\\"components/profile/profile.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":2},{\\\"title\\\":\\\"relationships\\\",\\\"view\\\":\\\"components/relationship/relationship.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":4},{\\\"title\\\":\\\"notes\\\",\\\"view\\\":\\\"components/notes/notes.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":5},{\\\"title\\\":\\\"messaging\\\",\\\"view\\\":\\\"components/messaging/messaging.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":5},{\\\"title\\\":\\\"dataentryTabular\\\",\\\"view\\\":\\\"components/dataentry/dataentry-tabular-layout.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":3}],\\\"program\\\":\\\"IpHINAT79UW\\\"},\\\"ur1Edk5Oe2n\\\":{\\\"widgets\\\":[{\\\"title\\\":\\\"enrollment\\\",\\\"view\\\":\\\"components/enrollment/enrollment.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":0},{\\\"title\\\":\\\"indicators\\\",\\\"view\\\":\\\"components/rulebound/rulebound.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":1},{\\\"title\\\":\\\"dataentry\\\",\\\"view\\\":\\\"components/dataentry/dataentry.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":2},{\\\"title\\\":\\\"report\\\",\\\"view\\\":\\\"components/report/tei-report.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":3},{\\\"title\\\":\\\"current_selections\\\",\\\"view\\\":\\\"components/selected/selected.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":0},{\\\"title\\\":\\\"feedback\\\",\\\"view\\\":\\\"components/rulebound/rulebound.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":1},{\\\"title\\\":\\\"profile\\\",\\\"view\\\":\\\"components/profile/profile.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":2},{\\\"title\\\":\\\"relationships\\\",\\\"view\\\":\\\"components/relationship/relationship.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":3},{\\\"title\\\":\\\"notes\\\",\\\"view\\\":\\\"components/notes/notes.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":4},{\\\"title\\\":\\\"messaging\\\",\\\"view\\\":\\\"components/messaging/messaging.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":5},{\\\"title\\\":\\\"dataentryTabular\\\",\\\"view\\\":\\\"components/dataentry/dataentry-tabular-layout.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":3}],\\\"program\\\":\\\"ur1Edk5Oe2n\\\"}}\",\"keyStyle\":\"light_blue/light_blue.css\",\"keyUiLocale\":\"en\",\"keyAnalysisDisplayProperty\":\"name\",\"keyMessageEmailNotification\":false}",
+        "responseSize": 3609,
+        "responseHeaders": {
+            "server": "nginx/1.23.0",
+            "content-type": "application/json;charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3000",
+            "vary": "Origin",
+            "access-control-expose-headers": "ETag, Location",
+            "cache-control": "no-cache, private",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block"
+        }
+    },
+    {
+        "path": "/api/42/me/dashboard",
+        "featureName": null,
+        "static": true,
+        "count": 5,
+        "nonDeterministic": false,
+        "method": "GET",
+        "requestBody": "",
+        "requestHeaders": {
+            "host": "debug.dhis2.org",
+            "connection": "keep-alive",
+            "accept": "application/json",
+            "origin": "http://localhost:3000",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "cross-site"
+        },
+        "statusCode": 200,
+        "responseBody": "{\"unreadInterpretations\":41,\"unreadMessageConversations\":201}",
+        "responseSize": 61,
+        "responseHeaders": {
+            "server": "nginx/1.23.0",
+            "content-type": "application/json;charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3000",
+            "vary": "Origin",
+            "access-control-expose-headers": "ETag, Location",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block"
+        }
+    },
+    {
+        "path": "/api/42/me?fields=authorities,avatar,email,name,settings",
+        "featureName": null,
+        "static": true,
+        "count": 5,
+        "nonDeterministic": false,
+        "method": "GET",
+        "requestBody": "",
+        "requestHeaders": {
+            "host": "debug.dhis2.org",
+            "connection": "keep-alive",
+            "accept": "application/json",
+            "origin": "http://localhost:3000",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "cross-site"
+        },
+        "statusCode": 200,
+        "responseBody": "{\"name\":\"John Traore\",\"email\":\"dummy@dhis2.org\",\"settings\":{\"keyMessageSmsNotification\":false,\"keyCurrentStyle\":\"light_blue/light_blue.css\",\"keyTrackerDashboardLayout\":\"{\\\"IpHINAT79UW\\\":{\\\"widgets\\\":[{\\\"title\\\":\\\"enrollment\\\",\\\"view\\\":\\\"components/enrollment/enrollment.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":0},{\\\"title\\\":\\\"indicators\\\",\\\"view\\\":\\\"components/rulebound/rulebound.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":1},{\\\"title\\\":\\\"dataentry\\\",\\\"view\\\":\\\"components/dataentry/dataentry.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":2},{\\\"title\\\":\\\"report\\\",\\\"view\\\":\\\"components/report/tei-report.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":3},{\\\"title\\\":\\\"current_selections\\\",\\\"view\\\":\\\"components/selected/selected.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":0},{\\\"title\\\":\\\"feedback\\\",\\\"view\\\":\\\"components/rulebound/rulebound.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":1},{\\\"title\\\":\\\"profile\\\",\\\"view\\\":\\\"components/profile/profile.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":2},{\\\"title\\\":\\\"relationships\\\",\\\"view\\\":\\\"components/relationship/relationship.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":4},{\\\"title\\\":\\\"notes\\\",\\\"view\\\":\\\"components/notes/notes.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":5},{\\\"title\\\":\\\"messaging\\\",\\\"view\\\":\\\"components/messaging/messaging.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":5},{\\\"title\\\":\\\"dataentryTabular\\\",\\\"view\\\":\\\"components/dataentry/dataentry-tabular-layout.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":3}],\\\"program\\\":\\\"IpHINAT79UW\\\"},\\\"ur1Edk5Oe2n\\\":{\\\"widgets\\\":[{\\\"title\\\":\\\"enrollment\\\",\\\"view\\\":\\\"components/enrollment/enrollment.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":0},{\\\"title\\\":\\\"indicators\\\",\\\"view\\\":\\\"components/rulebound/rulebound.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":1},{\\\"title\\\":\\\"dataentry\\\",\\\"view\\\":\\\"components/dataentry/dataentry.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":2},{\\\"title\\\":\\\"report\\\",\\\"view\\\":\\\"components/report/tei-report.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":3},{\\\"title\\\":\\\"current_selections\\\",\\\"view\\\":\\\"components/selected/selected.html\\\",\\\"show\\\":false,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":0},{\\\"title\\\":\\\"feedback\\\",\\\"view\\\":\\\"components/rulebound/rulebound.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":1},{\\\"title\\\":\\\"profile\\\",\\\"view\\\":\\\"components/profile/profile.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":2},{\\\"title\\\":\\\"relationships\\\",\\\"view\\\":\\\"components/relationship/relationship.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":3},{\\\"title\\\":\\\"notes\\\",\\\"view\\\":\\\"components/notes/notes.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":4},{\\\"title\\\":\\\"messaging\\\",\\\"view\\\":\\\"components/messaging/messaging.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"smallerWidget\\\",\\\"order\\\":5},{\\\"title\\\":\\\"dataentryTabular\\\",\\\"view\\\":\\\"components/dataentry/dataentry-tabular-layout.html\\\",\\\"show\\\":true,\\\"expand\\\":true,\\\"parent\\\":\\\"biggerWidget\\\",\\\"order\\\":3}],\\\"program\\\":\\\"ur1Edk5Oe2n\\\"}}\",\"keyStyle\":\"light_blue/light_blue.css\",\"keyUiLocale\":\"en\",\"keyAnalysisDisplayProperty\":\"name\",\"keyMessageEmailNotification\":false},\"authorities\":[\"F_PROGRAM_DELETE\",\"M_dhis-web-visualizer\",\"M_dhis-web-sms-configuration\",\"F_OPTIONGROUPSET_DELETE\",\"F_PROGRAM_INSTANCE_DELETE\",\"F_TRACKED_ENTITY_INSTANCE_LIST\",\"F_CATEGORY_OPTION_GROUP_PUBLIC_ADD\",\"F_EXPORT_DATA\",\"F_ATTRIBUTE_DELETE\",\"F_REPORT_PRIVATE_ADD\",\"F_USER_GROUPS_READ_ONLY_ADD_MEMBERS\",\"M_dhis-web-data-visualizer\",\"F_VIEW_UNAPPROVED_DATA\",\"F_DATAELEMENTGROUPSET_DELETE\",\"F_USERGROUP_DELETE\",\"F_GENERATE_STATISTICAL_PROGRAM_REPORT\",\"F_TRACKED_ENTITY_INSTANCE_DASHBOARD\",\"F_TRACKED_ENTITY_ATTRIBUTE_DELETE\",\"M_dhis-web-sms\",\"F_SQLVIEW_PRIVATE_ADD\",\"F_MINMAX_DATAELEMENT_ADD\",\"F_PROGRAM_DASHBOARD_CONFIG_ADMIN\",\"F_REPORT_EXTERNAL\",\"F_VALIDATIONRULEGROUP_PRIVATE_ADD\",\"M_dhis-web-datastore\",\"F_EVENT_VISUALIZATION_EXTERNAL\",\"F_USER_ADD_WITHIN_MANAGED_GROUP\",\"F_PROGRAM_PRIVATE_ADD\",\"F_USER_DELETE_WITHIN_MANAGED_GROUP\",\"F_ANALYTICSTABLEHOOK_ADD\",\"F_USERROLE_PUBLIC_ADD\",\"F_PERFORM_MAINTENANCE\",\"F_PUSH_ANALYSIS_DELETE\",\"F_USERGROUP_MANAGING_RELATIONSHIPS_ADD\",\"F_PROGRAM_RULE_ADD\",\"F_INDICATOR_DELETE\",\"F_SINGLE_EVENT_DATA_ENTRY\",\"F_DATAVALUE_ADD\",\"F_PROGRAM_INDICATOR_PRIVATE_ADD\",\"M_dhis-web-reports\",\"F_TRACKED_ENTITY_UPDATE\",\"F_TRACKED_ENTITY_INSTANCE_MANAGEMENT\",\"F_EVENTCHART_PUBLIC_ADD\",\"F_TRACKED_ENTITY_ATTRIBUTE_PRIVATE_ADD\",\"F_EXPORT_EVENTS\",\"F_TRACKED_ENTITY_COMMENT_DELETE\",\"F_ORGUNITGROUPSET_PUBLIC_ADD\",\"F_GENERATE_PROGRAM_SUMMARY_REPORT\",\"F_ACCEPT_DATA_LOWER_LEVELS\",\"F_IMPORT_DATA\",\"F_CONSTANT_DELETE\",\"F_CATEGORY_COMBO_PRIVATE_ADD\",\"F_TRACKED_ENTITY_ADD\",\"F_CATEGORY_OPTION_GROUP_SET_PRIVATE_ADD\",\"F_ATTRIBUTE_PRIVATE_ADD\",\"F_SYSTEM_SETTING\",\"F_LEGEND_SET_DELETE\",\"M_dhis-web-pivot\",\"F_DOCUMENT_PRIVATE_ADD\",\"M_dhis-web-event-capture\",\"F_ATTRIBUTE_PUBLIC_ADD\",\"F_GENERATE_BENEFICIARY_TABULAR_REPORT\",\"F_INDICATORGROUP_DELETE\",\"F_PROGRAM_STAGE_INSTANCE_SEARCH\",\"F_PROGRAM_INDICATOR_DELETE\",\"F_ORGUNITGROUP_PUBLIC_ADD\",\"M_dhis-web-usage-analytics\",\"F_OPTIONGROUP_DELETE\",\"F_INDICATORGROUPSET_DELETE\",\"F_VALIDATIONRULE_DELETE\",\"F_MAP_EXTERNAL\",\"F_REPLICATE_USER\",\"F_EVENTCHART_EXTERNAL\",\"F_CONSTANT_ADD\",\"F_DOCUMENT_EXTERNAL\",\"F_CATEGORY_OPTION_PUBLIC_ADD\",\"F_PERFORM_ANALYTICS_EXPLAIN\",\"F_DATA_APPROVAL_LEVEL\",\"F_INDICATOR_PUBLIC_ADD\",\"F_LOCALE_ADD\",\"F_ORGANISATIONUNITLEVEL_UPDATE\",\"F_ORGANISATIONUNIT_MOVE\",\"F_NAME_BASED_DATA_ENTRY\",\"F_PROGRAM_RULE_DELETE\",\"F_USER_DELETE\",\"F_USERROLE_PRIVATE_ADD\",\"F_METADATA_EXPORT\",\"F_DATASET_PRIVATE_ADD\",\"M_dhis-web-user\",\"F_DOCUMENT_PUBLIC_ADD\",\"F_USER_ADD\",\"F_CATEGORY_OPTION_GROUP_PRIVATE_ADD\",\"F_ORGANISATIONUNIT_DELETE\",\"M_dhis-web-event-visualizer\",\"F_SQLVIEW_DELETE\",\"F_DASHBOARD_PUBLIC_ADD\",\"F_VISUALIZATION_EXTERNAL\",\"F_CATEGORY_OPTION_GROUP_SET_PUBLIC_ADD\",\"F_DATAELEMENTGROUP_DELETE\",\"M_dhis-web-maintenance-datadictionary\",\"F_PROGRAMSTAGE_DELETE\",\"F_DATAELEMENTGROUPSET_PRIVATE_ADD\",\"M_dhis-web-approval\",\"M_dhis-web-app-management\",\"F_ORGUNITGROUPSET_PRIVATE_ADD\",\"F_OPTIONGROUP_PRIVATE_ADD\",\"F_EXTERNAL_MAP_LAYER_DELETE\",\"F_RELATIONSHIPTYPE_PUBLIC_ADD\",\"F_TEI_CASCADE_DELETE\",\"M_dhis-web-aggregate-data-entry\",\"F_SEND_EMAIL\",\"F_VIEW_SERVER_INFO\",\"F_TRACKED_ENTITY_DELETE\",\"F_PREDICTOR_ADD\",\"F_LEGEND_SET_PUBLIC_ADD\",\"F_SQLVIEW_EXTERNAL\",\"F_TRACKED_ENTITY_INSTANCE_HISTORY\",\"F_SECTION_DELETE\",\"F_EVENTREPORT_PUBLIC_ADD\",\"F_ORGUNITGROUP_PRIVATE_ADD\",\"M_dhis-web-data-administration\",\"M_dhis-web-mobile\",\"F_OPTIONGROUPSET_PRIVATE_ADD\",\"M_dhis-web-settings\",\"F_IMPORT_EVENTS\",\"F_OPTIONSET_PRIVATE_ADD\",\"F_INDICATORGROUP_PUBLIC_ADD\",\"M_dhis-web-reporting\",\"M_dhis-web-tracker-capture\",\"F_CATEGORY_OPTION_DELETE\",\"F_TRACKED_ENTITY_INSTANCE_SEARCH_IN_ALL_ORGUNITS\",\"M_dhis-web-maintenance-settings\",\"F_ACTIVITY_PLAN\",\"F_USERROLE_DELETE\",\"M_dhis-web-interpretation\",\"F_REPORT_PUBLIC_ADD\",\"M_dhis-web-event-reports\",\"M_dhis-web-capture\",\"F_DATASET_PUBLIC_ADD\",\"F_RELATIONSHIP_DELETE\",\"F_MOBILE_SENDSMS\",\"F_IGNORE_TRACKER_REQUIRED_VALUE_VALIDATION\",\"F_PROGRAM_PUBLIC_ADD\",\"F_EXTERNAL_MAP_LAYER_PUBLIC_ADD\",\"F_RUN_VALIDATION\",\"F_VALIDATIONRULE_PUBLIC_ADD\",\"F_ORGUNITGROUP_DELETE\",\"M_dhis-web-dataentry\",\"M_dhis-web-maintenance-user\",\"F_PROGRAM_TRACKING_SEARCH\",\"F_USER_VIEW\",\"F_DATAELEMENT_PUBLIC_ADD\",\"F_PREDICTORGROUP_ADD\",\"F_UNCOMPLETE_EVENT\",\"F_METADATA_IMPORT\",\"F_OPTIONGROUPSET_PUBLIC_ADD\",\"F_CATEGORY_PUBLIC_ADD\",\"M_dhis-web-maintenance-appmanager\",\"F_PROGRAM_INDICATOR_GROUP_DELETE\",\"F_PREDICTORGROUP_DELETE\",\"M_dhis-web-cache-cleaner\",\"F_TRACKED_ENTITY_ATTRIBUTE_PUBLIC_ADD\",\"F_DATAELEMENTGROUPSET_PUBLIC_ADD\",\"M_dhis-web-messaging\",\"F_PROGRAM_INDICATOR_GROUP_PUBLIC_ADD\",\"F_VISUALIZATION_PUBLIC_ADD\",\"F_PROGRAM_TRACKING_LIST\",\"F_INSERT_CUSTOM_JS_CSS\",\"F_INDICATOR_PRIVATE_ADD\",\"F_CATEGORY_DELETE\",\"F_PROGRAMSTAGE_ADD\",\"F_DATAELEMENT_DELETE\",\"F_PROGRAM_INDICATOR_PUBLIC_ADD\",\"F_USERGROUP_MANAGING_RELATIONSHIPS_VIEW\",\"F_PROGRAM_INDICATOR_GROUP_PRIVATE_ADD\",\"F_EVENT_VISUALIZATION_PUBLIC_ADD\",\"F_VALIDATIONRULE_PRIVATE_ADD\",\"M_dhis-web-scheduler\",\"F_METADATA_MANAGE\",\"F_PROGRAM_INSTANCE_MANAGEMENT\",\"F_ORGANISATIONUNIT_ADD\",\"M_dhis-web-light\",\"F_INDICATORGROUP_PRIVATE_ADD\",\"F_PREDICTOR_RUN\",\"F_SQLVIEW_PUBLIC_ADD\",\"F_CATEGORY_PRIVATE_ADD\",\"M_dhis-web-mapping\",\"F_SEND_MESSAGE\",\"F_EDIT_EXPIRED\",\"F_VALIDATIONRULEGROUP_PUBLIC_ADD\",\"F_APPROVE_DATA_LOWER_LEVELS\",\"F_INDICATORGROUPSET_PRIVATE_ADD\",\"F_CATEGORY_COMBO_DELETE\",\"F_CATEGORY_COMBO_PUBLIC_ADD\",\"F_PROGRAM_STAGE_INSTANCE_DELETE\",\"M_dhis-web-importexport\",\"F_OPTIONSET_PUBLIC_ADD\",\"F_EVENTREPORT_EXTERNAL\",\"F_ACCESS_TRACKED_ENTITY_ATTRIBUTES\",\"F_PREDICTOR_DELETE\",\"F_ANALYTICSTABLEHOOK_DELETE\",\"F_VIEW_EVENT_ANALYTICS\",\"F_DATAELEMENT_PRIVATE_ADD\",\"F_USERGROUP_PUBLIC_ADD\",\"F_ENROLLMENT_CASCADE_DELETE\",\"F_ANONYMOUS_DATA_ENTRY\",\"M_dhis-web-translations\",\"F_CATEGORY_OPTION_GROUP_SET_DELETE\",\"F_SCHEDULING_SEND_MESSAGE\",\"F_REPORT_DELETE\",\"M_dhis-web-caseentry\",\"M_linelisting\",\"F_OAUTH2_CLIENT_MANAGE\",\"F_PROGRAM_TRACKING_MANAGEMENT\",\"F_VIEW_DATABROWSER\",\"F_RELATIONSHIP_MANAGEMENT\",\"F_TRACKED_ENTITY_COMMENT_ADD\",\"F_RELATIONSHIPTYPE_DELETE\",\"M_dhis-web-maintenance\",\"F_DATASET_DELETE\",\"F_CATEGORY_OPTION_PRIVATE_ADD\",\"M_dhis-web-import-export\",\"F_SECTION_ADD\",\"F_VALIDATIONRULEGROUP_DELETE\",\"F_TRACKED_ENTITY_INSTANCE_CHANGE_LOCATION\",\"F_EXTERNAL_MAP_LAYER_PRIVATE_ADD\",\"M_dhis-web-menu-management\",\"F_CATEGORY_OPTION_GROUP_DELETE\",\"F_DATAELEMENTGROUP_PRIVATE_ADD\",\"F_INDICATORTYPE_DELETE\",\"F_ORGUNITGROUPSET_DELETE\",\"M_dhis-web-dashboard\",\"F_APPROVE_DATA\",\"F_GENERATE_MIN_MAX_VALUES\",\"M_dhis-web-data-quality\",\"F_RELATIONSHIP_ADD\",\"M_dhis-web-maps\",\"F_LEGEND_SET_PRIVATE_ADD\",\"F_OPTIONSET_DELETE\",\"F_INDICATORTYPE_ADD\",\"M_dhis-web-validationrule\",\"F_DOCUMENT_DELETE\",\"F_MAP_PUBLIC_ADD\",\"F_PROGRAM_RULE_MANAGEMENT\",\"F_PUSH_ANALYSIS_ADD\",\"F_INDICATORGROUPSET_PUBLIC_ADD\",\"F_DATAELEMENTGROUP_PUBLIC_ADD\",\"F_OPTIONGROUP_PUBLIC_ADD\",\"F_SCHEDULING_ADMIN\",\"F_DATA_APPROVAL_WORKFLOW\"]}",
+        "responseSize": 10389,
+        "responseHeaders": {
+            "server": "nginx/1.23.0",
+            "content-type": "application/json;charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3000",
+            "vary": "Origin",
+            "access-control-expose-headers": "ETag, Location",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block"
+        }
+    },
+    {
+        "path": "/api/42/staticContent/logo_banner",
+        "featureName": null,
+        "static": true,
+        "count": 4,
+        "nonDeterministic": false,
+        "method": "GET",
+        "requestBody": "",
+        "requestHeaders": {
+            "host": "debug.dhis2.org",
+            "connection": "keep-alive",
+            "accept": "application/json",
+            "origin": "http://localhost:3000",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "cross-site"
+        },
+        "statusCode": 404,
+        "responseBody": "{\"httpStatus\":\"Not Found\",\"httpStatusCode\":404,\"status\":\"ERROR\",\"message\":\"No custom file found.\"}",
+        "responseSize": 98,
+        "responseHeaders": {
+            "server": "nginx/1.23.0",
+            "content-type": "application/json;charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3000",
+            "vary": "Origin",
+            "access-control-expose-headers": "ETag, Location",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block"
+        }
+    }
+]

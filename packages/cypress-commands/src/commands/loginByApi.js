@@ -1,15 +1,34 @@
 Cypress.Commands.add('loginByApi', ({ username, password, baseUrl }) => {
     // Login via API
     cy.request({
-        url: `${baseUrl}/dhis-web-commons-security/login.action`,
-        method: 'POST',
-        form: true,
-        followRedirect: true,
-        body: {
-            j_username: username,
-            j_password: password,
-            '2fa_code': '',
-        },
+        url: `${baseUrl}/api/loginConfig`,
+        method: 'GET',
+    }).then((response) => {
+        // Versions <= 41
+        if (response.body['apiVersion']) {
+            cy.request({
+                url: `${baseUrl}/api/auth/login`,
+                method: 'POST',
+                followRedirect: true,
+                body: {
+                    username: username,
+                    password: password,
+                },
+            })
+        } else {
+            // Versions >=40
+            cy.request({
+                url: `${baseUrl}/dhis-web-commons-security/login.action`,
+                method: 'POST',
+                form: true,
+                followRedirect: true,
+                body: {
+                    j_username: username,
+                    j_password: password,
+                    '2fa_code': '',
+                },
+            })
+        }
     })
 
     // Set base url for the app platform
