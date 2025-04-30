@@ -1,3 +1,10 @@
+## [10.0.7](https://github.com/dhis2/cli-utils-cypress/compare/v10.0.6...v10.0.7) (2025-04-30)
+
+
+### Bug Fixes
+
+* handle 404 and 302 responses from api/loginConfig endpoint ([#404](https://github.com/dhis2/cli-utils-cypress/issues/404)) ([e922803](https://github.com/dhis2/cli-utils-cypress/commit/e9228039233e9e5e92252123d7bde4aad768dea2))
+
 ## [10.0.6](https://github.com/dhis2/cli-utils-cypress/compare/v10.0.5...v10.0.6) (2024-05-24)
 
 
