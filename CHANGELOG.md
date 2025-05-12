@@ -1,3 +1,10 @@
+# [10.1.0](https://github.com/dhis2/cli-utils-cypress/compare/v10.0.7...v10.1.0) (2025-05-12)
+
+
+### Features
+
+* improve login by api command ([#406](https://github.com/dhis2/cli-utils-cypress/issues/406)) ([78a5cb0](https://github.com/dhis2/cli-utils-cypress/commit/78a5cb0e8886c8f37529136a082cd9942006a1b1))
+
 ## [10.0.7](https://github.com/dhis2/cli-utils-cypress/compare/v10.0.6...v10.0.7) (2025-04-30)
 
 
