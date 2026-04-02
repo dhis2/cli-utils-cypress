@@ -4,7 +4,8 @@ function fillInLoginForm({ name, password, server }) {
 
     // Enter credentials
     // clearing as it might be stored for some reason
-    cy.get('input#server').clear().type(server)
+    cy.get('input#server').clear()
+    cy.get('input#server').type(server)
     cy.get('input#j_username').type(name)
     cy.get('input#j_password').type(password)
     cy.get('[data-test="dhis2-adapter-loginsubmit"]').click()

@@ -15,7 +15,7 @@ jobs:
                   cache: 'yarn'
             - run: yarn install --frozen-lockfile
             - id: commitlint
-              run: echo ::set-output name=config_path::$(node -e "process.stdout.write(require('@dhis2/cli-style').config.commitlint)")
+              run: echo "config_path=$(node -e "process.stdout.write(require('@dhis2/cli-style').config.commitlint)")" >> "$GITHUB_OUTPUT"
             - uses: JulienKode/pull-request-name-linter-action@v0.5.0
               with:
                   configuration-path: ${{ steps.commitlint.outputs.config_path }}
@@ -32,7 +32,7 @@ jobs:
                   cache: 'yarn'
             - run: yarn install --frozen-lockfile
             - id: commitlint
-              run: echo ::set-output name=config_path::$(node -e "process.stdout.write(require('@dhis2/cli-style').config.commitlint)")
+              run: echo "config_path=$(node -e "process.stdout.write(require('@dhis2/cli-style').config.commitlint)")" >> "$GITHUB_OUTPUT"
             - uses: wagoid/commitlint-github-action@v4
               with:
                   configFile: ${{ steps.commitlint.outputs.config_path }}

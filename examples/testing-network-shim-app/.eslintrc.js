@@ -1,5 +1,11 @@
 const { config } = require('@dhis2/cli-style')
 
 module.exports = {
-    extends: ['plugin:cypress/recommended', config.eslintReact],
+    extends: [config.eslintReact],
+    overrides: [
+        {
+            files: ['cypress/**/*.js', 'cypress/**/*.ts'],
+            extends: ['plugin:cypress/recommended'],
+        },
+    ],
 }
