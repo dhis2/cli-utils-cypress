@@ -1,9 +1,11 @@
+import { getPublicValue } from './envHelpers.js'
+
 export const getDhis2BaseUrl = () => {
-    const baseUrl = Cypress.expose('dhis2BaseUrl')
+    const baseUrl = getPublicValue('dhis2BaseUrl')
 
     if (!baseUrl) {
         throw new Error(
-            'No `dhis2BaseUrl` found. Please make sure to expose it via `config.expose` in `setupNodeEvents` or set it via `Cypress.expose()`'
+            'No `dhis2BaseUrl` found. Please make sure to add it to `cypress.env.json` or expose it via `config.expose` in `setupNodeEvents`'
         )
     }
 

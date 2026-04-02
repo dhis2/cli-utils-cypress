@@ -1,4 +1,5 @@
 import { isStubMode } from '../enableNetworkShim/index.js'
+import { getPublicValue, getSensitiveValues } from '../../helper/envHelpers.js'
 
 export const enableAutoLogin = ({
     username: _username,
@@ -9,10 +10,10 @@ export const enableAutoLogin = ({
         return
     }
 
-    const baseUrl = _baseUrl || Cypress.expose('dhis2BaseUrl')
+    const baseUrl = _baseUrl || getPublicValue('dhis2BaseUrl')
 
     const createSession = () =>
-        cy.env(['dhis2Username', 'dhis2Password']).then((envVars) => {
+        getSensitiveValues(['dhis2Username', 'dhis2Password']).then((envVars) => {
             const username = _username || envVars.dhis2Username
             const password = _password || envVars.dhis2Password
 

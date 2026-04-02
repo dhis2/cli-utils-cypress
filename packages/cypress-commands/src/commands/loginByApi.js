@@ -1,11 +1,13 @@
+import { getPublicValue, setPublicValue } from '../helper/envHelpers.js'
+
 /* When the run starts the correct login endpoint is unknown, so an attempt
  * to login via the api endpoint is tried first and if that fails the
  * legacy endpoint is queried. Once a successful login has occurred,
- * the login instructions are stored via Cypress.expose()
+ * the login instructions are stored as a public config value
  * which will persist for the entire run. */
 Cypress.Commands.add('loginByApi', ({ username, password, baseUrl }) => {
     const HAS_API_AUTH_LOGIN_ENV_KEY = 'hasApiAuthLogin'
-    const hasApiAuthLogin = Cypress.expose(HAS_API_AUTH_LOGIN_ENV_KEY)
+    const hasApiAuthLogin = getPublicValue(HAS_API_AUTH_LOGIN_ENV_KEY)
     const hasApiAuthLoginUnknown = typeof hasApiAuthLogin !== 'boolean'
     const apiAuthLoginOptions = {
         url: `${baseUrl}/api/auth/login`,
@@ -37,14 +39,14 @@ Cypress.Commands.add('loginByApi', ({ username, password, baseUrl }) => {
             if (response.status === 404 || response.status === 302) {
                 return cy.request(legacyLoginOptions).then((legacyResponse) => {
                     if (legacyResponse.status === 200) {
-                        Cypress.expose(HAS_API_AUTH_LOGIN_ENV_KEY, false)
+                        setPublicValue(HAS_API_AUTH_LOGIN_ENV_KEY, false)
                         cy.log('Using legacy login endpoint for this test run')
                     }
                     return cy.wrap(legacyResponse)
                 })
             }
             if (response.status === 200) {
-                Cypress.expose(HAS_API_AUTH_LOGIN_ENV_KEY, true)
+                setPublicValue(HAS_API_AUTH_LOGIN_ENV_KEY, true)
                 cy.log('Using web API login endpoint for this test run')
             }
             return cy.wrap(response)

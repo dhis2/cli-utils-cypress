@@ -1,3 +1,5 @@
+import { getPublicValue } from '../../helper/envHelpers.js'
+
 export const networkModes = {
     LIVE: 'live',
     CAPTURE: 'capture',
@@ -5,11 +7,11 @@ export const networkModes = {
 }
 
 export const isLiveMode = () =>
-    !Cypress.expose('networkMode') ||
-    Cypress.expose('networkMode') === networkModes.LIVE
+    !getPublicValue('networkMode') ||
+    getPublicValue('networkMode') === networkModes.LIVE
 
 export const isCaptureMode = () =>
-    Cypress.expose('networkMode') === networkModes.CAPTURE
+    getPublicValue('networkMode') === networkModes.CAPTURE
 
 export const isStubMode = () =>
-    Cypress.expose('networkMode') === networkModes.STUB
+    getPublicValue('networkMode') === networkModes.STUB
