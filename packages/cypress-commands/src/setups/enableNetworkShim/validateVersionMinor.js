@@ -4,14 +4,14 @@
  * @returns {void}
  */
 export default function validateVersionMinor() {
-    const baseUrl = Cypress.env('dhis2BaseUrl')
+    const baseUrl = Cypress.expose('dhis2BaseUrl')
 
     cy.request(`${baseUrl}/api/system/info`).then((response) => {
         if (response.status !== 200) {
             throw new Error('Could not request system minor version')
         }
 
-        const providedVersionMinor = Cypress.env('dhis2ApiVersion')
+        const providedVersionMinor = Cypress.expose('dhis2ApiVersion')
         const versionStr = response.body.version
         const foundVersionMinor = versionStr.split(/\.|-/)[1]
 

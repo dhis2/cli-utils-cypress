@@ -1,9 +1,9 @@
 export const getDhis2BaseUrl = () => {
-    const baseUrl = Cypress.env('dhis2BaseUrl')
+    const baseUrl = Cypress.expose('dhis2BaseUrl')
 
     if (!baseUrl) {
         throw new Error(
-            'No `dhis2BaseUrl` found. Please make sure to add it to `cypress.json`, `cypress.env.json`, or as an env var `dhis2BaseUrl`'
+            'No `dhis2BaseUrl` found. Please make sure to expose it via `config.expose` in `setupNodeEvents` or set it via `Cypress.expose()`'
         )
     }
 

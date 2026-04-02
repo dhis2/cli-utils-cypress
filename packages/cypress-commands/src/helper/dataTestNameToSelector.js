@@ -4,7 +4,7 @@
  * @returns {string}
  */
 export const dataTestNameToSelector = (dataTestName, prefix) => {
-    const defaultPrefix = Cypress.env('dhis2DataTestPrefix') || ''
+    const defaultPrefix = Cypress.expose('dhis2DataTestPrefix') || ''
     // Empty string is a valid value, so check for undefined
     const actualPrefix = typeof prefix === 'undefined' ? defaultPrefix : prefix
     const dataTestId = actualPrefix
