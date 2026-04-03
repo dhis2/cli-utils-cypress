@@ -2201,7 +2201,7 @@
     update-notifier "^3.0.0"
     yargs "^13.1.0"
 
-"@dhis2/cli-helpers-engine@^2.1.1", "@dhis2/cli-helpers-engine@^2.3.0":
+"@dhis2/cli-helpers-engine@^2.1.1":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@dhis2/cli-helpers-engine/-/cli-helpers-engine-2.4.0.tgz#1609d358088f0616fb400aa9f90fc8bb57d4b196"
   integrity sha512-SRcN3s/sQTkd5VUbWAs2+UeYtJ0zLdj4F/RkrL8x2/RX/79vIxvryqBom4FFw/meY0c2GDpXgrpKNQcST/OHBQ==
@@ -2216,10 +2216,10 @@
     update-notifier "^3.0.0"
     yargs "^13.1.0"
 
-"@dhis2/cli-helpers-engine@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@dhis2/cli-helpers-engine/-/cli-helpers-engine-3.0.0.tgz#dacddea16de7e5e60280aefbee2e5661795b78b3"
-  integrity sha512-e8cZFFsunQp56iLx1FKBWGZ1tmWOjdbqJaBwOnzvsKPyYopV9RzNcPm+HIBwfnCjHBWoWTf6ijaf3xVnimZC2w==
+"@dhis2/cli-helpers-engine@^3.0.0", "@dhis2/cli-helpers-engine@^3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@dhis2/cli-helpers-engine/-/cli-helpers-engine-3.2.2.tgz#e3ab24d3da46c7ecb79a31cb332548ebdac72d1c"
+  integrity sha512-zMBm33WzYbjmb/eqIfpZS1ZZWbFaRHoHZoVhKWvOX0TDAEmdPtEmfG5fc5keV3CU9lDBIyXCfmca0KJeNvs5/w==
   dependencies:
     chalk "^3.0.0"
     cross-spawn "^7.0.3"
