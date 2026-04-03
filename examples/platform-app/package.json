@@ -26,7 +26,7 @@
         "prop-types": "^15.7.2"
     },
     "devDependencies": {
-        "@badeball/cypress-cucumber-preprocessor": "^15.1.4",
+        "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
         "@cypress/webpack-preprocessor": "^5.17.0",
         "@dhis2/cypress-commands": "10.1.0",
         "@dhis2/cypress-plugins": "10.1.0",
