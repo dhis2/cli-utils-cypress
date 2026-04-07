@@ -12,7 +12,7 @@ Given('the user visits the app', () => {
 })
 
 When('the user types in the input', () => {
-    cy.get('input').type('AAAAAAA_CREATED_IN_TEST')
+    cy.get('input[placeholder="New group name"]').type('AAAAAAA_CREATED_IN_TEST')
 })
 
 Then('the user clicks the add button', () => {
