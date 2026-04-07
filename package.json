@@ -45,7 +45,7 @@
         "@dhis2/cli-style": "^10.7.9",
         "@dhis2/cli-utils-docsite": "^3.2.0",
         "concurrently": "^9.2.1",
-        "eslint-plugin-cypress": "^6.2.2",
+        "eslint-plugin-cypress": "^4.3.0",
         "eslint-plugin-prettier": "^5.5.5",
         "wait-on": "^9.0.4"
     },
