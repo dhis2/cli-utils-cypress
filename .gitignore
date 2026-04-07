@@ -36,3 +36,4 @@ bundle.stats.json
 
 # d2
 .d2/
+/.claude/settings.local.json

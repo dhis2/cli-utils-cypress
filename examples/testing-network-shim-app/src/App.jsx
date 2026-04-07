@@ -1,8 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { AddUpdateName } from './AddUpdateName.js'
-import { NameFilter } from './NameFilter.js'
-import { NamesList } from './NamesList.js'
+import { AddUpdateName } from './AddUpdateName.jsx'
+import { NameFilter } from './NameFilter.jsx'
+import { NamesList } from './NamesList.jsx'
 import { resourcePath } from './resourcePath.js'
 
 function App() {
