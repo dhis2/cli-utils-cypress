@@ -1,3 +1,12 @@
+## [10.1.1](https://github.com/dhis2/cli-utils-cypress/compare/v10.1.0...v10.1.1) (2026-04-07)
+
+
+### Bug Fixes
+
+* address cypress env warning ([#407](https://github.com/dhis2/cli-utils-cypress/issues/407)) ([9092fe3](https://github.com/dhis2/cli-utils-cypress/commit/9092fe3f4f8fe21694dea4c82cde67f6430a0818))
+* align dependency versions ([#420](https://github.com/dhis2/cli-utils-cypress/issues/420)) ([fe58fc5](https://github.com/dhis2/cli-utils-cypress/commit/fe58fc53fd1cc5c574aa973b150ff63b0406e5df))
+* pin dependency to fixed version to enable release ([#421](https://github.com/dhis2/cli-utils-cypress/issues/421)) ([1344608](https://github.com/dhis2/cli-utils-cypress/commit/1344608f231af9fbf999b281d08e067ed0a58be6))
+
 # [10.1.0](https://github.com/dhis2/cli-utils-cypress/compare/v10.0.7...v10.1.0) (2025-05-12)
 
 
