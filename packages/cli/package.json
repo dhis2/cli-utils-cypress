@@ -21,10 +21,10 @@
         "node": ">=12"
     },
     "dependencies": {
-        "@dhis2/cli-helpers-engine": "^2.3.0"
+        "@dhis2/cli-helpers-engine": "^3.2.2"
     },
     "devDependencies": {
-        "@dhis2/cli-app-scripts": "^6.2.0"
+        "@dhis2/cli-app-scripts": "^12.11.0"
     },
     "publishConfig": {
         "access": "public"

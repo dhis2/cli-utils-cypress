@@ -20,16 +20,14 @@
         "cy:capture-and-stub": "yarn cy:capture && yarn cy:stub"
     },
     "dependencies": {
-        "@babel/helper-builder-react-jsx": "^7.19.0",
-        "@babel/helper-builder-react-jsx-experimental": "^7.12.11",
-        "@dhis2/app-runtime": "^2.8.0",
-        "prop-types": "^15.7.2"
+        "@dhis2/app-runtime": "^3.16.0",
+        "prop-types": "^15.8.1"
     },
     "devDependencies": {
-        "@badeball/cypress-cucumber-preprocessor": "^15.1.4",
-        "@cypress/webpack-preprocessor": "^5.17.0",
+        "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
+        "@cypress/webpack-preprocessor": "^7.0.2",
         "@dhis2/cypress-commands": "10.1.0",
         "@dhis2/cypress-plugins": "10.1.0",
-        "cypress": "^12.7.0"
+        "cypress": "^15.13.0"
     }
 }
