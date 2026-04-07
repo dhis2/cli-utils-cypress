@@ -19,7 +19,7 @@
         "vite": "^8.0.5"
     },
     "scripts": {
-        "serve": "json-server src/json-server/db.js --routes ./src/json-server/routes.json --middlewares ../../node_modules/json-server-reset --watch -p 1337",
+        "serve": "json-server src/json-server/db.cjs --routes ./src/json-server/routes.json --middlewares ../../node_modules/json-server-reset --watch -p 1337",
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
