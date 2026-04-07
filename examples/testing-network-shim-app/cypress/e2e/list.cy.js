@@ -17,12 +17,12 @@ describe('List', () => {
 
         // Should produce an extra responseLookup array item
         // but not a new responseBody array item
-        cy.contains('Barry').find('button').click()
+        cy.contains('li', 'Barry').find('button').last().click()
         cy.get('.list').children().should('have.length', 4)
 
         // Should produce an extra responseLookup array item
         // but not a new responseBody array item
-        cy.contains('Harry').find('button').click()
+        cy.contains('li', 'Harry').find('button').last().click()
         cy.get('.list').children().should('have.length', 3)
     })
 })
