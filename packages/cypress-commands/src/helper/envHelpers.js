@@ -2,13 +2,17 @@ const hasExposeApi = typeof Cypress.expose === 'function'
 
 /**
  * Read a public (non-sensitive) config value.
- * Uses Cypress.expose() on 15.10+, falls back to Cypress.env().
+ * Checks Cypress.expose() first (if available), then falls back to
+ * Cypress.env() for values set via --env CLI flag or cypress.env.json.
  * @param {string} key
  * @returns {*}
  */
 export const getPublicValue = (key) => {
     if (hasExposeApi) {
-        return Cypress.expose(key)
+        const exposed = Cypress.expose(key)
+        if (exposed !== undefined) {
+            return exposed
+        }
     }
     return Cypress.env(key)
 }
