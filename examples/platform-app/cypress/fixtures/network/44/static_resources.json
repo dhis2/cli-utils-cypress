@@ -37,13 +37,7 @@
             "x-content-type-options": "nosniff",
             "x-xss-protection": "0"
         },
-        "responseLookup": [
-            0,
-            1,
-            2,
-            3,
-            4
-        ]
+        "responseLookup": [0, 1, 2, 3, 4]
     },
     {
         "path": "/api/me",
