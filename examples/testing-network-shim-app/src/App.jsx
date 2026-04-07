@@ -43,14 +43,14 @@ function App() {
             <NameFilter fetch={fetchNames} />
             <NamesList
                 names={names}
-                selectedId={selectedName && selectedName.id}
+                selectedId={selectedName?.id}
                 setSelectedName={setSelectedName}
                 deleteName={deleteName}
             />
             <AddUpdateName
                 submit={addOrUpdateName}
                 clear={() => setSelectedName(null)}
-                selectedName={selectedName && selectedName.name}
+                selectedName={selectedName?.name}
             />
         </div>
     )

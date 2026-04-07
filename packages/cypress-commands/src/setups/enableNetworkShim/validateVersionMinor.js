@@ -17,7 +17,10 @@ export default function validateVersionMinor() {
         const versionStr = response.body.version
         const foundVersionMinor = versionStr.split(/\.|-/)[1]
 
-        if (parseInt(providedVersionMinor) !== parseInt(foundVersionMinor)) {
+        if (
+            Number.parseInt(providedVersionMinor) !==
+            Number.parseInt(foundVersionMinor)
+        ) {
             const msg = `A capture run was started for a DHIS2-core instance with version ${providedVersionMinor} but the current instance has version ${foundVersionMinor}.`
 
             throw new Error(msg)

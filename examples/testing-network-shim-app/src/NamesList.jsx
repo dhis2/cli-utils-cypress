@@ -11,7 +11,14 @@ export const NamesList = ({
         {names.map(name => (
             <li
                 key={name.id}
+                role="button"
+                tabIndex={0}
                 onClick={() => setSelectedName(name)}
+                onKeyDown={e => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        setSelectedName(name)
+                    }
+                }}
                 className={
                     name.id === selectedId ? 'list-item selected' : 'list-item'
                 }

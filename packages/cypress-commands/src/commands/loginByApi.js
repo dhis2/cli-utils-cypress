@@ -32,7 +32,7 @@ Cypress.Commands.add('loginByApi', ({ username, password, baseUrl }) => {
     }
 
     // Set base url for the app platform
-    window.localStorage.setItem('DHIS2_BASE_URL', baseUrl)
+    localStorage.setItem('DHIS2_BASE_URL', baseUrl)
 
     if (hasApiAuthLoginUnknown) {
         return cy.request(apiAuthLoginOptions).then((response) => {
