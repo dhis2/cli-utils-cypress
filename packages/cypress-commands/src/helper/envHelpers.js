@@ -1,18 +1,13 @@
-const hasExposeApi = typeof Cypress.expose === 'function'
-
 /**
  * Read a public (non-sensitive) config value.
- * Checks Cypress.expose() first (if available), then falls back to
- * Cypress.env() for values set via --env CLI flag or cypress.env.json.
+ * Uses Cypress.expose() as sole source on 15.10+ (even if the value is undefined).
+ * Falls back to Cypress.env() only when Cypress.expose is not available.
  * @param {string} key
  * @returns {*}
  */
 export const getPublicValue = (key) => {
-    if (hasExposeApi) {
-        const exposed = Cypress.expose(key)
-        if (exposed !== undefined) {
-            return exposed
-        }
+    if (typeof Cypress.expose === 'function') {
+        return Cypress.expose(key)
     }
     return Cypress.env(key)
 }
@@ -24,7 +19,7 @@ export const getPublicValue = (key) => {
  * @param {*} value
  */
 export const setPublicValue = (key, value) => {
-    if (hasExposeApi) {
+    if (typeof Cypress.expose === 'function') {
         Cypress.expose(key, value)
     } else {
         Cypress.env(key, value)
@@ -39,7 +34,7 @@ export const setPublicValue = (key, value) => {
  * @returns {Cypress.Chainable<Record<string, *>>}
  */
 export const getSensitiveValues = (keys) => {
-    if (hasExposeApi) {
+    if (typeof Cypress.expose === 'function') {
         return cy.env(keys)
     }
     const result = {}
