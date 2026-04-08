@@ -1,4 +1,5 @@
 import './waitForResources.js'
+import { migrateEnvToExpose } from '../../helper/envHelpers.js'
 import { setDhis2BaseUrlToLocalStorage } from '../../helper/dhis2BaseUrl.js'
 import captureRequests from './captureRequests.js'
 import { isLiveMode, isStubMode, isCaptureMode } from './networkMode.js'
@@ -6,6 +7,15 @@ import stubRequests from './stubRequests.js'
 import validateVersionMinor from './validateVersionMinor.js'
 
 export function enableNetworkShim() {
+    // These public values may be set via --env CLI or cypress.env.json which
+    // only populates Cypress.env(). Bridge them into Cypress.expose().
+    migrateEnvToExpose([
+        'networkMode',
+        'dhis2BaseUrl',
+        'dhis2ApiVersion',
+        'dhis2DataTestPrefix',
+    ])
+
     if (isLiveMode()) {
         return
     }

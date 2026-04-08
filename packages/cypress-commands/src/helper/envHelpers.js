@@ -1,4 +1,27 @@
 /**
+ * Copy specific public (non-sensitive) keys from Cypress.env() into
+ * Cypress.expose() so they are available via getPublicValue().
+ * This bridges values set via --env CLI flag or cypress.env.json
+ * into the Cypress.expose() API. Only copies keys whose value is
+ * not undefined in Cypress.env(); existing Cypress.expose() values
+ * are not overwritten.
+ * @param {string[]} keys
+ */
+export const migrateEnvToExpose = (keys) => {
+    if (typeof Cypress.expose !== 'function') {
+        return
+    }
+    keys.forEach((key) => {
+        if (Cypress.expose(key) === undefined) {
+            const val = Cypress.env(key)
+            if (val !== undefined) {
+                Cypress.expose(key, val)
+            }
+        }
+    })
+}
+
+/**
  * Read a public (non-sensitive) config value.
  * Uses Cypress.expose() as sole source on 15.10+ (even if the value is undefined).
  * Falls back to Cypress.env() only when Cypress.expose is not available.

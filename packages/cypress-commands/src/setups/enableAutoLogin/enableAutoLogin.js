@@ -1,4 +1,8 @@
-import { getPublicValue, getSensitiveValues } from '../../helper/envHelpers.js'
+import {
+    getPublicValue,
+    getSensitiveValues,
+    migrateEnvToExpose,
+} from '../../helper/envHelpers.js'
 import { isStubMode } from '../enableNetworkShim/index.js'
 
 export const enableAutoLogin = ({
@@ -6,6 +10,11 @@ export const enableAutoLogin = ({
     password: _password,
     baseUrl: _baseUrl,
 } = {}) => {
+    // These values may be set via cypress.env.json; bridge them into Cypress.expose().
+    // networkMode is needed for the isStubMode() check below.
+    // dhis2DataTestPrefix is included for repos that don't call enableNetworkShim().
+    migrateEnvToExpose(['dhis2BaseUrl', 'networkMode', 'dhis2DataTestPrefix'])
+
     if (isStubMode()) {
         return
     }
