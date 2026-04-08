@@ -1,6 +1,6 @@
 {
     "name": "platform-app",
-    "version": "10.1.1",
+    "version": "10.1.2",
     "description": "",
     "license": "BSD-3-Clause",
     "private": true,
@@ -26,8 +26,8 @@
     "devDependencies": {
         "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
         "@cypress/webpack-preprocessor": "^7.0.2",
-        "@dhis2/cypress-commands": "10.1.1",
-        "@dhis2/cypress-plugins": "10.1.1",
+        "@dhis2/cypress-commands": "10.1.2",
+        "@dhis2/cypress-plugins": "10.1.2",
         "cypress": "^15.13.0"
     }
 }

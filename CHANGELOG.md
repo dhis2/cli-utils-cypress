@@ -1,3 +1,10 @@
+## [10.1.2](https://github.com/dhis2/cli-utils-cypress/compare/v10.1.1...v10.1.2) (2026-04-08)
+
+
+### Bug Fixes
+
+* check Cypress.expose availability lazily and remove undefined fallback ([#422](https://github.com/dhis2/cli-utils-cypress/issues/422)) ([53542bf](https://github.com/dhis2/cli-utils-cypress/commit/53542bf0ef5a9d408e40aa74d0de5017c6e045e0))
+
 ## [10.1.1](https://github.com/dhis2/cli-utils-cypress/compare/v10.1.0...v10.1.1) (2026-04-07)
 
 
