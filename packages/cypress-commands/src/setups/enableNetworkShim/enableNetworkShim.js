@@ -1,6 +1,6 @@
 import './waitForResources.js'
-import { migrateEnvToExpose } from '../../helper/envHelpers.js'
 import { setDhis2BaseUrlToLocalStorage } from '../../helper/dhis2BaseUrl.js'
+import { migrateEnvToExpose } from '../../helper/envHelpers.js'
 import captureRequests from './captureRequests.js'
 import { isLiveMode, isStubMode, isCaptureMode } from './networkMode.js'
 import stubRequests from './stubRequests.js'
