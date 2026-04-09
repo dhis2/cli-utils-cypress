@@ -15,7 +15,7 @@
         "@dhis2/cypress-plugins": "10.1.2",
         "@vitejs/plugin-react": "^6.0.1",
         "cypress": "^15.13.0",
-        "vite": "^8.0.5"
+        "vite": "^8.0.8"
     },
     "scripts": {
         "serve": "json-server src/json-server/db.js --routes ./src/json-server/routes.json --middlewares ../../node_modules/json-server-reset --watch -p 1337",
