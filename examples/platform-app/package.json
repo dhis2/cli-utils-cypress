@@ -25,7 +25,7 @@
     },
     "devDependencies": {
         "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
-        "@cypress/webpack-preprocessor": "^7.0.2",
+        "@cypress/webpack-preprocessor": "^7.1.0",
         "@dhis2/cypress-commands": "10.1.2",
         "@dhis2/cypress-plugins": "10.1.2",
         "cypress": "^15.13.0"
