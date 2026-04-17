@@ -28,6 +28,6 @@
         "@cypress/webpack-preprocessor": "^7.0.2",
         "@dhis2/cypress-commands": "10.1.2",
         "@dhis2/cypress-plugins": "10.1.2",
-        "cypress": "^15.13.0"
+        "cypress": "^15.14.0"
     }
 }
