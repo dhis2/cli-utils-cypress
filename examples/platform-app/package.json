@@ -20,7 +20,7 @@
         "cy:capture-and-stub": "yarn cy:capture && yarn cy:stub"
     },
     "dependencies": {
-        "@dhis2/app-runtime": "^3.16.0",
+        "@dhis2/app-runtime": "^3.17.0",
         "prop-types": "^15.8.1"
     },
     "devDependencies": {
